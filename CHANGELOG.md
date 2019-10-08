@@ -17,6 +17,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 -   Changed: In Portal Site, the difficulty of going over the gate from behind is now Normal, matching
     the corresponding trick in Portal Terminal.
 
+-   Added: Method to climb Command Center with only Space Jump Boots (Easy difficulty).
+
 ## [0.29.1] - 2019-10-01
 
 -   Fixed: Fix AttributeError preventing major/minor randomization from working.
