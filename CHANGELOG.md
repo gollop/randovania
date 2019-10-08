@@ -12,11 +12,16 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 -   Changed: Minimal Checking now also checks of Dark Agon Temple Keys and Dark Torvus Temple Keys.
 
+### Logic Database changes
+
+-   Changed: In Portal Site, the difficulty of going over the gate from behind is now Normal, matching
+    the corresponding trick in Portal Terminal.
+
 ## [0.29.1] - 2019-10-01
 
 -   Fixed: Fix AttributeError preventing major/minor randomization from working.
 
--   Fixed: Seeds where no progression is needed to finish should no longer fail to generate. 
+-   Fixed: Seeds where no progression is needed to finish should no longer fail to generate.
 
 ## [0.29.0] - 2019-10-01
 
