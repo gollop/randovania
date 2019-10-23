@@ -11517,7 +11517,7 @@
                     "nodes": [
                         {
                             "name": "Door to Temple Transport C",
-                            "heal": true,
+                            "heal": false,
                             "node_type": 1,
                             "dock_index": 1,
                             "connected_area_asset_id": 2556480432,
@@ -11539,7 +11539,7 @@
                         },
                         {
                             "name": "Door to Temple Sanctuary",
-                            "heal": true,
+                            "heal": false,
                             "node_type": 1,
                             "dock_index": 0,
                             "connected_area_asset_id": 2731245106,
@@ -11571,13 +11571,10 @@
                         },
                         {
                             "name": "Event - Transport C Access Light Block",
-                            "heal": true,
+                            "heal": false,
                             "node_type": 4,
                             "event_index": 7,
                             "connections": {
-                                "Door to Temple Transport C": [
-                                    []
-                                ],
                                 "Door to Temple Sanctuary": [
                                     []
                                 ]
