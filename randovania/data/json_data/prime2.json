@@ -7082,7 +7082,7 @@
                     "nodes": [
                         {
                             "name": "Door to GFMC Compound",
-                            "heal": true,
+                            "heal": false,
                             "node_type": 1,
                             "dock_index": 1,
                             "connected_area_asset_id": 1467316949,
@@ -7104,7 +7104,7 @@
                         },
                         {
                             "name": "Door to Grand Windchamber",
-                            "heal": true,
+                            "heal": false,
                             "node_type": 1,
                             "dock_index": 0,
                             "connected_area_asset_id": 2909835645,
