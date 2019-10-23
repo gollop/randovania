@@ -3053,7 +3053,7 @@
                     "nodes": [
                         {
                             "name": "Door to Meeting Grounds",
-                            "heal": true,
+                            "heal": false,
                             "node_type": 1,
                             "dock_index": 0,
                             "connected_area_asset_id": 2606692981,
@@ -3075,7 +3075,7 @@
                         },
                         {
                             "name": "Elevator to Great Temple - Temple Transport C",
-                            "heal": true,
+                            "heal": false,
                             "node_type": 3,
                             "destination_world_asset_id": 2252328306,
                             "destination_area_asset_id": 2556480432,
@@ -6557,7 +6557,7 @@
                     "nodes": [
                         {
                             "name": "Door to Temple Assembly Site",
-                            "heal": true,
+                            "heal": false,
                             "node_type": 1,
                             "dock_index": 0,
                             "connected_area_asset_id": 1263425809,
@@ -6579,7 +6579,7 @@
                         },
                         {
                             "name": "Elevator to Great Temple - Temple Transport B",
-                            "heal": true,
+                            "heal": false,
                             "node_type": 3,
                             "destination_world_asset_id": 2252328306,
                             "destination_area_asset_id": 2399252740,
@@ -9239,7 +9239,7 @@
                     "nodes": [
                         {
                             "name": "Door to Sacred Path",
-                            "heal": true,
+                            "heal": false,
                             "node_type": 1,
                             "dock_index": 0,
                             "connected_area_asset_id": 3258777533,
@@ -9261,7 +9261,7 @@
                         },
                         {
                             "name": "Elevator to Great Temple - Temple Transport A",
-                            "heal": true,
+                            "heal": false,
                             "node_type": 3,
                             "destination_world_asset_id": 2252328306,
                             "destination_area_asset_id": 408633584,
