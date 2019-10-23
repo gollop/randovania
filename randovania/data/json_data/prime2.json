@@ -37627,7 +37627,7 @@
                     "nodes": [
                         {
                             "name": "Door to Hydrodynamo Station",
-                            "heal": true,
+                            "heal": false,
                             "node_type": 1,
                             "dock_index": 0,
                             "connected_area_asset_id": 3585454182,
@@ -37642,7 +37642,7 @@
                         },
                         {
                             "name": "Door to Gathering Hall",
-                            "heal": true,
+                            "heal": false,
                             "node_type": 1,
                             "dock_index": 1,
                             "connected_area_asset_id": 889276218,
