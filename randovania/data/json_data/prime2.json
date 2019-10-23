@@ -26158,7 +26158,7 @@
                     "nodes": [
                         {
                             "name": "Door to Save Station C",
-                            "heal": true,
+                            "heal": false,
                             "node_type": 1,
                             "dock_index": 1,
                             "connected_area_asset_id": 3111736876,
@@ -26186,7 +26186,7 @@
                         },
                         {
                             "name": "Door to Bioenergy Production",
-                            "heal": true,
+                            "heal": false,
                             "node_type": 1,
                             "dock_index": 0,
                             "connected_area_asset_id": 323423656,
