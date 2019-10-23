@@ -6198,7 +6198,7 @@
                     "nodes": [
                         {
                             "name": "Door to Torvus Transport Access",
-                            "heal": true,
+                            "heal": false,
                             "node_type": 1,
                             "dock_index": 0,
                             "connected_area_asset_id": 2822315693,
@@ -6220,7 +6220,7 @@
                         },
                         {
                             "name": "Elevator to Torvus Bog - Transport to Temple Grounds",
-                            "heal": true,
+                            "heal": false,
                             "node_type": 3,
                             "destination_world_asset_id": 1039999561,
                             "destination_area_asset_id": 1868895730,
