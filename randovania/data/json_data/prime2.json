@@ -25326,9 +25326,6 @@
                             "heal": true,
                             "node_type": 0,
                             "connections": {
-                                "Door to Sand Processing": [
-                                    []
-                                ],
                                 "Door to Ventilation Area B": [
                                     []
                                 ]
@@ -25336,7 +25333,7 @@
                         },
                         {
                             "name": "Door to Sand Processing",
-                            "heal": true,
+                            "heal": false,
                             "node_type": 1,
                             "dock_index": 1,
                             "connected_area_asset_id": 2763180926,
@@ -25344,9 +25341,6 @@
                             "dock_type": 0,
                             "dock_weakness_index": 0,
                             "connections": {
-                                "Save Station": [
-                                    []
-                                ],
                                 "Door to Ventilation Area B": [
                                     []
                                 ]
@@ -25354,7 +25348,7 @@
                         },
                         {
                             "name": "Door to Ventilation Area B",
-                            "heal": true,
+                            "heal": false,
                             "node_type": 1,
                             "dock_index": 0,
                             "connected_area_asset_id": 1498100491,
