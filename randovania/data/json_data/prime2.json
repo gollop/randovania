@@ -12841,7 +12841,7 @@
                     "nodes": [
                         {
                             "name": "Door to Plaza Access",
-                            "heal": true,
+                            "heal": false,
                             "node_type": 1,
                             "dock_index": 0,
                             "connected_area_asset_id": 2918746407,
@@ -12863,7 +12863,7 @@
                         },
                         {
                             "name": "Elevator to Temple Grounds - Transport to Agon Wastes",
-                            "heal": true,
+                            "heal": false,
                             "node_type": 3,
                             "destination_world_asset_id": 1006255871,
                             "destination_area_asset_id": 1660916974,
