@@ -6602,7 +6602,7 @@
                     "nodes": [
                         {
                             "name": "Door to Temple Assembly Site",
-                            "heal": true,
+                            "heal": false,
                             "node_type": 1,
                             "dock_index": 0,
                             "connected_area_asset_id": 1263425809,
@@ -6617,7 +6617,7 @@
                         },
                         {
                             "name": "Pickup (Energy Tank)",
-                            "heal": true,
+                            "heal": false,
                             "node_type": 2,
                             "pickup_index": 9,
                             "major_location": true,
@@ -8040,7 +8040,7 @@
                     "nodes": [
                         {
                             "name": "Door to Communication Area",
-                            "heal": true,
+                            "heal": false,
                             "node_type": 1,
                             "dock_index": 0,
                             "connected_area_asset_id": 1667141025,
@@ -8055,7 +8055,7 @@
                         },
                         {
                             "name": "Keybearer Corpse (D-Isl)",
-                            "heal": true,
+                            "heal": false,
                             "node_type": 6,
                             "string_asset_id": 686343194,
                             "lore_type": 1,
