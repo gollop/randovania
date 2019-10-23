@@ -15126,7 +15126,7 @@
                     "nodes": [
                         {
                             "name": "Door to Mining Station B",
-                            "heal": true,
+                            "heal": false,
                             "node_type": 1,
                             "dock_index": 0,
                             "connected_area_asset_id": 3682282733,
@@ -15141,7 +15141,7 @@
                         },
                         {
                             "name": "Pickup (Missile)",
-                            "heal": true,
+                            "heal": false,
                             "node_type": 2,
                             "pickup_index": 32,
                             "major_location": false,
@@ -24437,7 +24437,7 @@
                     "nodes": [
                         {
                             "name": "Door to Main Reactor",
-                            "heal": true,
+                            "heal": false,
                             "node_type": 1,
                             "dock_index": 0,
                             "connected_area_asset_id": 3436835742,
@@ -24452,7 +24452,7 @@
                         },
                         {
                             "name": "Pickup (Dark Beam)",
-                            "heal": true,
+                            "heal": false,
                             "node_type": 2,
                             "pickup_index": 52,
                             "major_location": true,
@@ -25620,7 +25620,7 @@
                     "nodes": [
                         {
                             "name": "Door to Biostorage Station",
-                            "heal": true,
+                            "heal": false,
                             "node_type": 1,
                             "dock_index": 0,
                             "connected_area_asset_id": 2156489961,
@@ -25635,7 +25635,7 @@
                         },
                         {
                             "name": "Pickup (Missile)",
-                            "heal": true,
+                            "heal": false,
                             "node_type": 2,
                             "pickup_index": 54,
                             "major_location": false,
@@ -27055,7 +27055,7 @@
                     "nodes": [
                         {
                             "name": "Door to Bioenergy Production",
-                            "heal": true,
+                            "heal": false,
                             "node_type": 1,
                             "dock_index": 0,
                             "connected_area_asset_id": 323423656,
@@ -27070,7 +27070,7 @@
                         },
                         {
                             "name": "Pickup (Missile)",
-                            "heal": true,
+                            "heal": false,
                             "node_type": 2,
                             "pickup_index": 58,
                             "major_location": false,
