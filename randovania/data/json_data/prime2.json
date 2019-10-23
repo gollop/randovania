@@ -15911,7 +15911,7 @@
                     "nodes": [
                         {
                             "name": "Door to Portal Terminal",
-                            "heal": true,
+                            "heal": false,
                             "node_type": 1,
                             "dock_index": 0,
                             "connected_area_asset_id": 734872743,
@@ -15943,7 +15943,7 @@
                         },
                         {
                             "name": "Door to Mining Station A",
-                            "heal": true,
+                            "heal": false,
                             "node_type": 1,
                             "dock_index": 1,
                             "connected_area_asset_id": 3820941951,
@@ -15965,7 +15965,7 @@
                         },
                         {
                             "name": "Pickup (Missile)",
-                            "heal": true,
+                            "heal": false,
                             "node_type": 2,
                             "pickup_index": 36,
                             "major_location": false,
