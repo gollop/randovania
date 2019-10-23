@@ -13319,16 +13319,6 @@
                             "heal": true,
                             "node_type": 0,
                             "connections": {
-                                "Door to Transport Center": [
-                                    [
-                                        {
-                                            "requirement_type": 0,
-                                            "requirement_index": 15,
-                                            "amount": 1,
-                                            "negate": false
-                                        }
-                                    ]
-                                ],
                                 "Door to Mining Plaza": [
                                     []
                                 ]
@@ -13336,7 +13326,7 @@
                         },
                         {
                             "name": "Door to Transport Center",
-                            "heal": true,
+                            "heal": false,
                             "node_type": 1,
                             "dock_index": 1,
                             "connected_area_asset_id": 1272952761,
@@ -13344,16 +13334,6 @@
                             "dock_type": 0,
                             "dock_weakness_index": 0,
                             "connections": {
-                                "Save Station": [
-                                    [
-                                        {
-                                            "requirement_type": 0,
-                                            "requirement_index": 15,
-                                            "amount": 1,
-                                            "negate": false
-                                        }
-                                    ]
-                                ],
                                 "Door to Mining Plaza": [
                                     [
                                         {
@@ -13368,7 +13348,7 @@
                         },
                         {
                             "name": "Door to Mining Plaza",
-                            "heal": true,
+                            "heal": false,
                             "node_type": 1,
                             "dock_index": 0,
                             "connected_area_asset_id": 1115663770,
