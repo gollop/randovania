@@ -4606,7 +4606,7 @@
                         },
                         {
                             "name": "Door to Hive Chamber C",
-                            "heal": true,
+                            "heal": false,
                             "node_type": 1,
                             "dock_index": 0,
                             "connected_area_asset_id": 4219746340,
