@@ -15549,7 +15549,7 @@
                     "nodes": [
                         {
                             "name": "Door to Transport Center",
-                            "heal": true,
+                            "heal": false,
                             "node_type": 1,
                             "dock_index": 0,
                             "connected_area_asset_id": 1272952761,
@@ -15571,7 +15571,7 @@
                         },
                         {
                             "name": "Elevator to Torvus Bog - Transport to Agon Wastes",
-                            "heal": true,
+                            "heal": false,
                             "node_type": 3,
                             "destination_world_asset_id": 1039999561,
                             "destination_area_asset_id": 3479543630,
