@@ -8969,7 +8969,7 @@
                     "nodes": [
                         {
                             "name": "Door to Fortress Transport Access",
-                            "heal": true,
+                            "heal": false,
                             "node_type": 1,
                             "dock_index": 0,
                             "connected_area_asset_id": 1894115037,
@@ -8991,7 +8991,7 @@
                         },
                         {
                             "name": "Elevator to Sanctuary Fortress - Transport to Temple Grounds",
-                            "heal": true,
+                            "heal": false,
                             "node_type": 3,
                             "destination_world_asset_id": 464164546,
                             "destination_area_asset_id": 3528156989,
