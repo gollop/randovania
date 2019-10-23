@@ -4339,7 +4339,7 @@
                     "nodes": [
                         {
                             "name": "Door to Transport to Agon Wastes",
-                            "heal": true,
+                            "heal": false,
                             "node_type": 1,
                             "dock_index": 1,
                             "connected_area_asset_id": 1660916974,
@@ -4354,7 +4354,7 @@
                         },
                         {
                             "name": "Door to Industrial Site",
-                            "heal": true,
+                            "heal": false,
                             "node_type": 1,
                             "dock_index": 0,
                             "connected_area_asset_id": 1655474884,
