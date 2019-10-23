@@ -13177,7 +13177,7 @@
                     "nodes": [
                         {
                             "name": "Morph Ball Door to Mining Plaza",
-                            "heal": true,
+                            "heal": false,
                             "node_type": 1,
                             "dock_index": 0,
                             "connected_area_asset_id": 1115663770,
