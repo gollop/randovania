@@ -137,7 +137,7 @@ class DataEditorWindow(QMainWindow, Ui_DataEditorWindow):
                     node_connections[new_node] = node_connections.pop(old_node)
 
             self.radio_button_to_node[self.selected_node_button] = new_node
-            self.on_select_area()
+            self.update_selected_node()
 
     def update_selected_node(self):
         node = self.current_node
