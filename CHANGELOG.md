@@ -24,6 +24,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 -   Added: Method to get to the door to Service Access in Landing Site using Space Jump Boots and without slope
     jumping (Easy difficulty).
 
+-   Fixed: Staging Area is now correctly considered a dark world room.
+
 ## [0.29.1] - 2019-10-01
 
 -   Fixed: Fix AttributeError preventing major/minor randomization from working.

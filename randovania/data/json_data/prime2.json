@@ -47004,7 +47004,7 @@
                 },
                 {
                     "name": "Staging Area",
-                    "in_dark_aether": false,
+                    "in_dark_aether": true,
                     "asset_id": 1539257167,
                     "default_node_index": 2,
                     "nodes": [
