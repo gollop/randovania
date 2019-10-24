@@ -43471,7 +43471,7 @@
                     "nodes": [
                         {
                             "name": "Door to Transport to Temple Grounds",
-                            "heal": true,
+                            "heal": false,
                             "node_type": 1,
                             "dock_index": 0,
                             "connected_area_asset_id": 3528156989,
@@ -43515,7 +43515,7 @@
                         },
                         {
                             "name": "Door to Sanctuary Entrance",
-                            "heal": true,
+                            "heal": false,
                             "node_type": 1,
                             "dock_index": 1,
                             "connected_area_asset_id": 1193696267,
@@ -43537,14 +43537,11 @@
                         },
                         {
                             "name": "Event - [Sanctuary] Temple Transport Access Rings",
-                            "heal": true,
+                            "heal": false,
                             "node_type": 4,
                             "event_index": 43,
                             "connections": {
                                 "Door to Transport to Temple Grounds": [
-                                    []
-                                ],
-                                "Door to Sanctuary Entrance": [
                                     []
                                 ]
                             }
@@ -46983,7 +46980,7 @@
                     "nodes": [
                         {
                             "name": "Door to Transport to Torvus Bog",
-                            "heal": true,
+                            "heal": false,
                             "node_type": 1,
                             "dock_index": 1,
                             "connected_area_asset_id": 3145160350,
@@ -46998,7 +46995,7 @@
                         },
                         {
                             "name": "Door to Main Research",
-                            "heal": true,
+                            "heal": false,
                             "node_type": 1,
                             "dock_index": 0,
                             "connected_area_asset_id": 2437878657,
