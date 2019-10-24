@@ -12,6 +12,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 -   Changed: Minimal Checking now also checks of Dark Agon Temple Keys and Dark Torvus Temple Keys.
 
+-   *Major* - Added: The "Standable Terrain" trick in places that require standing on non-obviously standable spots.
+
 -   Added: The "Heals?" checkbox in the database editor now works.
 
 ### Logic Database changes

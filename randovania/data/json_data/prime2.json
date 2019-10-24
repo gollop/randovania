@@ -911,6 +911,11 @@
                 "index": 26,
                 "long_name": "Invisible Objects",
                 "short_name": "InvisibleObjects"
+            },
+            {
+                "index": 27,
+                "long_name": "Standable Terrain",
+                "short_name": "StandableTerrain"
             }
         ],
         "damage": [
