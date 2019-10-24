@@ -43426,7 +43426,7 @@
                     "nodes": [
                         {
                             "name": "Door to Temple Transport Access",
-                            "heal": true,
+                            "heal": false,
                             "node_type": 1,
                             "dock_index": 0,
                             "connected_area_asset_id": 1650075282,
@@ -43448,7 +43448,7 @@
                         },
                         {
                             "name": "Elevator to Temple Grounds - Transport to Sanctuary Fortress",
-                            "heal": true,
+                            "heal": false,
                             "node_type": 3,
                             "destination_world_asset_id": 1006255871,
                             "destination_area_asset_id": 3455543403,
@@ -47149,7 +47149,7 @@
                     "nodes": [
                         {
                             "name": "Door to Agon Transport Access",
-                            "heal": true,
+                            "heal": false,
                             "node_type": 1,
                             "dock_index": 0,
                             "connected_area_asset_id": 1963704303,
@@ -47171,7 +47171,7 @@
                         },
                         {
                             "name": "Elevator to Agon Wastes - Transport to Sanctuary Fortress",
-                            "heal": true,
+                            "heal": false,
                             "node_type": 3,
                             "destination_world_asset_id": 1119434212,
                             "destination_area_asset_id": 3331021649,
@@ -48594,7 +48594,7 @@
                     "nodes": [
                         {
                             "name": "Door to Torvus Transport Access",
-                            "heal": true,
+                            "heal": false,
                             "node_type": 1,
                             "dock_index": 0,
                             "connected_area_asset_id": 4071453868,
@@ -48616,7 +48616,7 @@
                         },
                         {
                             "name": "Elevator to Torvus Bog - Transport to Sanctuary Fortress",
-                            "heal": true,
+                            "heal": false,
                             "node_type": 3,
                             "destination_world_asset_id": 1039999561,
                             "destination_area_asset_id": 3205424168,
