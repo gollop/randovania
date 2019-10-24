@@ -49836,7 +49836,7 @@
                     "nodes": [
                         {
                             "name": "Door to Watch Station",
-                            "heal": true,
+                            "heal": false,
                             "node_type": 1,
                             "dock_index": 1,
                             "connected_area_asset_id": 2722128775,
@@ -49846,28 +49846,12 @@
                             "connections": {
                                 "Door to Sanctuary Temple": [
                                     []
-                                ],
-                                "Pickup (Missile)": [
-                                    [
-                                        {
-                                            "requirement_type": 0,
-                                            "requirement_index": 3,
-                                            "amount": 1,
-                                            "negate": false
-                                        },
-                                        {
-                                            "requirement_type": 0,
-                                            "requirement_index": 11,
-                                            "amount": 1,
-                                            "negate": false
-                                        }
-                                    ]
                                 ]
                             }
                         },
                         {
                             "name": "Door to Sanctuary Temple",
-                            "heal": true,
+                            "heal": false,
                             "node_type": 1,
                             "dock_index": 0,
                             "connected_area_asset_id": 1815493844,
@@ -49898,14 +49882,11 @@
                         },
                         {
                             "name": "Pickup (Missile)",
-                            "heal": true,
+                            "heal": false,
                             "node_type": 2,
                             "pickup_index": 107,
                             "major_location": false,
                             "connections": {
-                                "Door to Watch Station": [
-                                    []
-                                ],
                                 "Door to Sanctuary Temple": [
                                     []
                                 ]
