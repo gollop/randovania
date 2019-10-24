@@ -44788,7 +44788,7 @@
                         },
                         {
                             "name": "Door to Reactor Core",
-                            "heal": true,
+                            "heal": false,
                             "node_type": 1,
                             "dock_index": 0,
                             "connected_area_asset_id": 1248653973,
@@ -56478,7 +56478,7 @@
                         },
                         {
                             "name": "Door to Main Gyro Chamber",
-                            "heal": true,
+                            "heal": false,
                             "node_type": 1,
                             "dock_index": 0,
                             "connected_area_asset_id": 1932798548,
