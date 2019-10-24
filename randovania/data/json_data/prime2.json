@@ -45403,7 +45403,7 @@
                     "nodes": [
                         {
                             "name": "Door to Reactor Core",
-                            "heal": true,
+                            "heal": false,
                             "node_type": 1,
                             "dock_index": 0,
                             "connected_area_asset_id": 1248653973,
@@ -45425,7 +45425,7 @@
                         },
                         {
                             "name": "Pickup (Missile)",
-                            "heal": true,
+                            "heal": false,
                             "node_type": 2,
                             "pickup_index": 97,
                             "major_location": false,
