@@ -27392,7 +27392,7 @@
                     "nodes": [
                         {
                             "name": "Door to Transport to Temple Grounds",
-                            "heal": true,
+                            "heal": false,
                             "node_type": 1,
                             "dock_index": 0,
                             "connected_area_asset_id": 1868895730,
@@ -27407,7 +27407,7 @@
                         },
                         {
                             "name": "Door to Torvus Lagoon",
-                            "heal": true,
+                            "heal": false,
                             "node_type": 1,
                             "dock_index": 1,
                             "connected_area_asset_id": 2114709145,
