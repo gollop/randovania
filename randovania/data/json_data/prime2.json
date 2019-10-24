@@ -37703,7 +37703,7 @@
                     "nodes": [
                         {
                             "name": "Door to Hydrodynamo Station",
-                            "heal": true,
+                            "heal": false,
                             "node_type": 1,
                             "dock_index": 1,
                             "connected_area_asset_id": 3585454182,
@@ -37718,7 +37718,7 @@
                         },
                         {
                             "name": "Door to Catacombs",
-                            "heal": true,
+                            "heal": false,
                             "node_type": 1,
                             "dock_index": 0,
                             "connected_area_asset_id": 4217540043,
@@ -37737,6 +37737,12 @@
                                         {
                                             "requirement_type": 0,
                                             "requirement_index": 18,
+                                            "amount": 1,
+                                            "negate": false
+                                        },
+                                        {
+                                            "requirement_type": 6,
+                                            "requirement_index": 0,
                                             "amount": 1,
                                             "negate": false
                                         }
