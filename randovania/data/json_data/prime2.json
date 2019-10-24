@@ -5168,7 +5168,7 @@
                     "nodes": [
                         {
                             "name": "Door to Agon Transport Access",
-                            "heal": true,
+                            "heal": false,
                             "node_type": 1,
                             "dock_index": 0,
                             "connected_area_asset_id": 2744240555,
@@ -5177,14 +5177,7 @@
                             "dock_weakness_index": 0,
                             "connections": {
                                 "Pickup (Missile)": [
-                                    [
-                                        {
-                                            "requirement_type": 0,
-                                            "requirement_index": 0,
-                                            "amount": 1,
-                                            "negate": false
-                                        }
-                                    ]
+                                    []
                                 ],
                                 "Elevator to Agon Wastes - Transport to Temple Grounds": [
                                     [
@@ -5203,7 +5196,7 @@
                         },
                         {
                             "name": "Pickup (Missile)",
-                            "heal": true,
+                            "heal": false,
                             "node_type": 2,
                             "pickup_index": 5,
                             "major_location": false,
@@ -5215,7 +5208,7 @@
                         },
                         {
                             "name": "Elevator to Agon Wastes - Transport to Temple Grounds",
-                            "heal": true,
+                            "heal": false,
                             "node_type": 3,
                             "destination_world_asset_id": 1119434212,
                             "destination_area_asset_id": 1473133138,
@@ -5230,7 +5223,7 @@
                         },
                         {
                             "name": "Lore Scan",
-                            "heal": true,
+                            "heal": false,
                             "node_type": 6,
                             "string_asset_id": 971220893,
                             "lore_type": 0,
