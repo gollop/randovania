@@ -8086,7 +8086,7 @@
                     "nodes": [
                         {
                             "name": "Door to GFMC Compound",
-                            "heal": true,
+                            "heal": false,
                             "node_type": 1,
                             "dock_index": 1,
                             "connected_area_asset_id": 1467316949,
@@ -8175,7 +8175,7 @@
                         },
                         {
                             "name": "Door to Communication Area",
-                            "heal": true,
+                            "heal": false,
                             "node_type": 1,
                             "dock_index": 0,
                             "connected_area_asset_id": 1667141025,
@@ -8283,7 +8283,7 @@
                         },
                         {
                             "name": "Event - Trooper Security Station Gate",
-                            "heal": true,
+                            "heal": false,
                             "node_type": 4,
                             "event_index": 75,
                             "connections": {
