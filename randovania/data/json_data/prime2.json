@@ -44847,7 +44847,7 @@
                     "nodes": [
                         {
                             "name": "Door to Hall of Combat Mastery",
-                            "heal": true,
+                            "heal": false,
                             "node_type": 1,
                             "dock_index": 1,
                             "connected_area_asset_id": 1433528478,
@@ -44869,7 +44869,7 @@
                         },
                         {
                             "name": "Door to Reactor Core",
-                            "heal": true,
+                            "heal": false,
                             "node_type": 1,
                             "dock_index": 0,
                             "connected_area_asset_id": 1248653973,
@@ -44907,13 +44907,10 @@
                         },
                         {
                             "name": "Event - Minigyro Chamber Puzzle",
-                            "heal": true,
+                            "heal": false,
                             "node_type": 4,
                             "event_index": 46,
                             "connections": {
-                                "Door to Hall of Combat Mastery": [
-                                    []
-                                ],
                                 "Door to Reactor Core": [
                                     []
                                 ]
