@@ -8819,7 +8819,7 @@
                     "nodes": [
                         {
                             "name": "Door to Transport to Sanctuary Fortress",
-                            "heal": true,
+                            "heal": false,
                             "node_type": 1,
                             "dock_index": 0,
                             "connected_area_asset_id": 3455543403,
@@ -8828,24 +8828,6 @@
                             "dock_weakness_index": 0,
                             "connections": {
                                 "Door to GFMC Compound": [
-                                    []
-                                ],
-                                "Lore Scan": [
-                                    []
-                                ]
-                            }
-                        },
-                        {
-                            "name": "Door to GFMC Compound",
-                            "heal": true,
-                            "node_type": 1,
-                            "dock_index": 1,
-                            "connected_area_asset_id": 1467316949,
-                            "connected_dock_index": 1,
-                            "dock_type": 0,
-                            "dock_weakness_index": 0,
-                            "connections": {
-                                "Door to Transport to Sanctuary Fortress": [
                                     []
                                 ],
                                 "Pickup (Energy Tank)": [
@@ -8857,24 +8839,42 @@
                                             "negate": false
                                         }
                                     ]
+                                ],
+                                "Lore Scan": [
+                                    []
+                                ]
+                            }
+                        },
+                        {
+                            "name": "Door to GFMC Compound",
+                            "heal": false,
+                            "node_type": 1,
+                            "dock_index": 1,
+                            "connected_area_asset_id": 1467316949,
+                            "connected_dock_index": 1,
+                            "dock_type": 0,
+                            "dock_weakness_index": 0,
+                            "connections": {
+                                "Door to Transport to Sanctuary Fortress": [
+                                    []
                                 ]
                             }
                         },
                         {
                             "name": "Pickup (Energy Tank)",
-                            "heal": true,
+                            "heal": false,
                             "node_type": 2,
                             "pickup_index": 16,
                             "major_location": true,
                             "connections": {
-                                "Door to GFMC Compound": [
+                                "Door to Transport to Sanctuary Fortress": [
                                     []
                                 ]
                             }
                         },
                         {
                             "name": "Lore Scan",
-                            "heal": true,
+                            "heal": false,
                             "node_type": 6,
                             "string_asset_id": 3478732186,
                             "lore_type": 0,
