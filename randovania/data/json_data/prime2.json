@@ -56444,7 +56444,7 @@
                     "nodes": [
                         {
                             "name": "Door to Main Gyro Chamber",
-                            "heal": true,
+                            "heal": false,
                             "node_type": 1,
                             "dock_index": 1,
                             "connected_area_asset_id": 1932798548,
@@ -56459,7 +56459,7 @@
                         },
                         {
                             "name": "Door to Aerie Transport Station",
-                            "heal": true,
+                            "heal": false,
                             "node_type": 1,
                             "dock_index": 0,
                             "connected_area_asset_id": 3136899603,
