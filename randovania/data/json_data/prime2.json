@@ -46532,7 +46532,7 @@
                     "nodes": [
                         {
                             "name": "Door to Hall of Combat Mastery",
-                            "heal": true,
+                            "heal": false,
                             "node_type": 1,
                             "dock_index": 1,
                             "connected_area_asset_id": 1433528478,
@@ -46547,7 +46547,7 @@
                         },
                         {
                             "name": "Door to Transport to Agon Wastes",
-                            "heal": true,
+                            "heal": false,
                             "node_type": 1,
                             "dock_index": 0,
                             "connected_area_asset_id": 900285955,
