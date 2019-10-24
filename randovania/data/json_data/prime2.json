@@ -28146,7 +28146,7 @@
                         },
                         {
                             "name": "Door to Torvus Lagoon",
-                            "heal": true,
+                            "heal": false,
                             "node_type": 1,
                             "dock_index": 0,
                             "connected_area_asset_id": 2114709145,
@@ -37778,7 +37778,7 @@
                         },
                         {
                             "name": "Door to Hydrodynamo Station",
-                            "heal": true,
+                            "heal": false,
                             "node_type": 1,
                             "dock_index": 0,
                             "connected_area_asset_id": 3585454182,
