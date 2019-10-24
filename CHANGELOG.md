@@ -8,11 +8,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+-   *Major* - Added: The "Standable Terrain" and "Terminal Fall Abuse" tricks.
+
 -   Changed: Loading a new game will automatically clear any existing one.
 
 -   Changed: Minimal Checking now also checks of Dark Agon Temple Keys and Dark Torvus Temple Keys.
-
--   *Major* - Added: The "Standable Terrain" trick in places that require standing on non-obviously standable spots.
 
 -   Added: The "Heals?" checkbox in the database editor now works.
 

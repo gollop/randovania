@@ -916,6 +916,11 @@
                 "index": 27,
                 "long_name": "Standable Terrain",
                 "short_name": "StandableTerrain"
+            },
+            {
+                "index": 28,
+                "long_name": "Terminal Fall Abuse",
+                "short_name": "TerminalFall"
             }
         ],
         "damage": [
