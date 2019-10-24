@@ -3477,7 +3477,7 @@
                     "nodes": [
                         {
                             "name": "Door to Command Chamber",
-                            "heal": true,
+                            "heal": false,
                             "node_type": 1,
                             "dock_index": 1,
                             "connected_area_asset_id": 3592880139,
@@ -3583,7 +3583,7 @@
                         },
                         {
                             "name": "Door to Hive Chamber A",
-                            "heal": true,
+                            "heal": false,
                             "node_type": 1,
                             "dock_index": 0,
                             "connected_area_asset_id": 1353937573,
@@ -3608,13 +3608,10 @@
                         },
                         {
                             "name": "Event - Hive Tunnel Web",
-                            "heal": true,
+                            "heal": false,
                             "node_type": 4,
                             "event_index": 2,
                             "connections": {
-                                "Door to Command Chamber": [
-                                    []
-                                ],
                                 "Door to Hive Chamber A": [
                                     []
                                 ]
