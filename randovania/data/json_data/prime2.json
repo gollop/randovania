@@ -56515,7 +56515,7 @@
                     "nodes": [
                         {
                             "name": "Door to Sanctuary Temple",
-                            "heal": true,
+                            "heal": false,
                             "node_type": 1,
                             "dock_index": 0,
                             "connected_area_asset_id": 1815493844,
@@ -56543,7 +56543,7 @@
                         },
                         {
                             "name": "Door to Sanctuary Energy Controller",
-                            "heal": true,
+                            "heal": false,
                             "node_type": 1,
                             "dock_index": 1,
                             "connected_area_asset_id": 218311274,
