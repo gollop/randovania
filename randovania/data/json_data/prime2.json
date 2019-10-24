@@ -44151,7 +44151,7 @@
                     "nodes": [
                         {
                             "name": "Door to Reactor Access",
-                            "heal": true,
+                            "heal": false,
                             "node_type": 1,
                             "dock_index": 0,
                             "connected_area_asset_id": 3060184661,
@@ -44166,7 +44166,7 @@
                         },
                         {
                             "name": "Door to Sanctuary Entrance",
-                            "heal": true,
+                            "heal": false,
                             "node_type": 1,
                             "dock_index": 1,
                             "connected_area_asset_id": 1193696267,
