@@ -774,6 +774,11 @@
                 "index": 93,
                 "long_name": "Dark Samus 3 and 4",
                 "short_name": "Event93"
+            },
+            {
+                "index": 94,
+                "long_name": "Windchamber Gateway Pickup",
+                "short_name": "Event94"
             }
         ],
         "tricks": [
@@ -4930,7 +4935,7 @@
                     "nodes": [
                         {
                             "name": "Door to Path of Eyes",
-                            "heal": true,
+                            "heal": false,
                             "node_type": 1,
                             "dock_index": 1,
                             "connected_area_asset_id": 3997643454,
@@ -4946,27 +4951,13 @@
                                             "amount": 1,
                                             "negate": false
                                         }
-                                    ],
-                                    [
-                                        {
-                                            "requirement_type": 0,
-                                            "requirement_index": 24,
-                                            "amount": 1,
-                                            "negate": false
-                                        },
-                                        {
-                                            "requirement_type": 0,
-                                            "requirement_index": 27,
-                                            "amount": 1,
-                                            "negate": false
-                                        }
                                     ]
                                 ]
                             }
                         },
                         {
                             "name": "Door to Grand Windchamber",
-                            "heal": true,
+                            "heal": false,
                             "node_type": 1,
                             "dock_index": 0,
                             "connected_area_asset_id": 2909835645,
@@ -4978,12 +4969,84 @@
                                     [
                                         {
                                             "requirement_type": 0,
+                                            "requirement_index": 9,
+                                            "amount": 1,
+                                            "negate": false
+                                        },
+                                        {
+                                            "requirement_type": 0,
+                                            "requirement_index": 24,
+                                            "amount": 1,
+                                            "negate": false
+                                        },
+                                        {
+                                            "requirement_type": 1,
+                                            "requirement_index": 94,
+                                            "amount": 1,
+                                            "negate": true
+                                        },
+                                        {
+                                            "requirement_type": 2,
+                                            "requirement_index": 0,
+                                            "amount": 5,
+                                            "negate": false
+                                        },
+                                        {
+                                            "requirement_type": 2,
+                                            "requirement_index": 28,
+                                            "amount": 5,
+                                            "negate": false
+                                        },
+                                        {
+                                            "requirement_type": 6,
+                                            "requirement_index": 0,
+                                            "amount": 5,
+                                            "negate": false
+                                        }
+                                    ],
+                                    [
+                                        {
+                                            "requirement_type": 0,
                                             "requirement_index": 15,
+                                            "amount": 1,
+                                            "negate": false
+                                        }
+                                    ]
+                                ],
+                                "Event - Windchamber Gateway Pickup": [
+                                    [
+                                        {
+                                            "requirement_type": 0,
+                                            "requirement_index": 9,
+                                            "amount": 1,
+                                            "negate": false
+                                        },
+                                        {
+                                            "requirement_type": 0,
+                                            "requirement_index": 24,
+                                            "amount": 1,
+                                            "negate": false
+                                        },
+                                        {
+                                            "requirement_type": 2,
+                                            "requirement_index": 0,
+                                            "amount": 1,
+                                            "negate": false
+                                        },
+                                        {
+                                            "requirement_type": 6,
+                                            "requirement_index": 0,
                                             "amount": 1,
                                             "negate": false
                                         }
                                     ],
                                     [
+                                        {
+                                            "requirement_type": 0,
+                                            "requirement_index": 15,
+                                            "amount": 1,
+                                            "negate": false
+                                        },
                                         {
                                             "requirement_type": 0,
                                             "requirement_index": 24,
@@ -4996,9 +5059,33 @@
                                             "amount": 1,
                                             "negate": false
                                         }
-                                    ]
-                                ],
-                                "Pickup (Energy Tank)": [
+                                    ],
+                                    [
+                                        {
+                                            "requirement_type": 0,
+                                            "requirement_index": 15,
+                                            "amount": 1,
+                                            "negate": false
+                                        },
+                                        {
+                                            "requirement_type": 0,
+                                            "requirement_index": 24,
+                                            "amount": 1,
+                                            "negate": false
+                                        },
+                                        {
+                                            "requirement_type": 2,
+                                            "requirement_index": 5,
+                                            "amount": 2,
+                                            "negate": false
+                                        },
+                                        {
+                                            "requirement_type": 6,
+                                            "requirement_index": 0,
+                                            "amount": 2,
+                                            "negate": false
+                                        }
+                                    ],
                                     [
                                         {
                                             "requirement_type": 0,
@@ -5015,23 +5102,15 @@
                                             "negate": false
                                         },
                                         {
-                                            "requirement_type": 0,
+                                            "requirement_type": 2,
                                             "requirement_index": 27,
-                                            "amount": 1,
-                                            "negate": false
-                                        }
-                                    ],
-                                    [
-                                        {
-                                            "requirement_type": 0,
-                                            "requirement_index": 24,
                                             "amount": 1,
                                             "negate": false
                                         },
                                         {
                                             "requirement_type": 6,
                                             "requirement_index": 0,
-                                            "amount": 2,
+                                            "amount": 1,
                                             "negate": false
                                         }
                                     ]
@@ -5039,8 +5118,19 @@
                             }
                         },
                         {
+                            "name": "Event - Windchamber Gateway Pickup",
+                            "heal": false,
+                            "node_type": 4,
+                            "event_index": 94,
+                            "connections": {
+                                "Pickup (Energy Tank)": [
+                                    []
+                                ]
+                            }
+                        },
+                        {
                             "name": "Pickup (Energy Tank)",
-                            "heal": true,
+                            "heal": false,
                             "node_type": 2,
                             "pickup_index": 4,
                             "major_location": true,
@@ -5049,12 +5139,36 @@
                                     [
                                         {
                                             "requirement_type": 0,
-                                            "requirement_index": 23,
+                                            "requirement_index": 9,
+                                            "amount": 1,
+                                            "negate": false
+                                        },
+                                        {
+                                            "requirement_type": 0,
+                                            "requirement_index": 24,
+                                            "amount": 1,
+                                            "negate": false
+                                        },
+                                        {
+                                            "requirement_type": 2,
+                                            "requirement_index": 0,
+                                            "amount": 1,
+                                            "negate": false
+                                        },
+                                        {
+                                            "requirement_type": 6,
+                                            "requirement_index": 0,
                                             "amount": 1,
                                             "negate": false
                                         }
                                     ],
                                     [
+                                        {
+                                            "requirement_type": 0,
+                                            "requirement_index": 15,
+                                            "amount": 1,
+                                            "negate": false
+                                        },
                                         {
                                             "requirement_type": 0,
                                             "requirement_index": 24,
@@ -5071,14 +5185,54 @@
                                     [
                                         {
                                             "requirement_type": 0,
+                                            "requirement_index": 15,
+                                            "amount": 1,
+                                            "negate": false
+                                        },
+                                        {
+                                            "requirement_type": 0,
                                             "requirement_index": 24,
+                                            "amount": 1,
+                                            "negate": false
+                                        },
+                                        {
+                                            "requirement_type": 2,
+                                            "requirement_index": 5,
                                             "amount": 1,
                                             "negate": false
                                         },
                                         {
                                             "requirement_type": 6,
                                             "requirement_index": 0,
-                                            "amount": 2,
+                                            "amount": 1,
+                                            "negate": false
+                                        }
+                                    ],
+                                    [
+                                        {
+                                            "requirement_type": 0,
+                                            "requirement_index": 23,
+                                            "amount": 1,
+                                            "negate": false
+                                        }
+                                    ],
+                                    [
+                                        {
+                                            "requirement_type": 0,
+                                            "requirement_index": 24,
+                                            "amount": 1,
+                                            "negate": false
+                                        },
+                                        {
+                                            "requirement_type": 2,
+                                            "requirement_index": 28,
+                                            "amount": 1,
+                                            "negate": false
+                                        },
+                                        {
+                                            "requirement_type": 6,
+                                            "requirement_index": 0,
+                                            "amount": 1,
                                             "negate": false
                                         }
                                     ]
