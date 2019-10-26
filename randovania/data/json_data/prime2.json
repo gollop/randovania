@@ -5900,7 +5900,7 @@
                     "nodes": [
                         {
                             "name": "Door to Windchamber Tunnel",
-                            "heal": true,
+                            "heal": false,
                             "node_type": 1,
                             "dock_index": 0,
                             "connected_area_asset_id": 2590194623,
@@ -5925,13 +5925,71 @@
                                         {
                                             "requirement_type": 2,
                                             "requirement_index": 0,
-                                            "amount": 3,
+                                            "amount": 2,
                                             "negate": false
                                         },
                                         {
                                             "requirement_type": 6,
                                             "requirement_index": 0,
-                                            "amount": 3,
+                                            "amount": 2,
+                                            "negate": false
+                                        }
+                                    ],
+                                    [
+                                        {
+                                            "requirement_type": 0,
+                                            "requirement_index": 15,
+                                            "amount": 1,
+                                            "negate": false
+                                        },
+                                        {
+                                            "requirement_type": 0,
+                                            "requirement_index": 24,
+                                            "amount": 1,
+                                            "negate": false
+                                        },
+                                        {
+                                            "requirement_type": 0,
+                                            "requirement_index": 27,
+                                            "amount": 1,
+                                            "negate": false
+                                        }
+                                    ],
+                                    [
+                                        {
+                                            "requirement_type": 0,
+                                            "requirement_index": 15,
+                                            "amount": 1,
+                                            "negate": false
+                                        },
+                                        {
+                                            "requirement_type": 0,
+                                            "requirement_index": 24,
+                                            "amount": 1,
+                                            "negate": false
+                                        },
+                                        {
+                                            "requirement_type": 2,
+                                            "requirement_index": 5,
+                                            "amount": 2,
+                                            "negate": false
+                                        },
+                                        {
+                                            "requirement_type": 2,
+                                            "requirement_index": 28,
+                                            "amount": 2,
+                                            "negate": false
+                                        },
+                                        {
+                                            "requirement_type": 3,
+                                            "requirement_index": 1,
+                                            "amount": 10,
+                                            "negate": false
+                                        },
+                                        {
+                                            "requirement_type": 6,
+                                            "requirement_index": 0,
+                                            "amount": 2,
                                             "negate": false
                                         }
                                     ],
@@ -5957,8 +6015,14 @@
                                             "negate": false
                                         },
                                         {
-                                            "requirement_type": 0,
-                                            "requirement_index": 27,
+                                            "requirement_type": 1,
+                                            "requirement_index": 6,
+                                            "amount": 1,
+                                            "negate": false
+                                        },
+                                        {
+                                            "requirement_type": 6,
+                                            "requirement_index": 0,
                                             "amount": 1,
                                             "negate": false
                                         }
@@ -5993,13 +6057,13 @@
                                         {
                                             "requirement_type": 2,
                                             "requirement_index": 0,
-                                            "amount": 3,
+                                            "amount": 1,
                                             "negate": false
                                         },
                                         {
                                             "requirement_type": 6,
                                             "requirement_index": 0,
-                                            "amount": 3,
+                                            "amount": 1,
                                             "negate": false
                                         }
                                     ],
@@ -6035,6 +6099,12 @@
                                             "negate": false
                                         },
                                         {
+                                            "requirement_type": 2,
+                                            "requirement_index": 27,
+                                            "amount": 3,
+                                            "negate": false
+                                        },
+                                        {
                                             "requirement_type": 6,
                                             "requirement_index": 0,
                                             "amount": 3,
@@ -6060,13 +6130,39 @@
                                             "amount": 1,
                                             "negate": false
                                         }
+                                    ],
+                                    [
+                                        {
+                                            "requirement_type": 0,
+                                            "requirement_index": 15,
+                                            "amount": 1,
+                                            "negate": false
+                                        },
+                                        {
+                                            "requirement_type": 0,
+                                            "requirement_index": 24,
+                                            "amount": 1,
+                                            "negate": false
+                                        },
+                                        {
+                                            "requirement_type": 0,
+                                            "requirement_index": 27,
+                                            "amount": 1,
+                                            "negate": false
+                                        },
+                                        {
+                                            "requirement_type": 1,
+                                            "requirement_index": 6,
+                                            "amount": 1,
+                                            "negate": false
+                                        }
                                     ]
                                 ]
                             }
                         },
                         {
                             "name": "Portal to Ing Windchamber",
-                            "heal": true,
+                            "heal": false,
                             "node_type": 1,
                             "dock_index": 2,
                             "connected_area_asset_id": 3455003633,
@@ -6081,7 +6177,7 @@
                         },
                         {
                             "name": "Door to Windchamber Gateway",
-                            "heal": true,
+                            "heal": false,
                             "node_type": 1,
                             "dock_index": 1,
                             "connected_area_asset_id": 1966181726,
@@ -6104,15 +6200,67 @@
                                             "negate": false
                                         },
                                         {
+                                            "requirement_type": 1,
+                                            "requirement_index": 6,
+                                            "amount": 1,
+                                            "negate": false
+                                        },
+                                        {
                                             "requirement_type": 2,
                                             "requirement_index": 0,
-                                            "amount": 3,
+                                            "amount": 1,
                                             "negate": false
                                         },
                                         {
                                             "requirement_type": 6,
                                             "requirement_index": 0,
-                                            "amount": 3,
+                                            "amount": 1,
+                                            "negate": false
+                                        }
+                                    ],
+                                    [
+                                        {
+                                            "requirement_type": 0,
+                                            "requirement_index": 9,
+                                            "amount": 1,
+                                            "negate": false
+                                        },
+                                        {
+                                            "requirement_type": 0,
+                                            "requirement_index": 24,
+                                            "amount": 1,
+                                            "negate": false
+                                        },
+                                        {
+                                            "requirement_type": 2,
+                                            "requirement_index": 0,
+                                            "amount": 2,
+                                            "negate": false
+                                        },
+                                        {
+                                            "requirement_type": 6,
+                                            "requirement_index": 0,
+                                            "amount": 2,
+                                            "negate": false
+                                        }
+                                    ],
+                                    [
+                                        {
+                                            "requirement_type": 0,
+                                            "requirement_index": 15,
+                                            "amount": 1,
+                                            "negate": false
+                                        },
+                                        {
+                                            "requirement_type": 0,
+                                            "requirement_index": 24,
+                                            "amount": 1,
+                                            "negate": false
+                                        },
+                                        {
+                                            "requirement_type": 0,
+                                            "requirement_index": 27,
+                                            "amount": 1,
                                             "negate": false
                                         }
                                     ],
@@ -6126,20 +6274,6 @@
                                         {
                                             "requirement_type": 1,
                                             "requirement_index": 6,
-                                            "amount": 1,
-                                            "negate": false
-                                        }
-                                    ],
-                                    [
-                                        {
-                                            "requirement_type": 0,
-                                            "requirement_index": 24,
-                                            "amount": 1,
-                                            "negate": false
-                                        },
-                                        {
-                                            "requirement_type": 0,
-                                            "requirement_index": 27,
                                             "amount": 1,
                                             "negate": false
                                         }
@@ -6177,51 +6311,13 @@
                                         {
                                             "requirement_type": 2,
                                             "requirement_index": 0,
-                                            "amount": 3,
+                                            "amount": 1,
                                             "negate": false
                                         },
                                         {
                                             "requirement_type": 6,
                                             "requirement_index": 0,
-                                            "amount": 3,
-                                            "negate": false
-                                        }
-                                    ],
-                                    [
-                                        {
-                                            "requirement_type": 0,
-                                            "requirement_index": 15,
                                             "amount": 1,
-                                            "negate": false
-                                        },
-                                        {
-                                            "requirement_type": 0,
-                                            "requirement_index": 18,
-                                            "amount": 1,
-                                            "negate": false
-                                        },
-                                        {
-                                            "requirement_type": 0,
-                                            "requirement_index": 24,
-                                            "amount": 1,
-                                            "negate": false
-                                        },
-                                        {
-                                            "requirement_type": 0,
-                                            "requirement_index": 27,
-                                            "amount": 1,
-                                            "negate": false
-                                        },
-                                        {
-                                            "requirement_type": 2,
-                                            "requirement_index": 4,
-                                            "amount": 3,
-                                            "negate": false
-                                        },
-                                        {
-                                            "requirement_type": 6,
-                                            "requirement_index": 0,
-                                            "amount": 3,
                                             "negate": false
                                         }
                                     ],
@@ -6259,8 +6355,34 @@
                                             "negate": false
                                         },
                                         {
+                                            "requirement_type": 0,
+                                            "requirement_index": 27,
+                                            "amount": 1,
+                                            "negate": false
+                                        }
+                                    ],
+                                    [
+                                        {
+                                            "requirement_type": 0,
+                                            "requirement_index": 15,
+                                            "amount": 1,
+                                            "negate": false
+                                        },
+                                        {
+                                            "requirement_type": 0,
+                                            "requirement_index": 24,
+                                            "amount": 1,
+                                            "negate": false
+                                        },
+                                        {
                                             "requirement_type": 1,
                                             "requirement_index": 6,
+                                            "amount": 1,
+                                            "negate": false
+                                        },
+                                        {
+                                            "requirement_type": 2,
+                                            "requirement_index": 28,
                                             "amount": 1,
                                             "negate": false
                                         },
@@ -6282,12 +6404,20 @@
                         },
                         {
                             "name": "Pickup (Sunburst)",
-                            "heal": true,
+                            "heal": false,
                             "node_type": 2,
                             "pickup_index": 7,
                             "major_location": true,
                             "connections": {
                                 "Door to Windchamber Tunnel": [
+                                    [
+                                        {
+                                            "requirement_type": 0,
+                                            "requirement_index": 24,
+                                            "amount": 1,
+                                            "negate": false
+                                        }
+                                    ],
                                     [
                                         {
                                             "requirement_type": 1,
