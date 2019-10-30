@@ -779,6 +779,11 @@
                 "index": 94,
                 "long_name": "Windchamber Gateway Pickup",
                 "short_name": "Event94"
+            },
+            {
+                "index": 95,
+                "long_name": "Sanctuary Temple Access Quad",
+                "short_name": "Event95"
             }
         ],
         "tricks": [
@@ -56737,7 +56742,7 @@
                     "nodes": [
                         {
                             "name": "Door to Main Gyro Chamber",
-                            "heal": true,
+                            "heal": false,
                             "node_type": 1,
                             "dock_index": 1,
                             "connected_area_asset_id": 1932798548,
@@ -56745,6 +56750,16 @@
                             "dock_type": 0,
                             "dock_weakness_index": 0,
                             "connections": {
+                                "Door to Sanctuary Temple": [
+                                    [
+                                        {
+                                            "requirement_type": 1,
+                                            "requirement_index": 95,
+                                            "amount": 1,
+                                            "negate": false
+                                        }
+                                    ]
+                                ],
                                 "Pickup (Missile)": [
                                     [
                                         {
@@ -56774,13 +56789,13 @@
                                         {
                                             "requirement_type": 2,
                                             "requirement_index": 4,
-                                            "amount": 2,
+                                            "amount": 1,
                                             "negate": false
                                         },
                                         {
                                             "requirement_type": 6,
                                             "requirement_index": 0,
-                                            "amount": 2,
+                                            "amount": 1,
                                             "negate": false
                                         }
                                     ],
@@ -56806,18 +56821,18 @@
                                         {
                                             "requirement_type": 2,
                                             "requirement_index": 4,
-                                            "amount": 3,
+                                            "amount": 2,
                                             "negate": false
                                         },
                                         {
                                             "requirement_type": 6,
                                             "requirement_index": 0,
-                                            "amount": 3,
+                                            "amount": 2,
                                             "negate": false
                                         }
                                     ]
                                 ],
-                                "Room Center": [
+                                "Event - Sanctuary Temple Access Quad": [
                                     [
                                         {
                                             "requirement_type": 0,
@@ -56897,7 +56912,7 @@
                         },
                         {
                             "name": "Door to Sanctuary Temple",
-                            "heal": true,
+                            "heal": false,
                             "node_type": 1,
                             "dock_index": 0,
                             "connected_area_asset_id": 1815493844,
@@ -56905,7 +56920,183 @@
                             "dock_type": 0,
                             "dock_weakness_index": 0,
                             "connections": {
-                                "Room Center": [
+                                "Door to Main Gyro Chamber": [
+                                    [
+                                        {
+                                            "requirement_type": 0,
+                                            "requirement_index": 10,
+                                            "amount": 1,
+                                            "negate": false
+                                        },
+                                        {
+                                            "requirement_type": 0,
+                                            "requirement_index": 15,
+                                            "amount": 1,
+                                            "negate": false
+                                        },
+                                        {
+                                            "requirement_type": 0,
+                                            "requirement_index": 26,
+                                            "amount": 1,
+                                            "negate": false
+                                        },
+                                        {
+                                            "requirement_type": 0,
+                                            "requirement_index": 44,
+                                            "amount": 4,
+                                            "negate": false
+                                        },
+                                        {
+                                            "requirement_type": 1,
+                                            "requirement_index": 95,
+                                            "amount": 1,
+                                            "negate": false
+                                        }
+                                    ],
+                                    [
+                                        {
+                                            "requirement_type": 0,
+                                            "requirement_index": 15,
+                                            "amount": 1,
+                                            "negate": false
+                                        },
+                                        {
+                                            "requirement_type": 0,
+                                            "requirement_index": 18,
+                                            "amount": 1,
+                                            "negate": false
+                                        },
+                                        {
+                                            "requirement_type": 0,
+                                            "requirement_index": 24,
+                                            "amount": 1,
+                                            "negate": false
+                                        },
+                                        {
+                                            "requirement_type": 1,
+                                            "requirement_index": 95,
+                                            "amount": 1,
+                                            "negate": false
+                                        },
+                                        {
+                                            "requirement_type": 2,
+                                            "requirement_index": 4,
+                                            "amount": 2,
+                                            "negate": false
+                                        },
+                                        {
+                                            "requirement_type": 6,
+                                            "requirement_index": 0,
+                                            "amount": 2,
+                                            "negate": false
+                                        }
+                                    ],
+                                    [
+                                        {
+                                            "requirement_type": 0,
+                                            "requirement_index": 15,
+                                            "amount": 1,
+                                            "negate": false
+                                        },
+                                        {
+                                            "requirement_type": 0,
+                                            "requirement_index": 24,
+                                            "amount": 1,
+                                            "negate": false
+                                        },
+                                        {
+                                            "requirement_type": 0,
+                                            "requirement_index": 27,
+                                            "amount": 1,
+                                            "negate": false
+                                        },
+                                        {
+                                            "requirement_type": 1,
+                                            "requirement_index": 95,
+                                            "amount": 1,
+                                            "negate": false
+                                        },
+                                        {
+                                            "requirement_type": 2,
+                                            "requirement_index": 2,
+                                            "amount": 2,
+                                            "negate": false
+                                        },
+                                        {
+                                            "requirement_type": 6,
+                                            "requirement_index": 0,
+                                            "amount": 2,
+                                            "negate": false
+                                        }
+                                    ],
+                                    [
+                                        {
+                                            "requirement_type": 0,
+                                            "requirement_index": 15,
+                                            "amount": 1,
+                                            "negate": false
+                                        },
+                                        {
+                                            "requirement_type": 0,
+                                            "requirement_index": 27,
+                                            "amount": 1,
+                                            "negate": false
+                                        },
+                                        {
+                                            "requirement_type": 1,
+                                            "requirement_index": 95,
+                                            "amount": 1,
+                                            "negate": false
+                                        },
+                                        {
+                                            "requirement_type": 2,
+                                            "requirement_index": 10,
+                                            "amount": 1,
+                                            "negate": false
+                                        },
+                                        {
+                                            "requirement_type": 6,
+                                            "requirement_index": 0,
+                                            "amount": 1,
+                                            "negate": false
+                                        }
+                                    ]
+                                ],
+                                "Pickup (Missile)": [
+                                    [
+                                        {
+                                            "requirement_type": 0,
+                                            "requirement_index": 10,
+                                            "amount": 1,
+                                            "negate": false
+                                        },
+                                        {
+                                            "requirement_type": 0,
+                                            "requirement_index": 11,
+                                            "amount": 1,
+                                            "negate": false
+                                        },
+                                        {
+                                            "requirement_type": 0,
+                                            "requirement_index": 15,
+                                            "amount": 1,
+                                            "negate": false
+                                        },
+                                        {
+                                            "requirement_type": 0,
+                                            "requirement_index": 26,
+                                            "amount": 1,
+                                            "negate": false
+                                        },
+                                        {
+                                            "requirement_type": 0,
+                                            "requirement_index": 44,
+                                            "amount": 4,
+                                            "negate": false
+                                        }
+                                    ]
+                                ],
+                                "Event - Sanctuary Temple Access Quad": [
                                     [
                                         {
                                             "requirement_type": 0,
@@ -56985,12 +57176,34 @@
                         },
                         {
                             "name": "Pickup (Missile)",
-                            "heal": true,
+                            "heal": false,
                             "node_type": 2,
                             "pickup_index": 113,
                             "major_location": false,
                             "connections": {
-                                "Room Center": [
+                                "Door to Sanctuary Temple": [
+                                    [
+                                        {
+                                            "requirement_type": 0,
+                                            "requirement_index": 15,
+                                            "amount": 1,
+                                            "negate": false
+                                        },
+                                        {
+                                            "requirement_type": 0,
+                                            "requirement_index": 16,
+                                            "amount": 1,
+                                            "negate": false
+                                        },
+                                        {
+                                            "requirement_type": 1,
+                                            "requirement_index": 95,
+                                            "amount": 1,
+                                            "negate": false
+                                        }
+                                    ]
+                                ],
+                                "Event - Sanctuary Temple Access Quad": [
                                     [
                                         {
                                             "requirement_type": 0,
@@ -57009,152 +57222,13 @@
                             }
                         },
                         {
-                            "name": "Room Center",
-                            "heal": true,
-                            "node_type": 0,
+                            "name": "Event - Sanctuary Temple Access Quad",
+                            "heal": false,
+                            "node_type": 4,
+                            "event_index": 95,
                             "connections": {
-                                "Door to Main Gyro Chamber": [
-                                    [
-                                        {
-                                            "requirement_type": 0,
-                                            "requirement_index": 10,
-                                            "amount": 1,
-                                            "negate": false
-                                        },
-                                        {
-                                            "requirement_type": 0,
-                                            "requirement_index": 15,
-                                            "amount": 1,
-                                            "negate": false
-                                        },
-                                        {
-                                            "requirement_type": 0,
-                                            "requirement_index": 26,
-                                            "amount": 1,
-                                            "negate": false
-                                        },
-                                        {
-                                            "requirement_type": 0,
-                                            "requirement_index": 44,
-                                            "amount": 4,
-                                            "negate": false
-                                        }
-                                    ],
-                                    [
-                                        {
-                                            "requirement_type": 0,
-                                            "requirement_index": 15,
-                                            "amount": 1,
-                                            "negate": false
-                                        },
-                                        {
-                                            "requirement_type": 0,
-                                            "requirement_index": 18,
-                                            "amount": 1,
-                                            "negate": false
-                                        },
-                                        {
-                                            "requirement_type": 0,
-                                            "requirement_index": 24,
-                                            "amount": 1,
-                                            "negate": false
-                                        },
-                                        {
-                                            "requirement_type": 2,
-                                            "requirement_index": 4,
-                                            "amount": 3,
-                                            "negate": false
-                                        },
-                                        {
-                                            "requirement_type": 6,
-                                            "requirement_index": 0,
-                                            "amount": 3,
-                                            "negate": false
-                                        }
-                                    ],
-                                    [
-                                        {
-                                            "requirement_type": 0,
-                                            "requirement_index": 24,
-                                            "amount": 1,
-                                            "negate": false
-                                        },
-                                        {
-                                            "requirement_type": 0,
-                                            "requirement_index": 27,
-                                            "amount": 1,
-                                            "negate": false
-                                        },
-                                        {
-                                            "requirement_type": 2,
-                                            "requirement_index": 2,
-                                            "amount": 2,
-                                            "negate": false
-                                        },
-                                        {
-                                            "requirement_type": 6,
-                                            "requirement_index": 0,
-                                            "amount": 2,
-                                            "negate": false
-                                        }
-                                    ],
-                                    [
-                                        {
-                                            "requirement_type": 0,
-                                            "requirement_index": 27,
-                                            "amount": 1,
-                                            "negate": false
-                                        },
-                                        {
-                                            "requirement_type": 2,
-                                            "requirement_index": 10,
-                                            "amount": 2,
-                                            "negate": false
-                                        },
-                                        {
-                                            "requirement_type": 6,
-                                            "requirement_index": 0,
-                                            "amount": 2,
-                                            "negate": false
-                                        }
-                                    ]
-                                ],
                                 "Door to Sanctuary Temple": [
                                     []
-                                ],
-                                "Pickup (Missile)": [
-                                    [
-                                        {
-                                            "requirement_type": 0,
-                                            "requirement_index": 10,
-                                            "amount": 1,
-                                            "negate": false
-                                        },
-                                        {
-                                            "requirement_type": 0,
-                                            "requirement_index": 11,
-                                            "amount": 1,
-                                            "negate": false
-                                        },
-                                        {
-                                            "requirement_type": 0,
-                                            "requirement_index": 15,
-                                            "amount": 1,
-                                            "negate": false
-                                        },
-                                        {
-                                            "requirement_type": 0,
-                                            "requirement_index": 26,
-                                            "amount": 1,
-                                            "negate": false
-                                        },
-                                        {
-                                            "requirement_type": 0,
-                                            "requirement_index": 44,
-                                            "amount": 4,
-                                            "negate": false
-                                        }
-                                    ]
                                 ]
                             }
                         }
