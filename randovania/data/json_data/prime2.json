@@ -32168,7 +32168,7 @@
                     "nodes": [
                         {
                             "name": "Door to Torvus Grove",
-                            "heal": true,
+                            "heal": false,
                             "node_type": 1,
                             "dock_index": 0,
                             "connected_area_asset_id": 3896048152,
@@ -32183,7 +32183,7 @@
                         },
                         {
                             "name": "Door to Forgotten Bridge",
-                            "heal": true,
+                            "heal": false,
                             "node_type": 1,
                             "dock_index": 1,
                             "connected_area_asset_id": 165596961,
