@@ -43447,7 +43447,7 @@
                     "nodes": [
                         {
                             "name": "Door to Main Hydrochamber",
-                            "heal": true,
+                            "heal": false,
                             "node_type": 1,
                             "dock_index": 0,
                             "connected_area_asset_id": 3468345533,
@@ -43456,13 +43456,20 @@
                             "dock_weakness_index": 0,
                             "connections": {
                                 "Event - Hydrochamber Storage Item": [
-                                    []
+                                    [
+                                        {
+                                            "requirement_type": 1,
+                                            "requirement_index": 42,
+                                            "amount": 1,
+                                            "negate": true
+                                        }
+                                    ]
                                 ]
                             }
                         },
                         {
                             "name": "Pickup (Gravity Boost)",
-                            "heal": true,
+                            "heal": false,
                             "node_type": 2,
                             "pickup_index": 92,
                             "major_location": true,
@@ -43474,7 +43481,7 @@
                         },
                         {
                             "name": "Event - Hydrochamber Storage Item",
-                            "heal": true,
+                            "heal": false,
                             "node_type": 4,
                             "event_index": 42,
                             "connections": {
