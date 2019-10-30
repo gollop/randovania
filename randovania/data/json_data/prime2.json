@@ -13690,7 +13690,7 @@
                     "nodes": [
                         {
                             "name": "Door to Mining Station A",
-                            "heal": true,
+                            "heal": false,
                             "node_type": 1,
                             "dock_index": 0,
                             "connected_area_asset_id": 3820941951,
@@ -13712,7 +13712,7 @@
                         },
                         {
                             "name": "Door to Mining Plaza",
-                            "heal": true,
+                            "heal": false,
                             "node_type": 1,
                             "dock_index": 1,
                             "connected_area_asset_id": 1115663770,
@@ -13764,7 +13764,7 @@
                         },
                         {
                             "name": "Pickup (Energy Tank)",
-                            "heal": true,
+                            "heal": false,
                             "node_type": 2,
                             "pickup_index": 26,
                             "major_location": true,
