@@ -35137,7 +35137,7 @@
                     "nodes": [
                         {
                             "name": "Portal to Gloom Vista",
-                            "heal": true,
+                            "heal": false,
                             "node_type": 1,
                             "dock_index": 1,
                             "connected_area_asset_id": 2504558791,
@@ -35147,28 +35147,12 @@
                             "connections": {
                                 "Door to Torvus Grove": [
                                     []
-                                ],
-                                "Pickup (Energy Tank)": [
-                                    [
-                                        {
-                                            "requirement_type": 0,
-                                            "requirement_index": 24,
-                                            "amount": 1,
-                                            "negate": false
-                                        },
-                                        {
-                                            "requirement_type": 0,
-                                            "requirement_index": 27,
-                                            "amount": 1,
-                                            "negate": false
-                                        }
-                                    ]
                                 ]
                             }
                         },
                         {
                             "name": "Door to Torvus Grove",
-                            "heal": true,
+                            "heal": false,
                             "node_type": 1,
                             "dock_index": 0,
                             "connected_area_asset_id": 3896048152,
@@ -35181,6 +35165,12 @@
                                 ],
                                 "Pickup (Energy Tank)": [
                                     [
+                                        {
+                                            "requirement_type": 0,
+                                            "requirement_index": 15,
+                                            "amount": 1,
+                                            "negate": false
+                                        },
                                         {
                                             "requirement_type": 0,
                                             "requirement_index": 24,
@@ -35199,16 +35189,40 @@
                         },
                         {
                             "name": "Pickup (Energy Tank)",
-                            "heal": true,
+                            "heal": false,
                             "node_type": 2,
                             "pickup_index": 78,
                             "major_location": true,
                             "connections": {
-                                "Portal to Gloom Vista": [
-                                    []
-                                ],
                                 "Door to Torvus Grove": [
-                                    []
+                                    [
+                                        {
+                                            "requirement_type": 0,
+                                            "requirement_index": 15,
+                                            "amount": 1,
+                                            "negate": false
+                                        },
+                                        {
+                                            "requirement_type": 0,
+                                            "requirement_index": 24,
+                                            "amount": 1,
+                                            "negate": false
+                                        },
+                                        {
+                                            "requirement_type": 0,
+                                            "requirement_index": 27,
+                                            "amount": 1,
+                                            "negate": false
+                                        }
+                                    ],
+                                    [
+                                        {
+                                            "requirement_type": 3,
+                                            "requirement_index": 1,
+                                            "amount": 10,
+                                            "negate": false
+                                        }
+                                    ]
                                 ]
                             }
                         }
