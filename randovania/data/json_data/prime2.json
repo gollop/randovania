@@ -36778,7 +36778,7 @@
                     "nodes": [
                         {
                             "name": "Door to Controller Access",
-                            "heal": true,
+                            "heal": false,
                             "node_type": 1,
                             "dock_index": 0,
                             "connected_area_asset_id": 720788297,
@@ -36820,6 +36820,12 @@
                                     [
                                         {
                                             "requirement_type": 1,
+                                            "requirement_index": 32,
+                                            "amount": 1,
+                                            "negate": true
+                                        },
+                                        {
+                                            "requirement_type": 1,
                                             "requirement_index": 33,
                                             "amount": 1,
                                             "negate": false
@@ -36827,7 +36833,14 @@
                                     ]
                                 ],
                                 "Event - Torvus Energy Controller Pickup": [
-                                    []
+                                    [
+                                        {
+                                            "requirement_type": 1,
+                                            "requirement_index": 87,
+                                            "amount": 1,
+                                            "negate": true
+                                        }
+                                    ]
                                 ],
                                 "Lore Scan": [
                                     []
@@ -36836,7 +36849,7 @@
                         },
                         {
                             "name": "Pickup (Emerald Translator)",
-                            "heal": true,
+                            "heal": false,
                             "node_type": 2,
                             "pickup_index": 82,
                             "major_location": true,
@@ -36848,7 +36861,7 @@
                         },
                         {
                             "name": "Teleport to Great Temple - Main Energy Controller",
-                            "heal": true,
+                            "heal": false,
                             "node_type": 3,
                             "destination_world_asset_id": 2252328306,
                             "destination_area_asset_id": 44045108,
@@ -36863,7 +36876,7 @@
                         },
                         {
                             "name": "Teleport to Sanctuary Fortress - Sanctuary Energy Controller",
-                            "heal": true,
+                            "heal": false,
                             "node_type": 3,
                             "destination_world_asset_id": 464164546,
                             "destination_area_asset_id": 218311274,
@@ -36878,7 +36891,7 @@
                         },
                         {
                             "name": "Teleport to Agon Wastes - Agon Energy Controller",
-                            "heal": true,
+                            "heal": false,
                             "node_type": 3,
                             "destination_world_asset_id": 1119434212,
                             "destination_area_asset_id": 50083607,
@@ -36893,7 +36906,7 @@
                         },
                         {
                             "name": "Event - Torvus Energy Returned",
-                            "heal": true,
+                            "heal": false,
                             "node_type": 4,
                             "event_index": 32,
                             "connections": {
@@ -36904,7 +36917,7 @@
                         },
                         {
                             "name": "Event - Torvus Energy Controller Pickup",
-                            "heal": true,
+                            "heal": false,
                             "node_type": 4,
                             "event_index": 87,
                             "connections": {
@@ -36915,7 +36928,7 @@
                         },
                         {
                             "name": "Lore Scan",
-                            "heal": true,
+                            "heal": false,
                             "node_type": 6,
                             "string_asset_id": 3529248034,
                             "lore_type": 0,
