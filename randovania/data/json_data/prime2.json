@@ -45173,7 +45173,7 @@
                     "nodes": [
                         {
                             "name": "Door to Reactor Core",
-                            "heal": true,
+                            "heal": false,
                             "node_type": 1,
                             "dock_index": 1,
                             "connected_area_asset_id": 1248653973,
@@ -45181,90 +45181,8 @@
                             "dock_type": 0,
                             "dock_weakness_index": 7,
                             "connections": {
-                                "Door to Main Research": [
+                                "Room Center": [
                                     []
-                                ],
-                                "Portal to Hive Portal Chamber (First)": [
-                                    [
-                                        {
-                                            "requirement_type": 0,
-                                            "requirement_index": 15,
-                                            "amount": 1,
-                                            "negate": false
-                                        },
-                                        {
-                                            "requirement_type": 0,
-                                            "requirement_index": 43,
-                                            "amount": 1,
-                                            "negate": false
-                                        }
-                                    ]
-                                ],
-                                "Pickup (Power Bomb)": [
-                                    [
-                                        {
-                                            "requirement_type": 0,
-                                            "requirement_index": 15,
-                                            "amount": 1,
-                                            "negate": false
-                                        },
-                                        {
-                                            "requirement_type": 0,
-                                            "requirement_index": 17,
-                                            "amount": 1,
-                                            "negate": false
-                                        },
-                                        {
-                                            "requirement_type": 0,
-                                            "requirement_index": 18,
-                                            "amount": 1,
-                                            "negate": false
-                                        },
-                                        {
-                                            "requirement_type": 0,
-                                            "requirement_index": 24,
-                                            "amount": 1,
-                                            "negate": false
-                                        },
-                                        {
-                                            "requirement_type": 2,
-                                            "requirement_index": 4,
-                                            "amount": 3,
-                                            "negate": false
-                                        },
-                                        {
-                                            "requirement_type": 6,
-                                            "requirement_index": 0,
-                                            "amount": 3,
-                                            "negate": false
-                                        }
-                                    ],
-                                    [
-                                        {
-                                            "requirement_type": 0,
-                                            "requirement_index": 24,
-                                            "amount": 1,
-                                            "negate": false
-                                        },
-                                        {
-                                            "requirement_type": 0,
-                                            "requirement_index": 27,
-                                            "amount": 1,
-                                            "negate": false
-                                        },
-                                        {
-                                            "requirement_type": 2,
-                                            "requirement_index": 2,
-                                            "amount": 2,
-                                            "negate": false
-                                        },
-                                        {
-                                            "requirement_type": 6,
-                                            "requirement_index": 0,
-                                            "amount": 2,
-                                            "negate": false
-                                        }
-                                    ]
                                 ]
                             }
                         },
@@ -45277,72 +45195,13 @@
                             "connected_dock_index": 2,
                             "dock_type": 3,
                             "dock_weakness_index": 1,
-                            "connections": {}
-                        },
-                        {
-                            "name": "Portal from Hive Portal Chamber (Second)",
-                            "heal": true,
-                            "node_type": 1,
-                            "dock_index": 5,
-                            "connected_area_asset_id": 2073342059,
-                            "connected_dock_index": 4,
-                            "dock_type": 3,
-                            "dock_weakness_index": 3,
                             "connections": {
-                                "Door to Reactor Core": [
-                                    []
-                                ],
-                                "Door to Main Research": [
-                                    []
-                                ],
-                                "Portal to Hive Portal Chamber (First)": [
+                                "Portal from Hive Portal Chamber (First)": [
                                     [
                                         {
                                             "requirement_type": 0,
                                             "requirement_index": 15,
                                             "amount": 1,
-                                            "negate": false
-                                        },
-                                        {
-                                            "requirement_type": 0,
-                                            "requirement_index": 43,
-                                            "amount": 1,
-                                            "negate": false
-                                        }
-                                    ]
-                                ],
-                                "Pickup (Power Bomb)": [
-                                    [
-                                        {
-                                            "requirement_type": 0,
-                                            "requirement_index": 15,
-                                            "amount": 1,
-                                            "negate": false
-                                        },
-                                        {
-                                            "requirement_type": 0,
-                                            "requirement_index": 17,
-                                            "amount": 1,
-                                            "negate": false
-                                        }
-                                    ],
-                                    [
-                                        {
-                                            "requirement_type": 0,
-                                            "requirement_index": 24,
-                                            "amount": 1,
-                                            "negate": false
-                                        },
-                                        {
-                                            "requirement_type": 0,
-                                            "requirement_index": 27,
-                                            "amount": 1,
-                                            "negate": false
-                                        },
-                                        {
-                                            "requirement_type": 6,
-                                            "requirement_index": 0,
-                                            "amount": 2,
                                             "negate": false
                                         }
                                     ]
@@ -45350,34 +45209,15 @@
                             }
                         },
                         {
-                            "name": "Door to Main Research",
-                            "heal": true,
+                            "name": "Portal from Hive Portal Chamber (Second)",
+                            "heal": false,
                             "node_type": 1,
-                            "dock_index": 0,
-                            "connected_area_asset_id": 2437878657,
-                            "connected_dock_index": 2,
-                            "dock_type": 0,
-                            "dock_weakness_index": 0,
+                            "dock_index": 5,
+                            "connected_area_asset_id": 2073342059,
+                            "connected_dock_index": 4,
+                            "dock_type": 3,
+                            "dock_weakness_index": 3,
                             "connections": {
-                                "Door to Reactor Core": [
-                                    []
-                                ],
-                                "Portal to Hive Portal Chamber (First)": [
-                                    [
-                                        {
-                                            "requirement_type": 0,
-                                            "requirement_index": 15,
-                                            "amount": 1,
-                                            "negate": false
-                                        },
-                                        {
-                                            "requirement_type": 0,
-                                            "requirement_index": 43,
-                                            "amount": 1,
-                                            "negate": false
-                                        }
-                                    ]
-                                ],
                                 "Pickup (Power Bomb)": [
                                     [
                                         {
@@ -45391,33 +45231,15 @@
                                             "requirement_index": 17,
                                             "amount": 1,
                                             "negate": false
-                                        },
-                                        {
-                                            "requirement_type": 0,
-                                            "requirement_index": 18,
-                                            "amount": 1,
-                                            "negate": false
-                                        },
-                                        {
-                                            "requirement_type": 0,
-                                            "requirement_index": 24,
-                                            "amount": 1,
-                                            "negate": false
-                                        },
-                                        {
-                                            "requirement_type": 2,
-                                            "requirement_index": 4,
-                                            "amount": 3,
-                                            "negate": false
-                                        },
-                                        {
-                                            "requirement_type": 6,
-                                            "requirement_index": 0,
-                                            "amount": 3,
-                                            "negate": false
                                         }
                                     ],
                                     [
+                                        {
+                                            "requirement_type": 0,
+                                            "requirement_index": 15,
+                                            "amount": 1,
+                                            "negate": false
+                                        },
                                         {
                                             "requirement_type": 0,
                                             "requirement_index": 24,
@@ -45431,18 +45253,30 @@
                                             "negate": false
                                         },
                                         {
-                                            "requirement_type": 2,
-                                            "requirement_index": 2,
-                                            "amount": 2,
-                                            "negate": false
-                                        },
-                                        {
                                             "requirement_type": 6,
                                             "requirement_index": 0,
-                                            "amount": 2,
+                                            "amount": 1,
                                             "negate": false
                                         }
                                     ]
+                                ],
+                                "Room Center": [
+                                    []
+                                ]
+                            }
+                        },
+                        {
+                            "name": "Door to Main Research",
+                            "heal": false,
+                            "node_type": 1,
+                            "dock_index": 0,
+                            "connected_area_asset_id": 2437878657,
+                            "connected_dock_index": 2,
+                            "dock_type": 0,
+                            "dock_weakness_index": 0,
+                            "connections": {
+                                "Room Center": [
+                                    []
                                 ]
                             }
                         },
@@ -45457,29 +45291,56 @@
                             "dock_weakness_index": 3,
                             "connections": {
                                 "Portal to Hive Portal Chamber (Second)": [
-                                    []
+                                    [
+                                        {
+                                            "requirement_type": 0,
+                                            "requirement_index": 15,
+                                            "amount": 1,
+                                            "negate": false
+                                        }
+                                    ]
                                 ]
                             }
                         },
                         {
                             "name": "Portal to Hive Portal Chamber (First)",
-                            "heal": true,
+                            "heal": false,
                             "node_type": 1,
                             "dock_index": 2,
                             "connected_area_asset_id": 2073342059,
                             "connected_dock_index": 1,
                             "dock_type": 3,
                             "dock_weakness_index": 1,
-                            "connections": {}
+                            "connections": {
+                                "Room Center": [
+                                    []
+                                ]
+                            }
                         },
                         {
                             "name": "Pickup (Power Bomb)",
-                            "heal": true,
+                            "heal": false,
                             "node_type": 2,
                             "pickup_index": 96,
                             "major_location": false,
                             "connections": {
-                                "Door to Reactor Core": [
+                                "Portal from Hive Portal Chamber (Second)": [
+                                    [
+                                        {
+                                            "requirement_type": 0,
+                                            "requirement_index": 15,
+                                            "amount": 1,
+                                            "negate": false
+                                        },
+                                        {
+                                            "requirement_type": 0,
+                                            "requirement_index": 17,
+                                            "amount": 1,
+                                            "negate": false
+                                        }
+                                    ]
+                                ],
+                                "Room Center": [
                                     [
                                         {
                                             "requirement_type": 0,
@@ -45516,64 +45377,95 @@
                                         {
                                             "requirement_type": 2,
                                             "requirement_index": 4,
-                                            "amount": 3,
+                                            "amount": 2,
                                             "negate": false
                                         },
                                         {
                                             "requirement_type": 6,
                                             "requirement_index": 0,
-                                            "amount": 3,
+                                            "amount": 2,
+                                            "negate": false
+                                        }
+                                    ]
+                                ]
+                            }
+                        },
+                        {
+                            "name": "Room Center",
+                            "heal": false,
+                            "node_type": 0,
+                            "connections": {
+                                "Door to Reactor Core": [
+                                    []
+                                ],
+                                "Portal from Hive Portal Chamber (Second)": [
+                                    [
+                                        {
+                                            "requirement_type": 0,
+                                            "requirement_index": 15,
+                                            "amount": 1,
+                                            "negate": false
+                                        },
+                                        {
+                                            "requirement_type": 0,
+                                            "requirement_index": 18,
+                                            "amount": 1,
+                                            "negate": false
+                                        },
+                                        {
+                                            "requirement_type": 0,
+                                            "requirement_index": 24,
+                                            "amount": 1,
+                                            "negate": false
+                                        },
+                                        {
+                                            "requirement_type": 2,
+                                            "requirement_index": 4,
+                                            "amount": 2,
+                                            "negate": false
+                                        },
+                                        {
+                                            "requirement_type": 6,
+                                            "requirement_index": 0,
+                                            "amount": 2,
+                                            "negate": false
+                                        }
+                                    ],
+                                    [
+                                        {
+                                            "requirement_type": 0,
+                                            "requirement_index": 15,
+                                            "amount": 1,
+                                            "negate": false
+                                        },
+                                        {
+                                            "requirement_type": 0,
+                                            "requirement_index": 24,
+                                            "amount": 1,
+                                            "negate": false
+                                        },
+                                        {
+                                            "requirement_type": 0,
+                                            "requirement_index": 27,
+                                            "amount": 1,
+                                            "negate": false
+                                        },
+                                        {
+                                            "requirement_type": 2,
+                                            "requirement_index": 2,
+                                            "amount": 1,
+                                            "negate": false
+                                        },
+                                        {
+                                            "requirement_type": 6,
+                                            "requirement_index": 0,
+                                            "amount": 1,
                                             "negate": false
                                         }
                                     ]
                                 ],
                                 "Door to Main Research": [
-                                    [
-                                        {
-                                            "requirement_type": 0,
-                                            "requirement_index": 15,
-                                            "amount": 1,
-                                            "negate": false
-                                        },
-                                        {
-                                            "requirement_type": 0,
-                                            "requirement_index": 17,
-                                            "amount": 1,
-                                            "negate": false
-                                        }
-                                    ],
-                                    [
-                                        {
-                                            "requirement_type": 0,
-                                            "requirement_index": 15,
-                                            "amount": 1,
-                                            "negate": false
-                                        },
-                                        {
-                                            "requirement_type": 0,
-                                            "requirement_index": 18,
-                                            "amount": 1,
-                                            "negate": false
-                                        },
-                                        {
-                                            "requirement_type": 0,
-                                            "requirement_index": 24,
-                                            "amount": 1,
-                                            "negate": false
-                                        },
-                                        {
-                                            "requirement_type": 2,
-                                            "requirement_index": 4,
-                                            "amount": 3,
-                                            "negate": false
-                                        },
-                                        {
-                                            "requirement_type": 6,
-                                            "requirement_index": 0,
-                                            "amount": 3,
-                                            "negate": false
-                                        }
-                                    ]
+                                    []
                                 ],
                                 "Portal to Hive Portal Chamber (First)": [
                                     [
@@ -45585,52 +45477,8 @@
                                         },
                                         {
                                             "requirement_type": 0,
-                                            "requirement_index": 17,
-                                            "amount": 1,
-                                            "negate": false
-                                        },
-                                        {
-                                            "requirement_type": 0,
                                             "requirement_index": 43,
                                             "amount": 1,
-                                            "negate": false
-                                        }
-                                    ],
-                                    [
-                                        {
-                                            "requirement_type": 0,
-                                            "requirement_index": 15,
-                                            "amount": 1,
-                                            "negate": false
-                                        },
-                                        {
-                                            "requirement_type": 0,
-                                            "requirement_index": 18,
-                                            "amount": 1,
-                                            "negate": false
-                                        },
-                                        {
-                                            "requirement_type": 0,
-                                            "requirement_index": 24,
-                                            "amount": 1,
-                                            "negate": false
-                                        },
-                                        {
-                                            "requirement_type": 0,
-                                            "requirement_index": 43,
-                                            "amount": 1,
-                                            "negate": false
-                                        },
-                                        {
-                                            "requirement_type": 2,
-                                            "requirement_index": 4,
-                                            "amount": 3,
-                                            "negate": false
-                                        },
-                                        {
-                                            "requirement_type": 6,
-                                            "requirement_index": 0,
-                                            "amount": 3,
                                             "negate": false
                                         }
                                     ]
