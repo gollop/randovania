@@ -2315,7 +2315,7 @@
                     "nodes": [
                         {
                             "name": "Door to Landing Site",
-                            "heal": true,
+                            "heal": false,
                             "node_type": 1,
                             "dock_index": 1,
                             "connected_area_asset_id": 1655756413,
@@ -2333,7 +2333,7 @@
                         },
                         {
                             "name": "Door to Hive Transport Area",
-                            "heal": true,
+                            "heal": false,
                             "node_type": 1,
                             "dock_index": 0,
                             "connected_area_asset_id": 2485094202,
@@ -2348,7 +2348,7 @@
                         },
                         {
                             "name": "Dock to Hive Chamber A",
-                            "heal": true,
+                            "heal": false,
                             "node_type": 1,
                             "dock_index": 2,
                             "connected_area_asset_id": 1353937573,
@@ -2359,7 +2359,7 @@
                         },
                         {
                             "name": "Translator Gate",
-                            "heal": true,
+                            "heal": false,
                             "node_type": 5,
                             "gate_index": 0,
                             "connections": {
