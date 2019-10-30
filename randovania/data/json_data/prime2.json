@@ -2661,7 +2661,7 @@
                     "nodes": [
                         {
                             "name": "Door to Industrial Site",
-                            "heal": true,
+                            "heal": false,
                             "node_type": 1,
                             "dock_index": 0,
                             "connected_area_asset_id": 1655474884,
@@ -2676,7 +2676,7 @@
                         },
                         {
                             "name": "Door to Hive Access Tunnel",
-                            "heal": true,
+                            "heal": false,
                             "node_type": 1,
                             "dock_index": 2,
                             "connected_area_asset_id": 2970881060,
@@ -2691,7 +2691,7 @@
                         },
                         {
                             "name": "Door to Hive Chamber C",
-                            "heal": true,
+                            "heal": false,
                             "node_type": 1,
                             "dock_index": 1,
                             "connected_area_asset_id": 4219746340,
@@ -2713,7 +2713,7 @@
                         },
                         {
                             "name": "Top of Elevator",
-                            "heal": true,
+                            "heal": false,
                             "node_type": 0,
                             "connections": {
                                 "Door to Industrial Site": [
@@ -2736,7 +2736,7 @@
                         },
                         {
                             "name": "Translator Gate",
-                            "heal": true,
+                            "heal": false,
                             "node_type": 5,
                             "gate_index": 2,
                             "connections": {
