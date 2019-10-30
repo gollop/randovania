@@ -33314,7 +33314,7 @@
                     "nodes": [
                         {
                             "name": "Door to Plaza Access",
-                            "heal": true,
+                            "heal": false,
                             "node_type": 1,
                             "dock_index": 0,
                             "connected_area_asset_id": 3250751238,
@@ -33369,9 +33369,15 @@
                                             "negate": false
                                         },
                                         {
+                                            "requirement_type": 2,
+                                            "requirement_index": 27,
+                                            "amount": 1,
+                                            "negate": false
+                                        },
+                                        {
                                             "requirement_type": 6,
                                             "requirement_index": 0,
-                                            "amount": 3,
+                                            "amount": 1,
                                             "negate": false
                                         }
                                     ]
@@ -33380,13 +33386,34 @@
                         },
                         {
                             "name": "Pickup (Energy Tank)",
-                            "heal": true,
+                            "heal": false,
                             "node_type": 2,
                             "pickup_index": 71,
                             "major_location": true,
                             "connections": {
                                 "Door to Plaza Access": [
-                                    []
+                                    [
+                                        {
+                                            "requirement_type": 0,
+                                            "requirement_index": 15,
+                                            "amount": 1,
+                                            "negate": false
+                                        },
+                                        {
+                                            "requirement_type": 0,
+                                            "requirement_index": 16,
+                                            "amount": 1,
+                                            "negate": false
+                                        }
+                                    ],
+                                    [
+                                        {
+                                            "requirement_type": 6,
+                                            "requirement_index": 0,
+                                            "amount": 1,
+                                            "negate": false
+                                        }
+                                    ]
                                 ]
                             }
                         }
