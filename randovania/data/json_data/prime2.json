@@ -48814,7 +48814,7 @@
                     "nodes": [
                         {
                             "name": "Door to Dynamo Works",
-                            "heal": true,
+                            "heal": false,
                             "node_type": 1,
                             "dock_index": 1,
                             "connected_area_asset_id": 3222355176,
@@ -48841,13 +48841,13 @@
                                         {
                                             "requirement_type": 2,
                                             "requirement_index": 2,
-                                            "amount": 2,
+                                            "amount": 1,
                                             "negate": false
                                         },
                                         {
                                             "requirement_type": 6,
                                             "requirement_index": 0,
-                                            "amount": 2,
+                                            "amount": 1,
                                             "negate": false
                                         }
                                     ]
@@ -48856,7 +48856,7 @@
                         },
                         {
                             "name": "Door to Main Gyro Chamber",
-                            "heal": true,
+                            "heal": false,
                             "node_type": 1,
                             "dock_index": 0,
                             "connected_area_asset_id": 1932798548,
@@ -48883,13 +48883,13 @@
                                         {
                                             "requirement_type": 2,
                                             "requirement_index": 2,
-                                            "amount": 2,
+                                            "amount": 1,
                                             "negate": false
                                         },
                                         {
                                             "requirement_type": 6,
                                             "requirement_index": 0,
-                                            "amount": 2,
+                                            "amount": 1,
                                             "negate": false
                                         }
                                     ]
