@@ -59673,7 +59673,7 @@
                     "nodes": [
                         {
                             "name": "Door to Controller Access",
-                            "heal": true,
+                            "heal": false,
                             "node_type": 1,
                             "dock_index": 0,
                             "connected_area_asset_id": 3902528658,
@@ -59718,6 +59718,12 @@
                                     [
                                         {
                                             "requirement_type": 1,
+                                            "requirement_index": 66,
+                                            "amount": 1,
+                                            "negate": true
+                                        },
+                                        {
+                                            "requirement_type": 1,
                                             "requirement_index": 68,
                                             "amount": 1,
                                             "negate": false
@@ -59731,7 +59737,7 @@
                         },
                         {
                             "name": "Pickup (Cobalt Translator)",
-                            "heal": true,
+                            "heal": false,
                             "node_type": 2,
                             "pickup_index": 116,
                             "major_location": true,
@@ -59743,7 +59749,7 @@
                         },
                         {
                             "name": "Teleport to Great Temple - Main Energy Controller",
-                            "heal": true,
+                            "heal": false,
                             "node_type": 3,
                             "destination_world_asset_id": 2252328306,
                             "destination_area_asset_id": 44045108,
@@ -59758,7 +59764,7 @@
                         },
                         {
                             "name": "Teleport to Agon Wastes - Agon Energy Controller",
-                            "heal": true,
+                            "heal": false,
                             "node_type": 3,
                             "destination_world_asset_id": 1119434212,
                             "destination_area_asset_id": 50083607,
@@ -59773,7 +59779,7 @@
                         },
                         {
                             "name": "Teleport to Torvus Bog - Torvus Energy Controller",
-                            "heal": true,
+                            "heal": false,
                             "node_type": 3,
                             "destination_world_asset_id": 1039999561,
                             "destination_area_asset_id": 322696632,
@@ -59788,7 +59794,7 @@
                         },
                         {
                             "name": "Event - Sanctuary Energy Returned",
-                            "heal": true,
+                            "heal": false,
                             "node_type": 4,
                             "event_index": 66,
                             "connections": {
@@ -59799,7 +59805,7 @@
                         },
                         {
                             "name": "Lore Scan",
-                            "heal": true,
+                            "heal": false,
                             "node_type": 6,
                             "string_asset_id": 1041207119,
                             "lore_type": 0,
