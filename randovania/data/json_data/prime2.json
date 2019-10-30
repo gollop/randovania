@@ -21297,7 +21297,7 @@
                     "nodes": [
                         {
                             "name": "Door to Controller Access",
-                            "heal": true,
+                            "heal": false,
                             "node_type": 1,
                             "dock_index": 0,
                             "connected_area_asset_id": 3209927104,
@@ -21342,11 +21342,24 @@
                                             "requirement_index": 19,
                                             "amount": 1,
                                             "negate": false
+                                        },
+                                        {
+                                            "requirement_type": 1,
+                                            "requirement_index": 79,
+                                            "amount": 1,
+                                            "negate": true
                                         }
                                     ]
                                 ],
                                 "Event - Agon Energy Controller Pickup": [
-                                    []
+                                    [
+                                        {
+                                            "requirement_type": 1,
+                                            "requirement_index": 88,
+                                            "amount": 1,
+                                            "negate": true
+                                        }
+                                    ]
                                 ],
                                 "Lore Scan": [
                                     []
@@ -21355,7 +21368,7 @@
                         },
                         {
                             "name": "Pickup (Amber Translator)",
-                            "heal": true,
+                            "heal": false,
                             "node_type": 2,
                             "pickup_index": 46,
                             "major_location": true,
@@ -21367,7 +21380,7 @@
                         },
                         {
                             "name": "Teleport to Sanctuary Fortress - Sanctuary Energy Controller",
-                            "heal": true,
+                            "heal": false,
                             "node_type": 3,
                             "destination_world_asset_id": 464164546,
                             "destination_area_asset_id": 218311274,
@@ -21382,7 +21395,7 @@
                         },
                         {
                             "name": "Teleport to Torvus Bog - Torvus Energy Controller",
-                            "heal": true,
+                            "heal": false,
                             "node_type": 3,
                             "destination_world_asset_id": 1039999561,
                             "destination_area_asset_id": 322696632,
@@ -21397,7 +21410,7 @@
                         },
                         {
                             "name": "Teleport to Great Temple - Main Energy Controller",
-                            "heal": true,
+                            "heal": false,
                             "node_type": 3,
                             "destination_world_asset_id": 2252328306,
                             "destination_area_asset_id": 44045108,
@@ -21412,7 +21425,7 @@
                         },
                         {
                             "name": "Event - Agon Energy Returned",
-                            "heal": true,
+                            "heal": false,
                             "node_type": 4,
                             "event_index": 79,
                             "connections": {
@@ -21423,7 +21436,7 @@
                         },
                         {
                             "name": "Event - Agon Energy Controller Pickup",
-                            "heal": true,
+                            "heal": false,
                             "node_type": 4,
                             "event_index": 88,
                             "connections": {
@@ -21434,7 +21447,7 @@
                         },
                         {
                             "name": "Lore Scan",
-                            "heal": true,
+                            "heal": false,
                             "node_type": 6,
                             "string_asset_id": 4021961856,
                             "lore_type": 0,
