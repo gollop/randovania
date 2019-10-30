@@ -19231,7 +19231,7 @@
                     "nodes": [
                         {
                             "name": "Door to Ventilation Area A",
-                            "heal": true,
+                            "heal": false,
                             "node_type": 1,
                             "dock_index": 1,
                             "connected_area_asset_id": 2217754069,
@@ -19240,7 +19240,14 @@
                             "dock_weakness_index": 0,
                             "connections": {
                                 "Door to Agon Temple": [
-                                    []
+                                    [
+                                        {
+                                            "requirement_type": 0,
+                                            "requirement_index": 15,
+                                            "amount": 1,
+                                            "negate": false
+                                        }
+                                    ]
                                 ],
                                 "Pickup (Power Bomb)": [
                                     [
@@ -19274,7 +19281,7 @@
                         },
                         {
                             "name": "Door to Agon Temple",
-                            "heal": true,
+                            "heal": false,
                             "node_type": 1,
                             "dock_index": 0,
                             "connected_area_asset_id": 1979488942,
@@ -19283,7 +19290,14 @@
                             "dock_weakness_index": 2,
                             "connections": {
                                 "Door to Ventilation Area A": [
-                                    []
+                                    [
+                                        {
+                                            "requirement_type": 0,
+                                            "requirement_index": 15,
+                                            "amount": 1,
+                                            "negate": false
+                                        }
+                                    ]
                                 ],
                                 "Pickup (Power Bomb)": [
                                     [
@@ -19317,13 +19331,19 @@
                         },
                         {
                             "name": "Pickup (Power Bomb)",
-                            "heal": true,
+                            "heal": false,
                             "node_type": 2,
                             "pickup_index": 42,
                             "major_location": false,
                             "connections": {
                                 "Door to Ventilation Area A": [
                                     [
+                                        {
+                                            "requirement_type": 0,
+                                            "requirement_index": 15,
+                                            "amount": 1,
+                                            "negate": false
+                                        },
                                         {
                                             "requirement_type": 0,
                                             "requirement_index": 24,
@@ -19335,11 +19355,35 @@
                                             "requirement_index": 27,
                                             "amount": 1,
                                             "negate": false
+                                        },
+                                        {
+                                            "requirement_type": 2,
+                                            "requirement_index": 28,
+                                            "amount": 1,
+                                            "negate": false
+                                        },
+                                        {
+                                            "requirement_type": 3,
+                                            "requirement_index": 1,
+                                            "amount": 10,
+                                            "negate": false
+                                        },
+                                        {
+                                            "requirement_type": 6,
+                                            "requirement_index": 0,
+                                            "amount": 1,
+                                            "negate": false
                                         }
                                     ]
                                 ],
                                 "Door to Agon Temple": [
                                     [
+                                        {
+                                            "requirement_type": 0,
+                                            "requirement_index": 15,
+                                            "amount": 1,
+                                            "negate": false
+                                        },
                                         {
                                             "requirement_type": 0,
                                             "requirement_index": 24,
