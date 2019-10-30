@@ -21455,7 +21455,7 @@
                     "nodes": [
                         {
                             "name": "Door to Transport to Sanctuary Fortress",
-                            "heal": true,
+                            "heal": false,
                             "node_type": 1,
                             "dock_index": 0,
                             "connected_area_asset_id": 3331021649,
@@ -21463,37 +21463,11 @@
                             "dock_type": 0,
                             "dock_weakness_index": 7,
                             "connections": {
-                                "Door to Sandcanyon": [
+                                "Room Center": [
                                     [
                                         {
                                             "requirement_type": 0,
                                             "requirement_index": 15,
-                                            "amount": 1,
-                                            "negate": false
-                                        }
-                                    ]
-                                ],
-                                "Door to Main Reactor": [
-                                    [
-                                        {
-                                            "requirement_type": 0,
-                                            "requirement_index": 15,
-                                            "amount": 1,
-                                            "negate": false
-                                        }
-                                    ]
-                                ],
-                                "Pickup (Missile)": [
-                                    [
-                                        {
-                                            "requirement_type": 0,
-                                            "requirement_index": 15,
-                                            "amount": 1,
-                                            "negate": false
-                                        },
-                                        {
-                                            "requirement_type": 0,
-                                            "requirement_index": 18,
                                             "amount": 1,
                                             "negate": false
                                         }
@@ -21503,7 +21477,7 @@
                         },
                         {
                             "name": "Door to Sandcanyon",
-                            "heal": true,
+                            "heal": false,
                             "node_type": 1,
                             "dock_index": 2,
                             "connected_area_asset_id": 3853985320,
@@ -21511,43 +21485,11 @@
                             "dock_type": 0,
                             "dock_weakness_index": 0,
                             "connections": {
-                                "Door to Transport to Sanctuary Fortress": [
+                                "Room Center": [
                                     [
                                         {
                                             "requirement_type": 0,
                                             "requirement_index": 15,
-                                            "amount": 1,
-                                            "negate": false
-                                        },
-                                        {
-                                            "requirement_type": 0,
-                                            "requirement_index": 18,
-                                            "amount": 1,
-                                            "negate": false
-                                        }
-                                    ]
-                                ],
-                                "Door to Main Reactor": [
-                                    [
-                                        {
-                                            "requirement_type": 0,
-                                            "requirement_index": 15,
-                                            "amount": 1,
-                                            "negate": false
-                                        }
-                                    ]
-                                ],
-                                "Pickup (Missile)": [
-                                    [
-                                        {
-                                            "requirement_type": 0,
-                                            "requirement_index": 15,
-                                            "amount": 1,
-                                            "negate": false
-                                        },
-                                        {
-                                            "requirement_type": 0,
-                                            "requirement_index": 18,
                                             "amount": 1,
                                             "negate": false
                                         }
@@ -21557,13 +21499,49 @@
                         },
                         {
                             "name": "Door to Main Reactor",
-                            "heal": true,
+                            "heal": false,
                             "node_type": 1,
                             "dock_index": 1,
                             "connected_area_asset_id": 3436835742,
                             "connected_dock_index": 2,
                             "dock_type": 0,
                             "dock_weakness_index": 2,
+                            "connections": {
+                                "Room Center": [
+                                    [
+                                        {
+                                            "requirement_type": 0,
+                                            "requirement_index": 15,
+                                            "amount": 1,
+                                            "negate": false
+                                        }
+                                    ]
+                                ]
+                            }
+                        },
+                        {
+                            "name": "Pickup (Missile)",
+                            "heal": false,
+                            "node_type": 2,
+                            "pickup_index": 47,
+                            "major_location": false,
+                            "connections": {
+                                "Room Center": [
+                                    [
+                                        {
+                                            "requirement_type": 0,
+                                            "requirement_index": 15,
+                                            "amount": 1,
+                                            "negate": false
+                                        }
+                                    ]
+                                ]
+                            }
+                        },
+                        {
+                            "name": "Room Center",
+                            "heal": false,
+                            "node_type": 0,
                             "connections": {
                                 "Door to Transport to Sanctuary Fortress": [
                                     [
@@ -21582,6 +21560,16 @@
                                     ]
                                 ],
                                 "Door to Sandcanyon": [
+                                    [
+                                        {
+                                            "requirement_type": 0,
+                                            "requirement_index": 15,
+                                            "amount": 1,
+                                            "negate": false
+                                        }
+                                    ]
+                                ],
+                                "Door to Main Reactor": [
                                     [
                                         {
                                             "requirement_type": 0,
@@ -21606,37 +21594,6 @@
                                             "negate": false
                                         }
                                     ]
-                                ]
-                            }
-                        },
-                        {
-                            "name": "Pickup (Missile)",
-                            "heal": true,
-                            "node_type": 2,
-                            "pickup_index": 47,
-                            "major_location": false,
-                            "connections": {
-                                "Door to Transport to Sanctuary Fortress": [
-                                    [
-                                        {
-                                            "requirement_type": 0,
-                                            "requirement_index": 15,
-                                            "amount": 1,
-                                            "negate": false
-                                        },
-                                        {
-                                            "requirement_type": 0,
-                                            "requirement_index": 18,
-                                            "amount": 1,
-                                            "negate": false
-                                        }
-                                    ]
-                                ],
-                                "Door to Sandcanyon": [
-                                    []
-                                ],
-                                "Door to Main Reactor": [
-                                    []
                                 ]
                             }
                         }
