@@ -582,7 +582,7 @@
             },
             {
                 "index": 55,
-                "long_name": "UNUSED",
+                "long_name": "Sanctuary Entrance Wall Sections Destroyed",
                 "short_name": "Event55"
             },
             {
@@ -784,6 +784,11 @@
                 "index": 95,
                 "long_name": "Sanctuary Temple Access Quad",
                 "short_name": "Event95"
+            },
+            {
+                "index": 96,
+                "long_name": "Sanctuary Entrance Turret Activated",
+                "short_name": "Event96"
             }
         ],
         "tricks": [
@@ -44037,7 +44042,7 @@
                     "nodes": [
                         {
                             "name": "Door to Power Junction",
-                            "heal": true,
+                            "heal": false,
                             "node_type": 1,
                             "dock_index": 0,
                             "connected_area_asset_id": 834698518,
@@ -44061,13 +44066,25 @@
                                         },
                                         {
                                             "requirement_type": 0,
-                                            "requirement_index": 17,
+                                            "requirement_index": 24,
                                             "amount": 1,
                                             "negate": false
                                         },
                                         {
-                                            "requirement_type": 0,
-                                            "requirement_index": 43,
+                                            "requirement_type": 1,
+                                            "requirement_index": 96,
+                                            "amount": 1,
+                                            "negate": false
+                                        },
+                                        {
+                                            "requirement_type": 2,
+                                            "requirement_index": 0,
+                                            "amount": 2,
+                                            "negate": false
+                                        },
+                                        {
+                                            "requirement_type": 2,
+                                            "requirement_index": 27,
                                             "amount": 1,
                                             "negate": false
                                         },
@@ -44087,32 +44104,38 @@
                                         },
                                         {
                                             "requirement_type": 0,
-                                            "requirement_index": 15,
-                                            "amount": 1,
-                                            "negate": false
-                                        },
-                                        {
-                                            "requirement_type": 0,
                                             "requirement_index": 24,
-                                            "amount": 1,
-                                            "negate": false
-                                        },
-                                        {
-                                            "requirement_type": 0,
-                                            "requirement_index": 43,
                                             "amount": 1,
                                             "negate": false
                                         },
                                         {
                                             "requirement_type": 2,
                                             "requirement_index": 0,
-                                            "amount": 2,
+                                            "amount": 3,
+                                            "negate": false
+                                        },
+                                        {
+                                            "requirement_type": 2,
+                                            "requirement_index": 27,
+                                            "amount": 1,
+                                            "negate": false
+                                        },
+                                        {
+                                            "requirement_type": 2,
+                                            "requirement_index": 28,
+                                            "amount": 3,
+                                            "negate": false
+                                        },
+                                        {
+                                            "requirement_type": 3,
+                                            "requirement_index": 1,
+                                            "amount": 10,
                                             "negate": false
                                         },
                                         {
                                             "requirement_type": 6,
                                             "requirement_index": 0,
-                                            "amount": 2,
+                                            "amount": 3,
                                             "negate": false
                                         }
                                     ],
@@ -44139,6 +44162,12 @@
                                     [
                                         {
                                             "requirement_type": 0,
+                                            "requirement_index": 15,
+                                            "amount": 1,
+                                            "negate": false
+                                        },
+                                        {
+                                            "requirement_type": 0,
                                             "requirement_index": 24,
                                             "amount": 1,
                                             "negate": false
@@ -44152,26 +44181,6 @@
                                     ],
                                     [
                                         {
-                                            "requirement_type": 0,
-                                            "requirement_index": 24,
-                                            "amount": 1,
-                                            "negate": false
-                                        },
-                                        {
-                                            "requirement_type": 2,
-                                            "requirement_index": 0,
-                                            "amount": 4,
-                                            "negate": false
-                                        },
-                                        {
-                                            "requirement_type": 6,
-                                            "requirement_index": 0,
-                                            "amount": 4,
-                                            "negate": false
-                                        }
-                                    ],
-                                    [
-                                        {
                                             "requirement_type": 1,
                                             "requirement_index": 50,
                                             "amount": 1,
@@ -44179,14 +44188,8 @@
                                         }
                                     ]
                                 ],
-                                "Front of Lore Scan": [
+                                "Vigilance Class Turret": [
                                     [
-                                        {
-                                            "requirement_type": 0,
-                                            "requirement_index": 9,
-                                            "amount": 1,
-                                            "negate": false
-                                        },
                                         {
                                             "requirement_type": 0,
                                             "requirement_index": 15,
@@ -44200,145 +44203,167 @@
                                             "negate": false
                                         },
                                         {
+                                            "requirement_type": 1,
+                                            "requirement_index": 96,
+                                            "amount": 1,
+                                            "negate": false
+                                        }
+                                    ],
+                                    [
+                                        {
+                                            "requirement_type": 0,
+                                            "requirement_index": 15,
+                                            "amount": 1,
+                                            "negate": false
+                                        },
+                                        {
+                                            "requirement_type": 0,
+                                            "requirement_index": 18,
+                                            "amount": 1,
+                                            "negate": false
+                                        },
+                                        {
+                                            "requirement_type": 0,
+                                            "requirement_index": 24,
+                                            "amount": 1,
+                                            "negate": false
+                                        },
+                                        {
+                                            "requirement_type": 0,
+                                            "requirement_index": 27,
+                                            "amount": 1,
+                                            "negate": false
+                                        },
+                                        {
+                                            "requirement_type": 2,
+                                            "requirement_index": 4,
+                                            "amount": 1,
+                                            "negate": false
+                                        },
+                                        {
+                                            "requirement_type": 2,
+                                            "requirement_index": 27,
+                                            "amount": 1,
+                                            "negate": false
+                                        },
+                                        {
+                                            "requirement_type": 6,
+                                            "requirement_index": 0,
+                                            "amount": 1,
+                                            "negate": false
+                                        }
+                                    ],
+                                    [
+                                        {
+                                            "requirement_type": 0,
+                                            "requirement_index": 15,
+                                            "amount": 1,
+                                            "negate": false
+                                        },
+                                        {
+                                            "requirement_type": 0,
+                                            "requirement_index": 24,
+                                            "amount": 1,
+                                            "negate": false
+                                        },
+                                        {
+                                            "requirement_type": 0,
+                                            "requirement_index": 27,
+                                            "amount": 1,
+                                            "negate": false
+                                        },
+                                        {
+                                            "requirement_type": 2,
+                                            "requirement_index": 27,
+                                            "amount": 1,
+                                            "negate": false
+                                        },
+                                        {
+                                            "requirement_type": 2,
+                                            "requirement_index": 28,
+                                            "amount": 2,
+                                            "negate": false
+                                        },
+                                        {
+                                            "requirement_type": 3,
+                                            "requirement_index": 1,
+                                            "amount": 10,
+                                            "negate": false
+                                        },
+                                        {
+                                            "requirement_type": 6,
+                                            "requirement_index": 0,
+                                            "amount": 2,
+                                            "negate": false
+                                        }
+                                    ]
+                                ],
+                                "Scan Post": [
+                                    [
+                                        {
+                                            "requirement_type": 0,
+                                            "requirement_index": 15,
+                                            "amount": 1,
+                                            "negate": false
+                                        },
+                                        {
+                                            "requirement_type": 0,
+                                            "requirement_index": 24,
+                                            "amount": 1,
+                                            "negate": false
+                                        },
+                                        {
+                                            "requirement_type": 0,
+                                            "requirement_index": 27,
+                                            "amount": 1,
+                                            "negate": false
+                                        },
+                                        {
+                                            "requirement_type": 2,
+                                            "requirement_index": 27,
+                                            "amount": 1,
+                                            "negate": false
+                                        },
+                                        {
+                                            "requirement_type": 6,
+                                            "requirement_index": 0,
+                                            "amount": 1,
+                                            "negate": false
+                                        }
+                                    ],
+                                    [
+                                        {
+                                            "requirement_type": 0,
+                                            "requirement_index": 15,
+                                            "amount": 1,
+                                            "negate": false
+                                        },
+                                        {
                                             "requirement_type": 0,
                                             "requirement_index": 43,
                                             "amount": 1,
                                             "negate": false
                                         }
-                                    ],
-                                    [
-                                        {
-                                            "requirement_type": 0,
-                                            "requirement_index": 9,
-                                            "amount": 1,
-                                            "negate": false
-                                        },
-                                        {
-                                            "requirement_type": 0,
-                                            "requirement_index": 17,
-                                            "amount": 1,
-                                            "negate": false
-                                        },
-                                        {
-                                            "requirement_type": 0,
-                                            "requirement_index": 24,
-                                            "amount": 1,
-                                            "negate": false
-                                        },
-                                        {
-                                            "requirement_type": 0,
-                                            "requirement_index": 27,
-                                            "amount": 1,
-                                            "negate": false
-                                        },
-                                        {
-                                            "requirement_type": 6,
-                                            "requirement_index": 0,
-                                            "amount": 2,
-                                            "negate": false
-                                        }
-                                    ],
-                                    [
-                                        {
-                                            "requirement_type": 0,
-                                            "requirement_index": 9,
-                                            "amount": 1,
-                                            "negate": false
-                                        },
-                                        {
-                                            "requirement_type": 0,
-                                            "requirement_index": 24,
-                                            "amount": 1,
-                                            "negate": false
-                                        },
-                                        {
-                                            "requirement_type": 0,
-                                            "requirement_index": 27,
-                                            "amount": 1,
-                                            "negate": false
-                                        },
-                                        {
-                                            "requirement_type": 1,
-                                            "requirement_index": 50,
-                                            "amount": 1,
-                                            "negate": true
-                                        },
-                                        {
-                                            "requirement_type": 2,
-                                            "requirement_index": 13,
-                                            "amount": 2,
-                                            "negate": false
-                                        },
-                                        {
-                                            "requirement_type": 6,
-                                            "requirement_index": 0,
-                                            "amount": 2,
-                                            "negate": false
-                                        }
-                                    ],
-                                    [
-                                        {
-                                            "requirement_type": 0,
-                                            "requirement_index": 9,
-                                            "amount": 1,
-                                            "negate": false
-                                        },
-                                        {
-                                            "requirement_type": 0,
-                                            "requirement_index": 24,
-                                            "amount": 1,
-                                            "negate": false
-                                        },
-                                        {
-                                            "requirement_type": 0,
-                                            "requirement_index": 27,
-                                            "amount": 1,
-                                            "negate": false
-                                        },
-                                        {
-                                            "requirement_type": 3,
-                                            "requirement_index": 1,
-                                            "amount": 10,
-                                            "negate": false
-                                        },
-                                        {
-                                            "requirement_type": 6,
-                                            "requirement_index": 0,
-                                            "amount": 3,
-                                            "negate": false
-                                        }
                                     ]
                                 ],
-                                "Cannon to Pickup": [
+                                "Front of Lore Scan": [
                                     [
                                         {
                                             "requirement_type": 0,
-                                            "requirement_index": 9,
+                                            "requirement_index": 15,
                                             "amount": 1,
                                             "negate": false
                                         },
                                         {
                                             "requirement_type": 0,
-                                            "requirement_index": 24,
+                                            "requirement_index": 18,
                                             "amount": 1,
                                             "negate": false
                                         },
                                         {
-                                            "requirement_type": 0,
-                                            "requirement_index": 27,
+                                            "requirement_type": 1,
+                                            "requirement_index": 55,
                                             "amount": 1,
-                                            "negate": false
-                                        },
-                                        {
-                                            "requirement_type": 3,
-                                            "requirement_index": 1,
-                                            "amount": 10,
-                                            "negate": false
-                                        },
-                                        {
-                                            "requirement_type": 6,
-                                            "requirement_index": 0,
-                                            "amount": 3,
                                             "negate": false
                                         }
                                     ],
@@ -44350,27 +44375,29 @@
                                             "negate": false
                                         },
                                         {
-                                            "requirement_type": 0,
+                                            "requirement_type": 1,
+                                            "requirement_index": 55,
+                                            "amount": 1,
+                                            "negate": false
+                                        }
+                                    ],
+                                    [
+                                        {
+                                            "requirement_type": 1,
+                                            "requirement_index": 55,
+                                            "amount": 1,
+                                            "negate": false
+                                        },
+                                        {
+                                            "requirement_type": 2,
                                             "requirement_index": 27,
                                             "amount": 1,
                                             "negate": false
                                         },
                                         {
-                                            "requirement_type": 1,
-                                            "requirement_index": 50,
-                                            "amount": 1,
-                                            "negate": true
-                                        },
-                                        {
-                                            "requirement_type": 2,
-                                            "requirement_index": 13,
-                                            "amount": 3,
-                                            "negate": false
-                                        },
-                                        {
                                             "requirement_type": 6,
                                             "requirement_index": 0,
-                                            "amount": 3,
+                                            "amount": 1,
                                             "negate": false
                                         }
                                     ]
@@ -44379,7 +44406,7 @@
                         },
                         {
                             "name": "Door to Temple Transport Access",
-                            "heal": true,
+                            "heal": false,
                             "node_type": 1,
                             "dock_index": 1,
                             "connected_area_asset_id": 1650075282,
@@ -44411,6 +44438,12 @@
                                     [
                                         {
                                             "requirement_type": 0,
+                                            "requirement_index": 15,
+                                            "amount": 1,
+                                            "negate": false
+                                        },
+                                        {
+                                            "requirement_type": 0,
                                             "requirement_index": 24,
                                             "amount": 1,
                                             "negate": false
@@ -44434,8 +44467,30 @@
                             }
                         },
                         {
+                            "name": "Event - Sanctuary Entrance Wall Sections Destroyed",
+                            "heal": false,
+                            "node_type": 4,
+                            "event_index": 55,
+                            "connections": {
+                                "Vigilance Class Turret": [
+                                    []
+                                ]
+                            }
+                        },
+                        {
+                            "name": "Event - Sanctuary Entrance Turret Activated",
+                            "heal": false,
+                            "node_type": 4,
+                            "event_index": 96,
+                            "connections": {
+                                "Scan Post": [
+                                    []
+                                ]
+                            }
+                        },
+                        {
                             "name": "Pickup (Power Bomb)",
-                            "heal": true,
+                            "heal": false,
                             "node_type": 2,
                             "pickup_index": 94,
                             "major_location": false,
@@ -44447,7 +44502,7 @@
                         },
                         {
                             "name": "Lore Scan",
-                            "heal": true,
+                            "heal": false,
                             "node_type": 6,
                             "string_asset_id": 4072633400,
                             "lore_type": 0,
@@ -44459,8 +44514,307 @@
                             }
                         },
                         {
+                            "name": "Keybearer Corpse (S-Jrs)",
+                            "heal": false,
+                            "node_type": 6,
+                            "string_asset_id": 1657556419,
+                            "lore_type": 1,
+                            "extra": 117,
+                            "connections": {
+                                "Corpse Location": [
+                                    []
+                                ]
+                            }
+                        },
+                        {
+                            "name": "Corpse Location",
+                            "heal": false,
+                            "node_type": 0,
+                            "connections": {
+                                "Door to Power Junction": [
+                                    []
+                                ],
+                                "Pickup (Power Bomb)": [
+                                    [
+                                        {
+                                            "requirement_type": 0,
+                                            "requirement_index": 15,
+                                            "amount": 1,
+                                            "negate": false
+                                        },
+                                        {
+                                            "requirement_type": 1,
+                                            "requirement_index": 55,
+                                            "amount": 1,
+                                            "negate": false
+                                        }
+                                    ]
+                                ],
+                                "Keybearer Corpse (S-Jrs)": [
+                                    [
+                                        {
+                                            "requirement_type": 1,
+                                            "requirement_index": 50,
+                                            "amount": 1,
+                                            "negate": false
+                                        }
+                                    ]
+                                ]
+                            }
+                        },
+                        {
+                            "name": "Vigilance Class Turret",
+                            "heal": false,
+                            "node_type": 0,
+                            "connections": {
+                                "Door to Power Junction": [
+                                    [
+                                        {
+                                            "requirement_type": 0,
+                                            "requirement_index": 24,
+                                            "amount": 1,
+                                            "negate": false
+                                        },
+                                        {
+                                            "requirement_type": 6,
+                                            "requirement_index": 0,
+                                            "amount": 1,
+                                            "negate": false
+                                        }
+                                    ],
+                                    [
+                                        {
+                                            "requirement_type": 1,
+                                            "requirement_index": 50,
+                                            "amount": 1,
+                                            "negate": true
+                                        }
+                                    ]
+                                ],
+                                "Door to Temple Transport Access": [
+                                    [
+                                        {
+                                            "requirement_type": 0,
+                                            "requirement_index": 15,
+                                            "amount": 1,
+                                            "negate": false
+                                        },
+                                        {
+                                            "requirement_type": 0,
+                                            "requirement_index": 17,
+                                            "amount": 1,
+                                            "negate": false
+                                        },
+                                        {
+                                            "requirement_type": 2,
+                                            "requirement_index": 27,
+                                            "amount": 2,
+                                            "negate": false
+                                        },
+                                        {
+                                            "requirement_type": 6,
+                                            "requirement_index": 0,
+                                            "amount": 2,
+                                            "negate": false
+                                        }
+                                    ]
+                                ],
+                                "Event - Sanctuary Entrance Wall Sections Destroyed": [
+                                    [
+                                        {
+                                            "requirement_type": 1,
+                                            "requirement_index": 96,
+                                            "amount": 1,
+                                            "negate": false
+                                        }
+                                    ]
+                                ],
+                                "Corpse Location": [
+                                    [
+                                        {
+                                            "requirement_type": 0,
+                                            "requirement_index": 15,
+                                            "amount": 1,
+                                            "negate": false
+                                        },
+                                        {
+                                            "requirement_type": 0,
+                                            "requirement_index": 24,
+                                            "amount": 1,
+                                            "negate": false
+                                        },
+                                        {
+                                            "requirement_type": 0,
+                                            "requirement_index": 27,
+                                            "amount": 1,
+                                            "negate": false
+                                        },
+                                        {
+                                            "requirement_type": 2,
+                                            "requirement_index": 27,
+                                            "amount": 2,
+                                            "negate": false
+                                        },
+                                        {
+                                            "requirement_type": 6,
+                                            "requirement_index": 0,
+                                            "amount": 3,
+                                            "negate": false
+                                        }
+                                    ]
+                                ],
+                                "Scan Post": [
+                                    [
+                                        {
+                                            "requirement_type": 0,
+                                            "requirement_index": 15,
+                                            "amount": 1,
+                                            "negate": false
+                                        },
+                                        {
+                                            "requirement_type": 0,
+                                            "requirement_index": 17,
+                                            "amount": 1,
+                                            "negate": false
+                                        }
+                                    ],
+                                    [
+                                        {
+                                            "requirement_type": 0,
+                                            "requirement_index": 15,
+                                            "amount": 1,
+                                            "negate": false
+                                        },
+                                        {
+                                            "requirement_type": 6,
+                                            "requirement_index": 0,
+                                            "amount": 1,
+                                            "negate": false
+                                        }
+                                    ]
+                                ]
+                            }
+                        },
+                        {
+                            "name": "Scan Post",
+                            "heal": false,
+                            "node_type": 0,
+                            "connections": {
+                                "Door to Power Junction": [
+                                    [
+                                        {
+                                            "requirement_type": 0,
+                                            "requirement_index": 15,
+                                            "amount": 1,
+                                            "negate": false
+                                        },
+                                        {
+                                            "requirement_type": 0,
+                                            "requirement_index": 18,
+                                            "amount": 1,
+                                            "negate": false
+                                        },
+                                        {
+                                            "requirement_type": 0,
+                                            "requirement_index": 24,
+                                            "amount": 1,
+                                            "negate": false
+                                        },
+                                        {
+                                            "requirement_type": 2,
+                                            "requirement_index": 4,
+                                            "amount": 1,
+                                            "negate": false
+                                        },
+                                        {
+                                            "requirement_type": 6,
+                                            "requirement_index": 0,
+                                            "amount": 1,
+                                            "negate": false
+                                        }
+                                    ],
+                                    [
+                                        {
+                                            "requirement_type": 0,
+                                            "requirement_index": 15,
+                                            "amount": 1,
+                                            "negate": false
+                                        },
+                                        {
+                                            "requirement_type": 0,
+                                            "requirement_index": 18,
+                                            "amount": 1,
+                                            "negate": false
+                                        },
+                                        {
+                                            "requirement_type": 2,
+                                            "requirement_index": 1,
+                                            "amount": 1,
+                                            "negate": false
+                                        },
+                                        {
+                                            "requirement_type": 2,
+                                            "requirement_index": 27,
+                                            "amount": 1,
+                                            "negate": false
+                                        },
+                                        {
+                                            "requirement_type": 6,
+                                            "requirement_index": 0,
+                                            "amount": 1,
+                                            "negate": false
+                                        }
+                                    ],
+                                    [
+                                        {
+                                            "requirement_type": 0,
+                                            "requirement_index": 15,
+                                            "amount": 1,
+                                            "negate": false
+                                        },
+                                        {
+                                            "requirement_type": 0,
+                                            "requirement_index": 43,
+                                            "amount": 1,
+                                            "negate": false
+                                        }
+                                    ],
+                                    [
+                                        {
+                                            "requirement_type": 0,
+                                            "requirement_index": 24,
+                                            "amount": 1,
+                                            "negate": false
+                                        },
+                                        {
+                                            "requirement_type": 2,
+                                            "requirement_index": 27,
+                                            "amount": 1,
+                                            "negate": false
+                                        },
+                                        {
+                                            "requirement_type": 6,
+                                            "requirement_index": 0,
+                                            "amount": 1,
+                                            "negate": false
+                                        }
+                                    ]
+                                ],
+                                "Event - Sanctuary Entrance Turret Activated": [
+                                    [
+                                        {
+                                            "requirement_type": 0,
+                                            "requirement_index": 9,
+                                            "amount": 1,
+                                            "negate": false
+                                        }
+                                    ]
+                                ]
+                            }
+                        },
+                        {
                             "name": "Front of Lore Scan",
-                            "heal": true,
+                            "heal": false,
                             "node_type": 0,
                             "connections": {
                                 "Door to Power Junction": [
@@ -44469,7 +44823,7 @@
                                 "Lore Scan": [
                                     []
                                 ],
-                                "Cannon to Pickup": [
+                                "Corpse Location": [
                                     [
                                         {
                                             "requirement_type": 0,
@@ -44542,55 +44896,18 @@
                                             "negate": false
                                         },
                                         {
+                                            "requirement_type": 2,
+                                            "requirement_index": 27,
+                                            "amount": 2,
+                                            "negate": false
+                                        },
+                                        {
                                             "requirement_type": 6,
                                             "requirement_index": 0,
                                             "amount": 2,
                                             "negate": false
                                         }
                                     ]
-                                ]
-                            }
-                        },
-                        {
-                            "name": "Cannon to Pickup",
-                            "heal": true,
-                            "node_type": 0,
-                            "connections": {
-                                "Door to Power Junction": [
-                                    []
-                                ],
-                                "Pickup (Power Bomb)": [
-                                    [
-                                        {
-                                            "requirement_type": 0,
-                                            "requirement_index": 15,
-                                            "amount": 1,
-                                            "negate": false
-                                        }
-                                    ]
-                                ],
-                                "Keybearer Corpse (S-Jrs)": [
-                                    [
-                                        {
-                                            "requirement_type": 1,
-                                            "requirement_index": 50,
-                                            "amount": 1,
-                                            "negate": false
-                                        }
-                                    ]
-                                ]
-                            }
-                        },
-                        {
-                            "name": "Keybearer Corpse (S-Jrs)",
-                            "heal": true,
-                            "node_type": 6,
-                            "string_asset_id": 1657556419,
-                            "lore_type": 1,
-                            "extra": 117,
-                            "connections": {
-                                "Cannon to Pickup": [
-                                    []
                                 ]
                             }
                         }
