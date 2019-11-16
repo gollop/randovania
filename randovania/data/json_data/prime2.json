@@ -2887,7 +2887,7 @@
                     "nodes": [
                         {
                             "name": "Door to Path of Honor",
-                            "heal": true,
+                            "heal": false,
                             "node_type": 1,
                             "dock_index": 1,
                             "connected_area_asset_id": 2068656603,
@@ -2897,6 +2897,12 @@
                             "connections": {
                                 "Morph Ball Door to Path of Honor": [
                                     [
+                                        {
+                                            "requirement_type": 0,
+                                            "requirement_index": 15,
+                                            "amount": 1,
+                                            "negate": false
+                                        },
                                         {
                                             "requirement_type": 0,
                                             "requirement_index": 24,
@@ -2917,6 +2923,12 @@
                                         }
                                     ],
                                     [
+                                        {
+                                            "requirement_type": 0,
+                                            "requirement_index": 15,
+                                            "amount": 1,
+                                            "negate": false
+                                        },
                                         {
                                             "requirement_type": 0,
                                             "requirement_index": 24,
@@ -2963,7 +2975,7 @@
                         },
                         {
                             "name": "Morph Ball Door to Path of Honor",
-                            "heal": true,
+                            "heal": false,
                             "node_type": 1,
                             "dock_index": 0,
                             "connected_area_asset_id": 2068656603,
@@ -2978,7 +2990,7 @@
                         },
                         {
                             "name": "Pickup (Seeker Launcher)",
-                            "heal": true,
+                            "heal": false,
                             "node_type": 2,
                             "pickup_index": 1,
                             "major_location": true,
