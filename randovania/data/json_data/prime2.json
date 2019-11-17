@@ -367,7 +367,7 @@
             },
             {
                 "index": 12,
-                "long_name": "Bomb Guardian",
+                "long_name": "Bomb Guardian Defeated Once",
                 "short_name": "Event12"
             },
             {
@@ -799,6 +799,21 @@
                 "index": 98,
                 "long_name": "Gathering Hall South Ceiling Bomb Slot",
                 "short_name": "Event98"
+            },
+            {
+                "index": 99,
+                "long_name": "Mining Station A Pirate Troopers",
+                "short_name": "Event99"
+            },
+            {
+                "index": 100,
+                "long_name": "Agon Temple Pickup",
+                "short_name": "Event100"
+            },
+            {
+                "index": 101,
+                "long_name": "Agon Temple Pickup After Mining Station A Pirate Troopers",
+                "short_name": "Event101"
             }
         ],
         "tricks": [
