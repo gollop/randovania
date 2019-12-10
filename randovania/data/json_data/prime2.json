@@ -19527,34 +19527,6 @@
                                             "negate": false
                                         }
                                     ]
-                                ],
-                                "Pickup (Power Bomb)": [
-                                    [
-                                        {
-                                            "requirement_type": 0,
-                                            "requirement_index": 15,
-                                            "amount": 1,
-                                            "negate": false
-                                        },
-                                        {
-                                            "requirement_type": 0,
-                                            "requirement_index": 24,
-                                            "amount": 1,
-                                            "negate": false
-                                        },
-                                        {
-                                            "requirement_type": 0,
-                                            "requirement_index": 27,
-                                            "amount": 1,
-                                            "negate": false
-                                        },
-                                        {
-                                            "requirement_type": 0,
-                                            "requirement_index": 43,
-                                            "amount": 1,
-                                            "negate": false
-                                        }
-                                    ]
                                 ]
                             }
                         },
@@ -19615,46 +19587,6 @@
                             "pickup_index": 42,
                             "major_location": false,
                             "connections": {
-                                "Door to Ventilation Area A": [
-                                    [
-                                        {
-                                            "requirement_type": 0,
-                                            "requirement_index": 15,
-                                            "amount": 1,
-                                            "negate": false
-                                        },
-                                        {
-                                            "requirement_type": 0,
-                                            "requirement_index": 24,
-                                            "amount": 1,
-                                            "negate": false
-                                        },
-                                        {
-                                            "requirement_type": 0,
-                                            "requirement_index": 27,
-                                            "amount": 1,
-                                            "negate": false
-                                        },
-                                        {
-                                            "requirement_type": 2,
-                                            "requirement_index": 28,
-                                            "amount": 1,
-                                            "negate": false
-                                        },
-                                        {
-                                            "requirement_type": 3,
-                                            "requirement_index": 1,
-                                            "amount": 10,
-                                            "negate": false
-                                        },
-                                        {
-                                            "requirement_type": 6,
-                                            "requirement_index": 0,
-                                            "amount": 1,
-                                            "negate": false
-                                        }
-                                    ]
-                                ],
                                 "Door to Agon Temple": [
                                     [
                                         {
