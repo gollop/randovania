@@ -39182,13 +39182,13 @@
                                         {
                                             "requirement_type": 2,
                                             "requirement_index": 0,
-                                            "amount": 2,
+                                            "amount": 1,
                                             "negate": false
                                         },
                                         {
                                             "requirement_type": 6,
                                             "requirement_index": 0,
-                                            "amount": 2,
+                                            "amount": 1,
                                             "negate": false
                                         }
                                     ],
@@ -39236,13 +39236,13 @@
                                         {
                                             "requirement_type": 2,
                                             "requirement_index": 0,
-                                            "amount": 2,
+                                            "amount": 1,
                                             "negate": false
                                         },
                                         {
                                             "requirement_type": 6,
                                             "requirement_index": 0,
-                                            "amount": 2,
+                                            "amount": 1,
                                             "negate": false
                                         }
                                     ]
@@ -39322,13 +39322,13 @@
                                         {
                                             "requirement_type": 2,
                                             "requirement_index": 5,
-                                            "amount": 1,
+                                            "amount": 2,
                                             "negate": false
                                         },
                                         {
                                             "requirement_type": 6,
                                             "requirement_index": 0,
-                                            "amount": 1,
+                                            "amount": 2,
                                             "negate": false
                                         }
                                     ],
@@ -39449,12 +39449,6 @@
                                             "requirement_index": 18,
                                             "amount": 1,
                                             "negate": false
-                                        },
-                                        {
-                                            "requirement_type": 1,
-                                            "requirement_index": 35,
-                                            "amount": 1,
-                                            "negate": true
                                         }
                                     ]
                                 ],
@@ -39655,13 +39649,13 @@
                                         {
                                             "requirement_type": 2,
                                             "requirement_index": 5,
-                                            "amount": 1,
+                                            "amount": 2,
                                             "negate": false
                                         },
                                         {
                                             "requirement_type": 6,
                                             "requirement_index": 0,
-                                            "amount": 1,
+                                            "amount": 2,
                                             "negate": false
                                         }
                                     ],
@@ -39894,7 +39888,7 @@
                                         {
                                             "requirement_type": 2,
                                             "requirement_index": 5,
-                                            "amount": 3,
+                                            "amount": 2,
                                             "negate": false
                                         },
                                         {
@@ -39906,7 +39900,7 @@
                                         {
                                             "requirement_type": 6,
                                             "requirement_index": 0,
-                                            "amount": 3,
+                                            "amount": 2,
                                             "negate": false
                                         }
                                     ],
@@ -39976,7 +39970,7 @@
                                         {
                                             "requirement_type": 2,
                                             "requirement_index": 5,
-                                            "amount": 3,
+                                            "amount": 2,
                                             "negate": false
                                         },
                                         {
@@ -40084,7 +40078,7 @@
                                         {
                                             "requirement_type": 2,
                                             "requirement_index": 5,
-                                            "amount": 3,
+                                            "amount": 2,
                                             "negate": false
                                         },
                                         {
@@ -40096,7 +40090,7 @@
                                         {
                                             "requirement_type": 6,
                                             "requirement_index": 0,
-                                            "amount": 3,
+                                            "amount": 2,
                                             "negate": false
                                         }
                                     ],
@@ -40166,7 +40160,7 @@
                                         {
                                             "requirement_type": 2,
                                             "requirement_index": 5,
-                                            "amount": 3,
+                                            "amount": 2,
                                             "negate": false
                                         },
                                         {
@@ -40226,13 +40220,13 @@
                                         {
                                             "requirement_type": 2,
                                             "requirement_index": 5,
-                                            "amount": 1,
+                                            "amount": 2,
                                             "negate": false
                                         },
                                         {
                                             "requirement_type": 6,
                                             "requirement_index": 0,
-                                            "amount": 1,
+                                            "amount": 2,
                                             "negate": false
                                         }
                                     ]
@@ -41535,13 +41529,39 @@
                                         {
                                             "requirement_type": 2,
                                             "requirement_index": 2,
-                                            "amount": 2,
+                                            "amount": 1,
                                             "negate": false
                                         },
                                         {
                                             "requirement_type": 6,
                                             "requirement_index": 0,
-                                            "amount": 2,
+                                            "amount": 1,
+                                            "negate": false
+                                        }
+                                    ],
+                                    [
+                                        {
+                                            "requirement_type": 0,
+                                            "requirement_index": 24,
+                                            "amount": 1,
+                                            "negate": false
+                                        },
+                                        {
+                                            "requirement_type": 0,
+                                            "requirement_index": 25,
+                                            "amount": 1,
+                                            "negate": false
+                                        },
+                                        {
+                                            "requirement_type": 2,
+                                            "requirement_index": 27,
+                                            "amount": 1,
+                                            "negate": false
+                                        },
+                                        {
+                                            "requirement_type": 6,
+                                            "requirement_index": 0,
+                                            "amount": 1,
                                             "negate": false
                                         }
                                     ],
@@ -41561,13 +41581,39 @@
                                         {
                                             "requirement_type": 2,
                                             "requirement_index": 2,
-                                            "amount": 2,
+                                            "amount": 1,
                                             "negate": false
                                         },
                                         {
                                             "requirement_type": 6,
                                             "requirement_index": 0,
-                                            "amount": 2,
+                                            "amount": 1,
+                                            "negate": false
+                                        }
+                                    ],
+                                    [
+                                        {
+                                            "requirement_type": 0,
+                                            "requirement_index": 24,
+                                            "amount": 1,
+                                            "negate": false
+                                        },
+                                        {
+                                            "requirement_type": 1,
+                                            "requirement_index": 34,
+                                            "amount": 1,
+                                            "negate": false
+                                        },
+                                        {
+                                            "requirement_type": 2,
+                                            "requirement_index": 27,
+                                            "amount": 1,
+                                            "negate": false
+                                        },
+                                        {
+                                            "requirement_type": 6,
+                                            "requirement_index": 0,
+                                            "amount": 1,
                                             "negate": false
                                         }
                                     ]
@@ -41931,12 +41977,6 @@
                                             "requirement_index": 43,
                                             "amount": 1,
                                             "negate": false
-                                        },
-                                        {
-                                            "requirement_type": 1,
-                                            "requirement_index": 34,
-                                            "amount": 1,
-                                            "negate": true
                                         }
                                     ]
                                 ],
