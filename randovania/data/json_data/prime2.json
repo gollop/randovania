@@ -55603,12 +55603,6 @@
                                             "requirement_index": 18,
                                             "amount": 1,
                                             "negate": false
-                                        },
-                                        {
-                                            "requirement_type": 1,
-                                            "requirement_index": 57,
-                                            "amount": 1,
-                                            "negate": true
                                         }
                                     ]
                                 ],
@@ -55725,12 +55719,6 @@
                                             "requirement_index": 16,
                                             "amount": 1,
                                             "negate": false
-                                        },
-                                        {
-                                            "requirement_type": 1,
-                                            "requirement_index": 60,
-                                            "amount": 1,
-                                            "negate": true
                                         }
                                     ]
                                 ],
@@ -55863,12 +55851,6 @@
                                             "negate": false
                                         },
                                         {
-                                            "requirement_type": 1,
-                                            "requirement_index": 58,
-                                            "amount": 1,
-                                            "negate": true
-                                        },
-                                        {
                                             "requirement_type": 6,
                                             "requirement_index": 0,
                                             "amount": 1,
@@ -55905,12 +55887,6 @@
                                             "requirement_index": 57,
                                             "amount": 1,
                                             "negate": false
-                                        },
-                                        {
-                                            "requirement_type": 1,
-                                            "requirement_index": 58,
-                                            "amount": 1,
-                                            "negate": true
                                         },
                                         {
                                             "requirement_type": 2,
@@ -55955,12 +55931,6 @@
                                             "requirement_index": 57,
                                             "amount": 1,
                                             "negate": false
-                                        },
-                                        {
-                                            "requirement_type": 1,
-                                            "requirement_index": 58,
-                                            "amount": 1,
-                                            "negate": true
                                         }
                                     ]
                                 ]
