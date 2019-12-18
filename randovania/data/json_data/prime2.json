@@ -46332,7 +46332,7 @@
                                         {
                                             "requirement_type": 2,
                                             "requirement_index": 28,
-                                            "amount": 3,
+                                            "amount": 4,
                                             "negate": false
                                         },
                                         {
@@ -46344,7 +46344,7 @@
                                         {
                                             "requirement_type": 6,
                                             "requirement_index": 0,
-                                            "amount": 3,
+                                            "amount": 4,
                                             "negate": false
                                         }
                                     ],
