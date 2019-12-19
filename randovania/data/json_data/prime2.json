@@ -3133,7 +3133,7 @@
                     "nodes": [
                         {
                             "name": "Door to Path of Eyes",
-                            "heal": true,
+                            "heal": false,
                             "node_type": 1,
                             "dock_index": 2,
                             "connected_area_asset_id": 3997643454,
@@ -3151,7 +3151,7 @@
                         },
                         {
                             "name": "Door to Meeting Grounds",
-                            "heal": true,
+                            "heal": false,
                             "node_type": 1,
                             "dock_index": 1,
                             "connected_area_asset_id": 2606692981,
@@ -3182,36 +3182,12 @@
                                             "negate": false
                                         }
                                     ]
-                                ],
-                                "Portal to Base Access": [
-                                    [
-                                        {
-                                            "requirement_type": 0,
-                                            "requirement_index": 15,
-                                            "amount": 1,
-                                            "negate": false
-                                        },
-                                        {
-                                            "requirement_type": 0,
-                                            "requirement_index": 18,
-                                            "amount": 1,
-                                            "negate": false
-                                        }
-                                    ],
-                                    [
-                                        {
-                                            "requirement_type": 0,
-                                            "requirement_index": 24,
-                                            "amount": 1,
-                                            "negate": false
-                                        }
-                                    ]
                                 ]
                             }
                         },
                         {
                             "name": "Portal to Base Access",
-                            "heal": true,
+                            "heal": false,
                             "node_type": 1,
                             "dock_index": 0,
                             "connected_area_asset_id": 1752128027,
@@ -3220,9 +3196,6 @@
                             "dock_weakness_index": 1,
                             "connections": {
                                 "Door to Path of Eyes": [
-                                    []
-                                ],
-                                "Door to Meeting Grounds": [
                                     []
                                 ]
                             }
