@@ -1524,6 +1524,12 @@
                                             "negate": false
                                         },
                                         {
+                                            "requirement_type": 2,
+                                            "requirement_index": 1,
+                                            "amount": 1,
+                                            "negate": false
+                                        },
+                                        {
                                             "requirement_type": 6,
                                             "requirement_index": 0,
                                             "amount": 1,
@@ -1547,6 +1553,64 @@
                                     [
                                         {
                                             "requirement_type": 0,
+                                            "requirement_index": 9,
+                                            "amount": 1,
+                                            "negate": false
+                                        },
+                                        {
+                                            "requirement_type": 0,
+                                            "requirement_index": 24,
+                                            "amount": 1,
+                                            "negate": false
+                                        },
+                                        {
+                                            "requirement_type": 2,
+                                            "requirement_index": 0,
+                                            "amount": 2,
+                                            "negate": false
+                                        },
+                                        {
+                                            "requirement_type": 6,
+                                            "requirement_index": 0,
+                                            "amount": 2,
+                                            "negate": false
+                                        }
+                                    ],
+                                    [
+                                        {
+                                            "requirement_type": 0,
+                                            "requirement_index": 15,
+                                            "amount": 1,
+                                            "negate": false
+                                        },
+                                        {
+                                            "requirement_type": 0,
+                                            "requirement_index": 18,
+                                            "amount": 1,
+                                            "negate": false
+                                        },
+                                        {
+                                            "requirement_type": 0,
+                                            "requirement_index": 24,
+                                            "amount": 1,
+                                            "negate": false
+                                        },
+                                        {
+                                            "requirement_type": 2,
+                                            "requirement_index": 4,
+                                            "amount": 1,
+                                            "negate": false
+                                        },
+                                        {
+                                            "requirement_type": 6,
+                                            "requirement_index": 0,
+                                            "amount": 1,
+                                            "negate": false
+                                        }
+                                    ],
+                                    [
+                                        {
+                                            "requirement_type": 0,
                                             "requirement_index": 15,
                                             "amount": 1,
                                             "negate": false
@@ -1560,17 +1624,23 @@
                                         {
                                             "requirement_type": 2,
                                             "requirement_index": 4,
-                                            "amount": 4,
+                                            "amount": 5,
                                             "negate": false
                                         },
                                         {
                                             "requirement_type": 6,
                                             "requirement_index": 0,
-                                            "amount": 4,
+                                            "amount": 5,
                                             "negate": false
                                         }
                                     ],
                                     [
+                                        {
+                                            "requirement_type": 0,
+                                            "requirement_index": 15,
+                                            "amount": 1,
+                                            "negate": false
+                                        },
                                         {
                                             "requirement_type": 0,
                                             "requirement_index": 24,
@@ -1587,7 +1657,59 @@
                                     [
                                         {
                                             "requirement_type": 0,
+                                            "requirement_index": 15,
+                                            "amount": 1,
+                                            "negate": false
+                                        },
+                                        {
+                                            "requirement_type": 0,
                                             "requirement_index": 24,
+                                            "amount": 1,
+                                            "negate": false
+                                        },
+                                        {
+                                            "requirement_type": 2,
+                                            "requirement_index": 5,
+                                            "amount": 3,
+                                            "negate": false
+                                        },
+                                        {
+                                            "requirement_type": 6,
+                                            "requirement_index": 0,
+                                            "amount": 3,
+                                            "negate": false
+                                        }
+                                    ],
+                                    [
+                                        {
+                                            "requirement_type": 0,
+                                            "requirement_index": 24,
+                                            "amount": 1,
+                                            "negate": false
+                                        },
+                                        {
+                                            "requirement_type": 2,
+                                            "requirement_index": 2,
+                                            "amount": 1,
+                                            "negate": false
+                                        },
+                                        {
+                                            "requirement_type": 6,
+                                            "requirement_index": 0,
+                                            "amount": 1,
+                                            "negate": false
+                                        }
+                                    ],
+                                    [
+                                        {
+                                            "requirement_type": 0,
+                                            "requirement_index": 24,
+                                            "amount": 1,
+                                            "negate": false
+                                        },
+                                        {
+                                            "requirement_type": 2,
+                                            "requirement_index": 27,
                                             "amount": 1,
                                             "negate": false
                                         },
@@ -1611,15 +1733,12 @@
                                 ],
                                 "Event - Landing Site Webs": [
                                     []
-                                ],
-                                "Keybearer Corpse (M-Dhe)": [
-                                    []
                                 ]
                             }
                         },
                         {
                             "name": "Door to Service Access",
-                            "heal": true,
+                            "heal": false,
                             "node_type": 1,
                             "dock_index": 0,
                             "connected_area_asset_id": 2679590972,
@@ -1629,12 +1748,15 @@
                             "connections": {
                                 "Save Station": [
                                     []
+                                ],
+                                "Keybearer Corpse (M-Dhe)": [
+                                    []
                                 ]
                             }
                         },
                         {
                             "name": "Door to Hive Access Tunnel",
-                            "heal": true,
+                            "heal": false,
                             "node_type": 1,
                             "dock_index": 1,
                             "connected_area_asset_id": 2970881060,
@@ -1667,6 +1789,12 @@
                                             "negate": false
                                         },
                                         {
+                                            "requirement_type": 2,
+                                            "requirement_index": 13,
+                                            "amount": 1,
+                                            "negate": false
+                                        },
+                                        {
                                             "requirement_type": 6,
                                             "requirement_index": 0,
                                             "amount": 1,
@@ -1674,6 +1802,12 @@
                                         }
                                     ],
                                     [
+                                        {
+                                            "requirement_type": 0,
+                                            "requirement_index": 15,
+                                            "amount": 1,
+                                            "negate": false
+                                        },
                                         {
                                             "requirement_type": 0,
                                             "requirement_index": 24,
@@ -1687,22 +1821,14 @@
                                             "negate": false
                                         },
                                         {
-                                            "requirement_type": 6,
-                                            "requirement_index": 0,
-                                            "amount": 1,
-                                            "negate": false
-                                        }
-                                    ],
-                                    [
-                                        {
-                                            "requirement_type": 0,
-                                            "requirement_index": 27,
+                                            "requirement_type": 1,
+                                            "requirement_index": 56,
                                             "amount": 1,
                                             "negate": false
                                         },
                                         {
                                             "requirement_type": 2,
-                                            "requirement_index": 10,
+                                            "requirement_index": 13,
                                             "amount": 1,
                                             "negate": false
                                         },
@@ -1718,13 +1844,10 @@
                         },
                         {
                             "name": "Event - Landing Site Webs",
-                            "heal": true,
+                            "heal": false,
                             "node_type": 4,
                             "event_index": 71,
                             "connections": {
-                                "Save Station": [
-                                    []
-                                ],
                                 "Door to Hive Access Tunnel": [
                                     []
                                 ]
@@ -1732,13 +1855,13 @@
                         },
                         {
                             "name": "Keybearer Corpse (M-Dhe)",
-                            "heal": true,
+                            "heal": false,
                             "node_type": 6,
                             "string_asset_id": 3820230591,
                             "lore_type": 1,
                             "extra": 11,
                             "connections": {
-                                "Save Station": [
+                                "Door to Service Access": [
                                     []
                                 ]
                             }
