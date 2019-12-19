@@ -50138,7 +50138,7 @@
                     "nodes": [
                         {
                             "name": "Door to Main Research",
-                            "heal": true,
+                            "heal": false,
                             "node_type": 1,
                             "dock_index": 1,
                             "connected_area_asset_id": 2437878657,
@@ -50146,17 +50146,7 @@
                             "dock_type": 0,
                             "dock_weakness_index": 0,
                             "connections": {
-                                "Door to Watch Station": [
-                                    [
-                                        {
-                                            "requirement_type": 0,
-                                            "requirement_index": 11,
-                                            "amount": 1,
-                                            "negate": false
-                                        }
-                                    ]
-                                ],
-                                "Pickup (Missile)": [
+                                "Bottom Cannon": [
                                     [
                                         {
                                             "requirement_type": 0,
@@ -50170,7 +50160,7 @@
                         },
                         {
                             "name": "Door to Watch Station",
-                            "heal": true,
+                            "heal": false,
                             "node_type": 1,
                             "dock_index": 0,
                             "connected_area_asset_id": 2722128775,
@@ -50178,26 +50168,64 @@
                             "dock_type": 0,
                             "dock_weakness_index": 0,
                             "connections": {
-                                "Door to Main Research": [
-                                    []
-                                ],
                                 "Pickup (Missile)": [
-                                    []
+                                    [
+                                        {
+                                            "requirement_type": 0,
+                                            "requirement_index": 15,
+                                            "amount": 1,
+                                            "negate": false
+                                        }
+                                    ]
+                                ],
+                                "Bottom Cannon": [
+                                    [
+                                        {
+                                            "requirement_type": 0,
+                                            "requirement_index": 15,
+                                            "amount": 1,
+                                            "negate": false
+                                        }
+                                    ]
                                 ]
                             }
                         },
                         {
                             "name": "Pickup (Missile)",
-                            "heal": true,
+                            "heal": false,
                             "node_type": 2,
                             "pickup_index": 101,
                             "major_location": false,
+                            "connections": {
+                                "Bottom Cannon": [
+                                    [
+                                        {
+                                            "requirement_type": 0,
+                                            "requirement_index": 15,
+                                            "amount": 1,
+                                            "negate": false
+                                        }
+                                    ]
+                                ]
+                            }
+                        },
+                        {
+                            "name": "Bottom Cannon",
+                            "heal": false,
+                            "node_type": 0,
                             "connections": {
                                 "Door to Main Research": [
                                     []
                                 ],
                                 "Door to Watch Station": [
-                                    []
+                                    [
+                                        {
+                                            "requirement_type": 0,
+                                            "requirement_index": 15,
+                                            "amount": 1,
+                                            "negate": false
+                                        }
+                                    ]
                                 ]
                             }
                         }
