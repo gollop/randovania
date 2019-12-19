@@ -3548,7 +3548,7 @@
                     "nodes": [
                         {
                             "name": "Door to Hive Save Station",
-                            "heal": true,
+                            "heal": false,
                             "node_type": 1,
                             "dock_index": 2,
                             "connected_area_asset_id": 341957679,
@@ -3558,15 +3558,12 @@
                             "connections": {
                                 "Door to Hive Transport Area": [
                                     []
-                                ],
-                                "Morph Ball Door to Hive Chamber B": [
-                                    []
                                 ]
                             }
                         },
                         {
                             "name": "Door to Hive Transport Area",
-                            "heal": true,
+                            "heal": false,
                             "node_type": 1,
                             "dock_index": 0,
                             "connected_area_asset_id": 2485094202,
@@ -3578,13 +3575,20 @@
                                     []
                                 ],
                                 "Morph Ball Door to Hive Chamber B": [
-                                    []
+                                    [
+                                        {
+                                            "requirement_type": 0,
+                                            "requirement_index": 15,
+                                            "amount": 1,
+                                            "negate": false
+                                        }
+                                    ]
                                 ]
                             }
                         },
                         {
                             "name": "Morph Ball Door to Hive Chamber B",
-                            "heal": true,
+                            "heal": false,
                             "node_type": 1,
                             "dock_index": 1,
                             "connected_area_asset_id": 494654382,
@@ -3592,11 +3596,15 @@
                             "dock_type": 1,
                             "dock_weakness_index": 0,
                             "connections": {
-                                "Door to Hive Save Station": [
-                                    []
-                                ],
                                 "Door to Hive Transport Area": [
-                                    []
+                                    [
+                                        {
+                                            "requirement_type": 0,
+                                            "requirement_index": 15,
+                                            "amount": 1,
+                                            "negate": false
+                                        }
+                                    ]
                                 ]
                             }
                         }
