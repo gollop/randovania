@@ -9446,7 +9446,7 @@
                     "nodes": [
                         {
                             "name": "Portal to Profane Path",
-                            "heal": true,
+                            "heal": false,
                             "node_type": 1,
                             "dock_index": 2,
                             "connected_area_asset_id": 1692811478,
@@ -9454,9 +9454,6 @@
                             "dock_type": 3,
                             "dock_weakness_index": 1,
                             "connections": {
-                                "Door to Sacred Bridge": [
-                                    []
-                                ],
                                 "Door to Temple Transport A": [
                                     []
                                 ]
@@ -9464,7 +9461,7 @@
                         },
                         {
                             "name": "Door to Sacred Bridge",
-                            "heal": true,
+                            "heal": false,
                             "node_type": 1,
                             "dock_index": 1,
                             "connected_area_asset_id": 3132939042,
@@ -9536,12 +9533,10 @@
                                     [
                                         {
                                             "requirement_type": 0,
-                                            "requirement_index": 24,
+                                            "requirement_index": 15,
                                             "amount": 1,
                                             "negate": false
-                                        }
-                                    ],
-                                    [
+                                        },
                                         {
                                             "requirement_type": 0,
                                             "requirement_index": 27,
@@ -9560,13 +9555,21 @@
                                             "amount": 1,
                                             "negate": false
                                         }
+                                    ],
+                                    [
+                                        {
+                                            "requirement_type": 0,
+                                            "requirement_index": 24,
+                                            "amount": 1,
+                                            "negate": false
+                                        }
                                     ]
                                 ]
                             }
                         },
                         {
                             "name": "Door to Temple Transport A",
-                            "heal": true,
+                            "heal": false,
                             "node_type": 1,
                             "dock_index": 0,
                             "connected_area_asset_id": 1345979968,
@@ -9597,13 +9600,13 @@
                                         {
                                             "requirement_type": 2,
                                             "requirement_index": 0,
-                                            "amount": 3,
+                                            "amount": 2,
                                             "negate": false
                                         },
                                         {
                                             "requirement_type": 6,
                                             "requirement_index": 0,
-                                            "amount": 3,
+                                            "amount": 2,
                                             "negate": false
                                         }
                                     ],
@@ -9621,21 +9624,25 @@
                                             "negate": false
                                         },
                                         {
+                                            "requirement_type": 2,
+                                            "requirement_index": 1,
+                                            "amount": 1,
+                                            "negate": false
+                                        },
+                                        {
                                             "requirement_type": 6,
                                             "requirement_index": 0,
-                                            "amount": 2,
+                                            "amount": 1,
                                             "negate": false
                                         }
                                     ],
                                     [
                                         {
                                             "requirement_type": 0,
-                                            "requirement_index": 24,
+                                            "requirement_index": 15,
                                             "amount": 1,
                                             "negate": false
-                                        }
-                                    ],
-                                    [
+                                        },
                                         {
                                             "requirement_type": 0,
                                             "requirement_index": 27,
@@ -9651,7 +9658,15 @@
                                         {
                                             "requirement_type": 6,
                                             "requirement_index": 0,
-                                            "amount": 2,
+                                            "amount": 1,
+                                            "negate": false
+                                        }
+                                    ],
+                                    [
+                                        {
+                                            "requirement_type": 0,
+                                            "requirement_index": 24,
+                                            "amount": 1,
                                             "negate": false
                                         }
                                     ]
