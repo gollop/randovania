@@ -5760,7 +5760,7 @@
                     "nodes": [
                         {
                             "name": "Door to Hive Storage",
-                            "heal": true,
+                            "heal": false,
                             "node_type": 1,
                             "dock_index": 1,
                             "connected_area_asset_id": 1667749239,
@@ -5782,7 +5782,7 @@
                         },
                         {
                             "name": "Door to Hive Tunnel",
-                            "heal": true,
+                            "heal": false,
                             "node_type": 1,
                             "dock_index": 0,
                             "connected_area_asset_id": 360901706,
@@ -5804,6 +5804,12 @@
                                     [
                                         {
                                             "requirement_type": 0,
+                                            "requirement_index": 9,
+                                            "amount": 1,
+                                            "negate": false
+                                        },
+                                        {
+                                            "requirement_type": 0,
                                             "requirement_index": 15,
                                             "amount": 1,
                                             "negate": false
@@ -5820,13 +5826,10 @@
                         },
                         {
                             "name": "Event - Command Chamber Gate",
-                            "heal": true,
+                            "heal": false,
                             "node_type": 4,
                             "event_index": 4,
                             "connections": {
-                                "Door to Hive Storage": [
-                                    []
-                                ],
                                 "Door to Hive Tunnel": [
                                     []
                                 ]
