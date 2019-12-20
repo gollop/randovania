@@ -104,12 +104,18 @@ def create_major_item(item: MajorItem,
     else:
         convert_resources = tuple()
 
+    if item.probability_cap is None:
+        probability_cap = float("inf")
+    else:
+        probability_cap = item.probability_cap
+
     return PickupEntry(
         name=item.name,
         resources=conditional_resources,
         model_index=item.model_index,
         item_category=item.item_category,
         probability_offset=item.probability_offset,
+        probability_cap=probability_cap,
         convert_resources=convert_resources,
     )
 
@@ -174,7 +180,7 @@ def create_dark_temple_key(key_number: int,
         ),
         model_index=DARK_TEMPLE_KEY_MODEL,
         item_category=ItemCategory.TEMPLE_KEY,
-        probability_offset=3,
+        probability_offset=4,
     )
 
 
@@ -197,7 +203,7 @@ def create_sky_temple_key(key_number: int,
         ),
         model_index=SKY_TEMPLE_KEY_MODEL,
         item_category=ItemCategory.SKY_TEMPLE_KEY,
-        probability_offset=3,
+        probability_offset=4,
     )
 
 

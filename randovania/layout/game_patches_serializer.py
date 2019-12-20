@@ -29,6 +29,12 @@ _PROBABILITY_OFFSET_META = {
     "precision": 2.0,
     "if_different": 0.0,
 }
+_PROBABILITY_CAP_META = {
+    "min": 0,
+    "max": 20,
+    "precision": 1.0,
+    "if_different": float("inf"),
+}
 
 
 class BitPackPickupEntry:
@@ -44,6 +50,7 @@ class BitPackPickupEntry:
 
         yield self.value.model_index, 255
         yield from BitPackFloat(self.value.probability_offset).bit_pack_encode(_PROBABILITY_OFFSET_META)
+        yield from BitPackFloat(self.value.probability_cap).bit_pack_encode(_PROBABILITY_CAP_META)
         yield from self.value.item_category.bit_pack_encode({})
         yield int(any(cond.name is not None for cond in self.value.resources)), 2
         yield len(self.value.resources) - 1, MAXIMUM_PICKUP_CONDITIONAL_RESOURCES
@@ -66,6 +73,7 @@ class BitPackPickupEntry:
     def bit_pack_unpack(cls, decoder: BitPackDecoder, name: str, database: ResourceDatabase) -> PickupEntry:
         model_index = decoder.decode_single(255)
         probability_offset = BitPackFloat.bit_pack_unpack(decoder, _PROBABILITY_OFFSET_META)
+        probability_offset = BitPackFloat.bit_pack_unpack(decoder, _PROBABILITY_CAP_META)
         item_category = ItemCategory.bit_pack_unpack(decoder, {})
         has_name = bitpacking.decode_bool(decoder)
         num_conditional = decoder.decode_single(MAXIMUM_PICKUP_CONDITIONAL_RESOURCES) + 1

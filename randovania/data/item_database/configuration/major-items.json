@@ -47,13 +47,13 @@
         "model_index": 15,
         "progression": [14],
         "original_index": 24,
-        "probability_offset": -1
+        "probability_offset": -1.5
     },
     "Progressive Suit": {
         "item_category": "suit",
         "model_index": 13,
         "progression": [13, 14],
-        "probability_offset": 0
+        "probability_offset": 1.5
     },
 
 
@@ -132,7 +132,8 @@
         "ammo": [43],
         "converts_indices": [72],
         "original_index": 88,
-        "probability_offset": -2
+        "probability_offset": -2.75,
+        "probability_cap": 2
     },
     "Cannon Ball": {
         "item_category": "morph_ball",
@@ -162,7 +163,7 @@
         "model_index": 26,
         "progression": [23],
         "original_index": 86,
-        "probability_offset": 0
+        "probability_offset": 1.5
     },
     "Screw Attack": {
         "item_category": "movement",
@@ -175,7 +176,7 @@
         "item_category": "movement",
         "model_index": 26,
         "progression": [23, 27],
-        "probability_offset": 0
+        "probability_offset": 1
     },
 
 
@@ -270,6 +271,6 @@
         "item_category": "energy_tank",
         "model_index": 36,
         "progression": [42],
-        "probability_offset": 0
+        "probability_offset": 3
     }
 }

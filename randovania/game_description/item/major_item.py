@@ -15,7 +15,8 @@ class MajorItem:
     converts_indices: Tuple[int, ...] = tuple()
     required: bool = False
     original_index: Optional[PickupIndex] = None
-    probability_offset: int = 0
+    probability_offset: float = 0
+    probability_cap: Optional[float] = None
     warning: Optional[str] = None
 
     @classmethod
@@ -30,6 +31,7 @@ class MajorItem:
             required=value.get("required", False),
             original_index=PickupIndex(value["original_index"]) if "original_index" in value else None,
             probability_offset=value["probability_offset"],
+            probability_cap=value.get("probability_cap"),
             warning=value.get("warning"),
         )
 
@@ -44,6 +46,8 @@ class MajorItem:
             "required": self.required,
             "probability_offset": self.probability_offset,
         }
+        if self.probability_cap is not None:
+            result["probability_cap"] = self.probability_cap
         if self.original_index is not None:
             result["original_index"] = self.original_index.index
         if self.warning is not None:
