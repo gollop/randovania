@@ -8976,7 +8976,7 @@
                     "nodes": [
                         {
                             "name": "Door to Dynamo Chamber",
-                            "heal": true,
+                            "heal": false,
                             "node_type": 1,
                             "dock_index": 2,
                             "connected_area_asset_id": 3032508327,
@@ -8984,7 +8984,10 @@
                             "dock_type": 0,
                             "dock_weakness_index": 0,
                             "connections": {
-                                "Door to Storage Cavern A": [
+                                "Door to Trooper Security Station": [
+                                    []
+                                ],
+                                "Near Pickup": [
                                     [
                                         {
                                             "requirement_type": 0,
@@ -8997,23 +9000,15 @@
                                             "requirement_index": 18,
                                             "amount": 1,
                                             "negate": false
-                                        },
-                                        {
-                                            "requirement_type": 6,
-                                            "requirement_index": 0,
-                                            "amount": 3,
-                                            "negate": false
                                         }
                                     ],
                                     [
                                         {
                                             "requirement_type": 0,
-                                            "requirement_index": 24,
+                                            "requirement_index": 15,
                                             "amount": 1,
                                             "negate": false
-                                        }
-                                    ],
-                                    [
+                                        },
                                         {
                                             "requirement_type": 0,
                                             "requirement_index": 27,
@@ -9023,65 +9018,28 @@
                                         {
                                             "requirement_type": 2,
                                             "requirement_index": 10,
-                                            "amount": 2,
+                                            "amount": 1,
                                             "negate": false
                                         },
                                         {
                                             "requirement_type": 6,
                                             "requirement_index": 0,
-                                            "amount": 2,
-                                            "negate": false
-                                        }
-                                    ]
-                                ],
-                                "Door to Trooper Security Station": [
-                                    []
-                                ],
-                                "Pickup (Missile)": [
-                                    [
-                                        {
-                                            "requirement_type": 0,
-                                            "requirement_index": 15,
-                                            "amount": 1,
-                                            "negate": false
-                                        },
-                                        {
-                                            "requirement_type": 0,
-                                            "requirement_index": 18,
                                             "amount": 1,
                                             "negate": false
                                         }
                                     ],
                                     [
-                                        {
-                                            "requirement_type": 0,
-                                            "requirement_index": 15,
-                                            "amount": 1,
-                                            "negate": false
-                                        },
                                         {
                                             "requirement_type": 0,
                                             "requirement_index": 24,
                                             "amount": 1,
                                             "negate": false
-                                        },
-                                        {
-                                            "requirement_type": 0,
-                                            "requirement_index": 43,
-                                            "amount": 1,
-                                            "negate": false
                                         }
                                     ],
                                     [
                                         {
-                                            "requirement_type": 0,
-                                            "requirement_index": 15,
-                                            "amount": 1,
-                                            "negate": false
-                                        },
-                                        {
-                                            "requirement_type": 0,
-                                            "requirement_index": 43,
+                                            "requirement_type": 2,
+                                            "requirement_index": 27,
                                             "amount": 1,
                                             "negate": false
                                         },
@@ -9097,7 +9055,7 @@
                         },
                         {
                             "name": "Door to Storage Cavern A",
-                            "heal": true,
+                            "heal": false,
                             "node_type": 1,
                             "dock_index": 0,
                             "connected_area_asset_id": 939577218,
@@ -9105,8 +9063,133 @@
                             "dock_type": 0,
                             "dock_weakness_index": 0,
                             "connections": {
+                                "Near Pickup": [
+                                    []
+                                ]
+                            }
+                        },
+                        {
+                            "name": "Door to Trooper Security Station",
+                            "heal": false,
+                            "node_type": 1,
+                            "dock_index": 1,
+                            "connected_area_asset_id": 1441689027,
+                            "connected_dock_index": 0,
+                            "dock_type": 0,
+                            "dock_weakness_index": 0,
+                            "connections": {
                                 "Door to Dynamo Chamber": [
                                     []
+                                ]
+                            }
+                        },
+                        {
+                            "name": "Pickup (Missile)",
+                            "heal": false,
+                            "node_type": 2,
+                            "pickup_index": 12,
+                            "major_location": false,
+                            "connections": {
+                                "Near Pickup": [
+                                    []
+                                ]
+                            }
+                        },
+                        {
+                            "name": "Near Pickup",
+                            "heal": false,
+                            "node_type": 0,
+                            "connections": {
+                                "Door to Dynamo Chamber": [
+                                    []
+                                ],
+                                "Door to Storage Cavern A": [
+                                    [
+                                        {
+                                            "requirement_type": 0,
+                                            "requirement_index": 15,
+                                            "amount": 1,
+                                            "negate": false
+                                        },
+                                        {
+                                            "requirement_type": 0,
+                                            "requirement_index": 18,
+                                            "amount": 1,
+                                            "negate": false
+                                        },
+                                        {
+                                            "requirement_type": 2,
+                                            "requirement_index": 4,
+                                            "amount": 4,
+                                            "negate": false
+                                        },
+                                        {
+                                            "requirement_type": 6,
+                                            "requirement_index": 0,
+                                            "amount": 4,
+                                            "negate": false
+                                        }
+                                    ],
+                                    [
+                                        {
+                                            "requirement_type": 0,
+                                            "requirement_index": 15,
+                                            "amount": 1,
+                                            "negate": false
+                                        },
+                                        {
+                                            "requirement_type": 0,
+                                            "requirement_index": 18,
+                                            "amount": 1,
+                                            "negate": false
+                                        },
+                                        {
+                                            "requirement_type": 2,
+                                            "requirement_index": 27,
+                                            "amount": 1,
+                                            "negate": false
+                                        },
+                                        {
+                                            "requirement_type": 6,
+                                            "requirement_index": 0,
+                                            "amount": 1,
+                                            "negate": false
+                                        }
+                                    ],
+                                    [
+                                        {
+                                            "requirement_type": 0,
+                                            "requirement_index": 15,
+                                            "amount": 1,
+                                            "negate": false
+                                        },
+                                        {
+                                            "requirement_type": 0,
+                                            "requirement_index": 27,
+                                            "amount": 1,
+                                            "negate": false
+                                        },
+                                        {
+                                            "requirement_type": 2,
+                                            "requirement_index": 10,
+                                            "amount": 1,
+                                            "negate": false
+                                        },
+                                        {
+                                            "requirement_type": 6,
+                                            "requirement_index": 0,
+                                            "amount": 1,
+                                            "negate": false
+                                        }
+                                    ],
+                                    [
+                                        {
+                                            "requirement_type": 0,
+                                            "requirement_index": 24,
+                                            "amount": 1,
+                                            "negate": false
+                                        }
+                                    ]
                                 ],
                                 "Pickup (Missile)": [
                                     [
@@ -9137,33 +9220,6 @@
                                             "negate": false
                                         }
                                     ]
-                                ]
-                            }
-                        },
-                        {
-                            "name": "Door to Trooper Security Station",
-                            "heal": true,
-                            "node_type": 1,
-                            "dock_index": 1,
-                            "connected_area_asset_id": 1441689027,
-                            "connected_dock_index": 0,
-                            "dock_type": 0,
-                            "dock_weakness_index": 0,
-                            "connections": {
-                                "Door to Dynamo Chamber": [
-                                    []
-                                ]
-                            }
-                        },
-                        {
-                            "name": "Pickup (Missile)",
-                            "heal": true,
-                            "node_type": 2,
-                            "pickup_index": 12,
-                            "major_location": false,
-                            "connections": {
-                                "Door to Dynamo Chamber": [
-                                    []
                                 ]
                             }
                         }
