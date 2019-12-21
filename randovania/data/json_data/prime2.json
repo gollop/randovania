@@ -8020,7 +8020,7 @@
                     "nodes": [
                         {
                             "name": "Door to Communication Area",
-                            "heal": true,
+                            "heal": false,
                             "node_type": 1,
                             "dock_index": 0,
                             "connected_area_asset_id": 1667141025,
@@ -8028,62 +8028,6 @@
                             "dock_type": 0,
                             "dock_weakness_index": 0,
                             "connections": {
-                                "Door to Temple Assembly Site": [
-                                    [
-                                        {
-                                            "requirement_type": 0,
-                                            "requirement_index": 15,
-                                            "amount": 1,
-                                            "negate": false
-                                        },
-                                        {
-                                            "requirement_type": 0,
-                                            "requirement_index": 18,
-                                            "amount": 1,
-                                            "negate": false
-                                        },
-                                        {
-                                            "requirement_type": 1,
-                                            "requirement_index": 73,
-                                            "amount": 1,
-                                            "negate": false
-                                        }
-                                    ],
-                                    [
-                                        {
-                                            "requirement_type": 0,
-                                            "requirement_index": 15,
-                                            "amount": 1,
-                                            "negate": false
-                                        },
-                                        {
-                                            "requirement_type": 0,
-                                            "requirement_index": 43,
-                                            "amount": 1,
-                                            "negate": false
-                                        },
-                                        {
-                                            "requirement_type": 1,
-                                            "requirement_index": 73,
-                                            "amount": 1,
-                                            "negate": false
-                                        }
-                                    ],
-                                    [
-                                        {
-                                            "requirement_type": 0,
-                                            "requirement_index": 24,
-                                            "amount": 1,
-                                            "negate": false
-                                        },
-                                        {
-                                            "requirement_type": 1,
-                                            "requirement_index": 73,
-                                            "amount": 1,
-                                            "negate": false
-                                        }
-                                    ]
-                                ],
                                 "Event - Dynamo Chamber Gates": [
                                     [
                                         {
@@ -8103,12 +8047,6 @@
                                             "requirement_index": 18,
                                             "amount": 1,
                                             "negate": false
-                                        },
-                                        {
-                                            "requirement_type": 1,
-                                            "requirement_index": 73,
-                                            "amount": 1,
-                                            "negate": true
                                         }
                                     ],
                                     [
@@ -8125,10 +8063,28 @@
                                             "negate": false
                                         },
                                         {
+                                            "requirement_type": 6,
+                                            "requirement_index": 0,
+                                            "amount": 1,
+                                            "negate": false
+                                        }
+                                    ],
+                                    [
+                                        {
+                                            "requirement_type": 2,
+                                            "requirement_index": 13,
+                                            "amount": 1,
+                                            "negate": false
+                                        }
+                                    ]
+                                ],
+                                "Front of Gate Controls": [
+                                    [
+                                        {
                                             "requirement_type": 1,
                                             "requirement_index": 73,
                                             "amount": 1,
-                                            "negate": true
+                                            "negate": false
                                         }
                                     ]
                                 ]
@@ -8136,7 +8092,7 @@
                         },
                         {
                             "name": "Door to Temple Assembly Site",
-                            "heal": true,
+                            "heal": false,
                             "node_type": 1,
                             "dock_index": 1,
                             "connected_area_asset_id": 1263425809,
@@ -8144,7 +8100,7 @@
                             "dock_type": 0,
                             "dock_weakness_index": 0,
                             "connections": {
-                                "Door to Communication Area": [
+                                "Front of Gate Controls": [
                                     [
                                         {
                                             "requirement_type": 0,
@@ -8157,12 +8113,6 @@
                                             "requirement_index": 18,
                                             "amount": 1,
                                             "negate": false
-                                        },
-                                        {
-                                            "requirement_type": 1,
-                                            "requirement_index": 73,
-                                            "amount": 1,
-                                            "negate": false
                                         }
                                     ],
                                     [
@@ -8175,12 +8125,6 @@
                                         {
                                             "requirement_type": 0,
                                             "requirement_index": 43,
-                                            "amount": 1,
-                                            "negate": false
-                                        },
-                                        {
-                                            "requirement_type": 1,
-                                            "requirement_index": 73,
                                             "amount": 1,
                                             "negate": false
                                         }
@@ -8191,39 +8135,9 @@
                                             "requirement_index": 24,
                                             "amount": 1,
                                             "negate": false
-                                        },
-                                        {
-                                            "requirement_type": 1,
-                                            "requirement_index": 73,
-                                            "amount": 1,
-                                            "negate": false
                                         }
-                                    ]
-                                ],
-                                "Pickup (Power Bomb)": [
+                                    ],
                                     [
-                                        {
-                                            "requirement_type": 0,
-                                            "requirement_index": 15,
-                                            "amount": 1,
-                                            "negate": false
-                                        },
-                                        {
-                                            "requirement_type": 0,
-                                            "requirement_index": 43,
-                                            "amount": 1,
-                                            "negate": false
-                                        }
-                                    ]
-                                ],
-                                "Event - Dynamo Chamber Gates": [
-                                    [
-                                        {
-                                            "requirement_type": 0,
-                                            "requirement_index": 9,
-                                            "amount": 1,
-                                            "negate": false
-                                        },
                                         {
                                             "requirement_type": 1,
                                             "requirement_index": 73,
@@ -8236,12 +8150,12 @@
                         },
                         {
                             "name": "Pickup (Power Bomb)",
-                            "heal": true,
+                            "heal": false,
                             "node_type": 2,
                             "pickup_index": 8,
                             "major_location": false,
                             "connections": {
-                                "Door to Temple Assembly Site": [
+                                "Front of Gate Controls": [
                                     [
                                         {
                                             "requirement_type": 0,
@@ -8261,12 +8175,29 @@
                         },
                         {
                             "name": "Event - Dynamo Chamber Gates",
-                            "heal": true,
+                            "heal": false,
                             "node_type": 4,
                             "event_index": 73,
                             "connections": {
-                                "Door to Communication Area": [
+                                "Front of Gate Controls": [
                                     []
+                                ]
+                            }
+                        },
+                        {
+                            "name": "Front of Gate Controls",
+                            "heal": false,
+                            "node_type": 0,
+                            "connections": {
+                                "Door to Communication Area": [
+                                    [
+                                        {
+                                            "requirement_type": 1,
+                                            "requirement_index": 73,
+                                            "amount": 1,
+                                            "negate": false
+                                        }
+                                    ]
                                 ],
                                 "Door to Temple Assembly Site": [
                                     [
@@ -8304,6 +8235,14 @@
                                             "amount": 1,
                                             "negate": false
                                         }
+                                    ],
+                                    [
+                                        {
+                                            "requirement_type": 1,
+                                            "requirement_index": 73,
+                                            "amount": 1,
+                                            "negate": true
+                                        }
                                     ]
                                 ],
                                 "Pickup (Power Bomb)": [
@@ -8317,6 +8256,38 @@
                                         {
                                             "requirement_type": 0,
                                             "requirement_index": 43,
+                                            "amount": 1,
+                                            "negate": false
+                                        }
+                                    ]
+                                ],
+                                "Event - Dynamo Chamber Gates": [
+                                    [
+                                        {
+                                            "requirement_type": 0,
+                                            "requirement_index": 9,
+                                            "amount": 1,
+                                            "negate": false
+                                        }
+                                    ],
+                                    [
+                                        {
+                                            "requirement_type": 0,
+                                            "requirement_index": 15,
+                                            "amount": 1,
+                                            "negate": false
+                                        },
+                                        {
+                                            "requirement_type": 0,
+                                            "requirement_index": 18,
+                                            "amount": 1,
+                                            "negate": false
+                                        }
+                                    ],
+                                    [
+                                        {
+                                            "requirement_type": 0,
+                                            "requirement_index": 24,
                                             "amount": 1,
                                             "negate": false
                                         }
