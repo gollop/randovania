@@ -824,6 +824,16 @@
                 "index": 103,
                 "long_name": "Industrial Site Crate Lifted",
                 "short_name": "Event103"
+            },
+            {
+                "index": 104,
+                "long_name": "Path of Eyes First Light Block",
+                "short_name": "Event104"
+            },
+            {
+                "index": 105,
+                "long_name": "Path of Eyes Second Light Block",
+                "short_name": "Event105"
             }
         ],
         "tricks": [
@@ -5196,7 +5206,7 @@
                     "nodes": [
                         {
                             "name": "Door to Windchamber Gateway",
-                            "heal": true,
+                            "heal": false,
                             "node_type": 1,
                             "dock_index": 1,
                             "connected_area_asset_id": 1966181726,
@@ -5204,150 +5214,12 @@
                             "dock_type": 0,
                             "dock_weakness_index": 5,
                             "connections": {
-                                "Door to Hall of Eyes": [
+                                "Front of Light Block to Windchamber Gateway": [
                                     [
-                                        {
-                                            "requirement_type": 0,
-                                            "requirement_index": 2,
-                                            "amount": 1,
-                                            "negate": false
-                                        },
-                                        {
-                                            "requirement_type": 0,
-                                            "requirement_index": 27,
-                                            "amount": 1,
-                                            "negate": false
-                                        },
                                         {
                                             "requirement_type": 1,
                                             "requirement_index": 3,
                                             "amount": 1,
-                                            "negate": false
-                                        },
-                                        {
-                                            "requirement_type": 6,
-                                            "requirement_index": 0,
-                                            "amount": 4,
-                                            "negate": false
-                                        }
-                                    ],
-                                    [
-                                        {
-                                            "requirement_type": 0,
-                                            "requirement_index": 15,
-                                            "amount": 1,
-                                            "negate": false
-                                        },
-                                        {
-                                            "requirement_type": 0,
-                                            "requirement_index": 18,
-                                            "amount": 1,
-                                            "negate": false
-                                        },
-                                        {
-                                            "requirement_type": 1,
-                                            "requirement_index": 3,
-                                            "amount": 1,
-                                            "negate": false
-                                        },
-                                        {
-                                            "requirement_type": 6,
-                                            "requirement_index": 0,
-                                            "amount": 2,
-                                            "negate": false
-                                        }
-                                    ],
-                                    [
-                                        {
-                                            "requirement_type": 0,
-                                            "requirement_index": 24,
-                                            "amount": 1,
-                                            "negate": false
-                                        },
-                                        {
-                                            "requirement_type": 1,
-                                            "requirement_index": 3,
-                                            "amount": 1,
-                                            "negate": false
-                                        }
-                                    ]
-                                ],
-                                "Front of Translator Gate": [
-                                    [
-                                        {
-                                            "requirement_type": 0,
-                                            "requirement_index": 2,
-                                            "amount": 1,
-                                            "negate": false
-                                        },
-                                        {
-                                            "requirement_type": 0,
-                                            "requirement_index": 15,
-                                            "amount": 1,
-                                            "negate": false
-                                        },
-                                        {
-                                            "requirement_type": 0,
-                                            "requirement_index": 18,
-                                            "amount": 1,
-                                            "negate": false
-                                        },
-                                        {
-                                            "requirement_type": 1,
-                                            "requirement_index": 3,
-                                            "amount": 1,
-                                            "negate": false
-                                        },
-                                        {
-                                            "requirement_type": 6,
-                                            "requirement_index": 0,
-                                            "amount": 5,
-                                            "negate": false
-                                        }
-                                    ],
-                                    [
-                                        {
-                                            "requirement_type": 0,
-                                            "requirement_index": 2,
-                                            "amount": 1,
-                                            "negate": false
-                                        },
-                                        {
-                                            "requirement_type": 0,
-                                            "requirement_index": 24,
-                                            "amount": 1,
-                                            "negate": false
-                                        },
-                                        {
-                                            "requirement_type": 1,
-                                            "requirement_index": 3,
-                                            "amount": 1,
-                                            "negate": false
-                                        }
-                                    ],
-                                    [
-                                        {
-                                            "requirement_type": 0,
-                                            "requirement_index": 24,
-                                            "amount": 1,
-                                            "negate": false
-                                        },
-                                        {
-                                            "requirement_type": 1,
-                                            "requirement_index": 3,
-                                            "amount": 1,
-                                            "negate": false
-                                        },
-                                        {
-                                            "requirement_type": 2,
-                                            "requirement_index": 2,
-                                            "amount": 2,
-                                            "negate": false
-                                        },
-                                        {
-                                            "requirement_type": 6,
-                                            "requirement_index": 0,
-                                            "amount": 2,
                                             "negate": false
                                         }
                                     ]
@@ -5356,7 +5228,7 @@
                         },
                         {
                             "name": "Portal from Abandoned Base",
-                            "heal": true,
+                            "heal": false,
                             "node_type": 1,
                             "dock_index": 3,
                             "connected_area_asset_id": 3337937090,
@@ -5371,7 +5243,7 @@
                         },
                         {
                             "name": "Door to Hall of Eyes",
-                            "heal": true,
+                            "heal": false,
                             "node_type": 1,
                             "dock_index": 0,
                             "connected_area_asset_id": 1198237772,
@@ -5379,183 +5251,17 @@
                             "dock_type": 0,
                             "dock_weakness_index": 5,
                             "connections": {
-                                "Door to Windchamber Gateway": [
+                                "Event - Path of Eyes First Light Block": [
                                     [
                                         {
                                             "requirement_type": 0,
                                             "requirement_index": 2,
                                             "amount": 1,
-                                            "negate": false
-                                        },
-                                        {
-                                            "requirement_type": 1,
-                                            "requirement_index": 3,
-                                            "amount": 1,
-                                            "negate": false
-                                        },
-                                        {
-                                            "requirement_type": 2,
-                                            "requirement_index": 2,
-                                            "amount": 2,
-                                            "negate": false
-                                        },
-                                        {
-                                            "requirement_type": 6,
-                                            "requirement_index": 0,
-                                            "amount": 2,
-                                            "negate": false
-                                        }
-                                    ],
-                                    [
-                                        {
-                                            "requirement_type": 0,
-                                            "requirement_index": 15,
-                                            "amount": 1,
-                                            "negate": false
-                                        },
-                                        {
-                                            "requirement_type": 0,
-                                            "requirement_index": 18,
-                                            "amount": 1,
-                                            "negate": false
-                                        },
-                                        {
-                                            "requirement_type": 1,
-                                            "requirement_index": 3,
-                                            "amount": 1,
-                                            "negate": false
-                                        },
-                                        {
-                                            "requirement_type": 6,
-                                            "requirement_index": 0,
-                                            "amount": 1,
-                                            "negate": false
-                                        }
-                                    ],
-                                    [
-                                        {
-                                            "requirement_type": 0,
-                                            "requirement_index": 24,
-                                            "amount": 1,
-                                            "negate": false
-                                        },
-                                        {
-                                            "requirement_type": 1,
-                                            "requirement_index": 3,
-                                            "amount": 1,
-                                            "negate": false
-                                        }
-                                    ]
-                                ],
-                                "Event - Path of Eyes Light Block to Windchamber Gateway": [
-                                    [
-                                        {
-                                            "requirement_type": 0,
-                                            "requirement_index": 2,
-                                            "amount": 1,
-                                            "negate": false
-                                        },
-                                        {
-                                            "requirement_type": 0,
-                                            "requirement_index": 24,
-                                            "amount": 1,
-                                            "negate": false
-                                        }
-                                    ],
-                                    [
-                                        {
-                                            "requirement_type": 0,
-                                            "requirement_index": 2,
-                                            "amount": 1,
-                                            "negate": false
-                                        },
-                                        {
-                                            "requirement_type": 2,
-                                            "requirement_index": 2,
-                                            "amount": 2,
-                                            "negate": false
-                                        },
-                                        {
-                                            "requirement_type": 6,
-                                            "requirement_index": 0,
-                                            "amount": 2,
                                             "negate": false
                                         }
                                     ]
                                 ],
                                 "Front of Translator Gate": [
-                                    [
-                                        {
-                                            "requirement_type": 0,
-                                            "requirement_index": 2,
-                                            "amount": 1,
-                                            "negate": false
-                                        },
-                                        {
-                                            "requirement_type": 0,
-                                            "requirement_index": 15,
-                                            "amount": 1,
-                                            "negate": false
-                                        },
-                                        {
-                                            "requirement_type": 0,
-                                            "requirement_index": 18,
-                                            "amount": 1,
-                                            "negate": false
-                                        },
-                                        {
-                                            "requirement_type": 6,
-                                            "requirement_index": 0,
-                                            "amount": 5,
-                                            "negate": false
-                                        }
-                                    ],
-                                    [
-                                        {
-                                            "requirement_type": 0,
-                                            "requirement_index": 2,
-                                            "amount": 1,
-                                            "negate": false
-                                        },
-                                        {
-                                            "requirement_type": 0,
-                                            "requirement_index": 24,
-                                            "amount": 1,
-                                            "negate": false
-                                        }
-                                    ],
-                                    [
-                                        {
-                                            "requirement_type": 0,
-                                            "requirement_index": 15,
-                                            "amount": 1,
-                                            "negate": false
-                                        },
-                                        {
-                                            "requirement_type": 0,
-                                            "requirement_index": 16,
-                                            "amount": 1,
-                                            "negate": false
-                                        },
-                                        {
-                                            "requirement_type": 0,
-                                            "requirement_index": 18,
-                                            "amount": 1,
-                                            "negate": false
-                                        },
-                                        {
-                                            "requirement_type": 4,
-                                            "requirement_index": 0,
-                                            "amount": 1,
-                                            "negate": false
-                                        },
-                                        {
-                                            "requirement_type": 6,
-                                            "requirement_index": 0,
-                                            "amount": 3,
-                                            "negate": false
-                                        }
-                                    ],
                                     [
                                         {
                                             "requirement_type": 0,
@@ -5569,11 +5275,81 @@
                                             "amount": 1,
                                             "negate": false
                                         }
+                                    ]
+                                ],
+                                "Front of Light Block to Windchamber Gateway": [
+                                    [
+                                        {
+                                            "requirement_type": 0,
+                                            "requirement_index": 15,
+                                            "amount": 1,
+                                            "negate": false
+                                        },
+                                        {
+                                            "requirement_type": 0,
+                                            "requirement_index": 18,
+                                            "amount": 1,
+                                            "negate": false
+                                        },
+                                        {
+                                            "requirement_type": 1,
+                                            "requirement_index": 104,
+                                            "amount": 1,
+                                            "negate": false
+                                        }
+                                    ],
+                                    [
+                                        {
+                                            "requirement_type": 0,
+                                            "requirement_index": 15,
+                                            "amount": 1,
+                                            "negate": false
+                                        },
+                                        {
+                                            "requirement_type": 0,
+                                            "requirement_index": 18,
+                                            "amount": 1,
+                                            "negate": false
+                                        },
+                                        {
+                                            "requirement_type": 2,
+                                            "requirement_index": 1,
+                                            "amount": 1,
+                                            "negate": false
+                                        },
+                                        {
+                                            "requirement_type": 6,
+                                            "requirement_index": 0,
+                                            "amount": 1,
+                                            "negate": false
+                                        }
                                     ],
                                     [
                                         {
                                             "requirement_type": 0,
                                             "requirement_index": 24,
+                                            "amount": 1,
+                                            "negate": false
+                                        }
+                                    ],
+                                    [
+                                        {
+                                            "requirement_type": 1,
+                                            "requirement_index": 104,
+                                            "amount": 1,
+                                            "negate": false
+                                        },
+                                        {
+                                            "requirement_type": 1,
+                                            "requirement_index": 105,
+                                            "amount": 1,
+                                            "negate": false
+                                        }
+                                    ],
+                                    [
+                                        {
+                                            "requirement_type": 1,
+                                            "requirement_index": 104,
                                             "amount": 1,
                                             "negate": false
                                         },
@@ -5595,7 +5371,7 @@
                         },
                         {
                             "name": "Door to Torvus Transport Access",
-                            "heal": true,
+                            "heal": false,
                             "node_type": 1,
                             "dock_index": 2,
                             "connected_area_asset_id": 2822315693,
@@ -5609,65 +5385,54 @@
                             }
                         },
                         {
+                            "name": "Event - Path of Eyes First Light Block",
+                            "heal": false,
+                            "node_type": 4,
+                            "event_index": 104,
+                            "connections": {
+                                "Door to Hall of Eyes": [
+                                    []
+                                ]
+                            }
+                        },
+                        {
+                            "name": "Event - Path of Eyes Second Light Block",
+                            "heal": false,
+                            "node_type": 4,
+                            "event_index": 105,
+                            "connections": {
+                                "Front of Light Block to Windchamber Gateway": [
+                                    []
+                                ]
+                            }
+                        },
+                        {
                             "name": "Event - Path of Eyes Light Block to Windchamber Gateway",
-                            "heal": true,
+                            "heal": false,
                             "node_type": 4,
                             "event_index": 3,
                             "connections": {
-                                "Door to Windchamber Gateway": [
+                                "Front of Light Block to Windchamber Gateway": [
                                     []
                                 ]
                             }
                         },
                         {
                             "name": "Event - Path of Eyes Light Block In Tunnel",
-                            "heal": true,
+                            "heal": false,
                             "node_type": 4,
                             "event_index": 72,
                             "connections": {
-                                "Door to Windchamber Gateway": [
-                                    [
-                                        {
-                                            "requirement_type": 1,
-                                            "requirement_index": 3,
-                                            "amount": 1,
-                                            "negate": false
-                                        }
-                                    ]
-                                ],
                                 "Door to Hall of Eyes": [
-                                    []
-                                ],
-                                "Event - Path of Eyes Light Block to Windchamber Gateway": [
-                                    [
-                                        {
-                                            "requirement_type": 0,
-                                            "requirement_index": 2,
-                                            "amount": 1,
-                                            "negate": false
-                                        }
-                                    ]
-                                ],
-                                "Front of Translator Gate": [
                                     []
                                 ]
                             }
                         },
                         {
                             "name": "Front of Translator Gate",
-                            "heal": true,
+                            "heal": false,
                             "node_type": 0,
                             "connections": {
-                                "Door to Windchamber Gateway": [
-                                    [
-                                        {
-                                            "requirement_type": 1,
-                                            "requirement_index": 3,
-                                            "amount": 1,
-                                            "negate": false
-                                        }
-                                    ]
-                                ],
                                 "Door to Hall of Eyes": [
                                     [
                                         {
@@ -5678,7 +5443,19 @@
                                         },
                                         {
                                             "requirement_type": 0,
+                                            "requirement_index": 16,
+                                            "amount": 1,
+                                            "negate": false
+                                        },
+                                        {
+                                            "requirement_type": 0,
                                             "requirement_index": 18,
+                                            "amount": 1,
+                                            "negate": false
+                                        },
+                                        {
+                                            "requirement_type": 2,
+                                            "requirement_index": 1,
                                             "amount": 1,
                                             "negate": false
                                         },
@@ -5699,24 +5476,6 @@
                                         {
                                             "requirement_type": 1,
                                             "requirement_index": 72,
-                                            "amount": 1,
-                                            "negate": false
-                                        }
-                                    ],
-                                    [
-                                        {
-                                            "requirement_type": 0,
-                                            "requirement_index": 24,
-                                            "amount": 1,
-                                            "negate": false
-                                        }
-                                    ]
-                                ],
-                                "Event - Path of Eyes Light Block to Windchamber Gateway": [
-                                    [
-                                        {
-                                            "requirement_type": 0,
-                                            "requirement_index": 2,
                                             "amount": 1,
                                             "negate": false
                                         }
@@ -5750,12 +5509,15 @@
                                             "negate": false
                                         }
                                     ]
+                                ],
+                                "Northwest Corner": [
+                                    []
                                 ]
                             }
                         },
                         {
                             "name": "Translator Gate",
-                            "heal": true,
+                            "heal": false,
                             "node_type": 5,
                             "gate_index": 4,
                             "connections": {
@@ -5769,7 +5531,7 @@
                         },
                         {
                             "name": "Lore Scan",
-                            "heal": true,
+                            "heal": false,
                             "node_type": 6,
                             "string_asset_id": 2392838062,
                             "lore_type": 0,
@@ -5784,6 +5546,381 @@
                                             "negate": false
                                         }
                                     ]
+                                ]
+                            }
+                        },
+                        {
+                            "name": "Front of Light Block to Windchamber Gateway",
+                            "heal": false,
+                            "node_type": 0,
+                            "connections": {
+                                "Door to Windchamber Gateway": [
+                                    [
+                                        {
+                                            "requirement_type": 1,
+                                            "requirement_index": 3,
+                                            "amount": 1,
+                                            "negate": false
+                                        }
+                                    ]
+                                ],
+                                "Door to Hall of Eyes": [
+                                    [
+                                        {
+                                            "requirement_type": 0,
+                                            "requirement_index": 15,
+                                            "amount": 1,
+                                            "negate": false
+                                        },
+                                        {
+                                            "requirement_type": 0,
+                                            "requirement_index": 18,
+                                            "amount": 1,
+                                            "negate": false
+                                        },
+                                        {
+                                            "requirement_type": 1,
+                                            "requirement_index": 104,
+                                            "amount": 1,
+                                            "negate": false
+                                        }
+                                    ],
+                                    [
+                                        {
+                                            "requirement_type": 0,
+                                            "requirement_index": 15,
+                                            "amount": 1,
+                                            "negate": false
+                                        },
+                                        {
+                                            "requirement_type": 0,
+                                            "requirement_index": 18,
+                                            "amount": 1,
+                                            "negate": false
+                                        },
+                                        {
+                                            "requirement_type": 2,
+                                            "requirement_index": 1,
+                                            "amount": 1,
+                                            "negate": false
+                                        },
+                                        {
+                                            "requirement_type": 6,
+                                            "requirement_index": 0,
+                                            "amount": 1,
+                                            "negate": false
+                                        }
+                                    ],
+                                    [
+                                        {
+                                            "requirement_type": 0,
+                                            "requirement_index": 24,
+                                            "amount": 1,
+                                            "negate": false
+                                        }
+                                    ],
+                                    [
+                                        {
+                                            "requirement_type": 1,
+                                            "requirement_index": 104,
+                                            "amount": 1,
+                                            "negate": false
+                                        },
+                                        {
+                                            "requirement_type": 1,
+                                            "requirement_index": 105,
+                                            "amount": 1,
+                                            "negate": false
+                                        }
+                                    ]
+                                ],
+                                "Event - Path of Eyes Second Light Block": [
+                                    [
+                                        {
+                                            "requirement_type": 0,
+                                            "requirement_index": 2,
+                                            "amount": 1,
+                                            "negate": false
+                                        }
+                                    ]
+                                ],
+                                "Event - Path of Eyes Light Block to Windchamber Gateway": [
+                                    [
+                                        {
+                                            "requirement_type": 0,
+                                            "requirement_index": 2,
+                                            "amount": 1,
+                                            "negate": false
+                                        }
+                                    ]
+                                ],
+                                "Northwest Corner": [
+                                    [
+                                        {
+                                            "requirement_type": 0,
+                                            "requirement_index": 15,
+                                            "amount": 1,
+                                            "negate": false
+                                        },
+                                        {
+                                            "requirement_type": 0,
+                                            "requirement_index": 18,
+                                            "amount": 1,
+                                            "negate": false
+                                        },
+                                        {
+                                            "requirement_type": 0,
+                                            "requirement_index": 24,
+                                            "amount": 1,
+                                            "negate": false
+                                        },
+                                        {
+                                            "requirement_type": 2,
+                                            "requirement_index": 4,
+                                            "amount": 1,
+                                            "negate": false
+                                        },
+                                        {
+                                            "requirement_type": 6,
+                                            "requirement_index": 0,
+                                            "amount": 1,
+                                            "negate": false
+                                        }
+                                    ],
+                                    [
+                                        {
+                                            "requirement_type": 0,
+                                            "requirement_index": 15,
+                                            "amount": 1,
+                                            "negate": false
+                                        },
+                                        {
+                                            "requirement_type": 0,
+                                            "requirement_index": 18,
+                                            "amount": 1,
+                                            "negate": false
+                                        },
+                                        {
+                                            "requirement_type": 2,
+                                            "requirement_index": 4,
+                                            "amount": 5,
+                                            "negate": false
+                                        },
+                                        {
+                                            "requirement_type": 6,
+                                            "requirement_index": 0,
+                                            "amount": 5,
+                                            "negate": false
+                                        }
+                                    ],
+                                    [
+                                        {
+                                            "requirement_type": 0,
+                                            "requirement_index": 15,
+                                            "amount": 1,
+                                            "negate": false
+                                        },
+                                        {
+                                            "requirement_type": 0,
+                                            "requirement_index": 24,
+                                            "amount": 1,
+                                            "negate": false
+                                        },
+                                        {
+                                            "requirement_type": 0,
+                                            "requirement_index": 27,
+                                            "amount": 1,
+                                            "negate": false
+                                        }
+                                    ],
+                                    [
+                                        {
+                                            "requirement_type": 0,
+                                            "requirement_index": 24,
+                                            "amount": 1,
+                                            "negate": false
+                                        },
+                                        {
+                                            "requirement_type": 1,
+                                            "requirement_index": 105,
+                                            "amount": 1,
+                                            "negate": false
+                                        }
+                                    ],
+                                    [
+                                        {
+                                            "requirement_type": 0,
+                                            "requirement_index": 24,
+                                            "amount": 1,
+                                            "negate": false
+                                        },
+                                        {
+                                            "requirement_type": 2,
+                                            "requirement_index": 2,
+                                            "amount": 1,
+                                            "negate": false
+                                        },
+                                        {
+                                            "requirement_type": 6,
+                                            "requirement_index": 0,
+                                            "amount": 1,
+                                            "negate": false
+                                        }
+                                    ]
+                                ]
+                            }
+                        },
+                        {
+                            "name": "Northwest Corner",
+                            "heal": false,
+                            "node_type": 0,
+                            "connections": {
+                                "Front of Translator Gate": [
+                                    [
+                                        {
+                                            "requirement_type": 0,
+                                            "requirement_index": 2,
+                                            "amount": 1,
+                                            "negate": false
+                                        },
+                                        {
+                                            "requirement_type": 0,
+                                            "requirement_index": 15,
+                                            "amount": 1,
+                                            "negate": false
+                                        },
+                                        {
+                                            "requirement_type": 0,
+                                            "requirement_index": 18,
+                                            "amount": 1,
+                                            "negate": false
+                                        },
+                                        {
+                                            "requirement_type": 0,
+                                            "requirement_index": 25,
+                                            "amount": 1,
+                                            "negate": false
+                                        },
+                                        {
+                                            "requirement_type": 2,
+                                            "requirement_index": 1,
+                                            "amount": 1,
+                                            "negate": false
+                                        },
+                                        {
+                                            "requirement_type": 6,
+                                            "requirement_index": 0,
+                                            "amount": 1,
+                                            "negate": false
+                                        }
+                                    ],
+                                    [
+                                        {
+                                            "requirement_type": 0,
+                                            "requirement_index": 2,
+                                            "amount": 1,
+                                            "negate": false
+                                        },
+                                        {
+                                            "requirement_type": 0,
+                                            "requirement_index": 24,
+                                            "amount": 1,
+                                            "negate": false
+                                        }
+                                    ],
+                                    [
+                                        {
+                                            "requirement_type": 0,
+                                            "requirement_index": 15,
+                                            "amount": 1,
+                                            "negate": false
+                                        },
+                                        {
+                                            "requirement_type": 0,
+                                            "requirement_index": 18,
+                                            "amount": 1,
+                                            "negate": false
+                                        },
+                                        {
+                                            "requirement_type": 0,
+                                            "requirement_index": 24,
+                                            "amount": 1,
+                                            "negate": false
+                                        },
+                                        {
+                                            "requirement_type": 0,
+                                            "requirement_index": 25,
+                                            "amount": 1,
+                                            "negate": false
+                                        },
+                                        {
+                                            "requirement_type": 2,
+                                            "requirement_index": 4,
+                                            "amount": 1,
+                                            "negate": false
+                                        },
+                                        {
+                                            "requirement_type": 6,
+                                            "requirement_index": 0,
+                                            "amount": 1,
+                                            "negate": false
+                                        }
+                                    ],
+                                    [
+                                        {
+                                            "requirement_type": 0,
+                                            "requirement_index": 15,
+                                            "amount": 1,
+                                            "negate": false
+                                        },
+                                        {
+                                            "requirement_type": 0,
+                                            "requirement_index": 18,
+                                            "amount": 1,
+                                            "negate": false
+                                        },
+                                        {
+                                            "requirement_type": 0,
+                                            "requirement_index": 24,
+                                            "amount": 1,
+                                            "negate": false
+                                        },
+                                        {
+                                            "requirement_type": 2,
+                                            "requirement_index": 4,
+                                            "amount": 2,
+                                            "negate": false
+                                        },
+                                        {
+                                            "requirement_type": 6,
+                                            "requirement_index": 0,
+                                            "amount": 2,
+                                            "negate": false
+                                        }
+                                    ],
+                                    [
+                                        {
+                                            "requirement_type": 0,
+                                            "requirement_index": 24,
+                                            "amount": 1,
+                                            "negate": false
+                                        },
+                                        {
+                                            "requirement_type": 2,
+                                            "requirement_index": 27,
+                                            "amount": 1,
+                                            "negate": false
+                                        },
+                                        {
+                                            "requirement_type": 6,
+                                            "requirement_index": 0,
+                                            "amount": 1,
+                                            "negate": false
+                                        }
+                                    ]
+                                ],
+                                "Front of Light Block to Windchamber Gateway": [
+                                    []
                                 ]
                             }
                         }
