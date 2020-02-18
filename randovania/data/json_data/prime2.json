@@ -3112,6 +3112,7 @@
                             "scan_asset_id": 1116828519,
                             "keep_name_when_vanilla": false,
                             "editable": true,
+                            "requires_visit_to_world": false,
                             "connections": {
                                 "Door to Meeting Grounds": [
                                     []
@@ -5265,6 +5266,7 @@
                             "scan_asset_id": 1177189496,
                             "keep_name_when_vanilla": false,
                             "editable": true,
+                            "requires_visit_to_world": false,
                             "connections": {
                                 "Door to Agon Transport Access": [
                                     []
@@ -6293,6 +6295,7 @@
                             "scan_asset_id": 3917689266,
                             "keep_name_when_vanilla": false,
                             "editable": true,
+                            "requires_visit_to_world": false,
                             "connections": {
                                 "Door to Torvus Transport Access": [
                                     []
@@ -6683,6 +6686,7 @@
                             "scan_asset_id": 2420389345,
                             "keep_name_when_vanilla": false,
                             "editable": true,
+                            "requires_visit_to_world": false,
                             "connections": {
                                 "Door to Temple Assembly Site": [
                                     []
@@ -7822,6 +7826,7 @@
                             "scan_asset_id": null,
                             "keep_name_when_vanilla": true,
                             "editable": true,
+                            "requires_visit_to_world": false,
                             "connections": {
                                 "Door to Gateway Access": [
                                     [
@@ -8957,6 +8962,7 @@
                             "scan_asset_id": 2363755252,
                             "keep_name_when_vanilla": false,
                             "editable": true,
+                            "requires_visit_to_world": false,
                             "connections": {
                                 "Door to Fortress Transport Access": [
                                     []
@@ -9234,6 +9240,7 @@
                             "scan_asset_id": 2155694422,
                             "keep_name_when_vanilla": false,
                             "editable": true,
+                            "requires_visit_to_world": false,
                             "connections": {
                                 "Door to Sacred Path": [
                                     []
@@ -10674,6 +10681,7 @@
                             "scan_asset_id": 827726881,
                             "keep_name_when_vanilla": false,
                             "editable": true,
+                            "requires_visit_to_world": false,
                             "connections": {
                                 "Door to Transport A Access": [
                                     []
@@ -11633,6 +11641,7 @@
                             "scan_asset_id": 1430348762,
                             "keep_name_when_vanilla": false,
                             "editable": true,
+                            "requires_visit_to_world": false,
                             "connections": {
                                 "Door to Transport C Access": [
                                     []
@@ -11739,6 +11748,7 @@
                             "scan_asset_id": null,
                             "keep_name_when_vanilla": false,
                             "editable": false,
+                            "requires_visit_to_world": false,
                             "connections": {
                                 "Door to Controller Transport": [
                                     []
@@ -11755,6 +11765,7 @@
                             "scan_asset_id": null,
                             "keep_name_when_vanilla": false,
                             "editable": false,
+                            "requires_visit_to_world": false,
                             "connections": {
                                 "Door to Controller Transport": [
                                     []
@@ -11771,6 +11782,7 @@
                             "scan_asset_id": null,
                             "keep_name_when_vanilla": false,
                             "editable": false,
+                            "requires_visit_to_world": false,
                             "connections": {
                                 "Door to Controller Transport": [
                                     []
@@ -11841,6 +11853,7 @@
                             "scan_asset_id": 2113337837,
                             "keep_name_when_vanilla": false,
                             "editable": true,
+                            "requires_visit_to_world": false,
                             "connections": {
                                 "Door to Transport B Access": [
                                     []
@@ -11996,6 +12009,7 @@
                             "scan_asset_id": null,
                             "keep_name_when_vanilla": true,
                             "editable": true,
+                            "requires_visit_to_world": false,
                             "connections": {
                                 "Save Station": [
                                     [
@@ -12646,6 +12660,7 @@
                             "scan_asset_id": 2084247194,
                             "keep_name_when_vanilla": false,
                             "editable": true,
+                            "requires_visit_to_world": false,
                             "connections": {
                                 "Door to Plaza Access": [
                                     []
@@ -15885,6 +15900,7 @@
                             "scan_asset_id": 3549584208,
                             "keep_name_when_vanilla": false,
                             "editable": true,
+                            "requires_visit_to_world": false,
                             "connections": {
                                 "Door to Transport Center": [
                                     []
@@ -21568,6 +21584,7 @@
                             "scan_asset_id": null,
                             "keep_name_when_vanilla": false,
                             "editable": false,
+                            "requires_visit_to_world": false,
                             "connections": {
                                 "Door to Controller Access": [
                                     []
@@ -21584,6 +21601,7 @@
                             "scan_asset_id": null,
                             "keep_name_when_vanilla": false,
                             "editable": false,
+                            "requires_visit_to_world": false,
                             "connections": {
                                 "Door to Controller Access": [
                                     []
@@ -21600,6 +21618,7 @@
                             "scan_asset_id": null,
                             "keep_name_when_vanilla": false,
                             "editable": false,
+                            "requires_visit_to_world": false,
                             "connections": {
                                 "Door to Controller Access": [
                                     []
@@ -22373,6 +22392,7 @@
                             "scan_asset_id": 3069534230,
                             "keep_name_when_vanilla": false,
                             "editable": true,
+                            "requires_visit_to_world": false,
                             "connections": {
                                 "Door to Ventilation Area A": [
                                     []
@@ -27856,6 +27876,7 @@
                             "scan_asset_id": 3964483773,
                             "keep_name_when_vanilla": false,
                             "editable": true,
+                            "requires_visit_to_world": false,
                             "connections": {
                                 "Door to Temple Transport Access": [
                                     []
@@ -36073,6 +36094,7 @@
                             "scan_asset_id": 218734126,
                             "keep_name_when_vanilla": false,
                             "editable": true,
+                            "requires_visit_to_world": false,
                             "connections": {
                                 "Door to Torvus Temple": [
                                     []
@@ -37323,6 +37345,7 @@
                             "scan_asset_id": null,
                             "keep_name_when_vanilla": false,
                             "editable": false,
+                            "requires_visit_to_world": false,
                             "connections": {
                                 "Door to Controller Access": [
                                     []
@@ -37339,6 +37362,7 @@
                             "scan_asset_id": null,
                             "keep_name_when_vanilla": false,
                             "editable": false,
+                            "requires_visit_to_world": false,
                             "connections": {
                                 "Door to Controller Access": [
                                     []
@@ -37355,6 +37379,7 @@
                             "scan_asset_id": null,
                             "keep_name_when_vanilla": false,
                             "editable": false,
+                            "requires_visit_to_world": false,
                             "connections": {
                                 "Door to Controller Access": [
                                     []
@@ -44525,6 +44550,7 @@
                             "scan_asset_id": 2728448996,
                             "keep_name_when_vanilla": false,
                             "editable": true,
+                            "requires_visit_to_world": false,
                             "connections": {
                                 "Door to Fortress Transport Access": [
                                     []
@@ -44578,6 +44604,7 @@
                             "scan_asset_id": 585469310,
                             "keep_name_when_vanilla": false,
                             "editable": true,
+                            "requires_visit_to_world": false,
                             "connections": {
                                 "Door to Temple Transport Access": [
                                     []
@@ -48334,6 +48361,7 @@
                             "scan_asset_id": 3282119661,
                             "keep_name_when_vanilla": false,
                             "editable": true,
+                            "requires_visit_to_world": false,
                             "connections": {
                                 "Door to Agon Transport Access": [
                                     []
@@ -49846,6 +49874,7 @@
                             "scan_asset_id": 158293345,
                             "keep_name_when_vanilla": false,
                             "editable": true,
+                            "requires_visit_to_world": false,
                             "connections": {
                                 "Door to Torvus Transport Access": [
                                     []
@@ -59986,6 +60015,7 @@
                             "scan_asset_id": null,
                             "keep_name_when_vanilla": true,
                             "editable": true,
+                            "requires_visit_to_world": false,
                             "connections": {
                                 "Door to Checkpoint Station": [
                                     []
@@ -60080,6 +60110,7 @@
                             "scan_asset_id": null,
                             "keep_name_when_vanilla": false,
                             "editable": false,
+                            "requires_visit_to_world": false,
                             "connections": {
                                 "Door to Controller Access": [
                                     []
@@ -60096,6 +60127,7 @@
                             "scan_asset_id": null,
                             "keep_name_when_vanilla": false,
                             "editable": false,
+                            "requires_visit_to_world": false,
                             "connections": {
                                 "Door to Controller Access": [
                                     []
@@ -60112,6 +60144,7 @@
                             "scan_asset_id": null,
                             "keep_name_when_vanilla": false,
                             "editable": false,
+                            "requires_visit_to_world": false,
                             "connections": {
                                 "Door to Controller Access": [
                                     []
@@ -60894,6 +60927,7 @@
                             "scan_asset_id": null,
                             "keep_name_when_vanilla": true,
                             "editable": true,
+                            "requires_visit_to_world": false,
                             "connections": {
                                 "Aerie Entrance": [
                                     []
