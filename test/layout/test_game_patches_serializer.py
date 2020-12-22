@@ -16,6 +16,7 @@ from randovania.game_description.resources.pickup_entry import ConditionalResour
 from randovania.game_description.resources.pickup_index import PickupIndex
 from randovania.game_description.resources.resource_database import find_resource_info_with_long_name
 from randovania.game_description.resources.translator_gate import TranslatorGate
+from randovania.games.game import RandovaniaGame
 from randovania.generator import generator
 from randovania.generator.item_pool import pickup_creator, pool_creator
 from randovania.layout import game_patches_serializer
@@ -203,11 +204,13 @@ def test_round_trip_generated_patches(echoes_game_data, default_preset):
     # Setup
     preset = dataclasses.replace(
         default_preset,
-        layout_configuration=dataclasses.replace(
-            default_preset.layout_configuration,
-            trick_level_configuration=TrickLevelConfiguration(
-                global_level=LayoutTrickLevel.MINIMAL_LOGIC,
+        base_preset_name=default_preset.name,
+        configuration=dataclasses.replace(
+            default_preset.configuration,
+            trick_level=TrickLevelConfiguration(
+                minimal_logic=True,
                 specific_levels={},
+                game=RandovaniaGame.PRIME2,
             )
         )
     )
@@ -219,11 +222,12 @@ def test_round_trip_generated_patches(echoes_game_data, default_preset):
             presets={0: preset},
         ),
         status_update=lambda x: None,
+        attempts=0,
     ).all_patches
 
     # Run
     encoded = game_patches_serializer.serialize(all_patches, {0: echoes_game_data})
-    decoded = game_patches_serializer.decode(encoded, {0: preset.layout_configuration})
+    decoded = game_patches_serializer.decode(encoded, {0: preset.configuration})
 
     # Assert
     assert all_patches == decoded

@@ -1,3 +1,8 @@
+import contextlib
+
+import pytest
+from flask_socketio import ConnectionRefusedError
+
 from randovania.server import app
 
 
@@ -10,6 +15,7 @@ def test_create_app(mocker, tmpdir):
             "discord_client_secret": 5678,
             "fernet_key": 's2D-pjBIXqEqkbeRvkapeDn82MgZXLLQGZLTgqqZ--A=',
             "database_path": str(tmpdir.join("database.db")),
+            "client_version_checking": "strict",
         }
     }
     mock_game_session = mocker.patch("randovania.server.game_session.setup_app")
@@ -36,3 +42,24 @@ def test_create_app(mocker, tmpdir):
 
     encrpyted_value = b'gAAAAABfSh6fY4FOiqfGWMHXdE9A4uNVEu5wfn8BAsgP8EZ0-f-lqbYDqYzdiblhT5xhk-wMmG8sOLgKNN-dUaiV7n6JCydn7Q=='
     assert result.sio.fernet_encrypt.decrypt(encrpyted_value) == b'banana'
+
+
+@pytest.mark.parametrize(["mode", "client_version", "server_version", "expected"], [
+    (app.ClientVersionCheck.STRICT, "1.0", "1.0", True),
+    (app.ClientVersionCheck.STRICT, "1.0", "1.0.1", False),
+    (app.ClientVersionCheck.STRICT, "1.0", "1.1", False),
+    (app.ClientVersionCheck.MATCH_MAJOR_MINOR, "1.0", "1.0", True),
+    (app.ClientVersionCheck.MATCH_MAJOR_MINOR, "1.0", "1.0.1", True),
+    (app.ClientVersionCheck.MATCH_MAJOR_MINOR, "1.0", "1.1", False),
+    (app.ClientVersionCheck.IGNORE, "1.0", "1.0", True),
+    (app.ClientVersionCheck.IGNORE, "1.0", "1.0.1", True),
+    (app.ClientVersionCheck.IGNORE, "1.0", "1.1", True),
+])
+def test_check_client_version(mode, client_version, server_version, expected):
+    if expected:
+        expectation = contextlib.nullcontext()
+    else:
+        expectation = pytest.raises(ConnectionRefusedError)
+
+    with expectation:
+        app.check_client_version(mode, client_version, server_version)

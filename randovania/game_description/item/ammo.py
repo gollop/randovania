@@ -4,7 +4,7 @@ from typing import Tuple, Optional
 from randovania.game_description.item.item_category import ItemCategory
 
 
-@dataclass(frozen=True)
+@dataclass(frozen=True, order=True)
 class Ammo:
     name: str
     maximum: int
@@ -49,3 +49,7 @@ class Ammo:
         if self.unlocked_by is not None:
             result["unlocked_by"] = self.unlocked_by
         return result
+
+    @property
+    def model_index(self):
+        return self.models[0]

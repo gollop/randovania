@@ -9,20 +9,19 @@ from PySide2.QtWidgets import QMainWindow, QLabel
 from asyncqt import asyncSlot
 
 from randovania import get_data_path
-from randovania.game_connection.connection_backend import ConnectionStatus
+from randovania.game_connection.connection_base import GameConnectionStatus, InventoryItem
 from randovania.game_connection.game_connection import GameConnection
 from randovania.game_description import data_reader
 from randovania.game_description.resources.item_resource_info import ItemResourceInfo
 from randovania.game_description.resources.pickup_entry import PickupEntry
 from randovania.game_description.resources.resource_database import find_resource_info_with_long_name
-from randovania.game_description.resources.resource_info import CurrentResources
-from randovania.game_description.resources.resource_type import ResourceType
-from randovania.game_description.resources.simple_resource_info import SimpleResourceInfo
 from randovania.games.prime import default_data
 from randovania.gui.generated.auto_tracker_window_ui import Ui_AutoTrackerWindow
 from randovania.gui.lib import common_qt_lib
 from randovania.gui.lib.clickable_label import ClickableLabel
+from randovania.gui.lib.game_connection_setup import GameConnectionSetup
 from randovania.gui.lib.pixmap_lib import paint_with_opacity
+from randovania.interface_common.options import Options
 
 
 class AutoTrackerWindow(QMainWindow, Ui_AutoTrackerWindow):
@@ -30,7 +29,7 @@ class AutoTrackerWindow(QMainWindow, Ui_AutoTrackerWindow):
     _base_address: int
     give_item_signal = Signal(PickupEntry)
 
-    def __init__(self, game_connection: GameConnection):
+    def __init__(self, game_connection: GameConnection, options: Options):
         super().__init__()
         self.setupUi(self)
         self.game_connection = game_connection
@@ -43,40 +42,43 @@ class AutoTrackerWindow(QMainWindow, Ui_AutoTrackerWindow):
         self._labels_for_keys = []
         self.create_tracker()
 
+        self.game_connection_setup = GameConnectionSetup(self, self.game_connection_tool, self.connection_status_label,
+                                                         self.game_connection, options)
+        self.force_update_button.setEnabled(not options.tracking_inventory)
+        self.force_update_button.clicked.connect(self.on_force_update_button)
+
         self._update_timer = QTimer(self)
         self._update_timer.setInterval(100)
         self._update_timer.timeout.connect(self._on_timer_update)
         self._update_timer.setSingleShot(True)
-        self.game_connection.StatusUpdated.connect(self._game_status_updated)
 
     def showEvent(self, event: PySide2.QtGui.QShowEvent):
         self._update_timer.start()
-        self._game_status_updated(self.game_connection.current_status)
         super().showEvent(event)
 
     def hideEvent(self, event: PySide2.QtGui.QHideEvent):
         self._update_timer.stop()
         super().hideEvent(event)
 
-    def _game_status_updated(self, status: ConnectionStatus):
-        self.connection_status_label.setText(self.game_connection.pretty_current_status)
-
-    def _update_tracker_from_hook(self, inventory: CurrentResources):
+    def _update_tracker_from_hook(self, inventory: Dict[ItemResourceInfo, InventoryItem]):
         for item, label in self._item_to_label.items():
-            current = inventory.get(item, 0)
-            label.set_checked(current > 0)
+            current = inventory.get(item, InventoryItem(0, 0))
+            label.set_checked(current.capacity > 0)
 
-        self._energy_tank_label.setText("x {}/14".format(inventory.get(self._energy_tank_item, 0)))
+        energy_tank = inventory.get(self._energy_tank_item, InventoryItem(0, 0))
+        self._energy_tank_label.setText("x {}/{}".format(energy_tank.capacity, self._energy_tank_item.max_capacity))
 
         for label, keys in self._labels_for_keys:
-            num_keys = sum(inventory.get(key, 0) for key in keys)
+            num_keys = sum(inventory.get(key, InventoryItem(0, 0)).capacity for key in keys)
             label.setText("x {}/{}".format(num_keys, len(keys)))
 
     @asyncSlot()
     async def _on_timer_update(self):
         try:
-            if self.game_connection.current_status == ConnectionStatus.InGame:
-                inventory = await self.game_connection.get_inventory()
+            self.force_update_button.setEnabled(not self.game_connection.tracking_inventory)
+            current_status = self.game_connection.current_status
+            if current_status == GameConnectionStatus.InGame or current_status == GameConnectionStatus.TrackerOnly:
+                inventory = self.game_connection.get_current_inventory()
                 self._update_tracker_from_hook(inventory)
         finally:
             self._update_timer.start()
@@ -142,7 +144,7 @@ class AutoTrackerWindow(QMainWindow, Ui_AutoTrackerWindow):
         add_item(1, 6, "Amber Translator")
         add_item(2, 6, "Emerald Translator")
         add_item(3, 6, "Cobalt Translator")
-        
+
         add_item(2, 1, "Energy Transfer Module")
 
         self.inventory_layout.addWidget(create_item("energy_tank", True), 5, 1)
@@ -193,3 +195,7 @@ class AutoTrackerWindow(QMainWindow, Ui_AutoTrackerWindow):
              find_resource("Sky Temple Key 4"), find_resource("Sky Temple Key 5"), find_resource("Sky Temple Key 6"),
              find_resource("Sky Temple Key 7"), find_resource("Sky Temple Key 8"), find_resource("Sky Temple Key 9"),)
         ))
+
+    @asyncSlot()
+    async def on_force_update_button(self):
+        await self.game_connection.backend.update_current_inventory()

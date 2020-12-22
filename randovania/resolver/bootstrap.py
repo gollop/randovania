@@ -1,12 +1,17 @@
 import copy
 from typing import Tuple
 
+from randovania.game_description import default_database
 from randovania.game_description.game_description import GameDescription
 from randovania.game_description.game_patches import GamePatches
-from randovania.game_description.resources.resource_database import ResourceDatabase, find_resource_info_with_long_name
+from randovania.game_description.node import PlayerShipNode
+from randovania.game_description.resources.resource_database import ResourceDatabase
 from randovania.game_description.resources.resource_info import CurrentResources, \
-    add_resource_gain_to_current_resources, add_resources_into_another
-from randovania.layout.layout_configuration import LayoutConfiguration, LayoutElevators
+    add_resource_gain_to_current_resources
+from randovania.games.game import RandovaniaGame
+from randovania.layout.echoes_configuration import EchoesConfiguration
+from randovania.layout.elevators import LayoutElevators
+from randovania.layout.major_items_configuration import MajorItemsConfiguration
 from randovania.layout.trick_level import LayoutTrickLevel, TrickLevelConfiguration
 from randovania.resolver import debug
 from randovania.resolver.state import State
@@ -54,7 +59,7 @@ _events_for_vanilla_item_loss_from_ship = {
 }
 
 
-def static_resources_for_layout_logic(configuration: TrickLevelConfiguration,
+def trick_resources_for_configuration(configuration: TrickLevelConfiguration,
                                       resource_database: ResourceDatabase,
                                       ) -> CurrentResources:
     """
@@ -66,19 +71,18 @@ def static_resources_for_layout_logic(configuration: TrickLevelConfiguration,
     static_resources = {}
 
     for trick in resource_database.trick:
-        static_resources[trick] = configuration.level_for_trick(trick).as_number
-
-    # Room Rando
-    room_rando = find_resource_info_with_long_name(resource_database.misc, "Room Randomizer")
-    static_resources[room_rando] = 0
+        if configuration.minimal_logic:
+            level = LayoutTrickLevel.HYPERMODE
+        else:
+            level = configuration.level_for_trick(trick)
+        static_resources[trick] = level.as_number
 
     return static_resources
 
 
 def _add_minimal_logic_initial_resources(resources: CurrentResources,
                                          resource_database: ResourceDatabase,
-                                         progressive_grapple: bool,
-                                         progressive_suit: bool,
+                                         major_items: MajorItemsConfiguration,
                                          ) -> None:
     # TODO: this function assumes we're talking about Echoes
     for event in resource_database.event:
@@ -88,10 +92,12 @@ def _add_minimal_logic_initial_resources(resources: CurrentResources,
         if event.index not in {28, 93}:
             resources[event] = 1
 
+    item_db = default_database.item_database_for_game(RandovaniaGame.PRIME2)
+
     items_to_skip = copy.copy(_items_to_not_add_in_minimal_logic)
-    if not progressive_grapple:
+    if major_items.items_state[item_db.major_items["Progressive Grapple"]].num_shuffled_pickups == 0:
         items_to_skip.remove(23)
-    if not progressive_suit:
+    if major_items.items_state[item_db.major_items["Progressive Suit"]].num_shuffled_pickups == 0:
         items_to_skip.remove(13)
 
     for item in resource_database.item:
@@ -100,12 +106,13 @@ def _add_minimal_logic_initial_resources(resources: CurrentResources,
 
 
 def calculate_starting_state(game: GameDescription, patches: GamePatches) -> "State":
-    # TODO: is this fast start?
-    initial_game_state = game.initial_states["Default"]
-
     starting_node = game.world_list.resolve_teleporter_connection(patches.starting_location)
     initial_resources = copy.copy(patches.starting_items)
 
+    if isinstance(starting_node, PlayerShipNode):
+        initial_resources[starting_node.resource()] = 1
+
+    initial_game_state = game.initial_states.get("Default")
     if initial_game_state is not None:
         add_resource_gain_to_current_resources(initial_game_state, initial_resources)
 
@@ -116,7 +123,8 @@ def calculate_starting_state(game: GameDescription, patches: GamePatches) -> "St
         starting_node,
         patches,
         None,
-        game.resource_database
+        game.resource_database,
+        game.world_list,
     )
 
     # Being present with value 0 is troublesome since this dict is used for a simplify_requirements later on
@@ -127,28 +135,31 @@ def calculate_starting_state(game: GameDescription, patches: GamePatches) -> "St
     return starting_state
 
 
-def _create_vanilla_translator_resources(resource_database: ResourceDatabase,
-                                         elevators: LayoutElevators,
-                                         ) -> CurrentResources:
-    """
-
-    :param resource_database:
-    :param translator_configuration:
-    :return:
-    """
-    events = [
-        ("Vanilla GFMC Compound Translator Gate", False),
-        ("Vanilla Torvus Temple Translator Gate", False),
-        ("Vanilla Great Temple Emerald Translator Gate", elevators == LayoutElevators.VANILLA),
-    ]
-
+def version_resources_for_game(resource_database: ResourceDatabase) -> CurrentResources:
+    # All version differences are patched out from the game
     return {
-        find_resource_info_with_long_name(resource_database.misc, name): 1 if active else 0
-        for name, active in events
+        resource: 1 if resource.long_name == "NTSC" else 0
+        for resource in resource_database.version
     }
 
 
-def logic_bootstrap(configuration: LayoutConfiguration,
+def misc_resources_for_configuration(configuration: EchoesConfiguration,
+                                     resource_database: ResourceDatabase) -> CurrentResources:
+    enabled_resources = {
+        # Allow Vanilla X
+        19, 20, 21, 22, 23, 24, 25
+    }
+    if configuration.elevators == LayoutElevators.VANILLA:
+        # Vanilla Great Temple Emerald Translator Gate
+        enabled_resources.add(18)
+
+    return {
+        resource: 1 if resource.index in enabled_resources else 0
+        for resource in resource_database.misc
+    }
+
+
+def logic_bootstrap(configuration: EchoesConfiguration,
                     game: GameDescription,
                     patches: GamePatches,
                     ) -> Tuple[GameDescription, State]:
@@ -166,25 +177,18 @@ def logic_bootstrap(configuration: LayoutConfiguration,
     game = copy.deepcopy(game)
     starting_state = calculate_starting_state(game, patches)
 
-    if configuration.trick_level_configuration.global_level == LayoutTrickLevel.MINIMAL_LOGIC:
-        major_items_config = configuration.major_items_configuration
+    if configuration.trick_level.minimal_logic:
         _add_minimal_logic_initial_resources(starting_state.resources,
                                              game.resource_database,
-                                             major_items_config.progressive_grapple,
-                                             major_items_config.progressive_suit,
-                                             )
+                                             configuration.major_items_configuration)
 
-    static_resources = static_resources_for_layout_logic(configuration.trick_level_configuration,
+    static_resources = trick_resources_for_configuration(configuration.trick_level,
                                                          game.resource_database)
+    static_resources.update(version_resources_for_game(game.resource_database))
+    static_resources.update(misc_resources_for_configuration(configuration, game.resource_database))
 
-    add_resources_into_another(starting_state.resources, static_resources)
-    add_resources_into_another(starting_state.resources,
-                               _create_vanilla_translator_resources(game.resource_database,
-                                                                    configuration.elevators))
-
-    # All version differences are patched out from the game
-    starting_state.resources[find_resource_info_with_long_name(game.resource_database.version,
-                                                               "NTSC")] = 1
+    for resource, quantity in static_resources.items():
+        starting_state.resources[resource] = quantity
 
     game.patch_requirements(starting_state.resources, configuration.damage_strictness.value)
 

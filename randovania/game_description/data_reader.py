@@ -6,7 +6,7 @@ from randovania.game_description.dock import DockWeakness, DockType, DockWeaknes
 from randovania.game_description.echoes_game_specific import EchoesBeamConfiguration, EchoesGameSpecific
 from randovania.game_description.game_description import GameDescription
 from randovania.game_description.node import GenericNode, DockNode, TeleporterNode, PickupNode, EventNode, Node, \
-    TranslatorGateNode, LogbookNode, LoreType, NodeLocation
+    TranslatorGateNode, LogbookNode, LoreType, NodeLocation, PlayerShipNode
 from randovania.game_description.requirements import ResourceRequirement, Requirement, \
     RequirementOr, RequirementAnd, RequirementTemplate
 from randovania.game_description.resources.damage_resource_info import DamageReduction, DamageResourceInfo
@@ -21,6 +21,7 @@ from randovania.game_description.resources.translator_gate import TranslatorGate
 from randovania.game_description.resources.trick_resource_info import TrickResourceInfo
 from randovania.game_description.world import World
 from randovania.game_description.world_list import WorldList
+from randovania.games.game import RandovaniaGame
 
 X = TypeVar('X')
 Y = TypeVar('Y')
@@ -37,7 +38,7 @@ def read_resource_info(data: Dict, resource_type: ResourceType) -> SimpleResourc
 
 def read_item_resource_info(data: Dict) -> ItemResourceInfo:
     return ItemResourceInfo(data["index"], data["long_name"],
-                            data["short_name"], data["max_capacity"], data.get("custom_memory_offset"))
+                            data["short_name"], data["max_capacity"], data.get("extra"))
 
 
 def read_trick_resource_info(data: Dict) -> TrickResourceInfo:
@@ -186,7 +187,8 @@ def read_game_specific(data: Dict, resource_database: ResourceDatabase,
         beam_configurations=tuple(
             read_beam_configuration(beam, resource_database)
             for beam in data["beam_configurations"]
-        )
+        ),
+        dangerous_energy_tank=data["dangerous_energy_tank"],
     )
 
 
@@ -211,6 +213,12 @@ class WorldReader:
         return find_resource_info_with_long_name(
             self.resource_database.item,
             "Scan Visor"
+        )
+
+    def _get_command_visor(self) -> ItemResourceInfo:
+        return find_resource_info_with_long_name(
+            self.resource_database.item,
+            "Command Visor"
         )
 
     def read_node(self, data: Dict) -> Node:
@@ -276,6 +284,12 @@ class WorldReader:
                                    lore_type,
                                    required_translator,
                                    hint_index)
+
+            elif node_type == "player_ship":
+                return PlayerShipNode(name, heal, location, self.generic_index,
+                                      read_requirement(data["is_unlocked"], self.resource_database),
+                                      self._get_command_visor())
+
             else:
                 raise Exception(f"Unknown type: {node_type}")
 
@@ -337,6 +351,9 @@ def read_resource_database(data: Dict) -> ResourceDatabase:
         version=read_resource_info_array(data["versions"], ResourceType.VERSION),
         misc=read_resource_info_array(data["misc"], ResourceType.MISC),
         requirement_template={},
+        energy_tank_item_index=data["energy_tank_item_index"],
+        item_percentage_index=data["item_percentage_index"],
+        multiworld_magic_item_index=data["multiworld_magic_item_index"]
     )
     db.requirement_template.update(read_requirement_templates(data["requirement_template"], db))
     return db
@@ -350,12 +367,11 @@ def read_initial_states(data: Dict[str, List], resource_database: ResourceDataba
 
 
 def decode_data_with_world_reader(data: Dict) -> Tuple[WorldReader, GameDescription]:
-    game = data["game"]
-    game_name = data["game_name"]
+    game = RandovaniaGame(data["game"])
 
     resource_database = read_resource_database(data["resource_database"])
     dock_weakness_database = read_dock_weakness_database(data["dock_weakness_database"], resource_database)
-    if game == 2:
+    if game == RandovaniaGame.PRIME2:
         game_specific = read_game_specific(data["game_specific"], resource_database)
     else:
         game_specific = None
@@ -369,7 +385,6 @@ def decode_data_with_world_reader(data: Dict) -> Tuple[WorldReader, GameDescript
 
     return world_reader, GameDescription(
         game=game,
-        game_name=game_name,
         resource_database=resource_database,
         game_specific=game_specific,
         dock_weakness_database=dock_weakness_database,

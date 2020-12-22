@@ -66,3 +66,10 @@ target/
 
 # macOS
 .DS_Store
+
+# Vim
+*.swp
+
+# Usual dev server db
+/tools/test.db
+/network-storage

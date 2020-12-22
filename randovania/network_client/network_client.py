@@ -1,10 +1,11 @@
 import asyncio
 import base64
 import hashlib
+import json
 import logging
 from enum import Enum
 from pathlib import Path
-from typing import List, Optional, Tuple
+from typing import List, Optional, Tuple, Dict, Any
 
 import aiofiles
 import aiohttp.client_exceptions
@@ -13,6 +14,9 @@ import socketio
 import socketio.exceptions
 
 import randovania
+from randovania.game_connection.backend_choice import GameBackendChoice
+from randovania.game_connection.connection_base import InventoryItem, GameConnectionStatus
+from randovania.game_description.resources.item_resource_info import ItemResourceInfo
 from randovania.network_client.game_session import GameSessionListEntry, GameSessionEntry, User
 from randovania.network_common.admin_actions import SessionAdminUserAction, SessionAdminGlobalAction
 from randovania.network_common.error import decode_error, InvalidSession
@@ -48,12 +52,13 @@ class NetworkClient:
     _connection_state: ConnectionState
     _call_lock: asyncio.Lock
     _connect_task: Optional[asyncio.Task] = None
+    _waiting_for_on_connect: Optional[asyncio.Future] = None
     _restore_session_task: Optional[asyncio.Task] = None
     _connect_error: Optional[str] = None
+    _last_self_update: Any = None
 
     def __init__(self, user_data_dir: Path, configuration: dict):
         self.logger = logging.getLogger(__name__)
-        self.logger.setLevel(logging.DEBUG)
 
         self._connection_state = ConnectionState.Disconnected
         self.sio = socketio.AsyncClient()
@@ -105,6 +110,8 @@ class NetworkClient:
         if self.sio.connected:
             return
 
+        waiting_for_on_connect = asyncio.get_running_loop().create_future()
+        self._waiting_for_on_connect = waiting_for_on_connect
         try:
             # sio.connect is raising a NotImplementedError, likely due to Windows and/or asyncqt?
             engineio.asyncio_client.async_signal_handler_set = True
@@ -118,10 +125,9 @@ class NetworkClient:
             self._connect_error = None
             await self.sio.connect(self.configuration["server_address"],
                                    socketio_path=self.configuration["socketio_path"],
+                                   transports=['websocket'],
                                    headers={"X-Randovania-Version": randovania.VERSION})
-            if self._restore_session_task is not None:
-                self.logger.info(f"connect_to_server: waiting for restore session")
-                await asyncio.wait_for(self._restore_session_task, timeout=30)
+            await waiting_for_on_connect
             self.logger.info(f"connect_to_server: connected! -- {self._restore_session_task}")
 
         except (socketio.exceptions.ConnectionError, aiohttp.client_exceptions.ContentTypeError) as e:
@@ -133,6 +139,11 @@ class NetworkClient:
                     message = str(e)
                 await self.on_connect_error(message)
             raise UnableToConnect(self._connect_error)
+
+    def notify_on_connect(self, result):
+        if self._waiting_for_on_connect is not None:
+            self._waiting_for_on_connect.set_result(result)
+            self._waiting_for_on_connect = None
 
     def connect_to_server(self) -> asyncio.Task:
         if self._connect_task is None:
@@ -175,16 +186,22 @@ class NetworkClient:
             self.connection_state = ConnectionState.ConnectedNotLogged
 
     async def on_connect(self):
-        self._restore_session_task = asyncio.create_task(self._restore_session())
-        self._restore_session_task.add_done_callback(lambda _: setattr(self, "_restore_session_task", None))
-        await self._restore_session_task
+        try:
+            self._restore_session_task = asyncio.create_task(self._restore_session())
+            self._restore_session_task.add_done_callback(lambda _: setattr(self, "_restore_session_task", None))
+            await self._restore_session_task
+        finally:
+            self.notify_on_connect(True)
 
     async def on_connect_error(self, error_message: str):
-        self._connect_error = error_message
-        self.logger.info(f"on_connect_error: {error_message}")
-        self.connection_state = ConnectionState.Disconnected
-        if self._restore_session_task is not None:
-            self._restore_session_task.cancel()
+        try:
+            self._connect_error = error_message
+            self.logger.info(f"on_connect_error: {error_message}")
+            self.connection_state = ConnectionState.Disconnected
+            if self._restore_session_task is not None:
+                self._restore_session_task.cancel()
+        finally:
+            self.notify_on_connect(False)
 
     async def on_disconnect(self):
         self.logger.info(f"on_disconnect")
@@ -261,8 +278,9 @@ class NetworkClient:
     async def leave_game_session(self, permanent: bool):
         if permanent:
             await self.session_admin_player(self._current_user.id, SessionAdminUserAction.KICK, None)
-        await self._emit_with_result("disconnect_game_session")
+        await self._emit_with_result("disconnect_game_session", self._current_game_session.id)
         self._current_game_session = None
+        self._last_self_update = None
 
     async def session_admin_global(self, action: SessionAdminGlobalAction, arg):
         return await self._emit_with_result("game_session_admin_session",
@@ -271,6 +289,21 @@ class NetworkClient:
     async def session_admin_player(self, user_id: int, action: SessionAdminUserAction, arg):
         return await self._emit_with_result("game_session_admin_player",
                                             (self._current_game_session.id, user_id, action.value, arg))
+
+    async def session_self_update(self,
+                                  inventory: Dict[ItemResourceInfo, InventoryItem],
+                                  state: GameConnectionStatus, backend: GameBackendChoice):
+
+        inventory_json = json.dumps([
+            {"index": resource.index, "amount": item.amount, "capacity": item.capacity}
+            for resource, item in inventory.items()
+        ])
+        state_string = f"{state.pretty_text} ({backend.pretty_text})"
+
+        if self._last_self_update != state_string:
+            await self._emit_with_result("game_session_self_update",
+                                         (self._current_game_session.id, inventory_json, state_string))
+            self._last_self_update = state_string
 
     @property
     def current_user(self) -> Optional[User]:

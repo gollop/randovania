@@ -58,6 +58,10 @@ class BitPackValue:
     def bit_pack_unpack(cls, decoder: BitPackDecoder, metadata):
         raise NotImplementedError()
 
+    @classmethod
+    def bit_pack_skip_if_equals(cls):
+        return True
+
 
 class BitPackBool(BitPackValue):
     value: bool
@@ -66,11 +70,15 @@ class BitPackBool(BitPackValue):
         self.value = value
 
     def bit_pack_encode(self, metadata) -> Iterator[Tuple[int, int]]:
-        yield int(self.value), 2
+        yield from encode_bool(self.value)
 
     @classmethod
     def bit_pack_unpack(cls, decoder: BitPackDecoder, metadata) -> bool:
-        return bool(decoder.decode_single(2))
+        return decode_bool(decoder)
+
+    @classmethod
+    def bit_pack_skip_if_equals(cls):
+        return False
 
 
 class BitPackFloat(BitPackValue):
@@ -87,7 +95,7 @@ class BitPackFloat(BitPackValue):
                 return
 
         value_range = (metadata["max"] - metadata["min"]) * (10 ** metadata["precision"])
-        yield int((self.value - metadata["min"]) * (10 ** metadata["precision"])), value_range
+        yield int((self.value - metadata["min"]) * (10 ** metadata["precision"])), int(value_range) + 1
 
     @classmethod
     def bit_pack_unpack(cls, decoder: BitPackDecoder, metadata) -> float:
@@ -97,7 +105,7 @@ class BitPackFloat(BitPackValue):
                 return metadata["if_different"]
 
         value_range = (metadata["max"] - metadata["min"]) * (10 ** metadata["precision"])
-        decoded = decoder.decode_single(value_range)
+        decoded = decoder.decode_single(int(value_range) + 1)
         return float((decoded / (10 ** metadata["precision"])) + metadata["min"])
 
 
@@ -162,11 +170,11 @@ def _get_bit_pack_value_for_type(value_type):
         raise NotImplementedError("Unsupported bit packing for type {}".format(value_type))
 
 
-def _get_bit_pack_value_for(value):
+def _get_bit_pack_value_for(value, dataclass_type: type):
     if isinstance(value, BitPackValue):
         return value
 
-    return _get_bit_pack_value_for_type(type(value))(value)
+    return _get_bit_pack_value_for_type(dataclass_type)(value)
 
 
 class BitPackDataClass(BitPackValue):
@@ -178,13 +186,29 @@ class BitPackDataClass(BitPackValue):
                 continue
 
             item = getattr(self, field.name)
-            if reference is not None:
-                is_different = item != getattr(reference, field.name)
-                yield from encode_bool(is_different)
-                if not is_different:
-                    continue
+            bit_pack_value = _get_bit_pack_value_for(item, field.type)
 
-            yield from _get_bit_pack_value_for(item).bit_pack_encode(field.metadata)
+            if reference is not None:
+                reference_item = getattr(reference, field.name)
+            else:
+                reference_item = None
+
+            field_meta = dict(**field.metadata)
+            field_meta["reference"] = reference_item
+
+            encoded_item = list(bit_pack_value.bit_pack_encode(field_meta))
+            if any((a >= b) for (a, b) in encoded_item):
+                raise ValueError(f"Encoding field {field.name} of {type(self)} generated invalid value.")
+            should_encode = True
+
+            if bit_pack_value.bit_pack_skip_if_equals() and reference_item is not None:
+                reference_pack_value = _get_bit_pack_value_for(reference_item, field.type)
+                encoded_reference = list(reference_pack_value.bit_pack_encode(field_meta))
+                should_encode = encoded_item != encoded_reference
+                yield from encode_bool(should_encode)
+
+            if should_encode:
+                yield from encoded_item
 
     @classmethod
     def bit_pack_unpack(cls, decoder: BitPackDecoder, metadata):
@@ -195,14 +219,21 @@ class BitPackDataClass(BitPackValue):
             if not field.init:
                 continue
 
+            bit_pack_value = _get_bit_pack_value_for_type(field.type)
+
             should_decode = True
             if reference is not None:
-                if not decode_bool(decoder):
-                    item = getattr(reference, field.name)
+                reference_item = getattr(reference, field.name)
+                if bit_pack_value.bit_pack_skip_if_equals() and not decode_bool(decoder):
+                    item = reference_item
                     should_decode = False
+            else:
+                reference_item = None
 
             if should_decode:
-                item = _get_bit_pack_value_for_type(field.type).bit_pack_unpack(decoder, field.metadata)
+                field_meta = dict(**field.metadata)
+                field_meta["reference"] = reference_item
+                item = bit_pack_value.bit_pack_unpack(decoder, field_meta)
 
             args[field.name] = item
 
@@ -214,7 +245,7 @@ def pack_array_element(element: T, array: List[T]) -> Iterator[Tuple[int, int]]:
         yield array.index(element), len(array)
     else:
         if element not in array:
-            raise ValueError("given element is not in array")
+            raise ValueError(f"given element {element} is not in array of {len(array)}")
 
 
 def _is_sorted(array: List[T]) -> bool:
@@ -345,10 +376,14 @@ def pack_value(value: BitPackValue, metadata: Optional[dict] = None) -> bytes:
     if metadata is None:
         metadata = {}
 
-    return _pack_encode_results([
-        (value_argument, value_format)
-        for value_argument, value_format in value.bit_pack_encode(metadata)
-    ])
+    results = []
+
+    for i, (value_argument, value_format) in enumerate(value.bit_pack_encode(metadata)):
+        if value_argument >= value_format:
+            raise ValueError(f"At {i}, got {value_argument} which is bigger than limit {value_format}")
+        results.append((value_argument, value_format))
+
+    return _pack_encode_results(results)
 
 
 def round_trip(value: T,

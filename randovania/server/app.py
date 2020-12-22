@@ -1,12 +1,34 @@
+from distutils.version import StrictVersion
+from enum import Enum
 from logging.config import dictConfig
 
 import flask
 from flask_socketio import ConnectionRefusedError
 
 import randovania
-from randovania.interface_common.update_checker import strict_version_for_version_string, strict_current_version
 from randovania.server import game_session, user_session, database
 from randovania.server.server_app import ServerApp
+
+
+class ClientVersionCheck(Enum):
+    STRICT = "strict"
+    MATCH_MAJOR_MINOR = "match-major-minor"
+    IGNORE = "ignore"
+
+
+def check_client_version(version_checking: ClientVersionCheck, client_version: str, server_version: str):
+    if version_checking == ClientVersionCheck.STRICT:
+        if server_version != client_version:
+            raise ConnectionRefusedError(f"Incompatible client version '{client_version}', "
+                                         f"expected '{server_version}'")
+    elif version_checking == ClientVersionCheck.MATCH_MAJOR_MINOR:
+        server = StrictVersion(server_version.split(".dev")[0])
+        client = StrictVersion(client_version.split(".dev")[0])
+        if server.version[:2] != client.version[:2]:
+            shorter_client = "{}.{}".format(*client.version[:2])
+            shorter_server = "{}.{}".format(*server.version[:2])
+            raise ConnectionRefusedError(f"Incompatible client version '{shorter_client}', "
+                                         f"expected '{shorter_server}'")
 
 
 def create_app():
@@ -35,6 +57,7 @@ def create_app():
     app.config["DISCORD_CLIENT_SECRET"] = configuration["server_config"]["discord_client_secret"]
     app.config["DISCORD_REDIRECT_URI"] = "http://127.0.0.1:5000/callback/"  # Redirect URI.
     app.config["FERNET_KEY"] = configuration["server_config"]["fernet_key"].encode("ascii")
+    version_checking = ClientVersionCheck(configuration["server_config"]["client_version_checking"])
 
     database.db.init(configuration["server_config"]['database_path'])
     database.db.connect(reuse_if_open=True)
@@ -60,21 +83,23 @@ def create_app():
             raise ConnectionRefusedError("unknown client version")
 
         client_app_version = environ["HTTP_X_RANDOVANIA_VERSION"]
-        if server_version != client_app_version:
-            raise ConnectionRefusedError(f"Incompatible client version '{client_app_version}', "
-                                         f"expected '{server_version}'")
+        check_client_version(version_checking, client_app_version, server_version)
+        connected_clients.inc()
 
-        connected_clients.set(len(sio.get_server().environ))
-        app.logger.info(f"Client at {environ['REMOTE_ADDR']} with "
-                        f"version {client_app_version} connected, while server is {server_version}")
+        forwarded_for = environ.get('HTTP_X_FORWARDED_FOR')
+        app.logger.info(f"Client at {environ['REMOTE_ADDR']} ({forwarded_for}) with "
+                        f"version {client_app_version} connected.")
 
     @sio.sio.server.on("disconnect")
     def disconnect(sid):
+        connected_clients.dec()
         sio_environ = sio.get_server().environ
-        num_clients = len(sio_environ)
-        if sid in sio_environ:
-            num_clients -= 1
-        connected_clients.set(num_clients)
-        app.logger.info(f"Client at {sio_environ[sid]['REMOTE_ADDR']} disconnected.")
+
+        forwarded_for = sio_environ[sid].get('HTTP_X_FORWARDED_FOR')
+        app.logger.info(f"Client at {sio_environ[sid]['REMOTE_ADDR']} ({forwarded_for}) disconnected.")
+
+        session = sio.get_server().get_session(sid)
+        if "user-id" in session:
+            game_session.report_user_disconnected(sio, session["user-id"], app.logger)
 
     return app

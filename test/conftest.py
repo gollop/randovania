@@ -10,9 +10,10 @@ from randovania.game_description.game_description import GameDescription
 from randovania.game_description.game_patches import GamePatches
 from randovania.game_description.item.item_database import ItemDatabase
 from randovania.game_description.resources.resource_database import ResourceDatabase
+from randovania.games.game import RandovaniaGame
 from randovania.games.prime import default_data
 from randovania.interface_common.preset_manager import PresetManager
-from randovania.layout.layout_configuration import LayoutConfiguration
+from randovania.layout.echoes_configuration import EchoesConfiguration
 from randovania.layout.preset import Preset
 
 
@@ -45,18 +46,18 @@ def default_preset(preset_manager) -> Preset:
 
 
 @pytest.fixture()
-def default_layout_configuration(preset_manager) -> LayoutConfiguration:
-    return preset_manager.default_preset.get_preset().layout_configuration
+def default_layout_configuration(preset_manager) -> EchoesConfiguration:
+    return preset_manager.default_preset.get_preset().configuration
 
 
 @pytest.fixture()
 def echoes_resource_database() -> ResourceDatabase:
-    return default_database.default_prime2_resource_database()
+    return default_database.resource_database_for(RandovaniaGame.PRIME2)
 
 
 @pytest.fixture()
 def echoes_item_database() -> ItemDatabase:
-    return default_database.default_prime2_item_database()
+    return default_database.item_database_for_game(RandovaniaGame.PRIME2)
 
 
 @pytest.fixture()
@@ -68,6 +69,17 @@ def echoes_game_data() -> dict:
 def echoes_game_description(echoes_game_data) -> GameDescription:
     from randovania.game_description import data_reader
     return data_reader.decode_data(echoes_game_data)
+
+
+@pytest.fixture()
+def corruption_game_data() -> dict:
+    return default_data.decode_default_prime3()
+
+
+@pytest.fixture()
+def corruption_game_description(corruption_game_data) -> GameDescription:
+    from randovania.game_description import data_reader
+    return data_reader.decode_data(corruption_game_data)
 
 
 @pytest.fixture()

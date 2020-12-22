@@ -28,7 +28,7 @@ def test_run_filler(mock_retcon_playthrough_filler: MagicMock,
     logbook_nodes = [node for node in echoes_game_description.world_list.all_nodes if isinstance(node, LogbookNode)]
 
     player_pools = {
-        0: create_player_pool(rng, default_layout_configuration, 0),
+        0: create_player_pool(rng, default_layout_configuration, 0, 1),
     }
     initial_pickup_count = len(player_pools[0].pickups)
 
@@ -138,7 +138,7 @@ def test_add_relative_hint(echoes_game_description, empty_patches, location_prec
         max_distance = 8
         data = RelativeDataArea(
             precise_distance,
-            AreaLocation(0x3BFA3EFF, 0x62B0D67D),
+            AreaLocation(0x3BFA3EFF, 0x62AC8AC4),
             precision,
         )
     else:

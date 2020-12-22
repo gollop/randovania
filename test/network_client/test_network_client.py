@@ -1,11 +1,11 @@
 from pathlib import Path
 
 import pytest
-from mock import MagicMock, AsyncMock
+from mock import MagicMock, AsyncMock, call
 
 import randovania
 from randovania.network_client.network_client import NetworkClient, ConnectionState
-from randovania.network_common.admin_actions import SessionAdminGlobalAction
+from randovania.network_common.admin_actions import SessionAdminGlobalAction, SessionAdminUserAction
 from randovania.network_common.error import InvalidSession
 
 
@@ -66,8 +66,12 @@ async def test_connect_to_server(tmpdir):
     # Setup
     client = NetworkClient(Path(tmpdir), {"server_address": "http://localhost:5000",
                                           "socketio_path": "/path"})
+
+    async def connect(*args, **kwargs):
+        client._waiting_for_on_connect.set_result(True)
+
     client.sio = MagicMock()
-    client.sio.connect = AsyncMock()
+    client.sio.connect = AsyncMock(side_effect=connect)
     client.sio.connected = False
 
     # Run
@@ -77,6 +81,7 @@ async def test_connect_to_server(tmpdir):
     assert client.connection_state == ConnectionState.Connecting
     client.sio.connect.assert_awaited_once_with("http://localhost:5000",
                                                 socketio_path="/path",
+                                                transports=["websocket"],
                                                 headers={"X-Randovania-Version": randovania.VERSION})
 
 
@@ -92,3 +97,27 @@ async def test_session_admin_global(client):
     # Assert
     assert result == client._emit_with_result.return_value
     client._emit_with_result.assert_awaited_once_with("game_session_admin_session", (1234, "change_row", 5))
+
+
+@pytest.mark.parametrize("permanent", [False, True])
+@pytest.mark.asyncio
+async def test_leave_game_session(client: NetworkClient, permanent: bool):
+    client._emit_with_result = AsyncMock()
+    client._current_game_session = MagicMock()
+    client._current_game_session.id = 1234
+    client._current_user = MagicMock()
+    client._current_user.id = 5678
+    client._last_self_update = "foobar"
+
+    # Run
+    await client.leave_game_session(permanent)
+
+    # Assert
+    calls = [call("disconnect_game_session", 1234)]
+    if permanent:
+        calls.insert(0, call("game_session_admin_player", (1234, 5678, SessionAdminUserAction.KICK.value, None)))
+
+    client._emit_with_result.assert_has_awaits(calls)
+
+    assert client._current_game_session is None
+    assert client._last_self_update is None

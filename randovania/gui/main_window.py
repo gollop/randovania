@@ -1,6 +1,8 @@
-import dataclasses
+import functools
 import functools
 import json
+import os
+import platform
 from functools import partial
 from typing import Optional, List
 
@@ -13,6 +15,7 @@ from asyncqt import asyncSlot
 
 from randovania import VERSION
 from randovania.game_description import default_database
+from randovania.game_description.item.item_category import ItemCategory
 from randovania.game_description.node import LogbookNode, LoreType
 from randovania.game_description.resources.trick_resource_info import TrickResourceInfo
 from randovania.games.game import RandovaniaGame
@@ -33,9 +36,9 @@ from randovania.interface_common import github_releases_data, update_checker
 from randovania.interface_common.enum_lib import iterate_enum
 from randovania.interface_common.options import Options
 from randovania.interface_common.preset_manager import PresetManager
-from randovania.layout.layout_configuration import LayoutConfiguration
+from randovania.layout.echoes_configuration import EchoesConfiguration
 from randovania.layout.layout_description import LayoutDescription
-from randovania.layout.trick_level import TrickLevelConfiguration, LayoutTrickLevel
+from randovania.layout.trick_level import LayoutTrickLevel
 from randovania.network_client.network_client import ConnectionState
 from randovania.resolver import debug
 
@@ -119,9 +122,9 @@ class MainWindow(WindowManager, Ui_MainWindow):
             lambda: self.welcome_tab_widget.setCurrentWidget(self.tab_create_seed))
 
         # Menu Bar
-        for action, game in ((self.menu_action_visualize_prime_1, RandovaniaGame.PRIME1),
-                             (self.menu_action_visualize_prime_2, RandovaniaGame.PRIME2),
-                             (self.menu_action_visualize_prime_3, RandovaniaGame.PRIME3)):
+        for action, game in ((self.menu_action_prime_1_data_visualizer, RandovaniaGame.PRIME1),
+                             (self.menu_action_prime_2_data_visualizer, RandovaniaGame.PRIME2),
+                             (self.menu_action_prime_3_data_visualizer, RandovaniaGame.PRIME3)):
             action.triggered.connect(partial(self._open_data_visualizer_for_game, game))
 
         for action, game in ((self.menu_action_edit_prime_1, RandovaniaGame.PRIME1),
@@ -130,19 +133,22 @@ class MainWindow(WindowManager, Ui_MainWindow):
             action.triggered.connect(partial(self._open_data_editor_for_game, game))
 
         self.menu_action_item_tracker.triggered.connect(self._open_item_tracker)
+        self.menu_action_map_tracker.triggered.connect(self._on_menu_action_map_tracker)
         self.menu_action_edit_existing_database.triggered.connect(self._open_data_editor_prompt)
         self.menu_action_validate_seed_after.triggered.connect(self._on_validate_seed_change)
         self.menu_action_timeout_generation_after_a_time_limit.triggered.connect(self._on_generate_time_limit_change)
         self.menu_action_dark_mode.triggered.connect(self._on_menu_action_dark_mode)
         self.menu_action_open_auto_tracker.triggered.connect(self._open_auto_tracker)
+        self.menu_action_previously_generated_games.triggered.connect(self._on_menu_action_previously_generated_games)
+        self.menu_action_layout_editor.triggered.connect(self._on_menu_action_layout_editor)
         self.action_login_window.triggered.connect(self._action_login_window)
+
+        self.menu_prime_1_trick_details.aboutToShow.connect(self._create_trick_details_prime_1)
+        self.menu_prime_2_trick_details.aboutToShow.connect(self._create_trick_details_prime_2)
+        self.menu_prime_3_trick_details.aboutToShow.connect(self._create_trick_details_prime_3)
 
         self.generate_seed_tab = GenerateSeedTab(self, self, options)
         self.generate_seed_tab.setup_ui()
-
-        # Needs the GenerateSeedTab
-        self._create_open_map_tracker_actions()
-        self._setup_difficulties_menu()
 
         # Setting this event only now, so all options changed trigger only once
         options.on_options_changed = self.options_changed_signal.emit
@@ -256,7 +262,8 @@ class MainWindow(WindowManager, Ui_MainWindow):
             self.game_session_window = await GameSessionWindow.create_and_update(
                 network_client, common_qt_lib.get_game_connection(), self.preset_manager,
                 self, self._options)
-            self.game_session_window.show()
+            if self.game_session_window is not None:
+                self.game_session_window.show()
 
     @asyncSlot()
     @handle_network_errors
@@ -290,7 +297,8 @@ class MainWindow(WindowManager, Ui_MainWindow):
         self.game_session_window = await GameSessionWindow.create_and_update(self.network_client,
                                                                              common_qt_lib.get_game_connection(),
                                                                              self.preset_manager, self, self._options)
-        self.game_session_window.show()
+        if self.game_session_window is not None:
+            self.game_session_window.show()
 
     def open_game_details(self, layout: LayoutDescription):
         self.GameDetailsSignal.emit(layout)
@@ -402,22 +410,19 @@ class MainWindow(WindowManager, Ui_MainWindow):
             self._data_editor = DataEditorWindow(json.load(database_file), database_path, False, True)
             self._data_editor.show()
 
-    def _create_open_map_tracker_actions(self):
-        base_layout = self.preset_manager.default_preset.get_preset().layout_configuration
+    @asyncSlot()
+    async def _on_menu_action_map_tracker(self):
+        dialog = QtWidgets.QInputDialog(self)
+        dialog.setWindowTitle("Map Tracker")
+        dialog.setLabelText("Select preset used for the tracker.")
+        dialog.setComboBoxItems([preset.name for preset in self._preset_manager.all_presets])
+        dialog.setTextValue(self._options.selected_preset_name)
+        result = await async_dialog.execute_dialog(dialog)
+        if result == QtWidgets.QDialog.Accepted:
+            preset = self._preset_manager.preset_for_name(dialog.textValue())
+            self.open_map_tracker(preset.get_preset().configuration)
 
-        for trick_level in iterate_enum(LayoutTrickLevel):
-            if trick_level != LayoutTrickLevel.MINIMAL_LOGIC:
-                action = QtWidgets.QAction(self)
-                action.setText(trick_level.long_name)
-                self.menu_map_tracker.addAction(action)
-
-                configuration = dataclasses.replace(
-                    base_layout,
-                    trick_level_configuration=TrickLevelConfiguration(trick_level, {})
-                )
-                action.triggered.connect(partial(self.open_map_tracker, configuration))
-
-    def open_map_tracker(self, configuration: LayoutConfiguration):
+    def open_map_tracker(self, configuration: EchoesConfiguration):
         try:
             self._map_tracker = TrackerWindow(self._options.tracker_files_path, configuration)
         except InvalidLayoutForTracker as e:
@@ -459,35 +464,42 @@ class MainWindow(WindowManager, Ui_MainWindow):
         self._trick_details_popup.setWindowModality(Qt.WindowModal)
         self._trick_details_popup.open()
 
-    def _open_trick_details_popup(self, trick: TrickResourceInfo, level: LayoutTrickLevel):
-        self._exec_trick_details(TrickDetailsPopup(
-            self,
-            self,
-            default_database.default_prime2_game_description(),
-            trick,
-            level,
-        ))
+    def _open_trick_details_popup(self, game, trick: TrickResourceInfo, level: LayoutTrickLevel):
+        self._exec_trick_details(TrickDetailsPopup(self, self, game, trick, level))
 
-    def _setup_difficulties_menu(self):
-        game = default_database.default_prime2_game_description()
-        tricks_in_use = used_tricks(game.world_list)
+    def _create_trick_details_prime_1(self):
+        self.menu_prime_1_trick_details.aboutToShow.disconnect(self._create_trick_details_prime_1)
+        self._setup_difficulties_menu(RandovaniaGame.PRIME1, self.menu_prime_1_trick_details)
 
+    def _create_trick_details_prime_2(self):
+        self.menu_prime_2_trick_details.aboutToShow.disconnect(self._create_trick_details_prime_2)
+        self._setup_difficulties_menu(RandovaniaGame.PRIME2, self.menu_prime_2_trick_details)
+
+    def _create_trick_details_prime_3(self):
+        self.menu_prime_3_trick_details.aboutToShow.disconnect(self._create_trick_details_prime_3)
+        self._setup_difficulties_menu(RandovaniaGame.PRIME3, self.menu_prime_3_trick_details)
+
+    def _setup_difficulties_menu(self, game: RandovaniaGame, menu: QtWidgets.QMenu):
+        game = default_database.game_description_for(game)
+        tricks_in_use = used_tricks(game)
+
+        menu.clear()
         for trick in sorted(game.resource_database.trick, key=lambda _trick: _trick.long_name):
             if trick not in tricks_in_use:
                 continue
 
             trick_menu = QMenu(self)
             trick_menu.setTitle(trick.long_name)
-            self.menu_trick_details.addAction(trick_menu.menuAction())
+            menu.addAction(trick_menu.menuAction())
 
-            used_difficulties = difficulties_for_trick(game.world_list, trick)
+            used_difficulties = difficulties_for_trick(game, trick)
             for i, trick_level in enumerate(iterate_enum(LayoutTrickLevel)):
                 if trick_level in used_difficulties:
                     difficulty_action = QAction(self)
                     difficulty_action.setText(trick_level.long_name)
                     trick_menu.addAction(difficulty_action)
                     difficulty_action.triggered.connect(
-                        functools.partial(self._open_trick_details_popup, trick, trick_level))
+                        functools.partial(self._open_trick_details_popup, game, trick, trick_level))
 
     # ==========
 
@@ -522,11 +534,70 @@ class MainWindow(WindowManager, Ui_MainWindow):
 
     def _open_auto_tracker(self):
         from randovania.gui.auto_tracker_window import AutoTrackerWindow
-        self.auto_tracker_window = AutoTrackerWindow(common_qt_lib.get_game_connection())
+        self.auto_tracker_window = AutoTrackerWindow(common_qt_lib.get_game_connection(), self._options)
         self.auto_tracker_window.show()
+
+    def _on_menu_action_previously_generated_games(self):
+        path = self._options.data_dir.joinpath("game_history")
+        if platform.system() == "Windows":
+            os.startfile(path)
+        else:
+            box = QtWidgets.QMessageBox(QtWidgets.QMessageBox.Information, "Game History",
+                                        f"Previously generated games can be found at:\n{path}",
+                                        QtWidgets.QMessageBox.Ok, self)
+            box.setTextInteractionFlags(Qt.TextSelectableByMouse)
+            box.show()
+
+    def _on_menu_action_layout_editor(self):
+        from randovania.gui.corruption_layout_editor import CorruptionLayoutEditor
+        self.corruption_editor = CorruptionLayoutEditor()
+        self.corruption_editor.show()
 
     def _update_hints_text(self):
         game_description = default_database.default_prime2_game_description()
+        item_database = default_database.default_prime2_item_database()
+
+        rows = []
+
+        for item in item_database.major_items.values():
+            rows.append((
+                item.name,
+                item.item_category.hint_details[1],
+                item.item_category.general_details[1],
+                item.broad_category.hint_details[1],
+            ))
+
+        from randovania.games.prime.echoes_items import DARK_TEMPLE_KEY_NAMES
+        for dark_temple_key in DARK_TEMPLE_KEY_NAMES:
+            rows.append((
+                dark_temple_key.format("").strip(),
+                ItemCategory.TEMPLE_KEY.hint_details[1],
+                ItemCategory.TEMPLE_KEY.general_details[1],
+                ItemCategory.KEY.hint_details[1],
+            ))
+
+        rows.append((
+            "Sky Temple Key",
+            ItemCategory.SKY_TEMPLE_KEY.hint_details[1],
+            ItemCategory.SKY_TEMPLE_KEY.general_details[1],
+            ItemCategory.KEY.hint_details[1],
+        ))
+
+        for item in item_database.ammo.values():
+            rows.append((
+                item.name,
+                ItemCategory.EXPANSION.hint_details[1],
+                ItemCategory.EXPANSION.general_details[1],
+                item.broad_category.hint_details[1],
+            ))
+
+        self.hint_item_names_tree_widget.setRowCount(len(rows))
+        for i, elements in enumerate(rows):
+            for j, element in enumerate(elements):
+                self.hint_item_names_tree_widget.setItem(i, j, QtWidgets.QTableWidgetItem(element))
+
+        for i in range(4):
+            self.hint_item_names_tree_widget.resizeColumnToContents(i)
 
         number_for_hint_type = {
             hint_type: i + 1

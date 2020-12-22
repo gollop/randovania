@@ -6,24 +6,23 @@ from typing import Iterator, Optional, Callable, List, Dict
 import tenacity
 
 from randovania import VERSION
-from randovania.game_description import data_reader
+from randovania.game_description import data_reader, default_database
 from randovania.game_description.assignment import PickupAssignment, PickupTarget
 from randovania.game_description.game_description import GameDescription
 from randovania.game_description.game_patches import GamePatches
 from randovania.game_description.resources.pickup_entry import PickupEntry
 from randovania.game_description.world_list import WorldList
 from randovania.generator import base_patches_factory
-from randovania.generator.filler.filler_library import filter_unassigned_pickup_nodes, filter_pickup_nodes, \
-    UnableToGenerate
+from randovania.generator.filler.filler_library import filter_unassigned_pickup_nodes, UnableToGenerate
 from randovania.generator.filler.runner import run_filler, FillerPlayerResult, PlayerPool, FillerResults
 from randovania.generator.item_pool import pool_creator
 from randovania.layout.available_locations import RandomizationMode
-from randovania.layout.layout_configuration import LayoutConfiguration
+from randovania.layout.echoes_configuration import EchoesConfiguration
 from randovania.layout.layout_description import LayoutDescription
 from randovania.layout.permalink import Permalink
 from randovania.layout.preset import Preset
 from randovania.resolver import resolver
-from randovania.resolver.exceptions import GenerationFailure, InvalidConfiguration
+from randovania.resolver.exceptions import GenerationFailure, InvalidConfiguration, ImpossibleForSolver
 from randovania.resolver.state import State
 
 
@@ -37,37 +36,34 @@ def generate_description(permalink: Permalink,
                          status_update: Optional[Callable[[str], None]],
                          validate_after_generation: bool,
                          timeout: Optional[int] = 600,
+                         attempts: int = 15,
                          ) -> LayoutDescription:
     """
     Creates a LayoutDescription for the given Permalink.
     :param permalink:
     :param status_update:
     :param validate_after_generation:
-    :param timeout:
+    :param timeout: Abort generation after this many seconds.
+    :param attempts: Attempt this many generations.
     :return:
     """
     if status_update is None:
         status_update = id
 
-    create_patches_params = {
-        "permalink": permalink,
-        "status_update": status_update
-    }
+    try:
+        result = _async_create_description(
+            permalink=permalink,
+            status_update=status_update,
+            attempts=attempts,
+        )
+    except UnableToGenerate as e:
+        raise GenerationFailure("Could not generate a game with the given settings",
+                                permalink=permalink, source=e) from e
 
-    def create_failure(message: str):
-        return GenerationFailure(message, permalink=permalink)
-
-    with multiprocessing.dummy.Pool(1) as dummy_pool:
-        result_async = dummy_pool.apply_async(func=_async_create_description,
-                                              kwds=create_patches_params)
-        try:
-            result: LayoutDescription = result_async.get(timeout)
-        except multiprocessing.TimeoutError:
-            raise create_failure("Timeout reached when generating.")
-
-        if validate_after_generation and permalink.player_count == 1:
+    if validate_after_generation and permalink.player_count == 1:
+        with multiprocessing.dummy.Pool(1) as dummy_pool:
             resolve_params = {
-                "configuration": permalink.presets[0].layout_configuration,
+                "configuration": permalink.presets[0].configuration,
                 "patches": result.all_patches[0],
                 "status_update": status_update,
             }
@@ -76,21 +72,25 @@ def generate_description(permalink: Permalink,
 
             try:
                 final_state_by_resolve = final_state_async.get(timeout)
-            except multiprocessing.TimeoutError:
-                raise create_failure("Timeout reached when validating possibility")
+            except multiprocessing.TimeoutError as e:
+                raise GenerationFailure("Timeout reached when validating possibility",
+                                        permalink=permalink, source=e) from e
 
             if final_state_by_resolve is None:
                 # Why is final_state_by_distribution not OK?
-                raise create_failure("Generated seed was considered impossible by the solver")
+                raise GenerationFailure("Generated game was considered impossible by the solver",
+                                        permalink=permalink, source=ImpossibleForSolver())
 
     return result
 
 
-def _validate_item_pool_size(item_pool: List[PickupEntry], game: GameDescription) -> None:
-    if len(item_pool) > game.world_list.num_pickup_nodes:
+def _validate_item_pool_size(item_pool: List[PickupEntry], game: GameDescription,
+                             configuration: EchoesConfiguration) -> None:
+    min_starting_items = configuration.major_items_configuration.minimum_random_starting_items
+    if len(item_pool) > game.world_list.num_pickup_nodes + min_starting_items:
         raise InvalidConfiguration(
-            "Item pool has {0} items, but there's only {1} pickups spots in the game".format(len(item_pool),
-                                                                                             num_pickup_nodes))
+            "Item pool has {} items, which is more than {} (game) + {} (minimum starting items)".format(
+                len(item_pool), game.world_list.num_pickup_nodes, min_starting_items))
 
 
 def _distribute_remaining_items(rng: Random,
@@ -132,20 +132,27 @@ def _distribute_remaining_items(rng: Random,
 
 def _async_create_description(permalink: Permalink,
                               status_update: Callable[[str], None],
+                              attempts: int,
                               ) -> LayoutDescription:
     """
     :param permalink:
     :param status_update:
     :return:
     """
-    rng = Random(permalink.as_str)
+    rng = Random(permalink.as_bytes)
 
     presets = {
         i: permalink.get_preset(i)
         for i in range(permalink.player_count)
     }
 
-    filler_results = _retryable_create_patches(rng, presets, status_update)
+    retrying = tenacity.Retrying(
+        stop=tenacity.stop_after_attempt(attempts),
+        retry=tenacity.retry_if_exception_type(UnableToGenerate),
+        reraise=True
+    )
+
+    filler_results = retrying(_create_pools_and_fill, rng, presets, status_update)
     all_patches = _distribute_remaining_items(rng, filler_results.player_results)
     return LayoutDescription(
         permalink=permalink,
@@ -155,10 +162,11 @@ def _async_create_description(permalink: Permalink,
     )
 
 
-def create_player_pool(rng: Random, configuration: LayoutConfiguration, player_index: int) -> PlayerPool:
-    game = data_reader.decode_data(configuration.game_data)
-
-    base_patches = dataclasses.replace(base_patches_factory.create_base_patches(configuration, rng, game),
+def create_player_pool(rng: Random, configuration: EchoesConfiguration,
+                       player_index: int, num_players: int) -> PlayerPool:
+    game = default_database.game_description_for(configuration.game)
+    base_patches = dataclasses.replace(base_patches_factory.create_base_patches(configuration, rng, game,
+                                                                                num_players > 1),
                                        player_index=player_index)
 
     item_pool, pickup_assignment, initial_items = pool_creator.calculate_pool_results(configuration,
@@ -177,13 +185,10 @@ def create_player_pool(rng: Random, configuration: LayoutConfiguration, player_i
     )
 
 
-@tenacity.retry(stop=tenacity.stop_after_attempt(15),
-                retry=tenacity.retry_if_exception_type(UnableToGenerate),
-                reraise=True)
-def _retryable_create_patches(rng: Random,
-                              presets: Dict[int, Preset],
-                              status_update: Callable[[str], None],
-                              ) -> FillerResults:
+def _create_pools_and_fill(rng: Random,
+                           presets: Dict[int, Preset],
+                           status_update: Callable[[str], None],
+                           ) -> FillerResults:
     """
     Runs the rng-dependant parts of the generation, with retries
     :param rng:
@@ -195,10 +200,11 @@ def _retryable_create_patches(rng: Random,
 
     for player_index, player_preset in presets.items():
         status_update(f"Creating item pool for player {player_index + 1}")
-        player_pools[player_index] = create_player_pool(rng, player_preset.layout_configuration, player_index)
+        player_pools[player_index] = create_player_pool(rng, player_preset.configuration, player_index,
+                                                        len(presets))
 
     for player_pool in player_pools.values():
-        _validate_item_pool_size(player_pool.pickups, player_pool.game)
+        _validate_item_pool_size(player_pool.pickups, player_pool.game, player_pool.configuration)
 
     return run_filler(rng, player_pools, status_update)
 

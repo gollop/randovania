@@ -80,7 +80,7 @@ Dock Weaknesses
               Any of the following:
                   Missile ≥ 5
                   Missile ≥ 4 and Knowledge (Intermediate) and Use Screw Attack (Space Jump)
-          Missile and Knowledge (Intermediate) and Seeker Locks without Seekers (Expert) and Use Screw Attack (Space Jump)
+          Missile and Seeker Locks without Seekers (Expert) and Use Screw Attack (Space Jump)
 
   * (7) Power Bomb Blast Shield; Blast Shield? True
       Morph Ball and Power Bomb
@@ -95,11 +95,7 @@ Dock Weaknesses
               Any of the following:
                   Missile ≥ 5
                   Missile ≥ 4 and Air Underwater (Advanced) and Knowledge (Intermediate) and Use Screw Attack (Space Jump)
-          All of the following:
-              Missile and Knowledge (Intermediate) and Seeker Locks without Seekers (Expert) and Use Screw Attack (Space Jump)
-              Any of the following:
-                  Air Underwater (Advanced)
-                  No Gravity Boost and Air Underwater (Beginner)
+          Missile and Air Underwater (Advanced) and Seeker Locks without Seekers (Expert) and Use Screw Attack (Space Jump)
 
   * (10) Power Bomb Blast Shield (destructible by Power Bomb Guardian); Blast Shield? True
       Any of the following:
@@ -113,7 +109,16 @@ Dock Weaknesses
               Any of the following:
                   Missile ≥ 5
                   Missile ≥ 4 and Knowledge (Intermediate) and Use Screw Attack (Space Jump)
-          Missile ≥ 2 and Knowledge (Intermediate) and Seeker Locks without Seekers (Hypermode) and Use Screw Attack (Space Jump)
+          Missile ≥ 2 and Seeker Locks without Seekers (Hypermode) and Use Screw Attack (Space Jump)
+
+  * (12) Seeker Launcher Blast Shield (destructible with Screw Attack; Advanced); Blast Shield? True
+      Any of the following:
+          All of the following:
+              Seeker Launcher
+              Any of the following:
+                  Missile ≥ 5
+                  Missile ≥ 4 and Knowledge (Intermediate) and Use Screw Attack (Space Jump)
+          Missile and Seeker Locks without Seekers (Advanced) and Use Screw Attack (Space Jump)
 
 > DockType.MORPH_BALL_DOOR
   * (0) Morph Ball Door; Blast Shield? False
@@ -155,12 +160,12 @@ Asset id: 1655756413
                   Morph Ball and Morph Ball Bomb and Bomb Jump (Beginner)
           All of the following:
               Morph Ball and Morph Ball Bomb and Bomb Jump (Intermediate) and Standable Terrain (Intermediate)
-              Any of the following:
-                  Slope Jump (Advanced) or Bomb Space Jump (Expert)
-                  Movement (Intermediate) and Use Screw Attack (No Space Jump)
+              Slope Jump (Advanced) or Use Screw Attack (No Space Jump)
           All of the following:
               Space Jump Boots
-              Slope Jump (Intermediate) or Standable Terrain (Intermediate)
+              Any of the following:
+                  Slope Jump (Intermediate) or Standable Terrain (Intermediate)
+                  Morph Ball and Morph Ball Bomb and Bomb Space Jump (Intermediate)
   > Door to Hive Access Tunnel
       After Landing Site Webs
   > Event - Landing Site Webs
@@ -208,7 +213,7 @@ Asset id: 2679590972
           Morph Ball
           Any of the following:
               Morph Ball Bomb
-              Boost Ball and Wall Boost (Expert)
+              Boost Ball and Wall Boost (Advanced)
 
 > Door to Path of Honor; Heals? False
   * Normal Door to Path of Honor/Door to Service Access
@@ -232,7 +237,7 @@ Asset id: 2679590972
                   Any of the following:
                       Morph Ball Bomb or Wall Boost (Expert)
                       Wall Boost (Advanced) and Screw Attack into Tunnels (Advanced) and Use Screw Attack (Space Jump)
-              Morph Ball Bomb and Movement (Intermediate)
+              Morph Ball Bomb and Movement (Advanced)
   > Door to Meeting Grounds
       All of the following:
           Morph Ball
@@ -249,9 +254,9 @@ Asset id: 2679590972
               Morph Ball Bomb
               Boost Ball and Wall Boost (Expert)
   > Morph Ball Door to Meeting Grounds
-      Any of the following:
-          Movement (Intermediate)
-          Morph Ball and Boost Ball
+      All of the following:
+          Morph Ball
+          Boost Ball or Movement (Advanced)
   > Door to Meeting Grounds
       All of the following:
           Morph Ball
@@ -309,7 +314,7 @@ Asset id: 2068656603
           Morph Ball and Morph Ball Bomb and Bomb Jump (Beginner)
 
 > Door to Hall of Honored Dead; Heals? False
-  * Seeker Launcher Blast Shield (destructible with Screw Attack; Expert) to Hall of Honored Dead/Door to Path of Honor
+  * Seeker Launcher Blast Shield (destructible with Screw Attack; Advanced) to Hall of Honored Dead/Door to Path of Honor
   > Door to Service Access
       Trivial
 
@@ -328,12 +333,12 @@ Asset id: 2606692981
 
 > Door to Hall of Eyes; Heals? False
   * Normal Door to Hall of Eyes/Door to Meeting Grounds
-  > Room Center
+  > Bottom of Halfpipe
       Trivial
 
 > Door to Service Access; Heals? False; Spawn Point
   * Super Missile Blast Shield to Service Access/Door to Meeting Grounds
-  > Room Center
+  > Bottom of Halfpipe
       Trivial
 
 > Door to Temple Transport C; Heals? False
@@ -341,7 +346,7 @@ Asset id: 2606692981
   > Translator Gate
       Trivial
 
-> Room Center; Heals? False
+> Bottom of Halfpipe; Heals? False
   > Door to Hall of Eyes
       Trivial
   > Door to Service Access
@@ -351,19 +356,23 @@ Asset id: 2606692981
   > Front of Lore Scan
       Any of the following:
           Morph Ball and Boost Ball
-          Space Jump Boots and Slope Jump (Intermediate)
+          All of the following:
+              Space Jump Boots and Standable Terrain (Intermediate)
+              Any of the following:
+                  Before Torvus Energy Returned and Slope Jump (Intermediate)
+                  Morph Ball and Morph Ball Bomb and Bomb Space Jump (Intermediate)
 
 > Translator Gate; Heals? False
   * Translator Gate (TranslatorGate 1)
   > Door to Temple Transport C
       Trivial
-  > Room Center
+  > Bottom of Halfpipe
       Trivial
 
 > Front of Lore Scan; Heals? False
   > Morph Ball Door to Service Access
       Morph Ball
-  > Room Center
+  > Bottom of Halfpipe
       Trivial
   > Lore Scan
       Trivial
@@ -441,7 +450,7 @@ Asset id: 1353937573
 Hall of Honored Dead
 Asset id: 3098756660
 > Door to Path of Honor; Heals? False; Spawn Point
-  * Seeker Launcher Blast Shield (destructible with Screw Attack; Expert) to Path of Honor/Door to Hall of Honored Dead
+  * Seeker Launcher Blast Shield (destructible with Screw Attack; Advanced) to Path of Honor/Door to Hall of Honored Dead
   > Morph Ball Door to Path of Honor
       Any of the following:
           Screw Attack into Tunnels (Intermediate) and Use Screw Attack (Space Jump)
@@ -511,7 +520,7 @@ Asset id: 1655474884
 
 > Door to Collapsed Tunnel; Heals? False
   * Normal Door to Collapsed Tunnel/Door to Industrial Site
-  > Front of Lift Scan
+  > Front of Crate Terminal
       Trivial
 
 > Door to Hive Transport Area; Heals? False; Spawn Point
@@ -519,8 +528,8 @@ Asset id: 1655474884
   > Event - Industrial Site Gate
       All of the following:
           Scan Visor
-          Power Beam or Missile
-  > Front of Lift Scan
+          Power Beam or Missile ≥ 2
+  > Front of Crate Terminal
       Any of the following:
           Space Jump Boots and Instant Morph (Advanced)
           Morph Ball and Morph Ball Bomb and Bomb Jump (Intermediate)
@@ -530,10 +539,10 @@ Asset id: 1655474884
   * Event Industrial Site Gate
   > Door to Hive Transport Area
       Trivial
-  > Front of Lift Scan
+  > Front of Crate Terminal
       Trivial
 
-> Front of Lift Scan; Heals? False
+> Front of Crate Terminal; Heals? False
   > Door to Collapsed Tunnel
       Any of the following:
           Space Jump Boots
@@ -545,16 +554,22 @@ Asset id: 1655474884
           Movement (Beginner) and Use Screw Attack (Space Jump)
   > Event - Industrial Site Gate
       All of the following:
-          Scan Visor and Open Gates from Behind (Beginner)
+          Scan Visor
           Any of the following:
-              Missile
-              Annihilator Beam and Charge Beam and Dark Ammo ≥ 5 and Light Ammo ≥ 5
+              All of the following:
+                  Open Gates from Behind (Beginner)
+                  Any of the following:
+                      Missile
+                      Annihilator Beam and Charge Beam and Dark Ammo ≥ 5 and Light Ammo ≥ 5
+              Power Beam and Charge Beam and Open Gates from Behind (Intermediate)
   > Front of Translator Gate
       Scan Visor or Slope Jump (Intermediate)
 
 > Front of Translator Gate; Heals? False
   > Door to Collapsed Tunnel
       Power Beam and Scan Visor
+  > Front of Crate Terminal
+      Trivial
   > Translator Gate
       Trivial
 
@@ -603,7 +618,7 @@ Asset id: 360901706
       After Hive Tunnel Web
   > Event - Hive Tunnel Web
       All of the following:
-          Open Gates from Behind (Intermediate)
+          Open Gates from Behind (Beginner)
           Shoot Darkburst or Shoot Sonic Boom
 
 > Door to Hive Chamber A; Heals? False; Spawn Point
@@ -649,23 +664,8 @@ Path of Eyes
 Asset id: 3997643454
 > Door to Windchamber Gateway; Heals? False
   * Super Missile Blast Shield to Windchamber Gateway/Door to Path of Eyes
-  > Door to Hall of Eyes
-      All of the following:
-          After Path of Eyes Light Block to Windchamber Gateway
-          Any of the following:
-              Space Jump Boots
-              Movement (Expert) and Shoot Light Beam and Use Screw Attack (No Space Jump)
-              Morph Ball and Morph Ball Bomb and Bomb Jump (Intermediate)
-  > Front of Translator Gate
-      All of the following:
-          After Path of Eyes Light Block to Windchamber Gateway
-          Any of the following:
-              All of the following:
-                  Shoot Light Beam
-                  Any of the following:
-                      Space Jump Boots
-                      Morph Ball and Morph Ball Bomb and Bomb Space Jump (Hypermode)
-              Space Jump Boots and Standable Terrain (Intermediate)
+  > Front of Center Door
+      After Path of Eyes Light Block to Windchamber Gateway
 
 > Portal from Abandoned Base; Heals? False; Spawn Point
   * No Return Portal to Abandoned Base/Portal to Path of Eyes
@@ -674,30 +674,20 @@ Asset id: 3997643454
 
 > Door to Hall of Eyes; Heals? False
   * Super Missile Blast Shield to Hall of Eyes/Door to Path of Eyes
-  > Door to Windchamber Gateway
-      All of the following:
-          After Path of Eyes Light Block to Windchamber Gateway
-          Any of the following:
-              Space Jump Boots
-              All of the following:
-                  Shoot Light Beam
-                  Any of the following:
-                      Slope Jump (Intermediate)
-                      Morph Ball and Morph Ball Bomb and Bomb Jump (Intermediate)
-  > Event - Path of Eyes Light Block to Windchamber Gateway
-      All of the following:
-          Shoot Light Beam
-          Space Jump Boots or Slope Jump (Intermediate)
   > Front of Translator Gate
+      All of the following:
+          Morph Ball
+          Any of the following:
+              After Path of Eyes Light Block In Tunnel
+              Boost Ball and Morph Ball Bomb and Bomb Jump (Advanced) and Movement (Advanced) and NTSC
+  > Front of Center Door
       Any of the following:
+          Space Jump Boots
           All of the following:
               Shoot Light Beam
               Any of the following:
-                  Space Jump Boots
-                  Morph Ball and Morph Ball Bomb and Bomb Space Jump (Hypermode)
-          Morph Ball and Boost Ball and Morph Ball Bomb and Knowledge (Advanced) and NTSC
-          Morph Ball and After Path of Eyes Light Block In Tunnel
-          Space Jump Boots and Standable Terrain (Intermediate)
+                  Slope Jump (Intermediate)
+                  Morph Ball and Morph Ball Bomb and Bomb Jump (Beginner)
 
 > Door to Torvus Transport Access; Heals? False
   * Normal Door to Torvus Transport Access/Door to Path of Eyes
@@ -706,39 +696,33 @@ Asset id: 3997643454
 
 > Event - Path of Eyes Light Block to Windchamber Gateway; Heals? False
   * Event Path of Eyes Light Block to Windchamber Gateway
-  > Door to Windchamber Gateway
+  > Front of Center Door
       Trivial
 
 > Event - Path of Eyes Light Block In Tunnel; Heals? False
   * Event Path of Eyes Light Block In Tunnel
-  > Door to Windchamber Gateway
-      After Path of Eyes Light Block to Windchamber Gateway
   > Door to Hall of Eyes
       Trivial
-  > Event - Path of Eyes Light Block to Windchamber Gateway
-      Shoot Light Beam
   > Front of Translator Gate
-      Trivial
+      Morph Ball
 
 > Front of Translator Gate; Heals? False
-  > Door to Windchamber Gateway
-      After Path of Eyes Light Block to Windchamber Gateway
   > Door to Hall of Eyes
-      Any of the following:
-          Space Jump Boots
-          All of the following:
-              Morph Ball
-              Any of the following:
-                  After Path of Eyes Light Block In Tunnel
-                  Boost Ball and Morph Ball Bomb and Bomb Jump (Intermediate) and Knowledge (Intermediate) and NTSC
-  > Event - Path of Eyes Light Block to Windchamber Gateway
-      Shoot Light Beam
+      All of the following:
+          Morph Ball
+          Any of the following:
+              After Path of Eyes Light Block In Tunnel
+              Boost Ball and Morph Ball Bomb and Bomb Jump (Intermediate) and Movement (Intermediate) and NTSC
   > Event - Path of Eyes Light Block In Tunnel
       Morph Ball and Shoot Light Beam
   > Translator Gate
       Trivial
   > Lore Scan
       Morph Ball
+  > Front of Center Door
+      Any of the following:
+          Space Jump Boots
+          Morph Ball and Morph Ball Bomb and Bomb Jump (Beginner)
 
 > Translator Gate; Heals? False
   * Translator Gate (TranslatorGate 4)
@@ -751,6 +735,24 @@ Asset id: 3997643454
   * Logbook Luminoth Lore (Violet Translator) for 8e9fcfae
   > Front of Translator Gate
       Morph Ball
+
+> Front of Center Door; Heals? False
+  > Door to Windchamber Gateway
+      After Path of Eyes Light Block to Windchamber Gateway
+  > Door to Hall of Eyes
+      Any of the following:
+          Space Jump Boots
+          Morph Ball and Morph Ball Bomb and Bomb Jump (Beginner)
+  > Event - Path of Eyes Light Block to Windchamber Gateway
+      Shoot Light Beam
+  > Front of Translator Gate
+      Any of the following:
+          Space Jump Boots and Standable Terrain (Intermediate)
+          All of the following:
+              Shoot Light Beam
+              Any of the following:
+                  Space Jump Boots
+                  Morph Ball and Morph Ball Bomb and Bomb Space Jump (Hypermode)
 
 ----------------
 Agon Transport Access
@@ -839,7 +841,7 @@ War Ritual Grounds
 Asset id: 2859985581
 > Door to Shrine Access; Heals? False; Spawn Point
   * Normal Door to Shrine Access/Door to War Ritual Grounds
-  > Safe Zone (Before Pickup)
+  > Central Safe Zone
       All of the following:
           Activate Safe Zone
           Any of the following:
@@ -848,7 +850,7 @@ Asset id: 2859985581
 
 > Door to Base Access; Heals? False
   * Super Missile Blast Shield to Base Access/Door to War Ritual Grounds
-  > Safe Zone (Before Pickup)
+  > Central Safe Zone
       All of the following:
           Activate Safe Zone
           Any of the following:
@@ -857,10 +859,10 @@ Asset id: 2859985581
 
 > Pickup (Missile); Heals? False
   * Pickup 3; Major Location? False
-  > Safe Zone (Before Pickup)
+  > Central Safe Zone
       Dark World Damage ≥ 13 and Activate Safe Zone
 
-> Safe Zone (Before Pickup); Heals? True
+> Central Safe Zone; Heals? True
   > Door to Shrine Access
       Dark World Damage ≥ 30
   > Door to Base Access
@@ -885,14 +887,14 @@ Asset id: 3337937090
           All of the following:
               Morph Ball and Morph Ball Bomb
               Any of the following:
-                  Space Jump Boots and Ingclaw Vapor Damage ≥ 1500
+                  Space Jump Boots and Dark World Damage ≥ 40 and Ingclaw Vapor Damage ≥ 1500
                   All of the following:
-                      Bomb Jump (Intermediate) and Movement (Intermediate)
+                      Bomb Jump (Advanced) and Movement (Advanced)
                       Any of the following:
-                          Ingclaw Vapor Damage ≥ 500
-                          Boost Ball and Ingclaw Vapor Damage ≥ 400
-          Space Jump Boots and Slope Jump (Advanced) and Movement (Advanced) and Ingclaw Vapor Damage ≥ 70
-          Standable Terrain (Intermediate) and Dark World Damage ≥ 40 and Use Screw Attack (Space Jump)
+                          Boost Ball and Dark World Damage ≥ 90 and Ingclaw Vapor Damage ≥ 375
+                          Dark World Damage ≥ 200 and Ingclaw Vapor Damage ≥ 525
+          Space Jump Boots and Slope Jump (Advanced) and Dark World Damage ≥ 25 and Ingclaw Vapor Damage ≥ 70
+          Standable Terrain (Intermediate) and Dark World Damage ≥ 50 and Use Screw Attack (Space Jump)
 
 ----------------
 Windchamber Gateway
@@ -905,7 +907,9 @@ Asset id: 1966181726
 > Door to Grand Windchamber; Heals? False
   * Power Bomb Blast Shield to Grand Windchamber/Door to Windchamber Gateway
   > Door to Path of Eyes
-      Morph Ball or Use Screw Attack (Space Jump)
+      Any of the following:
+          Morph Ball or Use Screw Attack (Space Jump)
+          Scan Visor and Space Jump Boots and Extended Dash (Advanced)
   > Pickup (Energy Tank)
       Any of the following:
           Grapple Beam or Use Screw Attack (Space Jump)
@@ -980,7 +984,9 @@ Asset id: 1263425809
 > Portal to Plain of Dark Worship; Heals? False
   * Dark Portal to Plain of Dark Worship/Portal to Temple Assembly Site
   > Room Center
-      After Temple Assembly Site Light Block
+      Any of the following:
+          After Temple Assembly Site Light Block
+          Single Room Out of Bounds (Expert) and Use Screw Attack (Space Jump)
 
 > Door to Temple Transport B; Heals? False
   * Normal Door to Temple Transport B/Door to Temple Assembly Site
@@ -1013,13 +1019,22 @@ Asset id: 1263425809
   > Door to Storage Cavern B
       Trivial
   > Portal to Plain of Dark Worship
-      After Temple Assembly Site Light Block
+      Any of the following:
+          After Temple Assembly Site Light Block
+          All of the following:
+              Single Room Out of Bounds (Expert) and Standable Terrain (Expert)
+              Any of the following:
+                  Use Screw Attack (Space Jump)
+                  Space Jump Boots and Slope Jump (Expert)
   > Door to Dynamo Chamber
       Any of the following:
           Scan Visor or Space Jump Boots
-          Morph Ball and Morph Ball Bomb and Bomb Jump (Beginner)
-          Before Temple Assembly Site Light Block and Combat/Scan Dash (Intermediate)
-          Morph Ball and Roll Jump (Advanced)
+          Before Temple Assembly Site Light Block and Combat/Scan Dash (Intermediate) and Standable Terrain (Intermediate)
+          All of the following:
+              Morph Ball
+              Any of the following:
+                  Morph Ball Bomb and Bomb Jump (Beginner)
+                  Roll Jump (Advanced) and Standable Terrain (Advanced)
   > Door to Collapsed Tunnel
       Trivial
   > Pickup (Missile)
@@ -1108,7 +1123,6 @@ Asset id: 2909835645
           Any of the following:
               Scan Visor and Space Jump Boots and After Ing Windchamber Puzzle and Combat/Scan Dash (Advanced)
               Morph Ball Bomb and Bomb Space Jump (Advanced) and Standable Terrain (Advanced) and Use Screw Attack (Space Jump)
-              Grapple Beam and After Ing Windchamber Puzzle
 
 > Portal to Ing Windchamber; Heals? False
   * Dark Portal to Ing Windchamber/Portal to Grand Windchamber
@@ -1126,12 +1140,14 @@ Asset id: 2909835645
       Trivial
   > Pickup (Sunburst)
       All of the following:
-          Morph Ball
+          Morph Ball and After Ing Windchamber Puzzle
           Any of the following:
-              Scan Visor and Space Jump Boots and After Ing Windchamber Puzzle and Combat/Scan Dash (Advanced)
-              Morph Ball Bomb and Bomb Space Jump (Advanced) and Standable Terrain (Advanced) and Use Screw Attack (Space Jump)
-              Grapple Beam and After Ing Windchamber Puzzle
-              Space Jump Boots and After Ing Windchamber Puzzle and Terminal Fall Abuse (Intermediate) and Normal Damage ≥ 10
+              Grapple Beam
+              All of the following:
+                  Space Jump Boots
+                  Any of the following:
+                      Scan Visor and Combat/Scan Dash (Advanced)
+                      Terminal Fall Abuse (Beginner) and Normal Damage ≥ 10
 
 > Pickup (Sunburst); Heals? False
   * Pickup 7; Major Location? True
@@ -1242,33 +1258,35 @@ Asset id: 67496868
 > Door to Lake Access; Heals? False; Spawn Point
   * Seeker Launcher Blast Shield (destructible with Screw Attack; Hypermode) to Lake Access/Door to Plain of Dark Worship
   > Portal to Temple Assembly Site
-      Dark World Damage ≥ 5
+      Dark World Damage ≥ 10
 
 > Portal to Temple Assembly Site; Heals? True
   * Light Portal to Temple Assembly Site/Portal to Plain of Dark Worship
   > Door to Lake Access
-      Dark World Damage ≥ 5
+      Dark World Damage ≥ 10
   > Pickup (Missile)
       Any of the following:
-          Ingclaw Vapor Damage ≥ 1500
+          Dark World Damage ≥ 15 and Ingclaw Vapor Damage ≥ 1500
           All of the following:
               Movement (Intermediate)
               Any of the following:
-                  Ingclaw Vapor Damage ≥ 330
-                  Morph Ball and Boost Ball and Ingclaw Vapor Damage ≥ 230
-                  Ingclaw Vapor Damage ≥ 120 and Use Screw Attack (Space Jump)
+                  Morph Ball and Boost Ball and Dark World Damage ≥ 40 and Ingclaw Vapor Damage ≥ 200
+                  Dark World Damage ≥ 20 and Ingclaw Vapor Damage ≥ 120 and Use Screw Attack (Space Jump)
+                  Dark World Damage ≥ 80 and Ingclaw Vapor Damage ≥ 400
+                  Morph Ball and Dark World Damage ≥ 50 and Ingclaw Vapor Damage ≥ 280
 
 > Pickup (Missile); Heals? False
   * Pickup 10; Major Location? False
   > Portal to Temple Assembly Site
       Any of the following:
-          Ingclaw Vapor Damage ≥ 1500
+          Dark World Damage ≥ 20 and Ingclaw Vapor Damage ≥ 1500
           All of the following:
               Movement (Intermediate)
               Any of the following:
-                  Ingclaw Vapor Damage ≥ 360
-                  Morph Ball and Boost Ball and Ingclaw Vapor Damage ≥ 260
-                  Ingclaw Vapor Damage ≥ 240 and Use Screw Attack (Space Jump)
+                  Morph Ball and Boost Ball and Dark World Damage ≥ 30 and Ingclaw Vapor Damage ≥ 300
+                  Dark World Damage ≥ 40 and Ingclaw Vapor Damage ≥ 190 and Use Screw Attack (Space Jump)
+                  Dark World Damage ≥ 55 and Ingclaw Vapor Damage ≥ 475
+                  Morph Ball and Dark World Damage ≥ 60 and Ingclaw Vapor Damage ≥ 360
 
 ----------------
 Defiled Shrine
@@ -1357,7 +1375,7 @@ Asset id: 1667141025
       Trivial
   > Next to Pickup
       Any of the following:
-          Space Jump Boots or Standable Terrain (Intermediate)
+          Space Jump Boots or Standable Terrain (Beginner)
           Morph Ball and Morph Ball Bomb and Bomb Jump (Beginner)
 
 > Door to Storage Cavern A; Heals? False
@@ -1382,10 +1400,10 @@ Asset id: 1667141025
       Any of the following:
           Space Jump Boots
           All of the following:
-              Standable Terrain (Intermediate)
+              Standable Terrain (Beginner)
               Any of the following:
-                  Morph Ball and Morph Ball Bomb and Bomb Jump (Advanced)
-                  Movement (Intermediate) and Use Screw Attack (No Space Jump)
+                  Use Screw Attack (No Space Jump)
+                  Morph Ball and Morph Ball Bomb and Bomb Jump (Intermediate)
   > Pickup (Missile)
       All of the following:
           Morph Ball
@@ -1416,6 +1434,8 @@ Asset id: 2278776548
 
 > Event - Dark Samus 3 and 4; Heals? False
   * Event Dark Samus 3 and 4
+  > Door to Gateway Access
+      Trivial
 
 > Teleport to Great Temple - Sky Temple Energy Controller; Heals? False
   * Teleporter to Sky Temple - Sky Temple Energy Controller
@@ -1425,10 +1445,16 @@ Asset id: 2278776548
       All of the following:
           After Emperor Ing
           Any of the following:
-              Annihilator Beam and Charge Beam and Dark Ammo ≥ 26 and Light Ammo ≥ 26 and Invisible Objects (Beginner) and Dark World Damage ≥ 1500
-              Echo Visor and Charge Beam and Dark World Damage ≥ 1500
-              Charge Beam and Invisible Objects (Intermediate) and Dark World Damage ≥ 800
-              Missile ≥ 5 and Invisible Objects (Advanced) and Dark World Damage ≥ 300 and Use Screw Attack (Space Jump)
+              All of the following:
+                  Power Beam and Charge Beam
+                  Any of the following:
+                      All of the following:
+                          Dark World Damage ≥ 1500
+                          Any of the following:
+                              Echo Visor
+                              Annihilator Beam and Dark Ammo ≥ 26 and Light Ammo ≥ 26 and Combat (Beginner)
+                      Combat (Intermediate) and Invisible Objects (Intermediate) and Dark World Damage ≥ 800
+              Missile ≥ 5 and Combat (Advanced) and Invisible Objects (Advanced) and Normal Damage ≥ 80 and Dark World Damage ≥ 300 and Use Screw Attack (Space Jump)
 
 > Spawn Point/Front of Teleporter; Heals? False; Spawn Point
   > Teleport to Great Temple - Sky Temple Energy Controller
@@ -1449,7 +1475,7 @@ Asset id: 1467316949
   > Door to Windchamber Tunnel
       Morph Ball
   > Pickup 2 (Missile On Ship)
-      Morph Ball and After Jump Guardian and Movement (Advanced) and Use Screw Attack (No Space Jump)
+      After Jump Guardian and Movement (Advanced) and Use Screw Attack (No Space Jump)
   > Room Center
       Trivial
 
@@ -1488,7 +1514,11 @@ Asset id: 1467316949
   > Door to Sacred Bridge
       Any of the following:
           Space Jump Boots or Slope Jump (Intermediate)
-          Scan Visor and Morph Ball and After GFMC Compound Trooper Cutscene
+          All of the following:
+              Morph Ball
+              Any of the following:
+                  Scan Visor and After GFMC Compound Trooper Cutscene
+                  Morph Ball Bomb and Bomb Jump (Beginner)
   > Door to Trooper Security Station
       Trivial
   > Door to Fortress Transport Access
@@ -1499,16 +1529,16 @@ Asset id: 1467316949
           All of the following:
               Knowledge (Beginner)
               Any of the following:
+                  Shoot Annihilator Beam or Use Screw Attack (Space Jump)
                   All of the following:
                       Morph Ball
                       Boost Ball or Morph Ball Bomb or Power Bomb
-                  Annihilator Beam and Use Screw Attack (Space Jump)
   > Pickup 2 (Missile On Ship)
       All of the following:
           After Jump Guardian
           Any of the following:
               Space Jump Boots
-              Scan Visor and Extended Dash (Hypermode)
+              Scan Visor and Extended Dash (Expert)
   > Event - GFMC Compound Trooper Cutscene
       Trivial
   > Translator Gate
@@ -1587,7 +1617,7 @@ Asset id: 2681312991
           Activate Safe Zone
           Any of the following:
               Space Jump Boots and Dark World Damage ≥ 25
-              Combat/Scan Dash (Beginner) and Dark World Damage ≥ 40
+              Combat/Scan Dash (Intermediate) and Dark World Damage ≥ 40
 
 > Safe Zone; Heals? True
   > Door to Lake Access
@@ -1680,21 +1710,30 @@ Asset id: 3258777533
           All of the following:
               Scan Visor
               Any of the following:
-                  Morph Ball and Missile
-                  Combat/Scan Dash (Advanced) and Slope Jump (Advanced)
+                  After Sacred Path Wall Broken
+                  Combat/Scan Dash (Advanced) and Slope Jump (Advanced) and Standable Terrain (Advanced)
           Morph Ball and Morph Ball Bomb and Bomb Jump (Beginner)
           Movement (Intermediate) and Use Screw Attack (No Space Jump)
+  > Event - Sacred Path Wall Broken
+      Morph Ball and Missile
 
 > Door to Temple Transport A; Heals? False
   * Normal Door to Temple Transport A/Door to Sacred Path
   > Portal to Profane Path
       Any of the following:
           Space Jump Boots
-          Scan Visor and Morph Ball and Missile and Combat/Scan Dash (Advanced)
           Morph Ball and Morph Ball Bomb and Bomb Jump (Intermediate)
           Movement (Beginner) and Use Screw Attack (No Space Jump)
+          Scan Visor and Morph Ball and After Sacred Path Wall Broken and Combat/Scan Dash (Advanced)
   > Door to Sacred Bridge
       Trivial
+
+> Event - Sacred Path Wall Broken; Heals? False
+  * Event Sacred Path Wall Broken
+  > Door to Sacred Bridge
+      Trivial
+  > Door to Temple Transport A
+      Morph Ball
 
 ----------------
 Temple Transport A
@@ -1722,7 +1761,7 @@ Asset id: 1692811478
               Any of the following:
                   Dark World Damage ≥ 35
                   Space Jump Boots and Dark World Damage ≥ 25
-  > Safe Zone (Before Echo Gate)
+  > Safe Zone (Front of Echo Gate)
       Any of the following:
           Space Jump Boots and Dark World Damage ≥ 40
           Morph Ball and Morph Ball Bomb and Bomb Jump (Beginner) and Dark World Damage ≥ 70
@@ -1732,15 +1771,15 @@ Asset id: 1692811478
   * Light Portal to Sacred Path/Portal to Profane Path
   > Door to Phazon Pit
       Dark World Damage ≥ 15
-  > Safe Zone (Before Echo Gate)
+  > Safe Zone (Front of Echo Gate)
       Dark World Damage ≥ 15 and Activate Safe Zone
 
 > Pickup (Dark Ammo); Heals? False
   * Pickup 17; Major Location? False
-  > Safe Zone (Before Echo Gate)
+  > Safe Zone (Front of Echo Gate)
       Dark World Damage ≥ 10
 
-> Safe Zone (Before Echo Gate); Heals? True
+> Safe Zone (Front of Echo Gate); Heals? True
   > Door to Phazon Pit
       Any of the following:
           Dark World Damage ≥ 35
@@ -1778,9 +1817,11 @@ Asset id: 506667008
           All of the following:
               Morph Ball
               Any of the following:
-                  Space Jump Boots
-                  Roll Jump (Intermediate) and Dark World Damage ≥ 50
-                  Morph Ball Bomb and Bomb Space Jump (Intermediate) and Normal Damage ≥ 15 and Dark World Damage ≥ 75
+                  All of the following:
+                      Space Jump Boots
+                      Any of the following:
+                          Roll Jump (Intermediate) and Dark World Damage ≥ 50
+                          Morph Ball Bomb and Bomb Space Jump (Intermediate) and Normal Damage ≥ 15 and Dark World Damage ≥ 75
                   Boost Ball and Boost Jump (Expert) and Dark World Damage ≥ 60
 
 > Door to Phazon Grounds; Heals? False; Spawn Point
@@ -1842,9 +1883,10 @@ Asset id: 2235615956
           All of the following:
               Movement (Advanced)
               Any of the following:
-                  Ingstorm Damage ≥ 240
-                  Morph Ball and Boost Ball and Ingstorm Damage ≥ 160
-                  Ingstorm Damage ≥ 110 and Use Screw Attack (Space Jump)
+                  Morph Ball and Boost Ball and Dark World Damage ≥ 55 and Ingstorm Damage ≥ 120
+                  Dark World Damage ≥ 40 and Ingstorm Damage ≥ 100 and Use Screw Attack (Space Jump)
+                  Dark World Damage ≥ 100 and Ingstorm Damage ≥ 210
+                  Morph Ball and Dark World Damage ≥ 80 and Ingstorm Damage ≥ 150
 
 > Door to Reliquary Grounds; Heals? False
   * Light Door to Reliquary Grounds/Door to Reliquary Access
@@ -1854,9 +1896,10 @@ Asset id: 2235615956
           All of the following:
               Movement (Advanced)
               Any of the following:
-                  Ingstorm Damage ≥ 190
-                  Morph Ball and Boost Ball and Dark World Damage ≥ 130
-                  Movement (Advanced) and Ingstorm Damage ≥ 115 and Use Screw Attack (No Space Jump)
+                  Morph Ball and Boost Ball and Dark World Damage ≥ 60 and Ingstorm Damage ≥ 140
+                  Dark World Damage ≥ 80 and Ingstorm Damage ≥ 100 and Use Screw Attack (Space Jump)
+                  Dark World Damage ≥ 90 and Ingstorm Damage ≥ 220
+                  Morph Ball and Dark World Damage ≥ 85 and Ingstorm Damage ≥ 160
 
 ----------------
 Reliquary Grounds
@@ -1867,16 +1910,12 @@ Asset id: 4237279396
       Any of the following:
           Ingstorm Damage ≥ 1500
           All of the following:
-              Morph Ball and Morph Ball Bomb and Bomb Jump (Intermediate) and Ingstorm Damage ≥ 500
-              Any of the following:
-                  Movement (Expert)
-                  Movement (Intermediate) and Use Screw Attack (No Space Jump)
-          All of the following:
               Movement (Advanced)
               Any of the following:
-                  Ingstorm Damage ≥ 140 and Use Screw Attack (Space Jump)
-                  Space Jump Boots and Ingstorm Damage ≥ 200
-                  Ingstorm Damage ≥ 500 and Use Screw Attack (No Space Jump)
+                  Dark World Damage ≥ 60 and Ingstorm Damage ≥ 100 and Use Screw Attack (Space Jump)
+                  Space Jump Boots and Dark World Damage ≥ 60 and Ingstorm Damage ≥ 180
+                  Dark World Damage ≥ 80 and Ingstorm Damage ≥ 320 and Use Screw Attack (No Space Jump)
+                  Morph Ball and Morph Ball Bomb and Bomb Jump (Advanced) and Dark World Damage ≥ 160 and Ingclaw Vapor Damage ≥ 340
 
 > Door to Ing Reliquary; Heals? False
   * Normal Door to Ing Reliquary/Door to Reliquary Grounds
@@ -1886,8 +1925,12 @@ Asset id: 4237279396
           All of the following:
               Movement (Advanced)
               Any of the following:
-                  Ingstorm Damage ≥ 140
-                  Morph Ball and Boost Ball and Ingstorm Damage ≥ 110
+                  Dark World Damage ≥ 100 and Ingstorm Damage ≥ 160
+                  All of the following:
+                      Morph Ball
+                      Any of the following:
+                          Dark World Damage ≥ 50 and Ingstorm Damage ≥ 110
+                          Boost Ball and Dark World Damage ≥ 40 and Ingstorm Damage ≥ 90
 
 ----------------
 Ing Reliquary
@@ -1898,8 +1941,17 @@ Asset id: 1956545251
       All of the following:
           Dark Visor
           Any of the following:
-              Space Jump Boots and Ingstorm Damage ≥ 1500
-              Movement (Advanced) and Ingstorm Damage ≥ 80
+              All of the following:
+                  Ingstorm Damage ≥ 1500
+                  Any of the following:
+                      Space Jump Boots or Standable Terrain (Intermediate)
+                      Morph Ball and Morph Ball Bomb and Bomb Jump (Beginner)
+              All of the following:
+                  Movement (Advanced) and Dark World Damage ≥ 30 and Ingstorm Damage ≥ 80
+                  Any of the following:
+                      Space Jump Boots
+                      Morph Ball and Morph Ball Bomb and Bomb Jump (Beginner) and Dark World Damage ≥ 20 and Ingstorm Damage ≥ 10
+                      Standable Terrain (Intermediate) and Dark World Damage ≥ 10
 
 > Pickup (Sky Temple Key 7); Heals? False
   * Pickup 19; Major Location? True
@@ -1909,8 +1961,8 @@ Asset id: 1956545251
           All of the following:
               Movement (Advanced)
               Any of the following:
-                  Ingstorm Damage ≥ 220
-                  Space Jump Boots and Ingstorm Damage ≥ 140
+                  Dark World Damage ≥ 50 and Ingstorm Damage ≥ 230
+                  Space Jump Boots and Standable Terrain (Intermediate) and Dark World Damage ≥ 20 and Ingstorm Damage ≥ 160
 
 ----------------
 Credits
@@ -1951,7 +2003,7 @@ Asset id: 3885674414
                   Morph Ball and Boost Ball
                   Power Beam and Super Missile and Charge Beam and Missile ≥ 5
 
-> Door to Temple Sanctuary; Heals? True
+> Door to Temple Sanctuary; Heals? False
   * Normal Door to Temple Sanctuary/Door to Transport A Access
   > Save Station
       Morph Ball
@@ -1959,15 +2011,15 @@ Asset id: 3885674414
       Any of the following:
           Space Jump Boots
           Morph Ball and Morph Ball Bomb and Bomb Jump (Beginner)
-          Slope Jump (Intermediate) and Movement (Intermediate) and Use Screw Attack (No Space Jump)
+          Slope Jump (Intermediate) and Use Screw Attack (No Space Jump)
           Morph Ball and Boost Ball and Wall Boost (Advanced)
 
-> Door to Temple Transport A; Heals? True
+> Door to Temple Transport A; Heals? False
   * Normal Door to Temple Transport A/Door to Transport A Access
   > Door to Temple Sanctuary
       Trivial
 
-> Pickup (Missile); Heals? True
+> Pickup (Missile); Heals? False
   * Pickup 20; Major Location? False
   > Save Station
       Trivial
@@ -1975,12 +2027,12 @@ Asset id: 3885674414
 ----------------
 Temple Sanctuary
 Asset id: 2731245106
-> Door to Transport B Access; Heals? True
+> Door to Transport B Access; Heals? False
   * Normal Door to Transport B Access/Door to Temple Sanctuary
   > Transport B Translator Gate
       Trivial
 
-> Door to Transport A Access; Heals? True; Spawn Point
+> Door to Transport A Access; Heals? False; Spawn Point
   * Normal Door to Transport A Access/Door to Temple Sanctuary
   > Room Center
       Any of the following:
@@ -1991,27 +2043,27 @@ Asset id: 2731245106
   > Event - Transport A Gate Removal
       Disabled Room Randomizer and Disabled Vanilla Great Temple Emerald Translator Gate
 
-> Door to Controller Transport; Heals? True
+> Door to Controller Transport; Heals? False
   * Normal Door to Controller Transport/Door to Temple Sanctuary
   > Room Center
       Trivial
 
-> Door to Transport C Access; Heals? True
+> Door to Transport C Access; Heals? False
   * Normal Door to Transport C Access/Door to Temple Sanctuary
   > Transport C Translator Gate
       Trivial
 
-> Pickup (Energy Transfer Module); Heals? True
+> Pickup (Energy Transfer Module); Heals? False
   * Pickup 21; Major Location? True
   > Room Center
       Trivial
 
-> Event - Alpha Splinter; Heals? True
+> Event - Alpha Splinter; Heals? False
   * Event Alpha Splinter
   > Pickup (Energy Transfer Module)
       Trivial
 
-> Room Center; Heals? True
+> Room Center; Heals? False
   > Door to Controller Transport
       After Alpha Splinter
   > Event - Alpha Splinter
@@ -2023,28 +2075,28 @@ Asset id: 2731245106
   > Transport C Translator Gate
       After Alpha Splinter
 
-> Transport A Translator Gate; Heals? True
+> Transport A Translator Gate; Heals? False
   * Translator Gate (TranslatorGate 9)
   > Door to Transport A Access
       Trivial
   > Room Center
       Trivial
 
-> Transport B Translator Gate; Heals? True
+> Transport B Translator Gate; Heals? False
   * Translator Gate (TranslatorGate 7)
   > Door to Transport B Access
       Trivial
   > Room Center
       Trivial
 
-> Transport C Translator Gate; Heals? True
+> Transport C Translator Gate; Heals? False
   * Translator Gate (TranslatorGate 8)
   > Door to Transport C Access
       Trivial
   > Room Center
       Trivial
 
-> Event - Transport A Gate Removal; Heals? True
+> Event - Transport A Gate Removal; Heals? False
   * Event Great Temple Transport A Translator Gone
   > Door to Transport A Access
       Trivial
@@ -2052,19 +2104,19 @@ Asset id: 2731245106
 ----------------
 Transport C Access
 Asset id: 441310400
-> Door to Temple Transport C; Heals? True
+> Door to Temple Transport C; Heals? False
   * Normal Door to Temple Transport C/Door to Transport C Access
   > Door to Temple Sanctuary
       After Transport C Access Light Block
 
-> Door to Temple Sanctuary; Heals? True; Spawn Point
+> Door to Temple Sanctuary; Heals? False; Spawn Point
   * Normal Door to Temple Sanctuary/Door to Transport C Access
   > Door to Temple Transport C
       After Transport C Access Light Block
   > Event - Transport C Access Light Block
       Shoot Light Beam
 
-> Event - Transport C Access Light Block; Heals? True
+> Event - Transport C Access Light Block; Heals? False
   * Event Transport C Access Light Block
   > Door to Temple Transport C
       Trivial
@@ -2087,22 +2139,25 @@ Asset id: 300223430
 ----------------
 Transport B Access
 Asset id: 4273454375
-> Door to Temple Sanctuary; Heals? True; Spawn Point
+> Door to Temple Sanctuary; Heals? False; Spawn Point
   * Normal Door to Temple Sanctuary/Door to Transport B Access
   > Door to Temple Transport B
       Trivial
   > Pickup (Missile)
       Any of the following:
-          Morph Ball and Boost Ball and Wall Boost (Expert)
-          Morph Ball and Morph Ball Bomb
+          All of the following:
+              Morph Ball
+              Any of the following:
+                  Morph Ball Bomb
+                  Boost Ball and Wall Boost (Expert)
           Space Jump Boots and Slope Jump (Intermediate)
 
-> Door to Temple Transport B; Heals? True
+> Door to Temple Transport B; Heals? False
   * Normal Door to Temple Transport B/Door to Transport B Access
   > Door to Temple Sanctuary
       Trivial
 
-> Pickup (Missile); Heals? True
+> Pickup (Missile); Heals? False
   * Pickup 22; Major Location? False
   > Door to Temple Sanctuary
       Trivial
@@ -2123,7 +2178,7 @@ Asset id: 2556480432
 ----------------
 Main Energy Controller
 Asset id: 44045108
-> Door to Controller Transport; Heals? True; Spawn Point
+> Door to Controller Transport; Heals? False; Spawn Point
   * Normal Door to Controller Transport/Door to Main Energy Controller
   > Pickup (Violet Translator)
       Trivial
@@ -2138,37 +2193,37 @@ Asset id: 44045108
   > Lore Scan
       Trivial
 
-> Pickup (Violet Translator); Heals? True
+> Pickup (Violet Translator); Heals? False
   * Pickup 23; Major Location? True
   > Door to Controller Transport
       Trivial
 
-> Pickup (Light Suit); Heals? True
+> Pickup (Light Suit); Heals? False
   * Pickup 24; Major Location? True
   > Door to Controller Transport
       Trivial
 
-> Teleport to Agon Wastes - Agon Energy Controller; Heals? True
+> Teleport to Agon Wastes - Agon Energy Controller; Heals? False
   * Teleporter to Agon Wastes - Agon Energy Controller
   > Door to Controller Transport
       Trivial
 
-> Teleport to Torvus Bog - Torvus Energy Controller; Heals? True
+> Teleport to Torvus Bog - Torvus Energy Controller; Heals? False
   * Teleporter to Torvus Bog - Torvus Energy Controller
   > Door to Controller Transport
       Trivial
 
-> Teleport to Sanctuary Fortress - Sanctuary Energy Controller; Heals? True
+> Teleport to Sanctuary Fortress - Sanctuary Energy Controller; Heals? False
   * Teleporter to Sanctuary Fortress - Sanctuary Energy Controller
   > Door to Controller Transport
       Trivial
 
-> Event - Main Energy Controller Pickup; Heals? True
+> Event - Main Energy Controller Pickup; Heals? False
   * Event Main Energy Controller Pickup
   > Pickup (Light Suit)
       Trivial
 
-> Lore Scan; Heals? True
+> Lore Scan; Heals? False
   * Logbook Luminoth Lore (Violet Translator) for c3576ea5
   > Door to Controller Transport
       Trivial
@@ -2272,7 +2327,7 @@ Asset id: 3619928121
   > Door to Sanctum Access
       Any of the following:
           Dark World Damage ≥ 40 and Use Screw Attack (Space Jump)
-          Movement (Intermediate) and Screw Attack at Z-Axis (Intermediate) and Dark World Damage ≥ 50 and Disabled Room Randomizer and Use Screw Attack (No Space Jump)
+          Screw Attack at Z-Axis (Intermediate) and Dark World Damage ≥ 50 and Disabled Room Randomizer and Use Screw Attack (No Space Jump)
 
 ====================
 Agon Wastes
@@ -2344,8 +2399,8 @@ Asset id: 1115663770
       Any of the following:
           Space Jump Boots or Missile
           Morph Ball and Morph Ball Bomb and Bomb Jump (Beginner)
-          Movement (Intermediate) and Use Screw Attack (No Space Jump)
-          Scan Visor and Combat/Scan Dash (Intermediate) and Slope Jump (Intermediate)
+          Movement (Beginner) and Use Screw Attack (No Space Jump)
+          Combat/Scan Dash (Intermediate) and Slope Jump (Intermediate)
   > Translator Gate
       Trivial
 
@@ -2377,6 +2432,12 @@ Agon Map Station
 Asset id: 2220656039
 > Morph Ball Door to Mining Plaza; Heals? False; Spawn Point
   * Morph Ball Door to Mining Plaza/Morph Ball Door to Agon Map Station
+  > Map Station
+      Morph Ball
+
+> Map Station; Heals? False
+  > Morph Ball Door to Mining Plaza
+      Morph Ball
 
 ----------------
 Transit Station
@@ -2512,7 +2573,7 @@ Asset id: 3682282733
       Trivial
 
 > Door to Mine Shaft; Heals? False
-  * Seeker Launcher Blast Shield (destructible with Screw Attack; Expert) to Mine Shaft/Door to Mining Station B
+  * Seeker Launcher Blast Shield (destructible with Screw Attack; Advanced) to Mine Shaft/Door to Mining Station B
   > Room Center
       Trivial
 
@@ -2548,30 +2609,38 @@ Asset id: 3682282733
               All of the following:
                   After Mining Station B Portal Opened
                   Any of the following:
-                      Movement (Advanced) and Use Screw Attack (Space Jump)
+                      Movement (Intermediate) and Use Screw Attack (Space Jump)
                       Slope Jump (Intermediate) and Standable Terrain (Intermediate)
   > Door to Mine Shaft
       Any of the following:
           Scan Visor and Morph Ball
-          Space Jump Boots and Slope Jump (Intermediate)
+          All of the following:
+              Space Jump Boots
+              Slope Jump (Intermediate) or Standable Terrain (Beginner)
   > Portal to Trial Grounds
-      All of the following:
-          After Mining Station B Portal Opened
-          Any of the following:
-              All of the following:
-                  Morph Ball
-                  Any of the following:
-                      Boost Ball
-                      Morph Ball Bomb and Space Jump Boots and Bomb Space Jump (Intermediate)
-              Movement (Beginner) and Use Screw Attack (Space Jump)
-              Space Jump Boots and Slope Jump (Intermediate)
+      Any of the following:
+          All of the following:
+              After Mining Station B Portal Opened
+              Any of the following:
+                  All of the following:
+                      Morph Ball
+                      Any of the following:
+                          Boost Ball
+                          Morph Ball Bomb and Space Jump Boots and Bomb Space Jump (Intermediate)
+                  Movement (Beginner) and Use Screw Attack (Space Jump)
+                  Space Jump Boots and Slope Jump (Intermediate)
+          All of the following:
+              Single Room Out of Bounds (Expert) and Screw Attack into Tunnels (Expert)
+              Any of the following:
+                  Use Screw Attack (Space Jump)
+                  Screw Attack at Z-Axis (Expert) and Disabled Room Randomizer and Use Screw Attack (No Space Jump)
   > Event - Mining Station B Portal Opened
       All of the following:
           Morph Ball and Morph Ball Bomb
           Any of the following:
               Scan Visor
-              Standable Terrain (Advanced) and Use Screw Attack (Space Jump)
-              Space Jump Boots and Slope Jump (Expert) and Standable Terrain (Expert)
+              Standable Terrain (Intermediate) and Use Screw Attack (Space Jump)
+              Space Jump Boots and Slope Jump (Advanced)
   > Lore Scan
       Scan Visor
 
@@ -2599,7 +2668,7 @@ Asset id: 1272952761
       After Transport Center Gate
 
 > Door to Transport to Torvus Bog; Heals? False
-  * Seeker Launcher Blast Shield (destructible with Screw Attack; Expert) to Transport to Torvus Bog/Door to Transport Center
+  * Seeker Launcher Blast Shield (destructible with Screw Attack; Advanced) to Transport to Torvus Bog/Door to Transport Center
   > Portal to Crossroads
       All of the following:
           Morph Ball
@@ -2641,7 +2710,7 @@ Asset id: 1272952761
   > Event - Transport Center Gate
       Any of the following:
           Morph Ball and Morph Ball Bomb
-          Bomb Slot without Bombs (Expert) and Activate Bomb Slot without Bombs (No Space Jump)
+          Bomb Slot without Bombs (Advanced) and Activate Bomb Slot without Bombs (No Space Jump)
 
 ----------------
 Mining Station A
@@ -2683,7 +2752,7 @@ Asset id: 3820941951
           After Mining Station A Gate
           Any of the following:
               Space Jump Boots
-              Morph Ball and Morph Ball Bomb and Combat/Scan Dash (Advanced)
+              Morph Ball and Morph Ball Bomb and Bomb Jump (Advanced)
   > Door to Mining Station Access
       Trivial
   > Door to Portal Access A
@@ -2700,7 +2769,7 @@ Asset id: 3820941951
   > Front of Lore Scan
       Any of the following:
           Space Jump Boots
-          Morph Ball and Morph Ball Bomb and Bomb Jump (Advanced)
+          Morph Ball and Morph Ball Bomb and Bomb Jump (Intermediate)
   > Lore Scan
       Trivial
 
@@ -2723,7 +2792,11 @@ Asset id: 3820941951
 
 > Front of Lore Scan; Heals? False
   > Door to Central Station Access
-      Space Jump Boots or Combat/Scan Dash (Intermediate)
+      Any of the following:
+          All of the following:
+              After Mining Station A Gate
+              Space Jump Boots or Combat/Scan Dash (Intermediate)
+          Morph Ball and Morph Ball Bomb and Space Jump Boots and Bomb Space Jump (Expert)
   > Room Center
       Trivial
   > Event - Mining Station A Gate
@@ -2761,8 +2834,8 @@ Asset id: 3611217256
           Morph Ball
           Any of the following:
               Space Jump Boots and Dark World Damage ≥ 3
-              Standable Terrain (Intermediate) and Dark World Damage ≥ 4
-              Morph Ball Bomb and Bomb Jump (Intermediate) and Dark World Damage ≥ 7
+              Standable Terrain (Beginner) and Dark World Damage ≥ 4
+              Morph Ball Bomb and Bomb Jump (Beginner) and Dark World Damage ≥ 7
 
 ----------------
 Save Station 2
@@ -2890,7 +2963,7 @@ Asset id: 2260839223
               All of the following:
                   Space Jump Boots
                   Any of the following:
-                      Standable Terrain (Intermediate) and Dark World Damage ≥ 10
+                      Standable Terrain (Beginner) and Dark World Damage ≥ 10
                       Slope Jump (Intermediate) and Dark World Damage ≥ 15
               Morph Ball and Morph Ball Bomb and Bomb Space Jump (Advanced) and Dark World Damage ≥ 50
   > Safe Zone (Ingworms)
@@ -2900,7 +2973,7 @@ Asset id: 2260839223
               Dark World Damage ≥ 12
               Morph Ball and Dark World Damage ≥ 8
           Any of the following:
-              Space Jump Boots or Standable Terrain (Intermediate)
+              Space Jump Boots or Standable Terrain (Beginner)
               Morph Ball and Morph Ball Bomb and Bomb Jump (Beginner)
 
 > Spawn Point; Heals? False
@@ -2913,7 +2986,7 @@ Asset id: 2260839223
           Activate Safe Zone
           Any of the following:
               Space Jump Boots and Dark World Damage ≥ 10
-              Movement (Intermediate) and Dark World Damage ≥ 8 and Use Screw Attack (No Space Jump)
+              Movement (Beginner) and Dark World Damage ≥ 8 and Use Screw Attack (No Space Jump)
               Movement (Expert) and Dark World Damage ≥ 9
               Scan Visor and Combat/Scan Dash (Advanced) and Dark World Damage ≥ 9
   > Portal to Mining Station B
@@ -2953,7 +3026,7 @@ Asset id: 734872743
   > Portal to Portal Site
       Any of the following:
           Morph Ball and Morph Ball Bomb
-          Bomb Slot without Bombs (Expert) and Activate Bomb Slot without Bombs (Space Jump) and Use Screw Attack (Space Jump)
+          Bomb Slot without Bombs (Advanced) and Knowledge (Beginner) and Activate Bomb Slot without Bombs (Space Jump) and Use Screw Attack (Space Jump)
   > Lore Scan
       Trivial
 
@@ -3059,7 +3132,7 @@ Asset id: 4268351683
               Any of the following:
                   Bomb Space Jump (Hypermode)
                   Morph Ball Bomb and Bomb Jump (Beginner)
-                  Screw Attack and Slope Jump (Expert) and Movement (Expert)
+                  Screw Attack and Slope Jump (Expert)
                   Boost Ball and Wall Boost (Hypermode)
 
 ----------------
@@ -3186,12 +3259,12 @@ Asset id: 1803024829
       Any of the following:
           Morph Ball and Morph Ball Bomb and Bomb Jump (Beginner) and Dark World Damage ≥ 20
           Space Jump Boots and Dark World Damage ≥ 7
-          Movement (Intermediate) and Standable Terrain (Intermediate) and Dark World Damage ≥ 9 and Use Screw Attack (No Space Jump)
+          Standable Terrain (Intermediate) and Dark World Damage ≥ 9 and Use Screw Attack (No Space Jump)
 
 ----------------
 Agon Temple
 Asset id: 1979488942
-> Door to Mine Shaft; Heals? True
+> Door to Mine Shaft; Heals? False
   * Dark Door to Mine Shaft/Door to Agon Temple
   > Door to Temple Access
       Any of the following:
@@ -3205,22 +3278,23 @@ Asset id: 1979488942
   > Door to Mine Shaft
       Any of the following:
           Morph Ball and Morph Ball Bomb
-          Knowledge (Intermediate) and Use Screw Attack (Space Jump)
+          Movement (Intermediate) and Use Screw Attack (Space Jump)
   > Door to Sandcanyon
       Trivial
   > Event - Bomb Guardian
       Any of the following:
-          Before Bomb Guardian
-          Morph Ball and Morph Ball Bomb
-          Morph Ball and Power Bomb
+          Space Jump Boots or Before Bomb Guardian
+          All of the following:
+              Morph Ball
+              Morph Ball Bomb or Power Bomb
           All of the following:
               Knowledge (Beginner)
               Any of the following:
-                  Space Jump Boots or Use Screw Attack (Space Jump)
+                  Use Screw Attack (Space Jump)
                   Morph Ball and Boost Ball
                   Screw Attack at Z-Axis (Beginner) and Disabled Room Randomizer and Use Screw Attack (No Space Jump)
 
-> Door to Controller Access; Heals? True
+> Door to Controller Access; Heals? False
   * Normal Door to Controller Access/Door to Agon Temple
   > Door to Mine Shaft
       Trivial
@@ -3230,13 +3304,14 @@ Asset id: 1979488942
           Movement (Intermediate) and Use Screw Attack (Space Jump)
   > Room Center
       Any of the following:
-          Before Bomb Guardian
-          Morph Ball and Morph Ball Bomb
-          Morph Ball and Power Bomb
+          Space Jump Boots or Before Bomb Guardian
+          All of the following:
+              Morph Ball
+              Morph Ball Bomb or Power Bomb
           All of the following:
               Knowledge (Beginner)
               Any of the following:
-                  Space Jump Boots or Use Screw Attack (Space Jump)
+                  Use Screw Attack (Space Jump)
                   Morph Ball and Boost Ball
                   Screw Attack at Z-Axis (Beginner) and Disabled Room Randomizer and Use Screw Attack (No Space Jump)
 
@@ -3270,8 +3345,8 @@ Asset id: 1979488942
               Any of the following:
                   Use Screw Attack (Space Jump)
                   Morph Ball and Boost Ball
-                  Space Jump Boots and Slope Jump (Intermediate)
                   Screw Attack at Z-Axis (Beginner) and Disabled Room Randomizer and Use Screw Attack (No Space Jump)
+          Space Jump Boots and Slope Jump (Beginner)
   > Door to Controller Access
       Any of the following:
           Before Bomb Guardian
@@ -3283,8 +3358,8 @@ Asset id: 1979488942
               Any of the following:
                   Use Screw Attack (Space Jump)
                   Morph Ball and Boost Ball
-                  Space Jump Boots and Slope Jump (Intermediate)
                   Screw Attack at Z-Axis (Beginner) and Disabled Room Randomizer and Use Screw Attack (No Space Jump)
+          Space Jump Boots and Slope Jump (Beginner)
   > Event - Bomb Guardian
       Trivial
 
@@ -3307,20 +3382,24 @@ Asset id: 3212793644
 > Door to Crossroads; Heals? False
   * Normal Door to Crossroads/Door to Portal Site
   > Event - Portal Site Cutscene
-      Before Portal Site Cutscene
+      Before Portal Site Cutscene and Knowledge (Beginner)
   > Safe Zone (Bomb Slot)
       All of the following:
-          After Portal Site Cutscene and Movement (Intermediate) and Dark World Damage ≥ 10
+          After Portal Site Cutscene
           Any of the following:
-              Space Jump Boots
-              Morph Ball and Morph Ball Bomb and Bomb Jump (Intermediate)
+              All of the following:
+                  Before Portal Site Gate and Movement (Intermediate) and Dark World Damage ≥ 10
+                  Any of the following:
+                      Space Jump Boots
+                      Morph Ball and Morph Ball Bomb and Bomb Jump (Intermediate)
+              After Portal Site Gate and Dark World Damage ≥ 4
 
 > Door to Portal Access; Heals? False
   * Normal Door to Portal Access/Door to Portal Site
   > Event - Portal Site Cutscene
       Before Portal Site Cutscene
   > Safe Zone (Bomb Slot)
-      After Portal Site Gate and Dark World Damage ≥ 7
+      Dark World Damage ≥ 7
 
 > Portal to Portal Terminal; Heals? True; Spawn Point
   * Scan Portal to Portal Terminal/Portal to Portal Site
@@ -3340,7 +3419,7 @@ Asset id: 3212793644
 
 > Event - Portal Site Cutscene; Heals? False
   * Event Portal Site Cutscene
-  > Safe Zone (Bomb Slot)
+  > Portal to Portal Terminal
       Trivial
 
 > Safe Zone (Bomb Slot); Heals? True
@@ -3362,7 +3441,7 @@ Asset id: 3212793644
           Any of the following:
               Space Jump Boots
               Morph Ball and Morph Ball Bomb and Bomb Jump (Beginner)
-              Movement (Intermediate) and Use Screw Attack (No Space Jump)
+              Standable Terrain (Beginner) and Use Screw Attack (No Space Jump)
               Combat/Scan Dash (Advanced) and Standable Terrain (Advanced)
   > Event - Portal Site Gate
       All of the following:
@@ -3370,7 +3449,7 @@ Asset id: 3212793644
           Any of the following:
               Morph Ball and Morph Ball Bomb
               All of the following:
-                  Bomb Slot without Bombs (Expert) and Activate Bomb Slot without Bombs (No Space Jump)
+                  Bomb Slot without Bombs (Advanced) and Activate Bomb Slot without Bombs (No Space Jump)
                   Space Jump Boots or Standable Terrain (Intermediate)
 
 ----------------
@@ -3386,7 +3465,7 @@ Asset id: 4121352562
       Trivial
   > Next to Pickup
       Any of the following:
-          Morph Ball and Morph Ball Bomb and Screw Attack and After Central Mining Station Pirates and Movement (Expert) and Bomb Space Jump (Expert)
+          Morph Ball Bomb and After Central Mining Station Pirates and Movement (Expert) and Bomb Space Jump (Expert) and Use Screw Attack (No Space Jump)
           All of the following:
               Space Jump Boots
               Any of the following:
@@ -3397,18 +3476,20 @@ Asset id: 4121352562
 > Door to Central Station Access; Heals? False; Spawn Point
   * Missile Blast Shield to Central Station Access/Door to Central Mining Station
   > Door to Command Center Access (Top)
-      Any of the following:
-          All of the following:
-              Morph Ball
-              Any of the following:
-                  Spider Ball
-                  Morph Ball Bomb and Space Jump Boots and Bomb Space Jump (Intermediate)
-          After Central Mining Station Pirates and Standable Terrain (Intermediate) and Use Screw Attack (Space Jump)
-          All of the following:
-              Space Jump Boots
-              Any of the following:
-                  Slope Jump (Expert)
-                  Scan Visor and Combat/Scan Dash (Expert) and Standable Terrain (Beginner)
+      All of the following:
+          After Central Mining Station Pirates
+          Any of the following:
+              All of the following:
+                  Morph Ball
+                  Any of the following:
+                      Spider Ball
+                      Morph Ball Bomb and Space Jump Boots and Bomb Space Jump (Intermediate)
+              Standable Terrain (Intermediate) and Use Screw Attack (Space Jump)
+              All of the following:
+                  Space Jump Boots
+                  Any of the following:
+                      Slope Jump (Expert)
+                      Scan Visor and Combat/Scan Dash (Expert) and Standable Terrain (Expert)
   > Door to Command Center Access (Bottom)
       After Central Mining Station Pirates
   > Event - Central Mining Station Pirates
@@ -3433,8 +3514,11 @@ Asset id: 4121352562
   > Door to Command Center Access (Top)
       Any of the following:
           Morph Ball and Spider Ball
-          Space Jump Boots and Combat/Scan Dash (Advanced)
-          Morph Ball and Roll Jump (Advanced)
+          All of the following:
+              Space Jump Boots
+              Any of the following:
+                  Scan Visor and Combat/Scan Dash (Advanced)
+                  Morph Ball and Roll Jump (Advanced)
   > Door to Central Station Access
       Trivial
   > Door to Command Center Access (Bottom)
@@ -3487,9 +3571,9 @@ Asset id: 872074261
   * Pickup 41; Major Location? False
   > Safe Zone (Battleground Side)
       Any of the following:
-          Morph Ball and Morph Ball Bomb and Bomb Jump (Beginner) and Normal Damage ≥ 55
-          Space Jump Boots and Dark World Damage ≥ 30
-          Slope Jump (Intermediate) and Normal Damage ≥ 35
+          Morph Ball and Morph Ball Bomb and Bomb Jump (Beginner) and Normal Damage ≥ 55 and Dark World Damage ≥ 25
+          Space Jump Boots and Normal Damage ≥ 30 and Dark World Damage ≥ 15
+          Slope Jump (Intermediate) and Normal Damage ≥ 50 and Dark World Damage ≥ 10
 
 > Safe Zone (Judgment Pit Side); Heals? True
   > Door to Judgment Pit
@@ -3504,7 +3588,7 @@ Asset id: 872074261
           Morph Ball and Dark World Damage ≥ 5
   > Pickup (Missile)
       All of the following:
-          Morph Ball and Normal Damage ≥ 30
+          Morph Ball and Normal Damage ≥ 25 and Dark World Damage ≥ 10
           Morph Ball Bomb or Power Bomb
   > Safe Zone (Judgment Pit Side)
       All of the following:
@@ -3515,7 +3599,7 @@ Asset id: 872074261
                   Morph Ball
                   Any of the following:
                       Morph Ball Bomb and Bomb Jump (Beginner) and Dark World Damage ≥ 25
-                      Screw Attack and Slope Jump (Expert) and Movement (Expert) and Dark World Damage ≥ 20
+                      Screw Attack and Slope Jump (Expert) and Dark World Damage ≥ 20
                       Boost Ball and Wall Boost (Hypermode) and Dark World Damage ≥ 30
                       Bomb Space Jump (Hypermode) and Dark World Damage ≥ 40
 
@@ -3540,7 +3624,7 @@ Asset id: 2312259325
       Any of the following:
           All of the following:
               Dark World Damage ≥ 30
-              Space Jump Boots or Standable Terrain (Intermediate)
+              Space Jump Boots or Standable Terrain (Beginner)
           Screw Attack at Z-Axis (Beginner) and Dark World Damage ≥ 25 and Disabled Room Randomizer and Use Screw Attack (No Space Jump)
 
 > Door to Portal Site; Heals? False
@@ -3549,7 +3633,9 @@ Asset id: 2312259325
       Any of the following:
           All of the following:
               Dark World Damage ≥ 30
-              Space Jump Boots or Standable Terrain (Intermediate)
+              Any of the following:
+                  Space Jump Boots or Standable Terrain (Intermediate)
+                  Standable Terrain (Beginner) and Use Screw Attack (No Space Jump)
           Screw Attack at Z-Axis (Beginner) and Dark World Damage ≥ 25 and Disabled Room Randomizer and Use Screw Attack (No Space Jump)
 
 ----------------
@@ -3580,7 +3666,7 @@ Asset id: 3853985320
       All of the following:
           Morph Ball and Space Jump Boots
           Any of the following:
-              Screw Attack
+              Screw Attack or Single Room Out of Bounds (Expert)
               Boost Ball and Before Sandcanyon Denzium and Boost Jump (Expert)
 
 > Door to Agon Temple; Heals? False; Spawn Point
@@ -3689,7 +3775,11 @@ Asset id: 1970603146
 > Event - Amorbis; Heals? True
   * Event Amorbis
   > Pickup (Dark Suit)
-      Normal Damage ≥ 20 and Dark World Damage ≥ 15 and Activate Safe Zone
+      All of the following:
+          Activate Safe Zone
+          Any of the following:
+              Normal Damage ≥ 20 and Dark World Damage ≥ 30
+              Combat (Intermediate) and Normal Damage ≥ 10 and Dark World Damage ≥ 20
 
 > Safe Zone (Dark Agon Temple Access Side); Heals? False
   > Door to Dark Agon Temple Access
@@ -3705,7 +3795,7 @@ Asset id: 1970603146
                           Dark World Damage ≥ 20
                           Any of the following:
                               Standable Terrain (Advanced) and Use Screw Attack (Space Jump)
-                              Screw Attack at Z-Axis (Hypermode) and Disabled Room Randomizer and Use Screw Attack (No Space Jump)
+                              Screw Attack at Z-Axis (Expert) and Disabled Room Randomizer and Use Screw Attack (No Space Jump)
                       Space Jump Boots and Standable Terrain (Advanced) and Dark World Damage ≥ 30 and Shoot Dark Beam
                       Morph Ball and Morph Ball Bomb and Bomb Space Jump (Expert) and Dark World Damage ≥ 55
               All of the following:
@@ -3750,7 +3840,7 @@ Asset id: 1887668217
                       Boost Ball and Wall Boost (Advanced)
               All of the following:
                   After Command Center Gate Closed
-                  Space Jump Boots or Slope Jump (Intermediate)
+                  Space Jump Boots or Standable Terrain (Beginner)
   > Event - Command Center Access Grates/Crates
       All of the following:
           Morph Ball
@@ -3771,7 +3861,7 @@ Asset id: 1887668217
               Any of the following:
                   Morph Ball Bomb or Power Bomb
                   Boost Ball and Knowledge (Beginner)
-          Knowledge (Intermediate) and Disabled Room Randomizer and Use Screw Attack (No Space Jump)
+          Knowledge (Beginner) and Disabled Room Randomizer and Use Screw Attack (No Space Jump)
 
 > Door to Command Center (Top); Heals? False
   * Light Door to Command Center/Door to Command Center Access (Top)
@@ -3791,7 +3881,7 @@ Asset id: 1887668217
                   Boost Ball and Wall Boost (Advanced)
           All of the following:
               After Command Center Gate Closed
-              Space Jump Boots or Slope Jump (Intermediate)
+              Space Jump Boots or Standable Terrain (Beginner)
 
 ----------------
 Battleground
@@ -3840,7 +3930,7 @@ Asset id: 3933819436
       All of the following:
           Activate Safe Zone
           Any of the following:
-              Space Jump Boots and Standable Terrain (Intermediate) and Dark World Damage ≥ 12
+              Space Jump Boots and Standable Terrain (Beginner) and Dark World Damage ≥ 12
               Morph Ball and Morph Ball Bomb and Bomb Space Jump (Expert) and Dark World Damage ≥ 20
 
 > Safe Zone (Double Path Side, Top); Heals? True
@@ -3856,7 +3946,7 @@ Asset id: 3933819436
                   Any of the following:
                       Dark World Damage ≥ 95
                       Scan Visor and Combat/Scan Dash (Intermediate) and Dark World Damage ≥ 50
-              Slope Jump (Advanced) and Movement (Advanced) and Standable Terrain (Advanced) and Dark World Damage ≥ 120 and Use Screw Attack (No Space Jump)
+              Slope Jump (Advanced) and Standable Terrain (Advanced) and Dark World Damage ≥ 120 and Use Screw Attack (No Space Jump)
   > Safe Zone (Double Path Side, Bottom)
       Dark World Damage ≥ 2 and Activate Safe Zone
 
@@ -4044,7 +4134,7 @@ Asset id: 2146386747
               All of the following:
                   Dark World Damage ≥ 22
                   Space Jump Boots or Standable Terrain (Intermediate)
-              Movement (Beginner) and Dark World Damage ≥ 33 and Poison Water Damage ≥ 10
+              No Light Suit and Movement (Beginner) and Dark World Damage ≥ 33 and Poison Water Damage ≥ 10 and Enabled Allow Jumping on Dark Water
 
 > Door to Battleground (Top); Heals? True
   * Light Door to Battleground/Door to Double Path (Top)
@@ -4067,7 +4157,7 @@ Asset id: 2146386747
           Dark World Damage ≥ 30
           Any of the following:
               Space Jump Boots or Standable Terrain (Intermediate)
-              No Light Suit and Movement (Beginner) and Poison Water Damage ≥ 10
+              No Light Suit and Movement (Beginner) and Poison Water Damage ≥ 10 and Enabled Allow Jumping on Dark Water
   > Door to Doomed Entry (Bottom)
       Dark World Damage ≥ 8
 
@@ -4096,9 +4186,11 @@ Asset id: 3436835742
   * Light Door to Ventilation Area A/Door to Main Reactor
   > Door to Storage D
       Trivial
+  > Event - Dark Samus 1
+      Morph Ball and Morph Ball Bomb and Space Jump Boots and Bomb Space Jump (Intermediate) and Single Room Out of Bounds (Intermediate) and Standable Terrain (Intermediate)
   > Keybearer Corpse (B-Stl)
       After Dark Samus 1
-  > Room Bottom
+  > Bottom Floor (Center)
       After Dark Samus 1
 
 > Door to Sand Processing; Heals? False; Spawn Point
@@ -4114,7 +4206,7 @@ Asset id: 3436835742
       Any of the following:
           Shoot Dark Beam
           Knowledge (Beginner) and Use Screw Attack (No Space Jump)
-  > Room Bottom
+  > Bottom Floor (Center)
       After Dark Samus 1
 
 > Door to Security Station B; Heals? False
@@ -4127,28 +4219,27 @@ Asset id: 3436835742
           Knowledge (Beginner) and Use Screw Attack (No Space Jump)
   > Event - Dark Samus 1
       Trivial
-  > Before Pickup
+  > Next to Pickup
       All of the following:
           Morph Ball and After Dark Samus 1 and After Main Reactor Reloaded after DS1
           Any of the following:
               Screw Attack into Tunnels (Intermediate) and Use Screw Attack (Space Jump)
               All of the following:
-                  Space Jump Boots and Standable Terrain (Intermediate)
+                  Space Jump Boots and Standable Terrain (Advanced)
                   Any of the following:
-                      Morph Ball Bomb and Bomb Space Jump (Intermediate)
                       Slope Jump (Advanced) and Roll Jump (Advanced)
                       Scan Visor and Combat/Scan Dash (Expert)
-  > Room Bottom
+  > Bottom Floor (Center)
       After Dark Samus 1
 
 > Pickup (Missile); Heals? False
   * Pickup 49; Major Location? False
-  > Room Bottom
+  > Next to Pickup
       Trivial
 
 > Event - Dark Samus 1; Heals? False
   * Event Dark Samus 1
-  > Room Bottom
+  > Bottom Floor (Center)
       Trivial
 
 > Keybearer Corpse (B-Stl); Heals? False
@@ -4156,7 +4247,7 @@ Asset id: 3436835742
   > Door to Ventilation Area A
       Trivial
 
-> Before Pickup; Heals? False
+> Next to Pickup; Heals? False
   > Pickup (Missile)
       All of the following:
           Morph Ball
@@ -4165,34 +4256,30 @@ Asset id: 3436835742
               All of the following:
                   Knowledge (Beginner)
                   Power Beam or Boost Ball or Screw Attack
-  > Room Bottom
+  > Bottom Floor (Center)
       Morph Ball
 
-> Room Bottom; Heals? False
+> Bottom Floor (Center); Heals? False
   > Door to Ventilation Area A
       All of the following:
-          Morph Ball
+          Morph Ball and After Dark Samus 1 and After Main Reactor Reloaded after DS1
           Any of the following:
-              Spider Ball and After Dark Samus 1 and After Main Reactor Reloaded after DS1
+              Spider Ball
               Morph Ball Bomb and Bomb Space Jump (Expert) and Use Screw Attack (Space Jump)
   > Door to Storage D
       After Dark Samus 1
   > Door to Security Station B
-      Morph Ball and Morph Ball Bomb and Space Jump Boots and Bomb Space Jump (Advanced) and Standable Terrain (Beginner)
-  > Before Pickup
+      Morph Ball and Morph Ball Bomb and Space Jump Boots and Bomb Space Jump (Advanced) and Standable Terrain (Advanced)
+  > Next to Pickup
       All of the following:
-          Morph Ball and After Dark Samus 1 and After Main Reactor Reloaded after DS1
+          Morph Ball and Spider Ball and After Dark Samus 1 and After Main Reactor Reloaded after DS1
           Any of the following:
+              Boost Ball
               All of the following:
-                  Spider Ball
+                  Morph Ball Bomb
                   Any of the following:
-                      Boost Ball
-                      All of the following:
-                          Morph Ball Bomb
-                          Any of the following:
-                              Bomb Jump (Hypermode)
-                              Space Jump Boots and Bomb Space Jump (Intermediate) and Standable Terrain (Intermediate)
-              Morph Ball Bomb and Bomb Space Jump (Expert) and Standable Terrain (Intermediate) and Use Screw Attack (Space Jump)
+                      Bomb Jump (Hypermode)
+                      Space Jump Boots and Bomb Space Jump (Intermediate) and Standable Terrain (Intermediate)
 
 ----------------
 Dark Agon Energy Controller
@@ -4283,7 +4370,7 @@ Asset id: 2761919085
               Dark World Damage ≥ 18
               Morph Ball and Dark World Damage ≥ 10
   > Safe Zone (Movable Platform)
-      Space Jump Boots and Slope Jump (Intermediate) and Dark World Damage ≥ 10
+      Space Jump Boots and Slope Jump (Beginner) and Dark World Damage ≥ 10
 
 > Door to Double Path (Top); Heals? True
   * Dark Door to Double Path/Door to Doomed Entry (Top)
@@ -4312,7 +4399,7 @@ Asset id: 2761919085
           Activate Safe Zone
           Any of the following:
               Standable Terrain (Beginner) and Dark World Damage ≥ 10 and Use Screw Attack (Space Jump)
-              Morph Ball and Morph Ball Bomb and Movement (Intermediate) and Bomb Space Jump (Expert) and Dark World Damage ≥ 40
+              Morph Ball and Morph Ball Bomb and Bomb Space Jump (Expert) and Dark World Damage ≥ 40
 
 > Pickup (Dark Agon Key 2); Heals? False
   * Pickup 50; Major Location? True
@@ -4374,7 +4461,12 @@ Asset id: 2763180926
       Missile
   > Door to Save Station C
       Any of the following:
-          Before Sand Processing Sand Drained
+          All of the following:
+              Before Sand Processing Sand Drained
+              Any of the following:
+                  Space Jump Boots
+                  Morph Ball and Morph Ball Bomb and Bomb Jump (Beginner)
+                  Slope Jump (Intermediate) and Use Screw Attack (No Space Jump)
           All of the following:
               Morph Ball
               Any of the following:
@@ -4391,7 +4483,7 @@ Asset id: 2763180926
                   Boost Ball
                   Morph Ball Bomb or Wall Boost (Expert)
               Morph Ball Bomb and Space Jump Boots and Bomb Space Jump (Advanced)
-              Screw Attack into Tunnels (Hypermode) and Use Screw Attack (Space Jump)
+              Screw Attack into Tunnels (Expert) and Use Screw Attack (Space Jump)
 
 > Tunnel; Heals? False
   > Event - Sand Processing Sand Drained
@@ -4459,7 +4551,7 @@ Asset id: 2583401855
               All of the following:
                   Morph Ball Bomb
                   Any of the following:
-                      Gravity Boost and Bomb Jump (Intermediate) and Movement (Advanced) and Use Screw Attack (No Space Jump)
+                      Gravity Boost and Bomb Jump (Advanced) and Movement (Advanced) and Use Screw Attack (No Space Jump)
                       Combat/Scan Dash (Expert) and Bomb Space Jump (Expert)
 
 > Safe Zone (Oasis Access Side); Heals? True
@@ -4699,10 +4791,8 @@ Asset id: 123369195
               Space Jump Boots
               Morph Ball and Morph Ball Bomb and Bomb Jump (Beginner)
               All of the following:
-                  Standable Terrain (Intermediate)
-                  Any of the following:
-                      Movement (Expert)
-                      Movement (Intermediate) and Use Screw Attack (No Space Jump)
+                  Standable Terrain (Beginner)
+                  Movement (Expert) or Use Screw Attack (No Space Jump)
   > Pickup (Power Bomb)
       Light Suit
 
@@ -4727,6 +4817,7 @@ Asset id: 123369195
               Space Jump Boots
               Morph Ball and Morph Ball Bomb and Gravity Boost and Bomb Jump (Beginner)
               Screw Attack at Z-Axis (Intermediate) and Disabled Room Randomizer and Use Screw Attack (No Space Jump)
+              Morph Ball and Morph Ball Bomb and Bomb Space Jump (Hypermode)
 
 ----------------
 Ventilation Area B
@@ -5038,13 +5129,13 @@ Asset id: 2114709145
           After Torvus Lagoon Gates
           Any of the following:
               Space Jump Boots
-              Slope Jump (Advanced) and Standable Terrain (Advanced)
+              Slope Jump (Intermediate) and Standable Terrain (Intermediate)
   > Door to Path of Roots
       Trivial
   > Pickup (Missile)
       Any of the following:
           Gravity Boost
-          Morph Ball and Space Jump Boots and Screw Attack and Air Underwater (Advanced)
+          Air Underwater (Advanced) and Use Screw Attack (Space Jump)
   > Keybearer Corpse (S-Dly)
       Trivial
 
@@ -5056,7 +5147,9 @@ Asset id: 2114709145
 > Door to Portal Chamber; Heals? False
   * Normal Door to Portal Chamber/Door to Torvus Lagoon
   > Door to Temple Transport Access
-      After Torvus Lagoon Gates
+      Any of the following:
+          After Torvus Lagoon Gates
+          Single Room Out of Bounds (Advanced) and Use Screw Attack (No Space Jump)
   > Door to Ruined Alcove
       After Torvus Lagoon Gates
   > Event - Torvus Lagoon Gates
@@ -5110,6 +5203,8 @@ Asset id: 4092483679
 
 > Door to Torvus Lagoon; Heals? False
   * Normal Door to Torvus Lagoon/Door to Portal Chamber
+  > Portal to Portal Chamber
+      Single Room Out of Bounds (Advanced) and Screw Attack into Tunnels (Advanced) and Use Screw Attack (No Space Jump)
   > Door to Great Bridge
       All of the following:
           Morph Ball
@@ -5170,12 +5265,16 @@ Asset id: 1950913308
           Morph Ball and Morph Ball Bomb and Bomb Jump (Beginner)
   > Next to Pickup
       Any of the following:
-          Grapple Beam and Movement (Beginner)
+          Grapple Beam
           Space Jump Boots and Gravity Boost and Slope Jump (Intermediate)
           All of the following:
               Morph Ball
               Any of the following:
-                  Morph Ball Bomb and Space Jump Boots and Bomb Space Jump (Advanced)
+                  All of the following:
+                      Morph Ball Bomb
+                      Any of the following:
+                          Space Jump Boots and Bomb Space Jump (Advanced)
+                          Bomb Jump (Hypermode) and Standable Terrain (Hypermode)
                   Gravity Boost and Air Underwater (Advanced)
 
 > Lore Scan; Heals? False
@@ -5215,7 +5314,7 @@ Asset id: 165596961
               All of the following:
                   Morph Ball and Morph Ball Bomb
                   Any of the following:
-                      Bomb Jump (Beginner) and Movement (Beginner) and Use Screw Attack (No Space Jump)
+                      Bomb Jump (Beginner) and Use Screw Attack (No Space Jump)
                       Before Dark Forgotten Bridge Rotated and Bomb Jump (Intermediate)
   > Bridge Center
       Before Dark Forgotten Bridge Rotated
@@ -5226,10 +5325,11 @@ Asset id: 165596961
       Any of the following:
           Space Jump Boots
           All of the following:
-              Morph Ball and Morph Ball Bomb
+              Morph Ball and Morph Ball Bomb and Bomb Jump (Beginner)
               Any of the following:
                   Bomb Space Jump (Expert)
-                  Screw Attack and Movement (Advanced)
+                  Movement (Intermediate) and Use Screw Attack (No Space Jump)
+                  Gravity Boost and Air Underwater (Advanced)
 
 > Door to Grove Access; Heals? False
   * Dark Door to Grove Access/Door to Forgotten Bridge
@@ -5331,7 +5431,7 @@ Asset id: 3822429534
 > Door to Torvus Map Station; Heals? False
   * Normal Door to Torvus Map Station/Door to Great Bridge
   > Front of Translator Gate
-      Space Jump Boots and Slope Jump (Advanced)
+      Space Jump Boots and Slope Jump (Intermediate) and Standable Terrain (Beginner)
   > Translator Gate
       Trivial
 
@@ -5371,6 +5471,7 @@ Asset id: 3822429534
               Any of the following:
                   Boost Ball and Wall Boost (Intermediate)
                   Morph Ball Bomb and Bomb Jump (Beginner)
+          Slope Jump (Intermediate) and Use Screw Attack (No Space Jump)
 
 > Door to Portal Chamber; Heals? False
   * Missile Blast Shield to Portal Chamber/Door to Great Bridge
@@ -5380,7 +5481,7 @@ Asset id: 3822429534
 > Door to Temple Access (Bottom); Heals? False
   * Normal Door to Temple Access/Door to Great Bridge (Bottom)
   > Door to Torvus Map Station
-      Space Jump Boots and Combat/Scan Dash (Advanced) and Slope Jump (Advanced)
+      Space Jump Boots and Slope Jump (Advanced)
   > Door to Abandoned Worksite
       Any of the following:
           All of the following:
@@ -5397,7 +5498,7 @@ Asset id: 3822429534
   > Front of Translator Gate
       Any of the following:
           Space Jump Boots
-          Morph Ball and Morph Ball Bomb and Bomb Space Jump (Expert)
+          Morph Ball and Morph Ball Bomb and Bomb Space Jump (Advanced)
 
 > Pickup (Power Bomb); Heals? False
   * Pickup 64; Major Location? False
@@ -5425,7 +5526,7 @@ Asset id: 3822429534
   > Door to Temple Access (Top)
       Any of the following:
           Morph Ball and After Great Bridge Cannon
-          Slope Jump (Advanced) and Use Screw Attack (Space Jump)
+          Slope Jump (Intermediate) and Use Screw Attack (Space Jump)
   > Door to Temple Access (Bottom)
       Trivial
 
@@ -5455,25 +5556,50 @@ Asset id: 3250751238
 > Door to Torvus Plaza; Heals? False
   * Normal Door to Torvus Plaza/Door to Plaza Access
   > Door to Forgotten Bridge
-      After Torvus Plaza Access Puzzle
+      After Torvus Plaza Access Puzzle (Forgotten Bridge Slot) and After Torvus Plaza Access Puzzle (Torvus Plaza Slot)
+  > Out of Bounds
+      Single Room Out of Bounds (Advanced) and Screw Attack into Tunnels (Advanced) and Use Screw Attack (No Space Jump)
 
 > Door to Forgotten Bridge; Heals? False; Spawn Point
   * Normal Door to Forgotten Bridge/Door to Plaza Access
   > Door to Torvus Plaza
-      After Torvus Plaza Access Puzzle
+      After Torvus Plaza Access Puzzle (Forgotten Bridge Slot) and After Torvus Plaza Access Puzzle (Torvus Plaza Slot)
   > Pickup (Missile)
-      Morph Ball and Boost Ball and Morph Ball Bomb and After Torvus Plaza Access Puzzle
-  > Event - Torvus Plaza Access Puzzle
+      Morph Ball and Boost Ball and Morph Ball Bomb and After Torvus Plaza Access Puzzle (Forgotten Bridge Slot) and After Torvus Plaza Access Puzzle (Torvus Plaza Slot)
+  > Event - Bomb Slot (Forgotten Bridge Side)
       Morph Ball and Morph Ball Bomb
+  > Out of Bounds
+      Single Room Out of Bounds (Advanced) and Screw Attack into Tunnels (Advanced) and Use Screw Attack (No Space Jump)
+  > Event - Bomb Slot (Torvus Plaza Side)
+      Morph Ball and Morph Ball Bomb and After Torvus Plaza Access Puzzle (Forgotten Bridge Slot)
 
 > Pickup (Missile); Heals? False
   * Pickup 66; Major Location? False
+  > Door to Torvus Plaza
+      After Torvus Plaza Access Puzzle (Torvus Plaza Slot)
   > Door to Forgotten Bridge
-      After Torvus Plaza Access Puzzle
+      After Torvus Plaza Access Puzzle (Forgotten Bridge Slot)
+  > Event - Bomb Slot (Torvus Plaza Side)
+      Morph Ball and Morph Ball Bomb
 
-> Event - Torvus Plaza Access Puzzle; Heals? False
-  * Event Torvus Plaza Access Puzzle
+> Event - Bomb Slot (Forgotten Bridge Side); Heals? False
+  * Event Torvus Plaza Access Puzzle (Forgotten Bridge Slot)
   > Door to Forgotten Bridge
+      Morph Ball and Morph Ball Bomb
+
+> Out of Bounds; Heals? False
+  > Door to Torvus Plaza
+      Morph Ball
+  > Door to Forgotten Bridge
+      Morph Ball
+  > Pickup (Missile)
+      All of the following:
+          Morph Ball
+          Boost Ball or Movement (Expert)
+
+> Event - Bomb Slot (Torvus Plaza Side); Heals? False
+  * Event Torvus Plaza Access Puzzle (Torvus Plaza Slot)
+  > Door to Torvus Plaza
       Morph Ball and Morph Ball Bomb
 
 ----------------
@@ -5492,7 +5618,7 @@ Asset id: 1423634263
                       Any of the following:
                           Morph Ball Bomb and Screw Attack
                           Slope Jump (Intermediate) and Standable Terrain (Intermediate)
-                          Morph Ball Bomb and Bomb Space Jump (Beginner)
+                          Morph Ball Bomb and Bomb Space Jump (Intermediate)
                           Screw Attack and Movement (Beginner)
                   Morph Ball Bomb and Bomb Space Jump (Advanced)
   > Tunnel
@@ -5514,7 +5640,9 @@ Asset id: 1423634263
           Morph Ball
           Any of the following:
               Morph Ball Bomb or Use Screw Attack (Space Jump)
-              Space Jump Boots and Movement (Advanced) and Standable Terrain (Intermediate)
+              All of the following:
+                  Space Jump Boots and Standable Terrain (Intermediate)
+                  Slope Jump (Intermediate) or Movement (Advanced)
 
 > Pickup (Missile); Heals? False
   * Pickup 67; Major Location? False
@@ -5593,11 +5721,14 @@ Asset id: 39024685
       All of the following:
           Activate Safe Zone
           Any of the following:
-              Dark World Damage ≥ 30
-              Before Grapple Guardian and Dark World Damage ≥ 10
-          Any of the following:
-              Space Jump Boots and Dark World Damage ≥ 5
-              Morph Ball and Morph Ball Bomb and Bomb Jump (Expert) and Dark World Damage ≥ 22 and Poison Water Damage ≥ 18
+              Scan Visor and Before Grapple Guardian and Combat/Scan Dash (Advanced) and Jump Off Enemy (Advanced) and Standable Terrain (Advanced) and Dark World Damage ≥ 90
+              All of the following:
+                  Any of the following:
+                      Dark World Damage ≥ 30
+                      Before Grapple Guardian and Dark World Damage ≥ 10
+                  Any of the following:
+                      Space Jump Boots and Dark World Damage ≥ 5
+                      Morph Ball and Morph Ball Bomb and Bomb Jump (Expert) and Dark World Damage ≥ 25 and Poison Water Damage ≥ 20
 
 > Door to Dark Arena Tunnel; Heals? False
   * Light Door to Dark Arena Tunnel/Door to Dark Forgotten Bridge
@@ -5620,8 +5751,8 @@ Asset id: 39024685
               All of the following:
                   Morph Ball and Morph Ball Bomb
                   Any of the following:
-                      Bomb Jump (Beginner) and Movement (Beginner) and Dark World Damage ≥ 55 and Use Screw Attack (No Space Jump)
-                      After Dark Forgotten Bridge Rotated and Bomb Jump (Intermediate) and Dark World Damage ≥ 70
+                      Bomb Jump (Beginner) and Dark World Damage ≥ 55 and Use Screw Attack (No Space Jump)
+                      Before Dark Forgotten Bridge Rotated and Bomb Jump (Intermediate) and Dark World Damage ≥ 70
   > Door to Putrid Alcove
       Any of the following:
           Dark World Damage ≥ 60
@@ -5714,7 +5845,7 @@ Asset id: 350405542
       Dark World Damage ≥ 15 and Activate Safe Zone
 
 > Door to Cache A; Heals? True; Spawn Point
-  * Seeker Launcher Blast Shield (destructible with Screw Attack; Expert) to Cache A/Door to Poisoned Bog
+  * Seeker Launcher Blast Shield (destructible with Screw Attack; Advanced) to Cache A/Door to Poisoned Bog
   > Central Safe Zone (Beacon)
       Dark World Damage ≥ 3 and Activate Safe Zone
 
@@ -5760,7 +5891,7 @@ Asset id: 350405542
               Any of the following:
                   No Light Suit and Bomb Jump (Beginner) and Dark World Damage ≥ 30 and Poison Water Damage ≥ 20 and Enabled Allow Jumping on Dark Water
                   Bomb Jump (Advanced) and Standable Terrain (Advanced) and Dark World Damage ≥ 40
-          Slope Jump (Advanced) and Movement (Advanced) and Dark World Damage ≥ 30 and Use Screw Attack (No Space Jump)
+          Slope Jump (Advanced) and Standable Terrain (Advanced) and Dark World Damage ≥ 30 and Use Screw Attack (No Space Jump)
   > Pickup (Sky Temple Key 3)
       Dark Visor and Light Suit
 
@@ -5779,10 +5910,12 @@ Asset id: 2240736467
       Any of the following:
           Grapple Beam and Movement (Intermediate) and Dark World Damage ≥ 60
           All of the following:
-              Space Jump Boots
+              Space Jump Boots and Dark World Damage ≥ 30
               Any of the following:
-                  Standable Terrain (Intermediate) and Dark World Damage ≥ 30 and NTSC
-                  Slope Jump (Intermediate) and Dark World Damage ≥ 25 and Use Screw Attack (Space Jump)
+                  Standable Terrain (Intermediate) and NTSC
+                  All of the following:
+                      Use Screw Attack (Space Jump)
+                      Slope Jump (Beginner) or Standable Terrain (Beginner)
 
 > Door to Brooding Ground; Heals? True; Spawn Point
   * Normal Door to Brooding Ground/Door to Venomous Pond
@@ -5917,6 +6050,12 @@ Torvus Map Station
 Asset id: 673929343
 > Door to Great Bridge; Heals? False; Spawn Point
   * Normal Door to Great Bridge/Door to Torvus Map Station
+  > Map Station
+      Trivial
+
+> Map Station; Heals? False
+  > Door to Great Bridge
+      Trivial
 
 ----------------
 Torvus Plaza
@@ -5958,6 +6097,11 @@ Asset id: 957217977
           Any of the following:
               Boost Ball and Dark World Damage ≥ 70
               Morph Ball Bomb and Dark World Damage ≥ 80
+              All of the following:
+                  Single Room Out of Bounds (Advanced) and Screw Attack into Tunnels (Advanced)
+                  Any of the following:
+                      Dark World Damage ≥ 275 and Use Screw Attack (Space Jump)
+                      Dark World Damage ≥ 350 and Use Screw Attack (No Space Jump)
 
 > Door to Dark Torvus Arena; Heals? False
   * Normal Door to Dark Torvus Arena/Door to Dark Arena Tunnel
@@ -5967,6 +6111,11 @@ Asset id: 957217977
           Any of the following:
               Boost Ball and Dark World Damage ≥ 70
               Morph Ball Bomb and Movement (Advanced) and Dark World Damage ≥ 120
+              All of the following:
+                  Single Room Out of Bounds (Advanced) and Screw Attack into Tunnels (Advanced)
+                  Any of the following:
+                      Dark World Damage ≥ 250 and Use Screw Attack (Space Jump)
+                      Dark World Damage ≥ 325 and Use Screw Attack (No Space Jump)
 
 ----------------
 Putrid Alcove
@@ -6056,7 +6205,7 @@ Asset id: 3706669497
               All of the following:
                   Space Jump Boots
                   Any of the following:
-                      Screw Attack and Slope Jump (Intermediate) and Dark World Damage ≥ 50
+                      Screw Attack and Standable Terrain (Intermediate) and Dark World Damage ≥ 50
                       Morph Ball Bomb and Bomb Space Jump (Advanced) and Dark World Damage ≥ 100
 
 ----------------
@@ -6156,7 +6305,7 @@ Asset id: 3863006870
 
 > Door to Underground Tunnel; Heals? False
   * Normal Door to Underground Tunnel/Door to Torvus Temple
-  > Bottom Room Center
+  > Lower Level
       Before Torvus Temple Pirates and Enabled Vanilla Torvus Temple Translator Gate
   > Translator Gate
       Trivial
@@ -6167,24 +6316,24 @@ Asset id: 3863006870
       After Torvus Temple Pirates
   > Event - Torvus Temple Pirates
       Trivial
-  > Bottom Room Center
+  > Lower Level
       After Torvus Temple Elevator
   > Elevator Translator Scan
       After Torvus Temple Pirates and After Torvus Energy Controller Pickup
 
 > Door to Transport to Agon Wastes; Heals? False
   * Seeker Launcher Blast Shield (destructible with Screw Attack; Hypermode) to Transport to Agon Wastes/Door to Torvus Temple
-  > Bottom Room Center
+  > Lower Level
       Morph Ball
 
 > Door to Temple Access (Bottom); Heals? False
   * Super Missile Blast Shield to Temple Access/Door to Torvus Temple (Bottom)
-  > Bottom Room Center
+  > Lower Level
       Trivial
 
 > Door to Underground Transport; Heals? False
   * Super Missile Blast Shield to Underground Transport/Door to Torvus Temple
-  > Bottom Room Center
+  > Lower Level
       Morph Ball and After Torvus Temple Pirates
 
 > Pickup (Super Missile); Heals? False
@@ -6202,7 +6351,7 @@ Asset id: 3863006870
   > Door to Temple Access (Top)
       Trivial
 
-> Bottom Room Center; Heals? False
+> Lower Level; Heals? False
   > Door to Underground Tunnel
       Before Torvus Temple Pirates and Enabled Vanilla Torvus Temple Translator Gate
   > Door to Temple Access (Top)
@@ -6213,6 +6362,8 @@ Asset id: 3863006870
       Trivial
   > Door to Underground Transport
       Morph Ball and After Torvus Temple Pirates
+  > Event - Torvus Temple Pirates
+      Single Room Out of Bounds (Advanced) and Screw Attack into Tunnels (Advanced) and Use Screw Attack (No Space Jump)
   > Translator Gate
       Trivial
 
@@ -6220,7 +6371,7 @@ Asset id: 3863006870
   * Translator Gate (TranslatorGate 13)
   > Door to Underground Tunnel
       Trivial
-  > Bottom Room Center
+  > Lower Level
       Trivial
 
 > Elevator Translator Scan; Heals? False
@@ -6353,13 +6504,13 @@ Asset id: 1576678107
                   Morph Ball
                   Any of the following:
                       Boost Ball and Boost Jump (Advanced)
-                      Roll Jump (Expert) and Standable Terrain (Intermediate)
+                      Roll Jump (Hypermode) and Standable Terrain (Hypermode)
               Scan Visor and Extended Dash (Hypermode)
 
 > Pickup (Energy Tank); Heals? False
   * Pickup 78; Major Location? True
   > Door to Torvus Grove
-      Normal Damage ≥ 10
+      Normal Damage ≥ 10 or Use Screw Attack (Space Jump)
 
 ----------------
 Dark Torvus Temple
@@ -6406,12 +6557,16 @@ Asset id: 912503189
               Knowledge (Beginner)
               Seeker Launcher and Missile ≥ 4
           Any of the following:
-              Grapple Beam and Dark World Damage ≥ 18
-              Dark World Damage ≥ 6 and Use Screw Attack (Space Jump)
-              Space Jump Boots and Dark World Damage ≥ 20 and Poison Water Damage ≥ 5
-              Movement (Intermediate) and Dark World Damage ≥ 22 and Poison Water Damage ≥ 8 and Use Screw Attack (No Space Jump)
-              Morph Ball and Morph Ball Bomb and Bomb Jump (Beginner) and Dark World Damage ≥ 40 and Poison Water Damage ≥ 35
-              Gravity Boost and Dark World Damage ≥ 25 and Poison Water Damage ≥ 10
+              Grapple Beam and Dark World Damage ≥ 25
+              Dark World Damage ≥ 10 and Use Screw Attack (Space Jump)
+              Space Jump Boots and Dark World Damage ≥ 25 and Poison Water Damage ≥ 5
+              Movement (Intermediate) and Dark World Damage ≥ 30 and Poison Water Damage ≥ 8 and Use Screw Attack (No Space Jump)
+              Morph Ball and Morph Ball Bomb and Bomb Jump (Beginner) and Dark World Damage ≥ 50 and Poison Water Damage ≥ 35
+              Gravity Boost and Dark World Damage ≥ 35 and Poison Water Damage ≥ 10
+          Any of the following:
+              Combat (Advanced) or Normal Damage ≥ 300
+              Combat (Beginner) and Normal Damage ≥ 200
+              Combat (Intermediate) and Normal Damage ≥ 100
   > Safe Zone (Temple Access Side)
       Dark World Damage ≥ 5
   > Central Safe Zone (Top)
@@ -6430,8 +6585,11 @@ Asset id: 912503189
 > Central Safe Zone (Top); Heals? True
   > Door to Dark Controller Access
       All of the following:
-          Space Jump Boots and Dark World Damage ≥ 110
-          Dark Visor or Invisible Objects (Intermediate)
+          Space Jump Boots
+          Any of the following:
+              Dark Visor and Dark World Damage ≥ 110
+              Power Beam and Invisible Objects (Intermediate) and Dark World Damage ≥ 200
+              Invisible Objects (Advanced) and Dark World Damage ≥ 125
 
 ----------------
 Transport to Agon Wastes
@@ -6562,7 +6720,7 @@ Asset id: 3585454182
           Any of the following:
               Underwater Dash (Intermediate)
               Air Underwater (Advanced) and Use Screw Attack (Space Jump)
-  > Room Top
+  > Top of Cannon
       Any of the following:
           Space Jump Boots
           Morph Ball and Morph Ball Bomb and Bomb Jump (Advanced)
@@ -6573,18 +6731,11 @@ Asset id: 3585454182
   * Missile Blast Shield to Save Station B/Door to Hydrodynamo Station
   > Door to Underground Transport
       Trivial
-  > Room Top
-      Any of the following:
-          Space Jump Boots or Combat/Scan Dash (Intermediate)
-          Morph Ball and Morph Ball Bomb and Bomb Jump (Advanced)
-          All of the following:
-              Use Screw Attack (No Space Jump)
-              Any of the following:
-                  Movement (Beginner)
-                  Screw Attack at Z-Axis (Beginner) and Disabled Room Randomizer
 
 > Door to Gathering Access; Heals? False
   * Light Door to Gathering Access/Door to Hydrodynamo Station
+  > Door to Underground Transport
+      Air Underwater (Advanced) and Standable Terrain (Advanced) and Disabled Door Randomizer and Shoot Light Beam and Use Screw Attack (Space Jump)
   > Event - Hydrodynamo Station Lock (by Light Door)
       Scan Visor
   > Room Middle
@@ -6594,15 +6745,15 @@ Asset id: 3585454182
 
 > Door to Hydrodynamo Shaft; Heals? False
   * Normal Door to Hydrodynamo Shaft/Door to Hydrodynamo Station
+  > Door to Underground Transport
+      After Hydrodynamo Station Lock (below Seeker Door) and After Hydrodynamo Station Lock (by Dark Door) and After Hydrodynamo Station Lock (by Light Door) and Movement (Hypermode) and Air Underwater (Hypermode) and Use Screw Attack (Space Jump)
   > Room Bottom
-      All of the following:
-          After Hydrodynamo Station Lock (below Seeker Door) and After Hydrodynamo Station Lock (by Dark Door) and After Hydrodynamo Station Lock (by Light Door)
-          Any of the following:
-              Gravity Boost
-              Movement (Hypermode) and Air Underwater (Advanced) and Use Screw Attack (Space Jump)
+      Gravity Boost and After Hydrodynamo Station Lock (below Seeker Door) and After Hydrodynamo Station Lock (by Dark Door) and After Hydrodynamo Station Lock (by Light Door)
 
 > Door to Catacombs Access; Heals? False
   * Dark Door to Catacombs Access/Door to Hydrodynamo Station
+  > Door to Underground Transport
+      Air Underwater (Advanced) and Standable Terrain (Advanced) and Disabled Door Randomizer and Shoot Dark Beam and Use Screw Attack (Space Jump)
   > Event - Hydrodynamo Station Lock (by Dark Door)
       Scan Visor
   > Room Middle
@@ -6639,7 +6790,7 @@ Asset id: 3585454182
   > Door to Gathering Access
       Trivial
 
-> Room Top; Heals? False
+> Top of Cannon; Heals? False
   > Door to Underground Transport
       Trivial
   > Door to Save Station B
@@ -6687,7 +6838,7 @@ Asset id: 3585454182
       After Hydrodynamo Station Lock (below Seeker Door) and After Hydrodynamo Station Lock (by Dark Door) and After Hydrodynamo Station Lock (by Light Door)
   > Event - Hydrodynamo Station Lock (below Seeker Door)
       Scan Visor
-  > Room Top
+  > Top of Cannon
       All of the following:
           Morph Ball
           Before Hydrodynamo Station Lock (below Seeker Door) or Before Hydrodynamo Station Lock (by Dark Door) or Before Hydrodynamo Station Lock (by Light Door)
@@ -6835,7 +6986,7 @@ Asset id: 3000230508
           Activate Safe Zone
           Any of the following:
               Space Jump Boots and Dark World Damage ≥ 5
-              Scan Visor and Combat/Scan Dash (Intermediate) and Dark World Damage ≥ 2
+              Combat/Scan Dash (Intermediate) and Dark World Damage ≥ 2
               All of the following:
                   Use Screw Attack (No Space Jump)
                   Any of the following:
@@ -7008,7 +7159,7 @@ Asset id: 700027128
       Any of the following:
           Morph Ball and Morph Ball Bomb and Bomb Jump (Beginner) and Dark World Damage ≥ 55
           Space Jump Boots and Dark World Damage ≥ 40
-          Movement (Intermediate) and Jump Off Enemy (Hypermode) and Normal Damage ≥ 20 and Dark World Damage ≥ 130 and Use Screw Attack (No Space Jump)
+          Movement (Hypermode) and Jump Off Enemy (Hypermode) and Normal Damage ≥ 20 and Dark World Damage ≥ 130 and Use Screw Attack (No Space Jump)
   > Door to Undertemple Shaft
       Any of the following:
           Morph Ball and Morph Ball Bomb and Bomb Jump (Beginner) and Dark World Damage ≥ 180
@@ -7020,7 +7171,7 @@ Asset id: 700027128
       Any of the following:
           Space Jump Boots and Dark World Damage ≥ 70
           Morph Ball and Morph Ball Bomb and Bomb Jump (Beginner) and Dark World Damage ≥ 85
-          Movement (Intermediate) and Jump Off Enemy (Hypermode) and Normal Damage ≥ 20 and Dark World Damage ≥ 130 and Use Screw Attack (No Space Jump)
+          Movement (Hypermode) and Jump Off Enemy (Hypermode) and Normal Damage ≥ 20 and Dark World Damage ≥ 130 and Use Screw Attack (No Space Jump)
   > Door to Undertemple
       Dark World Damage ≥ 135
 
@@ -7054,7 +7205,7 @@ Asset id: 889276218
   > Event - Gathering Hall Portal Gate
       Any of the following:
           Morph Ball and Morph Ball Bomb
-          Bomb Slot without Bombs (Expert) and Activate Bomb Slot without Bombs (Space Jump)
+          Bomb Slot without Bombs (Advanced) and Activate Bomb Slot without Bombs (Space Jump)
   > Room Bottom
       Trivial
   > Kinetic Orb Cannon
@@ -7076,51 +7227,38 @@ Asset id: 889276218
           Space Jump Boots and Movement (Intermediate) and Normal Damage ≥ 30
   > Room Bottom
       Trivial
+  > Kinetic Orb Cannon
+      Any of the following:
+          Use Screw Attack (Space Jump)
+          All of the following:
+              Space Jump Boots
+              Any of the following:
+                  Morph Ball and Roll Jump (Intermediate)
+                  Scan Visor and Combat/Scan Dash (Intermediate)
 
 > Pickup (Missile); Heals? False
   * Pickup 84; Major Location? False
   > Door to Transit Tunnel South
-      Any of the following:
-          Grapple Beam or After Crypt Laser or Use Screw Attack (Space Jump)
-          Space Jump Boots and Before Gathering Hall Water Drained and Shoot Dark Beam
-          Morph Ball and Morph Ball Bomb and Bomb Jump (Advanced)
-          Morph Ball and Before Gathering Hall Water Drained and Roll Jump (Advanced)
-          Scan Visor and Space Jump Boots and Combat/Scan Dash (Advanced)
-  > Door to Gathering Access
+      Morph Ball and Space Jump Boots and Roll Jump (Advanced)
+  > Kinetic Orb Cannon
       Trivial
 
 > Event - Gathering Hall Water Drained; Heals? False
   * Event Gathering Hall Water Drained
   > Room Bottom
       Any of the following:
-          Morph Ball and Boost Ball
+          All of the following:
+              Morph Ball
+              Any of the following:
+                  Boost Ball
+                  Morph Ball Bomb and Space Jump Boots and Bomb Space Jump (Advanced)
           Grapple Beam and Space Jump Boots and Slope Jump (Intermediate)
+          Slope Jump (Advanced) and Use Screw Attack (Space Jump)
 
 > Event - Gathering Hall Portal Gate; Heals? False
   * Event Gathering Hall Portal Gate
   > Door to Transit Tunnel South
       Trivial
-
-> Before Pickup; Heals? False
-  > Pickup (Missile)
-      All of the following:
-          Morph Ball
-          Any of the following:
-              Morph Ball Bomb
-              Space Jump Boots and Missile ≥ 10 and Dark Ammo ≥ 60 and Light Ammo ≥ 60 and Instant Morph (Expert) and Bomb Slot without Bombs (Hypermode) and Activate Bomb Slot without Bombs (Instant Morph)
-          Any of the following:
-              Space Jump Boots and Combat/Scan Dash (Expert) and Roll Jump (Expert) and Instant Morph (Expert)
-              All of the following:
-                  Boost Ball and Spider Ball
-                  Any of the following:
-                      All of the following:
-                          Grapple Beam
-                          Any of the following:
-                              Space Jump Boots and After Gathering Hall Water Drained
-                              Morph Ball Bomb and Bomb Jump (Beginner) and Movement (Intermediate)
-                      After Gathering Hall Water Drained and Movement (Intermediate)
-                      Morph Ball Bomb and After Crypt Laser and Bomb Jump (Beginner) and Movement (Advanced)
-                      Gravity Boost and Air Underwater (Advanced) and Instant Morph (Advanced)
 
 > Room Bottom; Heals? False
   > Door to Transit Tunnel West
@@ -7130,56 +7268,93 @@ Asset id: 889276218
               Morph Ball and Morph Ball Bomb
               Any of the following:
                   Bomb Space Jump (Advanced)
-                  Grapple Beam and Movement (Beginner)
+                  Grapple Beam and Bomb Jump (Beginner)
   > Portal to Crypt
       After Gathering Hall Portal Gate
   > Door to Transit Tunnel South
       Any of the following:
-          Space Jump Boots and Before Gathering Hall Water Drained and Shoot Dark Beam
+          Grapple Beam
           All of the following:
-              Morph Ball
+              Space Jump Boots
               Any of the following:
-                  Boost Ball and Spider Ball and After Gathering Hall Water Drained and Movement (Intermediate)
+                  Before Gathering Hall Water Drained and Shoot Dark Beam
                   All of the following:
-                      Morph Ball Bomb
-                      Any of the following:
-                          After Gathering Hall Water Drained and Bomb Space Jump (Intermediate)
-                          Before Gathering Hall Water Drained and Bomb Jump (Advanced)
-          Grapple Beam and Movement (Beginner)
-          Space Jump Boots and After Gathering Hall Water Drained and Slope Jump (Intermediate)
+                      Slope Jump (Intermediate)
+                      Gravity Boost or After Gathering Hall Water Drained
+          All of the following:
+              Morph Ball and Morph Ball Bomb
+              Any of the following:
+                  Boost Ball and Spider Ball and After Gathering Hall Water Drained and Movement (Beginner)
+                  Before Gathering Hall Water Drained and Bomb Jump (Advanced)
+                  All of the following:
+                      Bomb Space Jump (Advanced)
+                      Gravity Boost or After Gathering Hall Water Drained
   > Event - Gathering Hall Water Drained
       Morph Ball and Power Bomb ≥ 2
-  > Before Pickup
-      Trivial
   > Kinetic Orb Cannon
       Any of the following:
+          Morph Ball and Boost Ball and Spider Ball and After Gathering Hall Water Drained and Movement (Intermediate)
           All of the following:
-              Morph Ball
+              Standable Terrain (Beginner)
+              Gravity Boost or After Gathering Hall Water Drained
               Any of the following:
-                  Boost Ball and Spider Ball and After Gathering Hall Water Drained and Movement (Intermediate)
-                  Morph Ball Bomb and Gravity Boost and Bomb Jump (Expert) and Standable Terrain (Beginner)
-          Space Jump Boots and Gravity Boost and Standable Terrain (Beginner)
+                  Space Jump Boots
+                  Morph Ball and Morph Ball Bomb and Bomb Jump (Expert)
   > Lore Scan
       Trivial
+  > Event - Gathering Hall Spider Puzzle
+      All of the following:
+          Morph Ball
+          Any of the following:
+              Morph Ball Bomb
+              Space Jump Boots and Missile ≥ 10 and Dark Ammo ≥ 60 and Light Ammo ≥ 60 and Instant Morph (Hypermode) and Bomb Slot without Bombs (Hypermode) and Activate Bomb Slot without Bombs (Instant Morph)
+          Any of the following:
+              All of the following:
+                  Any of the following:
+                      Instant Morph (Expert)
+                      Boost Ball and Spider Ball
+                  Any of the following:
+                      Standable Terrain (Intermediate) and Use Screw Attack (Space Jump)
+                      Scan Visor and Space Jump Boots and Combat/Scan Dash (Advanced) and Roll Jump (Advanced)
+              All of the following:
+                  Boost Ball and Spider Ball
+                  Any of the following:
+                      Morph Ball Bomb and After Gathering Hall Water Drained
+                      All of the following:
+                          Instant Morph (Advanced)
+                          Any of the following:
+                              Space Jump Boots
+                              Gravity Boost and Before Gathering Hall Water Drained and Air Underwater (Advanced)
 
 > Kinetic Orb Cannon; Heals? False
   > Door to Transit Tunnel West
       Any of the following:
-          Grapple Beam
-          All of the following:
-              Space Jump Boots
-              Combat/Scan Dash (Advanced) or Use Screw Attack (Space Jump)
+          Grapple Beam or Use Screw Attack (Space Jump)
+          Scan Visor and Space Jump Boots and Combat/Scan Dash (Advanced)
   > Door to Transit Tunnel South
       Any of the following:
-          Grapple Beam
+          Grapple Beam or After Crypt Laser or Use Screw Attack (Space Jump)
           All of the following:
               Space Jump Boots
-              Combat/Scan Dash (Advanced) or Use Screw Attack (Space Jump)
+              Any of the following:
+                  Scan Visor and Combat/Scan Dash (Advanced)
+                  Morph Ball and Before Gathering Hall Water Drained and Roll Jump (Advanced)
   > Door to Gathering Access
       Morph Ball
+  > Pickup (Missile)
+      All of the following:
+          After Gathering Hall Spider Puzzle
+          Any of the following:
+              Space Jump Boots
+              Morph Ball and Morph Ball Bomb and Bomb Jump (Beginner)
 
 > Lore Scan; Heals? False
   * Logbook Luminoth Lore (Emerald Translator) for 49cd4f34
+  > Room Bottom
+      Trivial
+
+> Event - Gathering Hall Spider Puzzle; Heals? False
+  * Event Gathering Hall Spider Puzzle
   > Room Bottom
       Trivial
 
@@ -7188,12 +7363,6 @@ Training Chamber
 Asset id: 1270197856
 > Door to Transit Tunnel East; Heals? False
   * Dark Door to Transit Tunnel East/Door to Training Chamber
-  > Door to Training Access
-      Morph Ball and Morph Ball Bomb and Space Jump Boots and Screw Attack and Bomb Space Jump (Expert) and Air Underwater (Expert)
-  > Door to Fortress Transport Access
-      Morph Ball and Morph Ball Bomb and Space Jump Boots and Screw Attack and After Training Chamber Statue and Bomb Space Jump (Expert) and Air Underwater (Expert)
-  > Door to Transit Tunnel West
-      Morph Ball and Morph Ball Bomb and Space Jump Boots and Screw Attack and Bomb Space Jump (Expert) and Air Underwater (Expert)
   > Room Center
       Any of the following:
           Gravity Boost
@@ -7204,17 +7373,23 @@ Asset id: 1270197856
 > Door to Training Access; Heals? False; Spawn Point
   * Normal Door to Training Access/Door to Training Chamber
   > Door to Transit Tunnel East
-      Space Jump Boots and Combat/Scan Dash (Intermediate)
+      Scan Visor and Space Jump Boots and Combat/Scan Dash (Intermediate)
   > Door to Fortress Transport Access
-      Space Jump Boots and After Training Chamber Statue and Combat/Scan Dash (Intermediate)
+      Scan Visor and Space Jump Boots and After Training Chamber Statue and Combat/Scan Dash (Intermediate)
   > Door to Transit Tunnel West
-      Space Jump Boots and Combat/Scan Dash (Intermediate)
+      Scan Visor and Space Jump Boots and Combat/Scan Dash (Intermediate)
   > Pickup (Missile)
       After Training Chamber Statue
   > Room Center
       Trivial
   > Top of Statue
-      Movement (Beginner) and Use Screw Attack (Space Jump)
+      Any of the following:
+          Use Screw Attack (Space Jump)
+          All of the following:
+              Scan Visor and Space Jump Boots
+              Any of the following:
+                  Extended Dash (Expert)
+                  Morph Ball and Spider Ball and Morph Ball Bomb and Combat/Scan Dash (Advanced) and Underwater Dash (Advanced) and Instant Morph (Advanced) and Standable Terrain (Advanced)
 
 > Door to Fortress Transport Access; Heals? False
   * Power Bomb Blast Shield to Fortress Transport Access/Door to Training Chamber
@@ -7223,18 +7398,10 @@ Asset id: 1270197856
           After Training Chamber Statue
           Morph Ball and Boost Ball and Spider Ball and Movement (Advanced)
   > Top of Statue
-      Space Jump Boots and After Training Chamber Statue and Standable Terrain (Intermediate)
+      Space Jump Boots and After Training Chamber Statue and Standable Terrain (Beginner)
 
 > Door to Transit Tunnel West; Heals? False
   * Light Door to Transit Tunnel West/Door to Training Chamber
-  > Door to Transit Tunnel East
-      Morph Ball and Morph Ball Bomb and Space Jump Boots and Screw Attack and Bomb Space Jump (Expert) and Air Underwater (Expert)
-  > Door to Training Access
-      Morph Ball and Morph Ball Bomb and Space Jump Boots and Screw Attack and Bomb Space Jump (Expert) and Air Underwater (Expert)
-  > Door to Fortress Transport Access
-      Morph Ball and Morph Ball Bomb and Space Jump Boots and Screw Attack and After Training Chamber Statue and Bomb Space Jump (Expert) and Air Underwater (Expert)
-  > Event - Training Chamber Statue
-      Morph Ball and Morph Ball Bomb and Space Jump Boots and Screw Attack and Bomb Space Jump (Expert) and Air Underwater (Expert)
   > Room Center
       Any of the following:
           Gravity Boost
@@ -7262,7 +7429,7 @@ Asset id: 1270197856
                       Any of the following:
                           Morph Ball Bomb
                           Power Bomb and Knowledge (Beginner)
-                  Space Jump Boots and Screw Attack and Air Underwater (Advanced)
+                  Air Underwater (Advanced) and Use Screw Attack (Space Jump)
   > Door to Training Access
       Any of the following:
           Gravity Boost
@@ -7284,7 +7451,7 @@ Asset id: 1270197856
                       Any of the following:
                           Morph Ball Bomb
                           Power Bomb and Knowledge (Beginner)
-                  Space Jump Boots and Screw Attack and Air Underwater (Advanced)
+                  Air Underwater (Advanced) and Use Screw Attack (Space Jump)
   > Pickup (Missile)
       After Training Chamber Statue
   > Top of Statue
@@ -7302,7 +7469,6 @@ Asset id: 1270197856
                       Any of the following:
                           Instant Morph (Intermediate)
                           Morph Ball Bomb and Bomb Jump (Intermediate)
-                  Scan Visor and Space Jump Boots and Combat/Scan Dash (Advanced) and Movement (Expert) and Underwater Dash (Advanced) and Standable Terrain (Intermediate)
           Space Jump Boots and Gravity Boost and Slope Jump (Intermediate) and Standable Terrain (Intermediate)
 
 > Top of Statue; Heals? False
@@ -7312,7 +7478,7 @@ Asset id: 1270197856
       Any of the following:
           Use Screw Attack (Space Jump)
           All of the following:
-              Space Jump Boots and Standable Terrain (Intermediate)
+              Space Jump Boots and Standable Terrain (Beginner)
               Any of the following:
                   After Training Chamber Statue
                   Morph Ball and Before Training Chamber Statue
@@ -7360,20 +7526,30 @@ Asset id: 4217540043
   > Door to Transit Tunnel East
       Any of the following:
           Space Jump Boots
-          Morph Ball and Morph Ball Bomb and Bomb Jump (Beginner)
-          Scan Visor and Combat/Scan Dash (Advanced) and Standable Terrain (Advanced)
-          Slope Jump (Intermediate) and Movement (Intermediate) and Use Screw Attack (No Space Jump)
+          All of the following:
+              Morph Ball
+              Any of the following:
+                  Morph Ball Bomb and Bomb Jump (Beginner)
+                  Gravity Boost and Air Underwater (Advanced)
+          Combat/Scan Dash (Advanced) and Standable Terrain (Advanced)
+          Slope Jump (Intermediate) and Use Screw Attack (No Space Jump)
   > Portal to Dungeon
       Any of the following:
           Morph Ball and Gravity Boost and Air Underwater (Advanced)
           Movement (Advanced) and Use Screw Attack (Space Jump)
-          Space Jump Boots and After Catacombs Gate
-          Scan Visor and After Catacombs Gate and Combat/Scan Dash (Intermediate)
+          All of the following:
+              After Catacombs Gate
+              Any of the following:
+                  Space Jump Boots
+                  All of the following:
+                      Standable Terrain (Intermediate)
+                      Combat/Scan Dash (Intermediate) or Use Screw Attack (No Space Jump)
   > Door to Transit Tunnel South
       Any of the following:
           Space Jump Boots
-          Morph Ball and Morph Ball Bomb and Bomb Jump (Beginner)
-          Scan Visor and Combat/Scan Dash (Intermediate) and Standable Terrain (Intermediate)
+          Morph Ball Bomb and Missile Launcher and Bomb Jump (Beginner)
+          Combat/Scan Dash (Intermediate) and Standable Terrain (Intermediate)
+          After Hydrochamber Storage Item and Normal Damage ≥ 10 and Allow Jumping on Dark Water ≥ 3
   > Door to Catacombs Access
       Trivial
   > Event - Catacombs Gate
@@ -7419,7 +7595,7 @@ Asset id: 3468345533
               Morph Ball Bomb and Space Jump Boots and Gravity Boost and Bomb Space Jump (Intermediate)
   > Door to Hydrodynamo Shaft
       Any of the following:
-          Morph Ball and Morph Ball Bomb and Space Jump Boots and Screw Attack and Bomb Space Jump (Hypermode) and Air Underwater (Advanced)
+          Morph Ball Bomb and Bomb Space Jump (Hypermode) and Air Underwater (Advanced) and Use Screw Attack (Space Jump)
           All of the following:
               Gravity Boost
               Any of the following:
@@ -7428,7 +7604,7 @@ Asset id: 3468345533
                       Any of the following:
                           Space Jump Boots
                           Morph Ball and Roll Jump (Expert)
-                  Before Hydrochamber Storage Item and Movement (Intermediate)
+                  Before Hydrochamber Storage Item and Standable Terrain (Intermediate)
 
 > Portal to Undertemple; Heals? False
   * Dark Portal to Undertemple/Portal to Main Hydrochamber
@@ -7501,12 +7677,12 @@ Asset id: 3366472600
           Dark World Damage ≥ 12
           Morph Ball and Dark World Damage ≥ 7
   > Event - Crypt Barrier
-      Movement (Intermediate) and Knowledge (Beginner) and Dark World Damage ≥ 12 and Use Screw Attack (Space Jump)
+      Knowledge (Intermediate) and Dark World Damage ≥ 12 and Use Screw Attack (Space Jump)
   > Laser Platform
       Any of the following:
           Space Jump Boots and Dark World Damage ≥ 10
           All of the following:
-              Morph Ball Bomb and Bomb Jump (Intermediate)
+              Morph Ball and Morph Ball Bomb and Bomb Jump (Beginner)
               Any of the following:
                   Bomb Space Jump (Intermediate) and Dark World Damage ≥ 25
                   Standable Terrain (Beginner) and Dark World Damage ≥ 35
@@ -7514,7 +7690,7 @@ Asset id: 3366472600
 > Laser Platform; Heals? False
   > Door to Crypt Tunnel
       Any of the following:
-          Space Jump Boots and Slope Jump (Advanced) and Standable Terrain (Advanced) and Dark World Damage ≥ 25
+          Space Jump Boots and Slope Jump (Intermediate) and Standable Terrain (Intermediate) and Dark World Damage ≥ 25
           All of the following:
               Morph Ball and Morph Ball Bomb
               Any of the following:
@@ -7568,7 +7744,7 @@ Asset id: 1654100212
               Morph Ball and Power Bomb
   > Door to Sacrificial Chamber Tunnel
       Any of the following:
-          Grapple Beam and Movement (Beginner) and Dark World Damage ≥ 35
+          Grapple Beam and After Grapple Guardian and Movement (Beginner) and Dark World Damage ≥ 35
           All of the following:
               Morph Ball and Power Bomb and Before Grapple Guardian
               Any of the following:
@@ -7945,7 +8121,7 @@ Asset id: 1193696267
                   Any of the following:
                       Morph Ball and Power Bomb
                       Movement (Intermediate) and Use Screw Attack (Space Jump)
-              Movement (Advanced) and Use Screw Attack (Space Jump)
+              Standable Terrain (Advanced) and Use Screw Attack (Space Jump)
               Morph Ball and Space Jump Boots and Power Bomb and Before Spider Guardian and Slope Jump (Intermediate) and Standable Terrain (Intermediate)
 
 > Door to Temple Transport Access; Heals? False; Spawn Point
@@ -8079,8 +8255,9 @@ Asset id: 1248653973
               All of the following:
                   Morph Ball
                   Any of the following:
-                      Boost Ball and Spider Ball
-                      Spider Ball and Movement (Advanced)
+                      All of the following:
+                          Spider Ball
+                          Boost Ball or Movement (Advanced)
                       Morph Ball Bomb and Bomb Space Jump (Advanced)
   > Before Quad
       Trivial
@@ -8100,11 +8277,11 @@ Asset id: 1248653973
                   Spider Ball
                   Any of the following:
                       Boost Ball
-                      Morph Ball Bomb and Screw Attack and Movement (Advanced) and Standable Terrain (Intermediate)
+                      Morph Ball Bomb and Screw Attack and Bomb Jump (Intermediate) and Standable Terrain (Intermediate)
               All of the following:
                   Standable Terrain (Intermediate)
                   Any of the following:
-                      Movement (Intermediate) and Screw Attack into Tunnels (Intermediate) and Use Screw Attack (Space Jump)
+                      Screw Attack into Tunnels (Intermediate) and Use Screw Attack (Space Jump)
                       All of the following:
                           Space Jump Boots
                           Any of the following:
@@ -8179,7 +8356,7 @@ Asset id: 4148317891
   > Pickup (Power Bomb)
       Any of the following:
           Morph Ball and Spider Ball
-          Movement (Intermediate) and Use Screw Attack (Space Jump)
+          Screw Attack into Tunnels (Intermediate) and Use Screw Attack (Space Jump)
   > Room Center
       Trivial
 
@@ -8208,14 +8385,14 @@ Asset id: 4148317891
 > Room Center; Heals? False
   > Door to Reactor Core
       Trivial
+  > Portal from Hive Portal Chamber (Second)
+      Any of the following:
+          Slope Jump (Beginner) and Use Screw Attack (Space Jump)
+          Morph Ball and Morph Ball Bomb and Space Jump Boots and Bomb Space Jump (Advanced)
   > Door to Main Research
       Trivial
   > Portal to Hive Portal Chamber (First)
       Morph Ball and Power Bomb
-  > Pickup (Power Bomb)
-      Any of the following:
-          Slope Jump (Intermediate) and Use Screw Attack (Space Jump)
-          Morph Ball and Spider Ball and Morph Ball Bomb and Space Jump Boots and Bomb Space Jump (Advanced)
 
 ----------------
 Sanctuary Map Station
@@ -8280,7 +8457,7 @@ Asset id: 1433528478
                   Slope Jump (Intermediate) or Standable Terrain (Intermediate)
   > Portal to Culling Chamber
       Trivial
-  > Before Pickup
+  > Next to Pickup
       All of the following:
           Morph Ball
           Any of the following:
@@ -8310,7 +8487,7 @@ Asset id: 1433528478
   > Door to Central Area Transport East
       Trivial
 
-> Before Pickup; Heals? False
+> Next to Pickup; Heals? False
   > Pickup (Missile)
       All of the following:
           Morph Ball
@@ -8324,7 +8501,11 @@ Asset id: 2437878657
 > Portal from Staging Area; Heals? False
   * No Return Portal to Staging Area/Portal to Main Research (Second)
   > Event - Caretaker Drone
-      Morph Ball and Boost Ball and Spider Ball and Morph Ball Bomb
+      All of the following:
+          Morph Ball and Boost Ball and Spider Ball
+          Any of the following:
+              Morph Ball Bomb
+              Movement (Expert) and Wall Boost (Expert) and Instant Morph (Expert)
 
 > Door to Central Area Transport West; Heals? False
   * Normal Door to Central Area Transport West/Door to Main Research
@@ -8691,8 +8872,12 @@ Asset id: 3222355176
   > Door to Central Area Transport East
       Any of the following:
           Morph Ball and Spider Ball and After Spider Guardian
-          Morph Ball and Morph Ball Bomb and Screw Attack and Bomb Space Jump (Expert) and Screw Attack at Z-Axis (Expert) and Disabled Room Randomizer
-          Space Jump Boots and Slope Jump (Intermediate)
+          Morph Ball Bomb and Bomb Space Jump (Expert) and Screw Attack at Z-Axis (Expert) and Disabled Room Randomizer and Use Screw Attack (No Space Jump)
+          All of the following:
+              Space Jump Boots
+              Any of the following:
+                  Slope Jump (Intermediate)
+                  Morph Ball and Morph Ball Bomb and Bomb Space Jump (Intermediate)
   > Door to Dynamo Access
       Trivial
   > Pickup 2 (Missile)
@@ -8780,10 +8965,10 @@ Asset id: 2722128775
           All of the following:
               Morph Ball and Spider Ball
               Any of the following:
-                  Morph Ball Bomb
+                  Morph Ball Bomb or Instant Morph (Intermediate)
                   Boost Ball and Wall Boost (Advanced)
           Space Jump Boots and Standable Terrain (Intermediate)
-          Screw Attack at Z-Axis (Intermediate) and Disabled Room Randomizer and Use Screw Attack (No Space Jump)
+          Screw Attack at Z-Axis (Beginner) and Disabled Room Randomizer and Use Screw Attack (No Space Jump)
   > Pickup (Dark Ammo)
       Morph Ball and Spider Ball and Morph Ball Bomb
   > Event - Watch Station Portal Gate
@@ -8805,9 +8990,9 @@ Asset id: 2722128775
   * Normal Door to Grand Abyss/Door to Watch Station
   > Event - Watch Station Portal Gate
       All of the following:
-          Space Jump Boots and Slope Jump (Advanced)
+          Space Jump Boots and Slope Jump (Advanced) and Standable Terrain (Advanced)
           Any of the following:
-              Morph Ball and Morph Ball Bomb
+              Morph Ball and Morph Ball Bomb and Instant Morph (Advanced)
               Instant Morph (Hypermode) and Bomb Slot without Bombs (Hypermode) and Activate Bomb Slot without Bombs (Instant Morph)
   > Room Center
       Trivial
@@ -8818,7 +9003,7 @@ Asset id: 2722128775
       All of the following:
           Morph Ball and Spider Ball
           Any of the following:
-              Morph Ball Bomb
+              Morph Ball Bomb or Instant Morph (Intermediate)
               Boost Ball and Wall Boost (Advanced)
   > Room Center
       Trivial
@@ -8886,14 +9071,18 @@ Asset id: 1120426713
   > Door to Main Gyro Chamber
       Any of the following:
           Morph Ball
-          Space Jump Boots and Slope Jump (Intermediate)
+          All of the following:
+              Space Jump Boots
+              Slope Jump (Beginner) or Standable Terrain (Beginner)
 
 > Door to Main Gyro Chamber; Heals? False
   * Dark Door to Main Gyro Chamber/Door to Dynamo Access
   > Door to Dynamo Works
       Any of the following:
           Morph Ball
-          Space Jump Boots and Slope Jump (Intermediate)
+          All of the following:
+              Space Jump Boots
+              Slope Jump (Beginner) or Standable Terrain (Beginner)
 
 ----------------
 Workers Path
@@ -8939,6 +9128,12 @@ Asset id: 4065261236
   * Light Door to Hive Dynamo Access/Door to Hive Dynamo Works
   > Portal to Dynamo Works
       After Hive Dynamo Works Portal Barrier and Dark World Damage ≥ 5
+  > Pickup (Sky Temple Key 6)
+      All of the following:
+          Dark Visor and Morph Ball and Single Room Out of Bounds (Expert) and Terminal Fall Abuse (Expert) and Normal Damage ≥ 10 and Disabled Room Randomizer and Disabled Door Randomizer and Shoot Light Beam
+          Any of the following:
+              Dark World Damage ≥ 200
+              Space Jump Boots and Dark World Damage ≥ 150
   > Event - Hive Dynamo Works Portal Barrier
       Dark Visor and Seeker Launcher and Missile ≥ 5
   > Safe Zone (Below Seeker Targets)
@@ -8954,7 +9149,7 @@ Asset id: 4065261236
                   Any of the following:
                       Scan Visor and Combat/Scan Dash (Intermediate) and Dark World Damage ≥ 16
                       Morph Ball and Roll Jump (Intermediate) and Dark World Damage ≥ 15
-                      Terminal Fall Abuse (Intermediate) and Normal Damage ≥ 10 and Dark World Damage ≥ 25
+                      Terminal Fall Abuse (Beginner) and Normal Damage ≥ 10 and Dark World Damage ≥ 25
 
 > Portal to Dynamo Works; Heals? False
   * Light Portal to Dynamo Works/Portal to Hive Dynamo Works
@@ -8977,8 +9172,14 @@ Asset id: 4065261236
                   Any of the following:
                       Dark World Damage ≥ 140
                       Movement (Intermediate) and Dark World Damage ≥ 90
-              Standable Terrain (Intermediate) and Dark World Damage ≥ 60 and Use Screw Attack (Space Jump)
-              Space Jump Boots and Standable Terrain (Advanced) and Dark World Damage ≥ 95
+              Standable Terrain (Beginner) and Dark World Damage ≥ 60 and Use Screw Attack (Space Jump)
+              Space Jump Boots and Standable Terrain (Intermediate) and Dark World Damage ≥ 95
+  > Safe Zone (Below Seeker Targets)
+      All of the following:
+          Single Room Out of Bounds (Expert) and Terminal Fall Abuse (Expert) and Screw Attack into Tunnels (Expert) and Normal Damage ≥ 10 and Activate Safe Zone
+          Any of the following:
+              Dark World Damage ≥ 70 and Use Screw Attack (Space Jump)
+              Dark World Damage ≥ 100 and Use Screw Attack (No Space Jump)
 
 > Pickup (Sky Temple Key 6); Heals? False
   * Pickup 106; Major Location? True
@@ -8992,7 +9193,7 @@ Asset id: 4065261236
                       Dark World Damage ≥ 140
                       Movement (Intermediate) and Dark World Damage ≥ 100
               Dark World Damage ≥ 60 and Use Screw Attack (Space Jump)
-              Scan Visor and Space Jump Boots and Combat/Scan Dash (Intermediate) and Standable Terrain (Advanced) and Dark World Damage ≥ 80
+              Scan Visor and Space Jump Boots and Combat/Scan Dash (Intermediate) and Standable Terrain (Intermediate) and Dark World Damage ≥ 80
 
 > Event - Hive Dynamo Works Portal Barrier; Heals? False
   * Event Hive Dynamo Works Portal Barrier
@@ -9020,7 +9221,7 @@ Asset id: 4065261236
                   Morph Ball Bomb and Space Jump Boots and Bomb Space Jump (Intermediate) and Dark World Damage ≥ 35
           Space Jump Boots and Slope Jump (Intermediate) and Dark World Damage ≥ 20
   > Event - Hive Dynamo Works Portal Barrier
-      Dark Visor and Seeker Launcher and Missile ≥ 5 and Open Gates from Behind (Intermediate) and Dark World Damage ≥ 20
+      Dark Visor and Seeker Launcher and Missile ≥ 5 and Open Gates from Behind (Beginner) and Dark World Damage ≥ 20
 
 ----------------
 Hive Reactor
@@ -9139,7 +9340,7 @@ Asset id: 1349974475
           Space Jump Boots
           Scan Visor and After Watch Station Access Grapple Points and Combat/Scan Dash (Intermediate)
           Morph Ball and Morph Ball Bomb and Bomb Jump (Beginner)
-          Screw Attack and Movement (Intermediate)
+          Movement (Beginner) and Use Screw Attack (No Space Jump)
   > Door to Main Gyro Chamber
       Any of the following:
           Use Screw Attack (Space Jump)
@@ -9178,7 +9379,7 @@ Asset id: 595516932
           All of the following:
               Space Jump Boots
               Any of the following:
-                  Boost Ball and Boost Jump (Advanced)
+                  Morph Ball and Boost Ball and Boost Jump (Advanced)
                   Scan Visor and Extended Dash (Expert)
 
 > Portal from Judgment Drop; Heals? False
@@ -9199,7 +9400,7 @@ Asset id: 595516932
           All of the following:
               Space Jump Boots
               Any of the following:
-                  Boost Ball and Boost Jump (Advanced)
+                  Morph Ball and Boost Ball and Boost Jump (Advanced)
                   All of the following:
                       Scan Visor
                       Any of the following:
@@ -9260,10 +9461,10 @@ Asset id: 1089946750
               Any of the following:
                   Screw Attack at Z-Axis (Intermediate) and Dark World Damage ≥ 10 and Disabled Room Randomizer
                   All of the following:
-                      Movement (Advanced) and Terminal Fall Abuse (Advanced) and Normal Damage ≥ 10 and Dark World Damage ≥ 35 and Activate Safe Zone
+                      Terminal Fall Abuse (Advanced) and Normal Damage ≥ 10 and Dark World Damage ≥ 35 and Activate Safe Zone
                       Any of the following:
-                          Roll Jump (Advanced)
                           Scan Visor and Combat/Scan Dash (Advanced)
+                          Morph Ball and Roll Jump (Advanced)
           All of the following:
               Space Jump Boots and Dark World Damage ≥ 25 and Activate Safe Zone
               Any of the following:
@@ -9293,13 +9494,13 @@ Asset id: 1089946750
           After Aerial Training Site Barrier
           Any of the following:
               Dark World Damage ≥ 20 and Use Screw Attack (Space Jump)
-              Screw Attack at Z-Axis (Advanced) and Standable Terrain (Advanced) and Dark World Damage ≥ 25 and Disabled Room Randomizer and Use Screw Attack (No Space Jump)
+              Screw Attack at Z-Axis (Intermediate) and Standable Terrain (Intermediate) and Dark World Damage ≥ 25 and Disabled Room Randomizer and Use Screw Attack (No Space Jump)
   > Door to Temple Security Access
       All of the following:
           After Aerial Training Site Barrier
           Any of the following:
               Dark World Damage ≥ 17 and Use Screw Attack (Space Jump)
-              Screw Attack at Z-Axis (Advanced) and Standable Terrain (Advanced) and Dark World Damage ≥ 25 and Disabled Room Randomizer and Use Screw Attack (No Space Jump)
+              Screw Attack at Z-Axis (Intermediate) and Standable Terrain (Intermediate) and Dark World Damage ≥ 25 and Disabled Room Randomizer and Use Screw Attack (No Space Jump)
   > Pickup (Ing Hive Key 3)
       Dark World Damage ≥ 8
   > Event - Aerial Training Site Barrier
@@ -9628,7 +9829,7 @@ Asset id: 4222565163
   * Light Door to Hive Gyro Chamber/Door to Hive Dynamo Access
   > Event - Hive Dynamo Access Echo Gate
       All of the following:
-          Echo Visor and Open Gates from Behind (Intermediate)
+          Echo Visor and Open Gates from Behind (Beginner)
           Any of the following:
               Dark World Damage ≥ 55 and Shoot Darkburst
               Dark World Damage ≥ 50 and Shoot Sonic Boom
@@ -9731,8 +9932,12 @@ Asset id: 1438939627
               Dark World Damage ≥ 20
               Any of the following:
                   Use Screw Attack (Space Jump)
-                  Screw Attack at Z-Axis (Intermediate) and Disabled Room Randomizer and Use Screw Attack (No Space Jump)
-          Morph Ball and Boost Ball and Space Jump Boots and Boost Jump (Advanced) and Dark World Damage ≥ 50
+                  Screw Attack at Z-Axis (Beginner) and Disabled Room Randomizer and Use Screw Attack (No Space Jump)
+          All of the following:
+              Morph Ball and Space Jump Boots
+              Any of the following:
+                  Boost Ball and Boost Jump (Advanced) and Dark World Damage ≥ 50
+                  Single Room Out of Bounds (Expert) and Dark World Damage ≥ 700
   > Door to Aerial Training Site
       Dark World Damage ≥ 18
 
@@ -9750,7 +9955,7 @@ Asset id: 1378173793
           Morph Ball and Boost Ball
           Any of the following:
               Use Screw Attack (Space Jump)
-              Space Jump Boots and Combat/Scan Dash (Advanced)
+              Scan Visor and Space Jump Boots and Combat/Scan Dash (Advanced)
               Screw Attack at Z-Axis (Advanced) and Disabled Room Randomizer and Use Screw Attack (No Space Jump)
   > Above Bomb Slot
       Before Vault Bridge
@@ -9761,9 +9966,9 @@ Asset id: 1378173793
       All of the following:
           After Vault Bridge
           Any of the following:
-              Morph Ball and Morph Ball Bomb and Bomb Space Jump (Intermediate)
+              Morph Ball and Morph Ball Bomb and Space Jump Boots and Bomb Space Jump (Intermediate)
               All of the following:
-                  Terminal Fall Abuse (Intermediate) and Normal Damage ≥ 10
+                  Terminal Fall Abuse (Beginner) and Normal Damage ≥ 10
                   Any of the following:
                       Space Jump Boots
                       Morph Ball and Morph Ball Bomb and Bomb Jump (Intermediate)
@@ -9773,7 +9978,7 @@ Asset id: 1378173793
           Any of the following:
               Space Jump Boots
               Morph Ball and Morph Ball Bomb and Bomb Jump (Beginner)
-              Movement (Intermediate) and Disabled Room Randomizer and Use Screw Attack (No Space Jump)
+              Movement (Beginner) and Use Screw Attack (No Space Jump)
 
 > Portal to Vault Attack Portal (Scan); Heals? False
   * Scan Portal to Vault Attack Portal/Portal to Vault (Scan)
@@ -9785,7 +9990,7 @@ Asset id: 1378173793
               All of the following:
                   Terminal Fall Abuse (Expert) and Normal Damage ≥ 10
                   Any of the following:
-                      Movement (Advanced) and Screw Attack at Z-Axis (Advanced) and Disabled Room Randomizer and Use Screw Attack (No Space Jump)
+                      Screw Attack at Z-Axis (Expert) and Disabled Room Randomizer and Use Screw Attack (No Space Jump)
                       Scan Visor and Combat/Scan Dash (Expert) and Normal Damage ≥ 60
   > Above Bomb Slot
       Space Jump Boots and After Vault Bomb Slot
@@ -9799,11 +10004,6 @@ Asset id: 1378173793
   * Event Vault Bridge
   > Portal to Vault Attack Portal (Dark)
       Trivial
-  > Front of Bomb Slot
-      Any of the following:
-          Space Jump Boots
-          Morph Ball and Morph Ball Bomb and Bomb Jump (Beginner)
-          Movement (Intermediate) and Use Screw Attack (No Space Jump)
 
 > Event - Vault Spinners; Heals? False
   * Event Vault Puzzle
@@ -9959,7 +10159,7 @@ Asset id: 3312357786
                   Dark Visor and Seeker Launcher and Missile ≥ 4
                   Morph Ball Bomb and Space Jump Boots and Bomb Space Jump (Advanced)
           Slope Jump (Intermediate) and Use Screw Attack (Space Jump)
-          Screw Attack at Z-Axis (Intermediate) and Disabled Room Randomizer and Use Screw Attack (No Space Jump)
+          Screw Attack at Z-Axis (Beginner) and Disabled Room Randomizer and Use Screw Attack (No Space Jump)
   > Door to Sanctuary Temple
       Trivial
   > Pickup (Missile)
@@ -10045,7 +10245,7 @@ Asset id: 2741330578
   > Door to Hive Dynamo Access
       Any of the following:
           Space Jump Boots and Dark World Damage ≥ 35
-          Movement (Expert) and Dark World Damage ≥ 45 and Use Screw Attack (Space Jump)
+          Movement (Expert) and Dark World Damage ≥ 45 and Use Screw Attack (No Space Jump)
           Morph Ball and Morph Ball Bomb and Bomb Jump (Expert) and Dark World Damage ≥ 60
   > Door to Hive Gyro Access
       Any of the following:
@@ -10159,7 +10359,7 @@ Asset id: 2838429875
           Any of the following:
               Space Jump Boots
               Screw Attack at Z-Axis (Beginner) and Disabled Room Randomizer
-  > Before Quad
+  > Before Quadraxis
       Dark World Damage ≥ 38
   > Event - Prepare Elevator Before Fight
       Dark World Damage ≥ 75
@@ -10170,7 +10370,7 @@ Asset id: 2838429875
       All of the following:
           Screw Attack and After Quadraxis and Dark World Damage ≥ 40
           Space Jump Boots or Screw Attack at Z-Axis (Beginner)
-  > Before Quad
+  > Before Quadraxis
       Dark World Damage ≥ 30
 
 > Door to Temple Security Access; Heals? False
@@ -10181,7 +10381,7 @@ Asset id: 2838429875
           Any of the following:
               Use Screw Attack (Space Jump)
               Screw Attack at Z-Axis (Beginner) and Disabled Room Randomizer and Use Screw Attack (No Space Jump)
-  > Before Quad
+  > Before Quadraxis
       Dark World Damage ≥ 20
 
 > Pickup (Annihilator Beam); Heals? False
@@ -10228,7 +10428,7 @@ Asset id: 2838429875
                   Scan Visor and Space Jump Boots and Dark World Damage ≥ 70
                   Combat/Scan Dash (Expert) or Extended Dash (Expert)
 
-> Before Quad; Heals? False
+> Before Quadraxis; Heals? False
   > Event - Quadraxis
       All of the following:
           Morph Ball
@@ -10249,7 +10449,7 @@ Asset id: 2838429875
 
 > Event - Prepare Elevator Before Fight; Heals? False
   * Event Quadraxis Elevator Prepared
-  > Before Quad
+  > Before Quadraxis
       Trivial
 
 > Event - Prepare Elevator After Fight; Heals? False
@@ -10353,7 +10553,7 @@ Asset id: 3968294891
               After Hive Temple Access Key Gate
               Any of the following:
                   Dark World Damage ≥ 20 and Use Screw Attack (Space Jump)
-                  Screw Attack at Z-Axis (Intermediate) and Dark World Damage ≥ 25 and Disabled Room Randomizer and Use Screw Attack (No Space Jump)
+                  Screw Attack at Z-Axis (Beginner) and Dark World Damage ≥ 25 and Disabled Room Randomizer and Use Screw Attack (No Space Jump)
 
 > Front of Gate; Heals? False
   > Door to Hive Gyro Chamber
@@ -10410,12 +10610,16 @@ Asset id: 4093264161
 > Door to Entrance Defense Hall; Heals? True; Spawn Point
   * Normal Door to Entrance Defense Hall/Door to Hive Entrance
   > Pickup (Sky Temple Key 5)
-      Dark Visor and Light Suit and Use Screw Attack (Space Jump)
+      All of the following:
+          Dark Visor and Use Screw Attack (Space Jump)
+          Any of the following:
+              Light Suit
+              Morph Ball Bomb and Bomb Jump (Hypermode) and Single Room Out of Bounds (Hypermode) and Standable Terrain (Hypermode) and Terminal Fall Abuse (Hypermode) and Normal Damage ≥ 10 and Dark World Damage ≥ 400
 
 > Pickup (Sky Temple Key 5); Heals? False
   * Pickup 117; Major Location? True
   > Door to Entrance Defense Hall
-      Trivial
+      Dark World Damage ≥ 40
 
 ----------------
 Hive Controller Access
@@ -10492,14 +10696,19 @@ Asset id: 1564082177
   * No Return Portal to Hive Summit/Portal to Aerie
   > Event - Dark Samus 2
       Any of the following:
-          Dark Visor or Invisible Objects (Advanced)
-          Echo Visor and Knowledge (Beginner)
+          All of the following:
+              Normal Damage ≥ 50
+              Any of the following:
+                  Dark Visor
+                  Echo Visor and Combat (Beginner)
+          Invisible Objects (Advanced) and Normal Damage ≥ 100
   > Event - Aerie Pickup
       All of the following:
           After Dark Samus 2
           Any of the following:
               Space Jump Boots
               Scan Visor and Combat/Scan Dash (Intermediate)
+              Movement (Beginner) and Use Screw Attack (No Space Jump)
   > Bottom Floor
       After Dark Samus 2
 
@@ -10507,8 +10716,12 @@ Asset id: 1564082177
   * Other Door to Aerie Access/Dock to Aerie
   > Event - Dark Samus 2
       Any of the following:
-          Dark Visor or Invisible Objects (Advanced)
-          Echo Visor and Knowledge (Beginner)
+          All of the following:
+              Normal Damage ≥ 50
+              Any of the following:
+                  Dark Visor
+                  Echo Visor and Combat (Beginner)
+          Invisible Objects (Advanced) and Normal Damage ≥ 100
 
 > Pickup (Echo Visor); Heals? False
   * Pickup 118; Major Location? True
@@ -10548,16 +10761,22 @@ Asset id: 2642430293
   * No Return Portal to Aerie/Portal to Hive Summit
   > Portal to Aerie
       All of the following:
-          Morph Ball and Spider Ball
+          Morph Ball and Activate Safe Zone
           Any of the following:
               All of the following:
-                  Boost Ball
+                  Spider Ball
                   Any of the following:
                       All of the following:
-                          Dark World Damage ≥ 140
+                          Boost Ball
                           Any of the following:
-                              Space Jump Boots
-                              Scan Visor and Combat/Scan Dash (Advanced)
-                      Morph Ball Bomb and Bomb Jump (Intermediate) and Dark World Damage ≥ 70
-              Morph Ball Bomb and Bomb Jump (Advanced) and Dark World Damage ≥ 100
+                              All of the following:
+                                  Dark World Damage ≥ 145
+                                  Space Jump Boots or Movement (Intermediate)
+                              Morph Ball Bomb and Bomb Jump (Intermediate) and Dark World Damage ≥ 60
+                      All of the following:
+                          Dark World Damage ≥ 75
+                          Any of the following:
+                              Space Jump Boots and Standable Terrain (Beginner)
+                              Morph Ball Bomb and Bomb Jump (Advanced)
+              Boost Ball and Space Jump Boots and Single Room Out of Bounds (Expert) and Boost Jump (Expert) and Dark World Damage ≥ 300
 

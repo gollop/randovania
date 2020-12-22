@@ -1,3 +1,4 @@
+import time
 from argparse import ArgumentParser
 from pathlib import Path
 
@@ -14,14 +15,19 @@ def validate_command_logic(args):
     if description.permalink.player_count != 1:
         raise ValueError(f"Validator does not support layouts with more than 1 player.")
 
-    configuration = description.permalink.presets[0].layout_configuration
+    configuration = description.permalink.presets[0].configuration
     patches = description.all_patches[0]
 
+    before = time.perf_counter()
     final_state_by_resolve = resolver.resolve(
         configuration=configuration,
         patches=patches
     )
-    print(final_state_by_resolve)
+    after = time.perf_counter()
+    print("Took {} seconds. Game is {}.".format(
+        after - before,
+        "possible" if final_state_by_resolve is not None else "impossible")
+    )
 
 
 def add_validate_command(sub_parsers):

@@ -23,7 +23,8 @@ def _database() -> ResourceDatabase:
 def _patches(empty_patches) -> GamePatches:
     return dataclasses.replace(
         empty_patches,
-        game_specific=EchoesGameSpecific(energy_per_tank=100, safe_zone_heal_per_second=1, beam_configurations=())
+        game_specific=EchoesGameSpecific(energy_per_tank=100, safe_zone_heal_per_second=1, beam_configurations=(),
+                                         dangerous_energy_tank=False)
     )
 
 
@@ -34,7 +35,7 @@ def test_collected_pickup_indices(database, patches):
         PickupIndex(1): 1,
         PickupIndex(15): 1
     }
-    s = state.State(resources, (), 99, None, patches, None, database)
+    s = state.State(resources, (), 99, None, patches, None, database, None)
 
     # Run
     indices = list(s.collected_pickup_indices)
@@ -45,7 +46,7 @@ def test_collected_pickup_indices(database, patches):
 
 def test_add_pickup_to_state(database, patches):
     # Starting State
-    s = state.State({}, (), 99, None, patches, None, database)
+    s = state.State({}, (), 99, None, patches, None, database, None)
 
     resource_a = ItemResourceInfo(1, "A", "A", 10, None)
     resource_b = ItemResourceInfo(2, "B", "B", 10, None)
@@ -69,7 +70,7 @@ def test_add_pickup_to_state(database, patches):
 def test_assign_pickup_to_starting_items(patches, database):
     # Setup
 
-    starting = state.State({}, (), 99, None, patches, None, database)
+    starting = state.State({}, (), 99, None, patches, None, database, None)
 
     resource_a = ItemResourceInfo(1, "A", "A", 10, None)
     resource_b = ItemResourceInfo(2, "B", "B", 10, None)
@@ -94,7 +95,7 @@ def test_assign_pickup_to_starting_items(patches, database):
 
 def test_state_with_pickup(database, patches):
     # Setup
-    starting = state.State({}, (), 99, None, patches, None, database)
+    starting = state.State({}, (), 99, None, patches, None, database, None)
 
     resource_a = ItemResourceInfo(1, "A", "A", 10, None)
     p = PickupEntry("A", 2, ItemCategory.SUIT, ItemCategory.LIFE_SUPPORT,
